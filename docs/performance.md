@@ -2,6 +2,8 @@
 
 Audience: public
 
+后续性能档位的参数、实现区别与预算规范见 [performance-profiles.md](performance-profiles.md)；它是未落地设计。追加Chrome两GPU合并采样试验已有隔离纹理、最终光学与WebGPU timestamp证据，见 [深入研究](shader-design-research.md)，没有替换生产核。下文保留首轮历史矩阵，不能与追加协议混算。
+
 2026-10-06 首个可复跑历史基线。原始 [JSON](../benchmarks/results/latest.json)、[逐次 CSV](../benchmarks/results/runs.csv)、[汇总 CSV](../benchmarks/results/summary.csv)、[完整报告](../benchmarks/results/report.md) 均进入 Git；不以旧版本实验室零散帧数作为本轮矩阵。
 
 固定构建、Chromium 154、Apple M4 Pro / ANGLE Metal（[采样后设备探针](../benchmarks/results/adapter.json)）、1440 × 1024 浏览器视口、960 × 540 scene、DPR 1、浅色 testchart、统一圆角 12 / 无外投影。每组预热 12 帧、采样 60 帧、重复 3 次，轮换后端顺序；总计 147 组，全部有效，无失败或跳过。代码输入列表与 SHA-256 在原始 JSON 中，覆盖 core、固定 vendor、benchmark runner/statistics，UI 与报告工具不在该 hash 内。

@@ -1,6 +1,8 @@
 import { GLImagePass } from "./blur-webgl.js";
-import { glVertex, glFragment } from "../shaders.js";
-import { surfaceUniforms, material } from "../policy.js";
+import { glVertex, glFragment, opticalBindings } from "../shaders.js";
+import { uniformData, bindUniformBlock } from "./uniforms.js";
+import { packOpticsU } from "../shaders/generated/packers.js";
+import { surfaceUniforms, material, controlsFor } from "../policy.js";
 export class WebGLRenderer {
   static async create(canvas, onFailure) {
     return new WebGLRenderer(canvas, onFailure);
@@ -14,8 +16,11 @@ export class WebGLRenderer {
     });
     if (!gl) throw new Error("WebGL2 context 不可用");
     this.gl = gl;
+    this.maxTextureDimension=gl.getParameter(gl.MAX_TEXTURE_SIZE);
     this.canvas = canvas;
     this.textures = new Map();
+    this.buffers = new Map();
+    this.uniformData = new Map();
     this.disposed = false;
     this.lost = (e) => {
       e.preventDefault();
@@ -40,18 +45,9 @@ export class WebGLRenderer {
       gl.linkProgram(this.program);
       if (!gl.getProgramParameter(this.program, gl.LINK_STATUS))
         throw new Error(gl.getProgramInfoLog(this.program));
-      this.locations = new Map();
-      for (
-        let i = 0;
-        i < gl.getProgramParameter(this.program, gl.ACTIVE_UNIFORMS);
-        i++
-      ) {
-        const u = gl.getActiveUniform(this.program, i);
-        this.locations.set(u.name, {
-          type: u.type,
-          loc: gl.getUniformLocation(this.program, u.name),
-        });
-      }
+      bindUniformBlock(gl, this.program, opticalBindings.uniforms.u, 0);
+      this.samplers = Object.fromEntries(Object.entries(opticalBindings.textures)
+        .map(([name, binding]) => [name, gl.getUniformLocation(this.program, binding.name)]));
       this.imagePass = new GLImagePass(gl);
       this.buffer = gl.createBuffer();
       gl.bindBuffer(gl.ARRAY_BUFFER, this.buffer);
@@ -61,7 +57,7 @@ export class WebGLRenderer {
         gl.STATIC_DRAW,
       );
       gl.useProgram(this.program);
-      const loc = gl.getAttribLocation(this.program, "a_position");
+      const loc = this.positionLocation = 0; // WGSL @location(0), emitted GLSL layout(location=0).
       gl.enableVertexAttribArray(loc);
       gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
       gl.enable(gl.BLEND);
@@ -119,9 +115,15 @@ export class WebGLRenderer {
         r.y + r.h > 0
       );
     });
+    const alive = new Set(visible.map(s => s.id));
+    for (const [id, buffer] of this.buffers) if (!alive.has(id)) {
+      g.deleteBuffer(buffer);
+      this.buffers.delete(id);
+      this.uniformData.delete(id);
+    }
     this.imagePass.prune(
       new Set(
-        visible.map((s) => String(material(s.kind, settings.controls).blur)),
+        visible.map((s) => String(material(s.kind, controlsFor(settings,s.kind)).blur)),
       ),
     );
     g.activeTexture(g.TEXTURE0);
@@ -157,7 +159,7 @@ export class WebGLRenderer {
       const r = s.bounds,
         blur = this.imagePass.blur(
           input,
-          material(s.kind, settings.controls).blur,
+          material(s.kind, controlsFor(settings,s.kind)).blur,
           dpr,
           `${signature}:${dpr}`,
           w,
@@ -170,7 +172,7 @@ export class WebGLRenderer {
       } else this.imagePass.target(null, w, h);
       g.useProgram(this.program);
       g.bindBuffer(g.ARRAY_BUFFER, this.buffer);
-      const loc = g.getAttribLocation(this.program, "a_position");
+      const loc = this.positionLocation;
       g.enableVertexAttribArray(loc);
       g.vertexAttribPointer(loc, 2, g.FLOAT, false, 0, 0);
       g.enable(g.BLEND);
@@ -192,20 +194,26 @@ export class WebGLRenderer {
           h,
           dpr,
           s.kind,
-          settings.controls,
+          controlsFor(settings,s.kind),
           settings.theme,
         ),
-        u_bg: 0,
-        u_blurredBg: 1,
+        u_glOrigin: 1,
       };
-      for (const [name, value] of Object.entries(uniforms)) {
-        const u = this.locations.get(name);
-        if (!u) continue;
-        if (u.type === g.FLOAT) g.uniform1f(u.loc, value);
-        else if (u.type === g.FLOAT_VEC2) g.uniform2fv(u.loc, value);
-        else if (u.type === g.FLOAT_VEC4) g.uniform4fv(u.loc, value);
-        else g.uniform1i(u.loc, value);
+      let buffer = this.buffers.get(s.id), data = this.uniformData.get(s.id);
+      if (!buffer) {
+        buffer = g.createBuffer();
+        data = uniformData(opticalBindings.uniforms.u);
+        this.buffers.set(s.id, buffer);
+        this.uniformData.set(s.id, data);
       }
+      g.bindBuffer(g.UNIFORM_BUFFER, buffer);
+      packOpticsU(data, uniforms);
+      // Replace storage so queued draws can retain the previous contents.
+      // Reuse the buffer object; the driver owns backing-storage retirement.
+      g.bufferData(g.UNIFORM_BUFFER, data.bytes, g.STREAM_DRAW);
+      g.bindBufferBase(g.UNIFORM_BUFFER, 0, buffer);
+      g.uniform1i(this.samplers.u_bg, 0);
+      g.uniform1i(this.samplers.u_blurredBg, 1);
       const x = Math.max(0, Math.floor(r.x * dpr) - 2),
         y = Math.max(0, Math.floor(h - (r.y + r.h) * dpr) - 2);
       const sw = Math.min(w - x, Math.ceil((r.x + r.w) * dpr) + 2 - x),
@@ -230,6 +238,9 @@ export class WebGLRenderer {
     this.canvas.removeEventListener("webglcontextlost", this.lost);
     for (const t of this.textures.values()) this.gl.deleteTexture(t.texture);
     this.textures.clear();
+    for (const buffer of this.buffers.values()) this.gl.deleteBuffer(buffer);
+    this.buffers.clear();
+    this.uniformData.clear();
     this.imagePass?.dispose();
     for (const t of this.layers ?? []) this.gl.deleteTexture(t);
     if (this.buffer) this.gl.deleteBuffer(this.buffer);

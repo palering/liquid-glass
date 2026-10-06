@@ -1,0 +1,28 @@
+{
+  "schema": "liquid-glass-performance-profiles-evidence",
+  "version": 1,
+  "date": "2026-10-06",
+  "source": "c54d8b1d181309ab76fea17820583d6ee9e66744d943bf264cc8c3ac908d656f",
+  "baselineSource": "bc2a5ad508a4350aac24d05a9c3519188573ee974398a39322f839ee46434bb7",
+  "files": {
+    "current-source.json": "ecc0089d1c78cf2c637c3e1807d9bcd2ac2736b5b49e67e53896310ac0d515eb",
+    "summary.json": "9f427d6ba3075918bfdde92b2abc4786c3e3a73af4000df9ce5d32522357be7e",
+    "checks.json": "601ea3001e9543d7f2c3a6546e3da5a4006f1b247f61ffb65f86c655950b12df",
+    "quality.json": "817ab101ed3262f30b93461b958b8913961b9dc017dbaa23bf0486b8da675b2c",
+    "contracts.json": "a4942d94cf28c24708c34d85aa37f46a70542dc330b18c3d54bde55a686b4f4f",
+    "stability.json": "ae9223a088a2b828995cf721fe2bc6c5a68c9ea50fdd7b9239feced1d391f24f",
+    "chrome-smoke.json": "7cb367cc25f302dfe7cb18a90c1f9c043aa38ce20f84425aed6f19c5deba017b",
+    "consumer-matrix.json": "bb8bb9c861c918cf590de55afd0e8db795e6d24cb42c957308d5781bda3f8620",
+    "consumer-interactions.json": "3be113a1644fcd0a8684a49695086b1656afdc0f28236da26ff8f378f42a6934",
+    "consumer-production.json": "b0c5debcfbdcad0fa8a632c3be564177c36327ab30a9361fd71dbb520ad6561b",
+    "lab-ui.json": "7fb721b3041a6bbfcfd465f7acda5e17b39145bafec1874d49152600373c3c41",
+    "lab-zh.png": "7573d554715ae1c02f57c586631567fba6a1008bad08271f8fa4949d59cf1d29"
+  },
+  "fixtures": {
+    "tests/browser/performance-profiles.html": "82a16ab3d7976912916988b4de2b95bac8929f973280831fc9d024cf50a9eb0f",
+    "tests/browser/performance-profiles.js": "756fb70976b0521278de2c32c1712e2beb5ac3dbfb1658cd49caf82525f6659d",
+    "tests/browser/profile-contracts.js": "5639e844ab355bf376fa866bd730ebf826492b3021179de38e74feeff15cdc7a",
+    "tests/browser/profile-stability.js": "a9664c75990933e9f8f8eb350168a3f4343bd67b767fb6a300ff1f8414a71cc4",
+    "tests/browser/chrome-smoke.js": "6a510fbebd51eda811dae77f96b0810929cadcb6e1a4912fa7bab1ed3a3ba1bb"
+  }
+}

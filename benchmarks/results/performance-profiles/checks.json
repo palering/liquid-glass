@@ -1,0 +1,33 @@
+{
+  "source": "c54d8b1d181309ab76fea17820583d6ee9e66744d943bf264cc8c3ac908d656f",
+  "nodeTests": 29,
+  "typecheck": true,
+  "shaderPairs": 4,
+  "libraryAndLabBuild": true,
+  "actualPackedImportSSRAndPresetChecks": true,
+  "tarballBytes": 40030,
+  "tarballSha256": "cba964765b213a6dd65f99490fd92c65f12212e4bd5bea0973da28fcd3dd8281",
+  "packageFiles": 13,
+  "consumerBuild": true,
+  "consumerSitesTests": 4,
+  "consumerBuildWarning": "715.59 kB JS / 219.87 kB gzip; existing single-chunk warning",
+  "runtimeStillJavaScript": true,
+  "pushed": false,
+  "deployed": false,
+  "documentation": {
+    "errors": 0,
+    "warnings": 19,
+    "warningScope": "Ignored Cargo cache and generated public archive copies only",
+    "projectLocalLinksChecked": 249,
+    "brokenProjectLinks": 0
+  },
+  "publicPatternCheck": {
+    "files": 42,
+    "privatePathOrCredentialMatches": 0,
+    "scope": "Public docs and new JSON archive; pattern check, not an exhaustive security audit"
+  },
+  "ignoreBoundary": {
+    "cacheOutputBuildPackagesAndEnvIgnored": true,
+    "trackedIgnoredArtifacts": 0
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "phase": "optical-refinement",
+  "baselineSource": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25",
+  "currentSource": "bc2a5ad508a4350aac24d05a9c3519188573ee974398a39322f839ee46434bb7",
+  "files": {
+    "README.md": "eb76d592d72a7d5f38e1158c7ca8957cd28d3579e96cc1549cf16c16447268ca",
+    "analytic-quality.json": "e1e5cb396d76559bde7619526c5be4d6ed38226c2f3b86f17dee716eed92445c",
+    "baseline-source.json": "58636568f737e2291952f0616386fdab0fe462964efb2491831c5e2f1d63cfc0",
+    "bounded-quality.json": "02cc7ee82d7c3620002dcc0c2a953fb2413f58914df150f49dd67857636f1fcc",
+    "candidates.json": "4996f30ff041b05067412c3eaa90ab6abbe3b9e62fdcfc30719425c1ad557909",
+    "chrome-smoke.json": "ac5e00bc9a37433675ddc88cc9eab2fee2df7dddc86dacaeb75d142f0e98cf31",
+    "consumer-final.jpg": "0a97f8cb1ba642e967b56b9e0887750bf7020bba00ba2ae99311be384b47eb6f",
+    "consumer-matrix.json": "9bbce043314520928df8233ce655ff9c45edaf83c44f61cd8278fe9b0a410479",
+    "consumer-production-dark.jpg": "9bbc11c847c199d07ec9808fc99a7c8fb06277e7519d6dcc0f3121d2427a57ee",
+    "consumer-production-light.jpg": "2dc62069b32bbb905c9985de0934f808485dca39afafee4cc75de1871924bd6d",
+    "consumer-production.json": "d3e537bfeb0aa6531bdcd1e3bf39b7bdf27f6f775b5acecf9304aeb55590ff2f",
+    "current-performance.json": "493f35488d11c4cb791fc6e3bd1f9865014fc7f06666bb3b8b4f8792ab001ace",
+    "current-quality.json": "f3449bf9c0bdf0c43a2f2926e2e2257d819d92e1aed2ecc5cc1f14b6a5e6579d",
+    "current-source.json": "4024f3cac5281ae8a37972def2e6900eef4d397d7c0b541a9c59b05c2b2732f4",
+    "current-timing.json": "5e8390f71bfef864f0738908ba66c2191eb4305bca640b52b554e82302ba6448",
+    "height-chart-light.jpg": "28d279da633163fb1a19e727d317c57fc7babcd795240902264c45b6436cab5d",
+    "height-photo-dark.jpg": "2f4cf1e69fd090c389a0d590ff4c8d72d8113f399d5206b6d01966c9f56b2339",
+    "height-photo-reading.jpg": "ec7b579c1b64666536cdce09487e0bca70e4510630fed2d2fee65264cb16ed1b",
+    "height-quality.json": "e205b93ed4a269d193daf85c510001e1c8328daa611ab55bf549d6fd90827f30",
+    "hybrid-quality.json": "1cea12e00837a5a13d8121a71684da5160ac5f2946c19f6cc8395f8f6cea1649",
+    "hybrid-timing.json": "726b8ec059bfdad7c263dde0890712daaa46b7ba40f258fb9d2da08fb894debd",
+    "neutral-bounded.json": "5726b03c0a5c370cfe493e5a93b355504ab936049043adfda5adfb26d52051c6",
+    "soak.json": "27447b21749056c90607d915ded6c5c3cee11a0aea064027fc897fa4434d362a",
+    "summary.json": "0e1b2faafc299918a9406b5bff7495ff6edb74a5d0c62cabc54f0a03ee1c4395"
+  }
+}

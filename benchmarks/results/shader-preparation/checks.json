@@ -1,0 +1,77 @@
+{
+  "schema": "liquid-glass-ts-readiness",
+  "date": "2026-10-07",
+  "sourceSha256": "0243e339c688c8bcc7f2b762bc330efe370b34eaa3cb088052684c85e55299cd",
+  "runtime": "JavaScript",
+  "tsMigrationStarted": false,
+  "adopted": "exact-zero Fresnel/glare skips; WGSL-generated GLSL and ABI unchanged",
+  "node": {
+    "command": "npm test",
+    "passed": 29
+  },
+  "types": {
+    "command": "npm run typecheck",
+    "passed": true
+  },
+  "shaderGeneration": {
+    "command": "npm run shaders:check",
+    "pairs": 4,
+    "passed": true
+  },
+  "builds": {
+    "libraryAndLab": true,
+    "consumer": true,
+    "consumerJsKB": 716.38,
+    "consumerGzipKB": 220,
+    "consumerChunkWarning": true,
+    "sitesTests": 4
+  },
+  "package": {
+    "command": "npm run test:package",
+    "files": 13,
+    "bytes": 40153,
+    "sha256": "e297ed09123536aa66dbe86f4067f2594ce6ac5a956219aa6833214bfc859ba0",
+    "installedImportAndReactSSR": true,
+    "private": true,
+    "license": "UNLICENSED"
+  },
+  "gpuQuality": {
+    "cases": 140,
+    "exactRGBA": 134,
+    "maxRGB": 1,
+    "alphaMax": 0,
+    "passed": true
+  },
+  "performanceContracts": {
+    "cases": 30,
+    "passed": true
+  },
+  "stability": {
+    "frames": 1350,
+    "passed": true
+  },
+  "chrome": {
+    "cases": 10,
+    "passed": true
+  },
+  "consumer": {
+    "matrixCases": 20,
+    "productionDragConnectEditReset": true,
+    "mobileThemes": [
+      "light",
+      "dark"
+    ],
+    "mobileWidth": 390,
+    "passed": true
+  },
+  "readyForTS": true,
+  "tsContract": "Exact pixels against this new source baseline; keep API, JSON, generated ABI and lifecycle. No model/kernel changes in language migration.",
+  "pushed": false,
+  "deployed": false,
+  "npmPublished": false,
+  "limits": [
+    "Single Chromium154 device; short GPU timing is not FPS or hardware-wide acceleration.",
+    "New height profiles are visual experiments, not accepted production replacements.",
+    "Other browsers/WebView, native DOM capture, driver memory and production long-term stability remain unvalidated."
+  ]
+}

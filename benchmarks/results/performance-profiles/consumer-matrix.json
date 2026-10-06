@@ -1,0 +1,2089 @@
+{
+  "phase": "complete",
+  "samples": [
+    {
+      "backend": "webgpu",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 499.1192626953125,
+            "y": 264.7862854003906,
+            "w": 45.60003662109375,
+            "h": 65.13906860351562
+          },
+          "provided": {
+            "x": 499.1192842942346,
+            "y": 264.786282306163,
+            "w": 45.6,
+            "h": 65.1375,
+            "scale": 0.2
+          },
+          "maxDelta": 0.0015686035156221578
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 556.019287109375,
+            "y": 275.045654296875,
+            "w": 6.79998779296875,
+            "h": 6.79998779296875
+          },
+          "provided": {
+            "x": 556.0192842942346,
+            "y": 275.045657306163,
+            "w": 6.800000000000001,
+            "h": 6.800000000000001,
+            "scale": 0.2
+          },
+          "maxDelta": 0.000012207031250710543
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 499.1192842942346,
+            "y": 264.786282306163,
+            "w": 45.6,
+            "h": 65.1375,
+            "radius": 2.4000000000000004,
+            "scale": 0.2
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 556.0192842942346,
+            "y": 275.045657306163,
+            "w": 6.800000000000001,
+            "h": 6.800000000000001,
+            "radius": 3.4000000000000004,
+            "scale": 0.2
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 1,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 0.2,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "webgpu",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 551.1192626953125,
+            "y": 583.2862548828125,
+            "w": 193.800048828125,
+            "h": 276.841064453125
+          },
+          "provided": {
+            "x": 551.1192842942346,
+            "y": 583.286282306163,
+            "w": 193.79999999999998,
+            "h": 276.83437499999997,
+            "scale": 0.85
+          },
+          "maxDelta": 0.006689453125034106
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 792.9442749023438,
+            "y": 626.888671875,
+            "w": 28.9000244140625,
+            "h": 28.89996337890625
+          },
+          "provided": {
+            "x": 792.9442842942346,
+            "y": 626.888626056163,
+            "w": 28.9,
+            "h": 28.9,
+            "scale": 0.85
+          },
+          "maxDelta": 0.00004581883695209399
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 551.1192842942346,
+            "y": 583.286282306163,
+            "w": 193.79999999999998,
+            "h": 276.83437499999997,
+            "radius": 10.2,
+            "scale": 0.85
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 792.9442842942346,
+            "y": 626.888626056163,
+            "w": 28.9,
+            "h": 28.9,
+            "radius": 14.45,
+            "scale": 0.85
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 1,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 0.85,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "webgpu",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 563.1192626953125,
+            "y": 656.7862548828125,
+            "w": 228,
+            "h": 325.6953125
+          },
+          "provided": {
+            "x": 563.1192842942346,
+            "y": 656.786282306163,
+            "w": 228,
+            "h": 325.6875,
+            "scale": 1
+          },
+          "maxDelta": 0.0078125
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 847.6192626953125,
+            "y": 708.0831298828125,
+            "w": 34,
+            "h": 34
+          },
+          "provided": {
+            "x": 847.6192842942346,
+            "y": 708.083157306163,
+            "w": 34,
+            "h": 34,
+            "scale": 1
+          },
+          "maxDelta": 0.000027423350502431276
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 563.1192842942346,
+            "y": 656.786282306163,
+            "w": 228,
+            "h": 325.6875,
+            "radius": 12,
+            "scale": 1
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 847.6192842942346,
+            "y": 708.083157306163,
+            "w": 34,
+            "h": 34,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 1,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 1,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "webgpu",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 643.1192626953125,
+            "y": 1146.7862548828125,
+            "w": 456,
+            "h": 651.390625
+          },
+          "provided": {
+            "x": 643.1192842942346,
+            "y": 1146.786282306163,
+            "w": 456,
+            "h": 651.375,
+            "scale": 2
+          },
+          "maxDelta": 0.015625
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 1212.1192626953125,
+            "y": 1249.3800048828125,
+            "w": 68,
+            "h": 68
+          },
+          "provided": {
+            "x": 1212.1192842942346,
+            "y": 1249.380032306163,
+            "w": 68,
+            "h": 68,
+            "scale": 2
+          },
+          "maxDelta": 0.000027423350502431276
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 643.1192842942346,
+            "y": 1146.786282306163,
+            "w": 456,
+            "h": 651.375,
+            "radius": 24,
+            "scale": 2
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 1212.1192842942346,
+            "y": 1249.380032306163,
+            "w": 68,
+            "h": 68,
+            "radius": 34,
+            "scale": 2
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 1,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 2,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "webgl",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 499.1192626953125,
+            "y": 264.7862854003906,
+            "w": 45.60003662109375,
+            "h": 65.13906860351562
+          },
+          "provided": {
+            "x": 499.1192842942346,
+            "y": 264.786282306163,
+            "w": 45.6,
+            "h": 65.1375,
+            "scale": 0.2
+          },
+          "maxDelta": 0.0015686035156221578
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 556.019287109375,
+            "y": 275.045654296875,
+            "w": 6.79998779296875,
+            "h": 6.79998779296875
+          },
+          "provided": {
+            "x": 556.0192842942346,
+            "y": 275.045657306163,
+            "w": 6.800000000000001,
+            "h": 6.800000000000001,
+            "scale": 0.2
+          },
+          "maxDelta": 0.000012207031250710543
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 499.1192842942346,
+            "y": 264.786282306163,
+            "w": 45.6,
+            "h": 65.1375,
+            "radius": 2.4000000000000004,
+            "scale": 0.2
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 556.0192842942346,
+            "y": 275.045657306163,
+            "w": 6.800000000000001,
+            "h": 6.800000000000001,
+            "radius": 3.4000000000000004,
+            "scale": 0.2
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 1,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 0.2,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "webgl",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 551.1192626953125,
+            "y": 583.2862548828125,
+            "w": 193.800048828125,
+            "h": 276.841064453125
+          },
+          "provided": {
+            "x": 551.1192842942346,
+            "y": 583.286282306163,
+            "w": 193.79999999999998,
+            "h": 276.83437499999997,
+            "scale": 0.85
+          },
+          "maxDelta": 0.006689453125034106
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 792.9442749023438,
+            "y": 626.888671875,
+            "w": 28.9000244140625,
+            "h": 28.89996337890625
+          },
+          "provided": {
+            "x": 792.9442842942346,
+            "y": 626.888626056163,
+            "w": 28.9,
+            "h": 28.9,
+            "scale": 0.85
+          },
+          "maxDelta": 0.00004581883695209399
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 551.1192842942346,
+            "y": 583.286282306163,
+            "w": 193.79999999999998,
+            "h": 276.83437499999997,
+            "radius": 10.2,
+            "scale": 0.85
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 792.9442842942346,
+            "y": 626.888626056163,
+            "w": 28.9,
+            "h": 28.9,
+            "radius": 14.45,
+            "scale": 0.85
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 1,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 0.85,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "webgl",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 563.1192626953125,
+            "y": 656.7862548828125,
+            "w": 228,
+            "h": 325.6953125
+          },
+          "provided": {
+            "x": 563.1192842942346,
+            "y": 656.786282306163,
+            "w": 228,
+            "h": 325.6875,
+            "scale": 1
+          },
+          "maxDelta": 0.0078125
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 847.6192626953125,
+            "y": 708.0831298828125,
+            "w": 34,
+            "h": 34
+          },
+          "provided": {
+            "x": 847.6192842942346,
+            "y": 708.083157306163,
+            "w": 34,
+            "h": 34,
+            "scale": 1
+          },
+          "maxDelta": 0.000027423350502431276
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 563.1192842942346,
+            "y": 656.786282306163,
+            "w": 228,
+            "h": 325.6875,
+            "radius": 12,
+            "scale": 1
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 847.6192842942346,
+            "y": 708.083157306163,
+            "w": 34,
+            "h": 34,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 1,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 1,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "webgl",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 643.1192626953125,
+            "y": 1146.7862548828125,
+            "w": 456,
+            "h": 651.390625
+          },
+          "provided": {
+            "x": 643.1192842942346,
+            "y": 1146.786282306163,
+            "w": 456,
+            "h": 651.375,
+            "scale": 2
+          },
+          "maxDelta": 0.015625
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 1212.1192626953125,
+            "y": 1249.3800048828125,
+            "w": 68,
+            "h": 68
+          },
+          "provided": {
+            "x": 1212.1192842942346,
+            "y": 1249.380032306163,
+            "w": 68,
+            "h": 68,
+            "scale": 2
+          },
+          "maxDelta": 0.000027423350502431276
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 643.1192842942346,
+            "y": 1146.786282306163,
+            "w": 456,
+            "h": 651.375,
+            "radius": 24,
+            "scale": 2
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 1212.1192842942346,
+            "y": 1249.380032306163,
+            "w": 68,
+            "h": 68,
+            "radius": 34,
+            "scale": 2
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 1,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 2,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "svg",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 499.1192626953125,
+            "y": 264.7862854003906,
+            "w": 45.60003662109375,
+            "h": 65.13906860351562
+          },
+          "provided": {
+            "x": 499.1192842942346,
+            "y": 264.786282306163,
+            "w": 45.6,
+            "h": 65.1375,
+            "scale": 0.2
+          },
+          "maxDelta": 0.0015686035156221578
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 556.019287109375,
+            "y": 275.045654296875,
+            "w": 6.79998779296875,
+            "h": 6.79998779296875
+          },
+          "provided": {
+            "x": 556.0192842942346,
+            "y": 275.045657306163,
+            "w": 6.800000000000001,
+            "h": 6.800000000000001,
+            "scale": 0.2
+          },
+          "maxDelta": 0.000012207031250710543
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 499.1192842942346,
+            "y": 264.786282306163,
+            "w": 45.6,
+            "h": 65.1375,
+            "radius": 2.4000000000000004,
+            "scale": 0.2
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 556.0192842942346,
+            "y": 275.045657306163,
+            "w": 6.800000000000001,
+            "h": 6.800000000000001,
+            "radius": 3.4000000000000004,
+            "scale": 0.2
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 0.2,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "svg",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 551.1192626953125,
+            "y": 583.2862548828125,
+            "w": 193.800048828125,
+            "h": 276.841064453125
+          },
+          "provided": {
+            "x": 551.1192842942346,
+            "y": 583.286282306163,
+            "w": 193.79999999999998,
+            "h": 276.83437499999997,
+            "scale": 0.85
+          },
+          "maxDelta": 0.006689453125034106
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 792.9442749023438,
+            "y": 626.888671875,
+            "w": 28.9000244140625,
+            "h": 28.89996337890625
+          },
+          "provided": {
+            "x": 792.9442842942346,
+            "y": 626.888626056163,
+            "w": 28.9,
+            "h": 28.9,
+            "scale": 0.85
+          },
+          "maxDelta": 0.00004581883695209399
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 551.1192842942346,
+            "y": 583.286282306163,
+            "w": 193.79999999999998,
+            "h": 276.83437499999997,
+            "radius": 10.2,
+            "scale": 0.85
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 792.9442842942346,
+            "y": 626.888626056163,
+            "w": 28.9,
+            "h": 28.9,
+            "radius": 14.45,
+            "scale": 0.85
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 0.85,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "svg",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 563.1192626953125,
+            "y": 656.7862548828125,
+            "w": 228,
+            "h": 325.6953125
+          },
+          "provided": {
+            "x": 563.1192842942346,
+            "y": 656.786282306163,
+            "w": 228,
+            "h": 325.6875,
+            "scale": 1
+          },
+          "maxDelta": 0.0078125
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 847.6192626953125,
+            "y": 708.0831298828125,
+            "w": 34,
+            "h": 34
+          },
+          "provided": {
+            "x": 847.6192842942346,
+            "y": 708.083157306163,
+            "w": 34,
+            "h": 34,
+            "scale": 1
+          },
+          "maxDelta": 0.000027423350502431276
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 563.1192842942346,
+            "y": 656.786282306163,
+            "w": 228,
+            "h": 325.6875,
+            "radius": 12,
+            "scale": 1
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 847.6192842942346,
+            "y": 708.083157306163,
+            "w": 34,
+            "h": 34,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 1,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "svg",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 643.1192626953125,
+            "y": 1146.7862548828125,
+            "w": 456,
+            "h": 651.390625
+          },
+          "provided": {
+            "x": 643.1192842942346,
+            "y": 1146.786282306163,
+            "w": 456,
+            "h": 651.375,
+            "scale": 2
+          },
+          "maxDelta": 0.015625
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 1212.1192626953125,
+            "y": 1249.3800048828125,
+            "w": 68,
+            "h": 68
+          },
+          "provided": {
+            "x": 1212.1192842942346,
+            "y": 1249.380032306163,
+            "w": 68,
+            "h": 68,
+            "scale": 2
+          },
+          "maxDelta": 0.000027423350502431276
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 643.1192842942346,
+            "y": 1146.786282306163,
+            "w": 456,
+            "h": 651.375,
+            "radius": 24,
+            "scale": 2
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 1212.1192842942346,
+            "y": 1249.380032306163,
+            "w": 68,
+            "h": 68,
+            "radius": 34,
+            "scale": 2
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 2,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "css",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 499.1192626953125,
+            "y": 264.7862854003906,
+            "w": 45.60003662109375,
+            "h": 65.13906860351562
+          },
+          "provided": {
+            "x": 499.1192842942346,
+            "y": 264.786282306163,
+            "w": 45.6,
+            "h": 65.1375,
+            "scale": 0.2
+          },
+          "maxDelta": 0.0015686035156221578
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 556.019287109375,
+            "y": 275.045654296875,
+            "w": 6.79998779296875,
+            "h": 6.79998779296875
+          },
+          "provided": {
+            "x": 556.0192842942346,
+            "y": 275.045657306163,
+            "w": 6.800000000000001,
+            "h": 6.800000000000001,
+            "scale": 0.2
+          },
+          "maxDelta": 0.000012207031250710543
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 499.1192842942346,
+            "y": 264.786282306163,
+            "w": 45.6,
+            "h": 65.1375,
+            "radius": 2.4000000000000004,
+            "scale": 0.2
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 556.0192842942346,
+            "y": 275.045657306163,
+            "w": 6.800000000000001,
+            "h": 6.800000000000001,
+            "radius": 3.4000000000000004,
+            "scale": 0.2
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 0.2,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "css",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 551.1192626953125,
+            "y": 583.2862548828125,
+            "w": 193.800048828125,
+            "h": 276.841064453125
+          },
+          "provided": {
+            "x": 551.1192842942346,
+            "y": 583.286282306163,
+            "w": 193.79999999999998,
+            "h": 276.83437499999997,
+            "scale": 0.85
+          },
+          "maxDelta": 0.006689453125034106
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 792.9442749023438,
+            "y": 626.888671875,
+            "w": 28.9000244140625,
+            "h": 28.89996337890625
+          },
+          "provided": {
+            "x": 792.9442842942346,
+            "y": 626.888626056163,
+            "w": 28.9,
+            "h": 28.9,
+            "scale": 0.85
+          },
+          "maxDelta": 0.00004581883695209399
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 551.1192842942346,
+            "y": 583.286282306163,
+            "w": 193.79999999999998,
+            "h": 276.83437499999997,
+            "radius": 10.2,
+            "scale": 0.85
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 792.9442842942346,
+            "y": 626.888626056163,
+            "w": 28.9,
+            "h": 28.9,
+            "radius": 14.45,
+            "scale": 0.85
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 0.85,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "css",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 563.1192626953125,
+            "y": 656.7862548828125,
+            "w": 228,
+            "h": 325.6953125
+          },
+          "provided": {
+            "x": 563.1192842942346,
+            "y": 656.786282306163,
+            "w": 228,
+            "h": 325.6875,
+            "scale": 1
+          },
+          "maxDelta": 0.0078125
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 847.6192626953125,
+            "y": 708.0831298828125,
+            "w": 34,
+            "h": 34
+          },
+          "provided": {
+            "x": 847.6192842942346,
+            "y": 708.083157306163,
+            "w": 34,
+            "h": 34,
+            "scale": 1
+          },
+          "maxDelta": 0.000027423350502431276
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 563.1192842942346,
+            "y": 656.786282306163,
+            "w": 228,
+            "h": 325.6875,
+            "radius": 12,
+            "scale": 1
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 847.6192842942346,
+            "y": 708.083157306163,
+            "w": 34,
+            "h": 34,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 1,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "css",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 643.1192626953125,
+            "y": 1146.7862548828125,
+            "w": 456,
+            "h": 651.390625
+          },
+          "provided": {
+            "x": 643.1192842942346,
+            "y": 1146.786282306163,
+            "w": 456,
+            "h": 651.375,
+            "scale": 2
+          },
+          "maxDelta": 0.015625
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 1212.1192626953125,
+            "y": 1249.3800048828125,
+            "w": 68,
+            "h": 68
+          },
+          "provided": {
+            "x": 1212.1192842942346,
+            "y": 1249.380032306163,
+            "w": 68,
+            "h": 68,
+            "scale": 2
+          },
+          "maxDelta": 0.000027423350502431276
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 643.1192842942346,
+            "y": 1146.786282306163,
+            "w": 456,
+            "h": 651.375,
+            "radius": 24,
+            "scale": 2
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 1212.1192842942346,
+            "y": 1249.380032306163,
+            "w": 68,
+            "h": 68,
+            "radius": 34,
+            "scale": 2
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 2,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "solid",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 499.1192626953125,
+            "y": 264.7862854003906,
+            "w": 45.60003662109375,
+            "h": 65.13906860351562
+          },
+          "provided": {
+            "x": 499.1192842942346,
+            "y": 264.786282306163,
+            "w": 45.6,
+            "h": 65.1375,
+            "scale": 0.2
+          },
+          "maxDelta": 0.0015686035156221578
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 556.019287109375,
+            "y": 275.045654296875,
+            "w": 6.79998779296875,
+            "h": 6.79998779296875
+          },
+          "provided": {
+            "x": 556.0192842942346,
+            "y": 275.045657306163,
+            "w": 6.800000000000001,
+            "h": 6.800000000000001,
+            "scale": 0.2
+          },
+          "maxDelta": 0.000012207031250710543
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 499.1192842942346,
+            "y": 264.786282306163,
+            "w": 45.6,
+            "h": 65.1375,
+            "radius": 2.4000000000000004,
+            "scale": 0.2
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 556.0192842942346,
+            "y": 275.045657306163,
+            "w": 6.800000000000001,
+            "h": 6.800000000000001,
+            "radius": 3.4000000000000004,
+            "scale": 0.2
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 0.2,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "solid",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 551.1192626953125,
+            "y": 583.2862548828125,
+            "w": 193.800048828125,
+            "h": 276.841064453125
+          },
+          "provided": {
+            "x": 551.1192842942346,
+            "y": 583.286282306163,
+            "w": 193.79999999999998,
+            "h": 276.83437499999997,
+            "scale": 0.85
+          },
+          "maxDelta": 0.006689453125034106
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 792.9442749023438,
+            "y": 626.888671875,
+            "w": 28.9000244140625,
+            "h": 28.89996337890625
+          },
+          "provided": {
+            "x": 792.9442842942346,
+            "y": 626.888626056163,
+            "w": 28.9,
+            "h": 28.9,
+            "scale": 0.85
+          },
+          "maxDelta": 0.00004581883695209399
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 551.1192842942346,
+            "y": 583.286282306163,
+            "w": 193.79999999999998,
+            "h": 276.83437499999997,
+            "radius": 10.2,
+            "scale": 0.85
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 792.9442842942346,
+            "y": 626.888626056163,
+            "w": 28.9,
+            "h": 28.9,
+            "radius": 14.45,
+            "scale": 0.85
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 0.85,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "solid",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 563.1192626953125,
+            "y": 656.7862548828125,
+            "w": 228,
+            "h": 325.6953125
+          },
+          "provided": {
+            "x": 563.1192842942346,
+            "y": 656.786282306163,
+            "w": 228,
+            "h": 325.6875,
+            "scale": 1
+          },
+          "maxDelta": 0.0078125
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 847.6192626953125,
+            "y": 708.0831298828125,
+            "w": 34,
+            "h": 34
+          },
+          "provided": {
+            "x": 847.6192842942346,
+            "y": 708.083157306163,
+            "w": 34,
+            "h": 34,
+            "scale": 1
+          },
+          "maxDelta": 0.000027423350502431276
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 563.1192842942346,
+            "y": 656.786282306163,
+            "w": 228,
+            "h": 325.6875,
+            "radius": 12,
+            "scale": 1
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 847.6192842942346,
+            "y": 708.083157306163,
+            "w": 34,
+            "h": 34,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 1,
+      "focusRetained": true,
+      "inputRetained": true
+    },
+    {
+      "backend": "solid",
+      "geometryMode": "provided",
+      "stageReads": 0,
+      "comparisons": [
+        {
+          "id": "workspace-sidebar",
+          "actual": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696
+          },
+          "provided": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "scale": 1
+          },
+          "maxDelta": 0
+        },
+        {
+          "id": "card-building",
+          "actual": {
+            "x": 643.1192626953125,
+            "y": 1146.7862548828125,
+            "w": 456,
+            "h": 651.390625
+          },
+          "provided": {
+            "x": 643.1192842942346,
+            "y": 1146.786282306163,
+            "w": 456,
+            "h": 651.375,
+            "scale": 2
+          },
+          "maxDelta": 0.015625
+        },
+        {
+          "id": "edge-building-fire",
+          "actual": {
+            "x": 1212.1192626953125,
+            "y": 1249.3800048828125,
+            "w": 68,
+            "h": 68
+          },
+          "provided": {
+            "x": 1212.1192842942346,
+            "y": 1249.380032306163,
+            "w": 68,
+            "h": 68,
+            "scale": 2
+          },
+          "maxDelta": 0.000027423350502431276
+        }
+      ],
+      "submitted": [
+        {
+          "id": "workspace-sidebar",
+          "bounds": {
+            "x": 76,
+            "y": 12,
+            "w": 236,
+            "h": 696,
+            "radius": 17,
+            "scale": 1
+          },
+          "cssRadius": 17
+        },
+        {
+          "id": "card-building",
+          "bounds": {
+            "x": 643.1192842942346,
+            "y": 1146.786282306163,
+            "w": 456,
+            "h": 651.375,
+            "radius": 24,
+            "scale": 2
+          },
+          "cssRadius": 12
+        },
+        {
+          "id": "edge-building-fire",
+          "bounds": {
+            "x": 1212.1192842942346,
+            "y": 1249.380032306163,
+            "w": 68,
+            "h": 68,
+            "radius": 34,
+            "scale": 2
+          },
+          "cssRadius": 17
+        }
+      ],
+      "registered": 3,
+      "gpuCanvases": 0,
+      "handles": 16,
+      "overflow": false,
+      "zoom": 2,
+      "focusRetained": true,
+      "inputRetained": true
+    }
+  ],
+  "invalidFallback": {
+    "mode": "dom",
+    "reason": "Geometry snapshot incomplete or invalid; measuring DOM",
+    "backend": "solid"
+  },
+  "thrownFallback": {
+    "mode": "dom",
+    "reason": "QA provider failure",
+    "backend": "solid"
+  },
+  "getterFallback": {
+    "mode": "dom",
+    "reason": "QA invalid geometry getter",
+    "backend": "solid"
+  },
+  "painterFallback": {
+    "backend": "solid",
+    "reason": "QA scene callback failed"
+  },
+  "painterRecovery": {
+    "backend": "solid",
+    "reason": null
+  },
+  "passed": true
+}

@@ -1,0 +1,209 @@
+{
+  "baselineRevision": "8cdf48d117d82273c7dd445da5a09cfad7f05569",
+  "cleanup": [
+    {
+      "backend": "webgpu",
+      "blurRadii": 0,
+      "buffers": 0,
+      "canvasCount": 0,
+      "disposed": true,
+      "groups": 0,
+      "listeners": 0,
+      "surfaces": 0
+    },
+    {
+      "backend": "webgpu",
+      "blurRadii": 0,
+      "buffers": 0,
+      "canvasCount": 0,
+      "disposed": true,
+      "groups": 0,
+      "listeners": 0,
+      "surfaces": 0
+    },
+    {
+      "backend": "webgl",
+      "blurRadii": 0,
+      "buffers": 0,
+      "canvasCount": 0,
+      "disposed": true,
+      "groups": 0,
+      "listeners": 0,
+      "surfaces": 0
+    },
+    {
+      "backend": "webgl",
+      "blurRadii": 0,
+      "buffers": 0,
+      "canvasCount": 0,
+      "disposed": true,
+      "groups": 0,
+      "listeners": 0,
+      "surfaces": 0
+    }
+  ],
+  "environment": {
+    "devicePixelRatio": 1,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "viewport": [
+      1440,
+      1024
+    ]
+  },
+  "errors": [],
+  "kind": "bounded-stress",
+  "passed": true,
+  "protocol": {
+    "dpr": 2,
+    "frames": 600,
+    "instances": 4,
+    "maxSurfaces": 50,
+    "note": "About ten seconds of foreground rAF; not a long-term soak or driver memory measurement"
+  },
+  "rows": [
+    {
+      "active": "webgpu",
+      "backend": "webgpu",
+      "blurRadii": 1,
+      "buffers": 50,
+      "canvases": 2,
+      "frame": 199,
+      "geometryMode": "provided",
+      "groups": 50,
+      "surfaces": 50
+    },
+    {
+      "active": "webgpu",
+      "backend": "webgpu",
+      "blurRadii": 1,
+      "buffers": 50,
+      "canvases": 2,
+      "frame": 199,
+      "geometryMode": "provided",
+      "groups": 50,
+      "surfaces": 50
+    },
+    {
+      "active": "webgl",
+      "backend": "webgl",
+      "blurRadii": 1,
+      "buffers": 0,
+      "canvases": 2,
+      "frame": 199,
+      "geometryMode": "provided",
+      "groups": 0,
+      "surfaces": 50
+    },
+    {
+      "active": "webgl",
+      "backend": "webgl",
+      "blurRadii": 1,
+      "buffers": 0,
+      "canvases": 2,
+      "frame": 199,
+      "geometryMode": "provided",
+      "groups": 0,
+      "surfaces": 50
+    },
+    {
+      "active": "webgpu",
+      "backend": "webgpu",
+      "blurRadii": 1,
+      "buffers": 50,
+      "canvases": 2,
+      "frame": 399,
+      "geometryMode": "provided",
+      "groups": 50,
+      "surfaces": 50
+    },
+    {
+      "active": "webgpu",
+      "backend": "webgpu",
+      "blurRadii": 1,
+      "buffers": 50,
+      "canvases": 2,
+      "frame": 399,
+      "geometryMode": "provided",
+      "groups": 50,
+      "surfaces": 50
+    },
+    {
+      "active": "webgl",
+      "backend": "webgl",
+      "blurRadii": 1,
+      "buffers": 0,
+      "canvases": 2,
+      "frame": 399,
+      "geometryMode": "provided",
+      "groups": 0,
+      "surfaces": 50
+    },
+    {
+      "active": "webgl",
+      "backend": "webgl",
+      "blurRadii": 1,
+      "buffers": 0,
+      "canvases": 2,
+      "frame": 399,
+      "geometryMode": "provided",
+      "groups": 0,
+      "surfaces": 50
+    },
+    {
+      "active": "webgpu",
+      "backend": "webgpu",
+      "blurRadii": 1,
+      "buffers": 50,
+      "canvases": 2,
+      "frame": 599,
+      "geometryMode": "provided",
+      "groups": 50,
+      "surfaces": 50
+    },
+    {
+      "active": "webgpu",
+      "backend": "webgpu",
+      "blurRadii": 1,
+      "buffers": 50,
+      "canvases": 2,
+      "frame": 599,
+      "geometryMode": "provided",
+      "groups": 50,
+      "surfaces": 50
+    },
+    {
+      "active": "webgl",
+      "backend": "webgl",
+      "blurRadii": 1,
+      "buffers": 0,
+      "canvases": 2,
+      "frame": 599,
+      "geometryMode": "provided",
+      "groups": 0,
+      "surfaces": 50
+    },
+    {
+      "active": "webgl",
+      "backend": "webgl",
+      "blurRadii": 1,
+      "buffers": 0,
+      "canvases": 2,
+      "frame": 599,
+      "geometryMode": "provided",
+      "groups": 0,
+      "surfaces": 50
+    }
+  ],
+  "schema": "liquid-glass-gpu-experiment",
+  "sourceFailure": {
+    "backendAfter": "webgpu",
+    "backendBefore": "webgpu",
+    "sceneReason": "QA scene callback failed",
+    "version": 63
+  },
+  "sourceRecovery": {
+    "backend": "webgpu",
+    "sceneReason": null
+  },
+  "version": 1
+}

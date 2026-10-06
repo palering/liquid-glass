@@ -1,0 +1,1248 @@
+{
+  "kind": "cpu-shader-analysis",
+  "baselineSource": "bc2a5ad508a4350aac24d05a9c3519188573ee974398a39322f839ee46434bb7",
+  "gaussian": {
+    "rows": [
+      {
+        "signal": "impulse",
+        "sigma": 0.1,
+        "step": 1,
+        "maxDelta": 1.3838965267367769e-87,
+        "finite": true
+      },
+      {
+        "signal": "impulse",
+        "sigma": 0.1,
+        "step": 0.75,
+        "maxDelta": 6.919482633683884e-88,
+        "finite": true
+      },
+      {
+        "signal": "impulse",
+        "sigma": 0.5,
+        "step": 1,
+        "maxDelta": 6.505213034913027e-19,
+        "finite": true
+      },
+      {
+        "signal": "impulse",
+        "sigma": 0.5,
+        "step": 0.75,
+        "maxDelta": 0.00026386507641543155,
+        "finite": true
+      },
+      {
+        "signal": "impulse",
+        "sigma": 1,
+        "step": 1,
+        "maxDelta": 1.457167719820518e-16,
+        "finite": true
+      },
+      {
+        "signal": "impulse",
+        "sigma": 1,
+        "step": 0.75,
+        "maxDelta": 0.0539909662243053,
+        "finite": true
+      },
+      {
+        "signal": "impulse",
+        "sigma": 1.5,
+        "step": 1,
+        "maxDelta": 5.551115123125783e-17,
+        "finite": true
+      },
+      {
+        "signal": "impulse",
+        "sigma": 1.5,
+        "step": 0.75,
+        "maxDelta": 0.10648266850745078,
+        "finite": true
+      },
+      {
+        "signal": "impulse",
+        "sigma": 2.25,
+        "step": 1,
+        "maxDelta": 1.942890293094024e-16,
+        "finite": true
+      },
+      {
+        "signal": "impulse",
+        "sigma": 2.25,
+        "step": 0.75,
+        "maxDelta": 0.08031640836428444,
+        "finite": true
+      },
+      {
+        "signal": "impulse",
+        "sigma": 3,
+        "step": 1,
+        "maxDelta": 5.551115123125783e-17,
+        "finite": true
+      },
+      {
+        "signal": "impulse",
+        "sigma": 3,
+        "step": 0.75,
+        "maxDelta": 0.06289899173015534,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 0.1,
+        "step": 1,
+        "maxDelta": 0,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 0.1,
+        "step": 0.75,
+        "maxDelta": 0,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 0.5,
+        "step": 1,
+        "maxDelta": 2.220446049250313e-16,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 0.5,
+        "step": 0.75,
+        "maxDelta": 0.0005277301528308909,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 1,
+        "step": 1,
+        "maxDelta": 9.992007221626409e-16,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 1,
+        "step": 0.75,
+        "maxDelta": 0.10798192637272874,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 1.5,
+        "step": 1,
+        "maxDelta": 4.440892098500626e-16,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 1.5,
+        "step": 0.75,
+        "maxDelta": 0.21287611692379765,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 2.25,
+        "step": 1,
+        "maxDelta": 3.885780586188048e-16,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 2.25,
+        "step": 0.75,
+        "maxDelta": 0.1555770414460001,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 3,
+        "step": 1,
+        "maxDelta": 1.0547118733938987e-15,
+        "finite": true
+      },
+      {
+        "signal": "checker",
+        "sigma": 3,
+        "step": 0.75,
+        "maxDelta": 0.10973209685569951,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 0.1,
+        "step": 1,
+        "maxDelta": 0,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 0.1,
+        "step": 0.75,
+        "maxDelta": 0,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 0.5,
+        "step": 1,
+        "maxDelta": 2.220446049250313e-16,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 0.5,
+        "step": 0.75,
+        "maxDelta": 0.000004397751273588213,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 1,
+        "step": 1,
+        "maxDelta": 3.3306690738754696e-16,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 1,
+        "step": 0.75,
+        "maxDelta": 0.000899849437071748,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 1.5,
+        "step": 1,
+        "maxDelta": 4.440892098500626e-16,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 1.5,
+        "step": 0.75,
+        "maxDelta": 0.0017747111417908412,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 2.25,
+        "step": 1,
+        "maxDelta": 2.220446049250313e-16,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 2.25,
+        "step": 0.75,
+        "maxDelta": 0.0013386068060716738,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 3,
+        "step": 1,
+        "maxDelta": 2.220446049250313e-16,
+        "finite": true
+      },
+      {
+        "signal": "ramp",
+        "sigma": 3,
+        "step": 0.75,
+        "maxDelta": 0.0010483165288359686,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 0.1,
+        "step": 1,
+        "maxDelta": 2.350988701644575e-38,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 0.1,
+        "step": 0.75,
+        "maxDelta": 0,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 0.5,
+        "step": 1,
+        "maxDelta": 2.220446049250313e-16,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 0.5,
+        "step": 0.75,
+        "maxDelta": 0.0003694111069815764,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 1,
+        "step": 1,
+        "maxDelta": 4.996003610813204e-16,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 1,
+        "step": 0.75,
+        "maxDelta": 0.07558735508362247,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 1.5,
+        "step": 1,
+        "maxDelta": 2.220446049250313e-16,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 1.5,
+        "step": 0.75,
+        "maxDelta": 0.14911053178071426,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 2.25,
+        "step": 1,
+        "maxDelta": 4.440892098500626e-16,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 2.25,
+        "step": 0.75,
+        "maxDelta": 0.11442005195967286,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 3,
+        "step": 1,
+        "maxDelta": 7.216449660063518e-16,
+        "finite": true
+      },
+      {
+        "signal": "noise",
+        "sigma": 3,
+        "step": 0.75,
+        "maxDelta": 0.0946250371474221,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 0.1,
+        "step": 1,
+        "maxDelta": 0,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 0.1,
+        "step": 0.75,
+        "maxDelta": 0,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 0.5,
+        "step": 1,
+        "maxDelta": 1.1102230246251565e-16,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 0.5,
+        "step": 0.75,
+        "maxDelta": 1.1102230246251565e-16,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 1,
+        "step": 1,
+        "maxDelta": 1.1102230246251565e-16,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 1,
+        "step": 0.75,
+        "maxDelta": 1.1102230246251565e-16,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 1.5,
+        "step": 1,
+        "maxDelta": 5.551115123125783e-17,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 1.5,
+        "step": 0.75,
+        "maxDelta": 5.551115123125783e-17,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 2.25,
+        "step": 1,
+        "maxDelta": 1.6653345369377348e-16,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 2.25,
+        "step": 0.75,
+        "maxDelta": 1.6653345369377348e-16,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 3,
+        "step": 1,
+        "maxDelta": 1.1102230246251565e-16,
+        "finite": true
+      },
+      {
+        "signal": "constant",
+        "sigma": 3,
+        "step": 0.75,
+        "maxDelta": 1.1102230246251565e-16,
+        "finite": true
+      }
+    ],
+    "unitTexelMaxDelta": 1.0547118733938987e-15,
+    "fractionalStepMaxDelta": 0.21287611692379765,
+    "passed": true
+  },
+  "profiles": [
+    {
+      "t": 0,
+      "hermite": {
+        "height": 0,
+        "slope": 0
+      },
+      "halfCircle": {
+        "height": 0,
+        "slope": null
+      },
+      "quarticConvex": {
+        "height": 0.01,
+        "slope": 200
+      }
+    },
+    {
+      "t": 0.001,
+      "hermite": {
+        "height": 0.000001499,
+        "slope": 0.002997
+      },
+      "halfCircle": {
+        "height": 0.04471017781221632,
+        "slope": 22.34390577008709
+      },
+      "quarticConvex": {
+        "height": 0.0631981328759004,
+        "slope": 31.55165995039044
+      }
+    },
+    {
+      "t": 0.01,
+      "hermite": {
+        "height": 0.00014900000000000002,
+        "slope": 0.029699999999999997
+      },
+      "halfCircle": {
+        "height": 0.14106735979665885,
+        "slope": 7.017923929582525
+      },
+      "quarticConvex": {
+        "height": 0.19850438282315092,
+        "slope": 9.776096489158599
+      }
+    },
+    {
+      "t": 0.1,
+      "hermite": {
+        "height": 0.014000000000000002,
+        "slope": 0.2700000000000001
+      },
+      "halfCircle": {
+        "height": 0.43588989435406733,
+        "slope": 2.064741604835056
+      },
+      "quarticConvex": {
+        "height": 0.58642987645583,
+        "slope": 2.486230764386741
+      }
+    },
+    {
+      "t": 0.25,
+      "hermite": {
+        "height": 0.078125,
+        "slope": 0.5625
+      },
+      "halfCircle": {
+        "height": 0.6614378277661477,
+        "slope": 1.1338934190276817
+      },
+      "quarticConvex": {
+        "height": 0.8267972847076845,
+        "slope": 1.0205040771249136
+      }
+    },
+    {
+      "t": 0.5,
+      "hermite": {
+        "height": 0.25,
+        "slope": 0.75
+      },
+      "halfCircle": {
+        "height": 0.8660254037844386,
+        "slope": 0.5773502691896258
+      },
+      "quarticConvex": {
+        "height": 0.9682458365518543,
+        "slope": 0.2581988897471611
+      }
+    },
+    {
+      "t": 0.75,
+      "hermite": {
+        "height": 0.421875,
+        "slope": 0.5625
+      },
+      "halfCircle": {
+        "height": 0.9682458365518543,
+        "slope": 0.2581988897471611
+      },
+      "quarticConvex": {
+        "height": 0.998044963916957,
+        "slope": 0.03131121455425748
+      }
+    },
+    {
+      "t": 0.99,
+      "hermite": {
+        "height": 0.499851,
+        "slope": 0.029700000000000025
+      },
+      "halfCircle": {
+        "height": 0.9999499987499375,
+        "slope": 0.010000500037503133
+      },
+      "quarticConvex": {
+        "height": 0.9999999949999999,
+        "slope": 0.0000020000000100000057
+      }
+    },
+    {
+      "t": 1,
+      "hermite": {
+        "height": 0.5,
+        "slope": 0
+      },
+      "halfCircle": {
+        "height": 1,
+        "slope": 0
+      },
+      "quarticConvex": {
+        "height": 1,
+        "slope": 0
+      }
+    }
+  ],
+  "memory": [
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1,
+      "physical": [
+        960,
+        540
+      ],
+      "radii": [
+        0
+      ],
+      "layered": false,
+      "chains": [],
+      "ownedTextureBytes": 2073600,
+      "ownedTextureMiB": 1.9775390625,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1,
+      "physical": [
+        960,
+        540
+      ],
+      "radii": [
+        0
+      ],
+      "layered": true,
+      "chains": [],
+      "ownedTextureBytes": 6220800,
+      "ownedTextureMiB": 5.9326171875,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1,
+      "physical": [
+        960,
+        540
+      ],
+      "radii": [
+        0.5
+      ],
+      "layered": false,
+      "chains": [
+        {
+          "radius": 0.5,
+          "levels": 0,
+          "scale": 1,
+          "sigma": 0.5,
+          "physicalBlurSize": [
+            960,
+            540
+          ],
+          "imagePasses": 2,
+          "texels": 1036800,
+          "bytes": 4147200
+        }
+      ],
+      "ownedTextureBytes": 6220800,
+      "ownedTextureMiB": 5.9326171875,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1,
+      "physical": [
+        960,
+        540
+      ],
+      "radii": [
+        0.5
+      ],
+      "layered": true,
+      "chains": [
+        {
+          "radius": 0.5,
+          "levels": 0,
+          "scale": 1,
+          "sigma": 0.5,
+          "physicalBlurSize": [
+            960,
+            540
+          ],
+          "imagePasses": 2,
+          "texels": 1036800,
+          "bytes": 4147200
+        }
+      ],
+      "ownedTextureBytes": 10368000,
+      "ownedTextureMiB": 9.8876953125,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1,
+      "physical": [
+        960,
+        540
+      ],
+      "radii": [
+        3,
+        9,
+        20
+      ],
+      "layered": false,
+      "chains": [
+        {
+          "radius": 3,
+          "levels": 0,
+          "scale": 1,
+          "sigma": 3,
+          "physicalBlurSize": [
+            960,
+            540
+          ],
+          "imagePasses": 2,
+          "texels": 1036800,
+          "bytes": 4147200
+        },
+        {
+          "radius": 9,
+          "levels": 2,
+          "scale": 4,
+          "sigma": 2.25,
+          "physicalBlurSize": [
+            240,
+            135
+          ],
+          "imagePasses": 4,
+          "texels": 226800,
+          "bytes": 907200
+        },
+        {
+          "radius": 20,
+          "levels": 3,
+          "scale": 8,
+          "sigma": 2.5,
+          "physicalBlurSize": [
+            120,
+            68
+          ],
+          "imagePasses": 5,
+          "texels": 186480,
+          "bytes": 745920
+        }
+      ],
+      "ownedTextureBytes": 7873920,
+      "ownedTextureMiB": 7.5091552734375,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1,
+      "physical": [
+        960,
+        540
+      ],
+      "radii": [
+        3,
+        9,
+        20
+      ],
+      "layered": true,
+      "chains": [
+        {
+          "radius": 3,
+          "levels": 0,
+          "scale": 1,
+          "sigma": 3,
+          "physicalBlurSize": [
+            960,
+            540
+          ],
+          "imagePasses": 2,
+          "texels": 1036800,
+          "bytes": 4147200
+        },
+        {
+          "radius": 9,
+          "levels": 2,
+          "scale": 4,
+          "sigma": 2.25,
+          "physicalBlurSize": [
+            240,
+            135
+          ],
+          "imagePasses": 4,
+          "texels": 226800,
+          "bytes": 907200
+        },
+        {
+          "radius": 20,
+          "levels": 3,
+          "scale": 8,
+          "sigma": 2.5,
+          "physicalBlurSize": [
+            120,
+            68
+          ],
+          "imagePasses": 5,
+          "texels": 186480,
+          "bytes": 745920
+        }
+      ],
+      "ownedTextureBytes": 12021120,
+      "ownedTextureMiB": 11.4642333984375,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1.5,
+      "physical": [
+        1440,
+        810
+      ],
+      "radii": [
+        0
+      ],
+      "layered": false,
+      "chains": [],
+      "ownedTextureBytes": 4665600,
+      "ownedTextureMiB": 4.449462890625,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1.5,
+      "physical": [
+        1440,
+        810
+      ],
+      "radii": [
+        0
+      ],
+      "layered": true,
+      "chains": [],
+      "ownedTextureBytes": 13996800,
+      "ownedTextureMiB": 13.348388671875,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1.5,
+      "physical": [
+        1440,
+        810
+      ],
+      "radii": [
+        0.5
+      ],
+      "layered": false,
+      "chains": [
+        {
+          "radius": 0.5,
+          "levels": 0,
+          "scale": 1,
+          "sigma": 0.75,
+          "physicalBlurSize": [
+            1440,
+            810
+          ],
+          "imagePasses": 2,
+          "texels": 2332800,
+          "bytes": 9331200
+        }
+      ],
+      "ownedTextureBytes": 13996800,
+      "ownedTextureMiB": 13.348388671875,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1.5,
+      "physical": [
+        1440,
+        810
+      ],
+      "radii": [
+        0.5
+      ],
+      "layered": true,
+      "chains": [
+        {
+          "radius": 0.5,
+          "levels": 0,
+          "scale": 1,
+          "sigma": 0.75,
+          "physicalBlurSize": [
+            1440,
+            810
+          ],
+          "imagePasses": 2,
+          "texels": 2332800,
+          "bytes": 9331200
+        }
+      ],
+      "ownedTextureBytes": 23328000,
+      "ownedTextureMiB": 22.247314453125,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1.5,
+      "physical": [
+        1440,
+        810
+      ],
+      "radii": [
+        3,
+        9,
+        20
+      ],
+      "layered": false,
+      "chains": [
+        {
+          "radius": 3,
+          "levels": 1,
+          "scale": 2,
+          "sigma": 2.25,
+          "physicalBlurSize": [
+            720,
+            405
+          ],
+          "imagePasses": 3,
+          "texels": 874800,
+          "bytes": 3499200
+        },
+        {
+          "radius": 9,
+          "levels": 3,
+          "scale": 8,
+          "sigma": 1.6875,
+          "physicalBlurSize": [
+            180,
+            102
+          ],
+          "imagePasses": 5,
+          "texels": 419760,
+          "bytes": 1679040
+        },
+        {
+          "radius": 20,
+          "levels": 4,
+          "scale": 16,
+          "sigma": 1.875,
+          "physicalBlurSize": [
+            90,
+            51
+          ],
+          "imagePasses": 6,
+          "texels": 396810,
+          "bytes": 1587240
+        }
+      ],
+      "ownedTextureBytes": 11431080,
+      "ownedTextureMiB": 10.901527404785156,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 1.5,
+      "physical": [
+        1440,
+        810
+      ],
+      "radii": [
+        3,
+        9,
+        20
+      ],
+      "layered": true,
+      "chains": [
+        {
+          "radius": 3,
+          "levels": 1,
+          "scale": 2,
+          "sigma": 2.25,
+          "physicalBlurSize": [
+            720,
+            405
+          ],
+          "imagePasses": 3,
+          "texels": 874800,
+          "bytes": 3499200
+        },
+        {
+          "radius": 9,
+          "levels": 3,
+          "scale": 8,
+          "sigma": 1.6875,
+          "physicalBlurSize": [
+            180,
+            102
+          ],
+          "imagePasses": 5,
+          "texels": 419760,
+          "bytes": 1679040
+        },
+        {
+          "radius": 20,
+          "levels": 4,
+          "scale": 16,
+          "sigma": 1.875,
+          "physicalBlurSize": [
+            90,
+            51
+          ],
+          "imagePasses": 6,
+          "texels": 396810,
+          "bytes": 1587240
+        }
+      ],
+      "ownedTextureBytes": 20762280,
+      "ownedTextureMiB": 19.800453186035156,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 2,
+      "physical": [
+        1920,
+        1080
+      ],
+      "radii": [
+        0
+      ],
+      "layered": false,
+      "chains": [],
+      "ownedTextureBytes": 8294400,
+      "ownedTextureMiB": 7.91015625,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 2,
+      "physical": [
+        1920,
+        1080
+      ],
+      "radii": [
+        0
+      ],
+      "layered": true,
+      "chains": [],
+      "ownedTextureBytes": 24883200,
+      "ownedTextureMiB": 23.73046875,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 2,
+      "physical": [
+        1920,
+        1080
+      ],
+      "radii": [
+        0.5
+      ],
+      "layered": false,
+      "chains": [
+        {
+          "radius": 0.5,
+          "levels": 0,
+          "scale": 1,
+          "sigma": 1,
+          "physicalBlurSize": [
+            1920,
+            1080
+          ],
+          "imagePasses": 2,
+          "texels": 4147200,
+          "bytes": 16588800
+        }
+      ],
+      "ownedTextureBytes": 24883200,
+      "ownedTextureMiB": 23.73046875,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 2,
+      "physical": [
+        1920,
+        1080
+      ],
+      "radii": [
+        0.5
+      ],
+      "layered": true,
+      "chains": [
+        {
+          "radius": 0.5,
+          "levels": 0,
+          "scale": 1,
+          "sigma": 1,
+          "physicalBlurSize": [
+            1920,
+            1080
+          ],
+          "imagePasses": 2,
+          "texels": 4147200,
+          "bytes": 16588800
+        }
+      ],
+      "ownedTextureBytes": 41472000,
+      "ownedTextureMiB": 39.55078125,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 2,
+      "physical": [
+        1920,
+        1080
+      ],
+      "radii": [
+        3,
+        9,
+        20
+      ],
+      "layered": false,
+      "chains": [
+        {
+          "radius": 3,
+          "levels": 1,
+          "scale": 2,
+          "sigma": 3,
+          "physicalBlurSize": [
+            960,
+            540
+          ],
+          "imagePasses": 3,
+          "texels": 1555200,
+          "bytes": 6220800
+        },
+        {
+          "radius": 9,
+          "levels": 3,
+          "scale": 8,
+          "sigma": 2.25,
+          "physicalBlurSize": [
+            240,
+            135
+          ],
+          "imagePasses": 5,
+          "texels": 745200,
+          "bytes": 2980800
+        },
+        {
+          "radius": 20,
+          "levels": 4,
+          "scale": 16,
+          "sigma": 2.5,
+          "physicalBlurSize": [
+            120,
+            68
+          ],
+          "imagePasses": 6,
+          "texels": 704880,
+          "bytes": 2819520
+        }
+      ],
+      "ownedTextureBytes": 20315520,
+      "ownedTextureMiB": 19.3743896484375,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    },
+    {
+      "css": [
+        960,
+        540
+      ],
+      "dpr": 2,
+      "physical": [
+        1920,
+        1080
+      ],
+      "radii": [
+        3,
+        9,
+        20
+      ],
+      "layered": true,
+      "chains": [
+        {
+          "radius": 3,
+          "levels": 1,
+          "scale": 2,
+          "sigma": 3,
+          "physicalBlurSize": [
+            960,
+            540
+          ],
+          "imagePasses": 3,
+          "texels": 1555200,
+          "bytes": 6220800
+        },
+        {
+          "radius": 9,
+          "levels": 3,
+          "scale": 8,
+          "sigma": 2.25,
+          "physicalBlurSize": [
+            240,
+            135
+          ],
+          "imagePasses": 5,
+          "texels": 745200,
+          "bytes": 2980800
+        },
+        {
+          "radius": 20,
+          "levels": 4,
+          "scale": 16,
+          "sigma": 2.5,
+          "physicalBlurSize": [
+            120,
+            68
+          ],
+          "imagePasses": 6,
+          "texels": 704880,
+          "bytes": 2819520
+        }
+      ],
+      "ownedTextureBytes": 36904320,
+      "ownedTextureMiB": 35.1947021484375,
+      "note": "Exact logical RGBA8 texel inventory for current allocation dimensions; excludes driver alignment, swapchain, canvas/decoded images and buffers"
+    }
+  ]
+}

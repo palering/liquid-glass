@@ -28,8 +28,10 @@
   },
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 4174 --strictPort",
-    "predev": "node scripts/fingerprint.mjs && node scripts/prepare-lab.mjs",
-    "prebuild": "node scripts/fingerprint.mjs && node scripts/prepare-lab.mjs",
+    "predev": "node scripts/shaders.mjs --check && node scripts/fingerprint.mjs && node scripts/prepare-lab.mjs",
+    "prebuild": "node scripts/shaders.mjs --check && node scripts/fingerprint.mjs && node scripts/prepare-lab.mjs",
+    "shaders:generate": "node scripts/shaders.mjs",
+    "shaders:check": "node scripts/shaders.mjs --check",
     "build": "vite build && vite build --config vite.lib.config.js",
     "test": "node --test tests/*.test.js",
     "typecheck": "tsc --noEmit",

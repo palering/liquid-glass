@@ -1,0 +1,48 @@
+{
+  "compiler": "naga-30.0.0",
+  "entry": "main",
+  "glsl": "#version 300 es\n\nprecision highp float;\nprecision highp int;\n\nstruct U {\n    vec2 step_;\n    vec2 size;\n    float sigma;\n    float mode;\n    vec2 pad;\n};\nuniform highp sampler2D _group_0_binding_0_fs;\n\nlayout(std140) uniform U_block_0Fragment { U _group_0_binding_2_fs; };\n\nlayout(location = 0) out vec4 _fs2p_location0;\n\nvoid main() {\n    vec4 position = gl_FragCoord;\n    vec4 color = vec4(0.0);\n    float total = 1.0;\n    int i = 1;\n    vec2 _e4 = _group_0_binding_2_fs.size;\n    vec2 uv = (position.xy / _e4);\n    float _e8 = _group_0_binding_2_fs.mode;\n    if ((_e8 == 1.0)) {\n        vec4 _e14 = textureLod(_group_0_binding_0_fs, vec2(uv), 0.0);\n        _fs2p_location0 = _e14;\n        return;\n    }\n    float _e17 = _group_0_binding_2_fs.mode;\n    if ((_e17 == 2.0)) {\n        vec2 _e24 = _group_0_binding_2_fs.step_;\n        vec4 _e27 = textureLod(_group_0_binding_0_fs, vec2((uv + _e24)), 0.0);\n        vec2 _e32 = _group_0_binding_2_fs.step_;\n        vec4 _e35 = textureLod(_group_0_binding_0_fs, vec2((uv - _e32)), 0.0);\n        float _e42 = _group_0_binding_2_fs.step_.x;\n        float _e46 = _group_0_binding_2_fs.step_.y;\n        vec4 _e51 = textureLod(_group_0_binding_0_fs, vec2((uv + vec2(_e42, -(_e46)))), 0.0);\n        float _e58 = _group_0_binding_2_fs.step_.x;\n        float _e63 = _group_0_binding_2_fs.step_.y;\n        vec4 _e67 = textureLod(_group_0_binding_0_fs, vec2((uv + vec2(-(_e58), _e63))), 0.0);\n        _fs2p_location0 = ((((_e27 + _e35) + _e51) + _e67) * 0.25);\n        return;\n    }\n    vec4 _e74 = textureLod(_group_0_binding_0_fs, vec2(uv), 0.0);\n    color = _e74;\n    bool loop_init = true;\n    while(true) {\n        if (!loop_init) {\n            int _e138 = i;\n            i = (_e138 + 2);\n        }\n        loop_init = false;\n        int _e80 = i;\n        if ((_e80 <= 12)) {\n        } else {\n            break;\n        }\n        {\n            int _e83 = i;\n            float t = float(_e83);\n            float _e90 = _group_0_binding_2_fs.sigma;\n            float _e93 = _group_0_binding_2_fs.sigma;\n            float a = exp((((-0.5 * t) * t) / (_e90 * _e93)));\n            float next = (t + 1.0);\n            float _e104 = _group_0_binding_2_fs.sigma;\n            float _e107 = _group_0_binding_2_fs.sigma;\n            float b = exp((((-0.5 * next) * next) / (_e104 * _e107)));\n            float weight = (a + b);\n            if ((weight > 0.0)) {\n                vec2 _e116 = _group_0_binding_2_fs.step_;\n                vec2 delta = (_e116 * (t + (b / weight)));\n                vec4 _e120 = color;\n                vec4 _e125 = textureLod(_group_0_binding_0_fs, vec2((uv + delta)), 0.0);\n                vec4 _e130 = textureLod(_group_0_binding_0_fs, vec2((uv - delta)), 0.0);\n                color = (_e120 + ((_e125 + _e130) * weight));\n                float _e134 = total;\n                total = (_e134 + (2.0 * weight));\n            }\n        }\n    }\n    vec4 _e141 = color;\n    float _e142 = total;\n    _fs2p_location0 = (_e141 / vec4(_e142));\n    return;\n}\n\n",
+  "stage": "fragment",
+  "textures": {
+    "image": {
+      "binding": 0,
+      "name": "_group_0_binding_0_fs",
+      "sampler": "sampling"
+    }
+  },
+  "uniforms": {
+    "u": {
+      "binding": 2,
+      "block": "U_block_0Fragment",
+      "fields": {
+        "mode": {
+          "count": 1,
+          "kind": "f32",
+          "offset": 20
+        },
+        "pad": {
+          "count": 2,
+          "kind": "f32",
+          "offset": 24
+        },
+        "sigma": {
+          "count": 1,
+          "kind": "f32",
+          "offset": 16
+        },
+        "size": {
+          "count": 2,
+          "kind": "f32",
+          "offset": 8
+        },
+        "step": {
+          "count": 2,
+          "kind": "f32",
+          "offset": 0
+        }
+      },
+      "size": 32
+    }
+  },
+  "wgsl": "// Shared downsample / Gaussian / blit shader. Original implementation here.\nstruct U {\n  step: vec2f,\n  size: vec2f,\n  sigma: f32,\n  mode: f32,\n  pad: vec2f,\n};\n@group(0) @binding(0) var image: texture_2d<f32>;\n@group(0) @binding(1) var sampling: sampler;\n@group(0) @binding(2) var<uniform> u: U;\n\n@fragment\nfn main(@builtin(position) position: vec4f) -> @location(0) vec4f {\n  // Textures and framebuffer use their backend's native row order.\n  // This ratio serves top-left WebGPU and bottom-left WebGL alike.\n  let uv = position.xy / u.size;\n  if (u.mode == 1.0) {\n    return textureSampleLevel(image, sampling, uv, 0);\n  }\n  if (u.mode == 2.0) {\n    return (\n      textureSampleLevel(image, sampling, uv + u.step, 0) +\n      textureSampleLevel(image, sampling, uv - u.step, 0) +\n      textureSampleLevel(image, sampling, uv + vec2f(u.step.x, -u.step.y), 0) +\n      textureSampleLevel(image, sampling, uv + vec2f(-u.step.x, u.step.y), 0)\n    ) * 0.25;\n  }\n  // Experimental algebraic regrouping: each adjacent texel pair is sampled\n  // through linear filtering. Valid for the unit-texel horizontal/vertical\n  // step used by our Gaussian passes; arbitrary scaled spacing is different.\n  var color = textureSampleLevel(image, sampling, uv, 0);\n  var total = 1.0;\n  for (var i = 1; i <= 12; i += 2) {\n    let t = f32(i);\n    let a = exp(-0.5 * t * t / (u.sigma * u.sigma));\n    let next = t + 1.0;\n    let b = exp(-0.5 * next * next / (u.sigma * u.sigma));\n    let weight = a + b;\n    // Small sigma can underflow both weights; avoid 0/0 offsets.\n    if (weight > 0.0) {\n      let delta = u.step * (t + b / weight);\n      color += (\n        textureSampleLevel(image, sampling, uv + delta, 0) +\n        textureSampleLevel(image, sampling, uv - delta, 0)\n      ) * weight;\n      total += 2.0 * weight;\n    }\n  }\n  return color / total;\n}\n"
+}

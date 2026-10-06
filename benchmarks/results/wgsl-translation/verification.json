@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-06",
+  "source": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25",
+  "nodeTests": {
+    "passed": 19,
+    "failed": 0
+  },
+  "typecheck": true,
+  "libraryBuild": true,
+  "consumerBuild": true,
+  "sitesTests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "package": {
+    "bytes": 36451,
+    "files": 13,
+    "coreImport": true,
+    "reactSSR": true,
+    "domRequiredAtImport": false
+  },
+  "generatedShaderPairs": 4,
+  "regenerationDeterministic": true,
+  "archiveHashesVerified": 20,
+  "publicDocsBrokenLinks": 0,
+  "credentialPatternScan": {
+    "files": 171,
+    "matchedFiles": []
+  },
+  "privatePathScan": {
+    "scope": "src/docs/tools/current-phase archive and main docs",
+    "files": 68,
+    "matchedFiles": []
+  },
+  "gitHead": "8cdf48d117d82273c7dd445da5a09cfad7f05569",
+  "lastKnownRemoteHead": "8cdf48d117d82273c7dd445da5a09cfad7f05569",
+  "pushed": false,
+  "deployed": false
+}

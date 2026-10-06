@@ -5,8 +5,12 @@ import { WebGPURenderer } from "./renderers/webgpu.js";
 import { WebGLRenderer } from "./renderers/webgl.js";
 import { DOMRenderer } from "./renderers/dom.js";
 import { candidates, material, resolveCapture } from "./policy.js";
+import { settingPatch } from "./settings.js";
+import { validateGeometry } from "./geometry.js";
+import {resolvePerformance} from './performance.js';
 export class GlassController {
   constructor(stage, options = {}) {
+    options = settingPatch(options);
     this.stage = stage;
     this.settings = {
       backend: "auto",
@@ -16,6 +20,7 @@ export class GlassController {
       quality: "high",
       enabled: true,
       layered: false,
+      performance: null,
       controls: { blur: 1, refraction: 1, highlight: 1, tint: 0 },
       ...options,
     };
@@ -70,6 +75,7 @@ export class GlassController {
   getState() {
     return {
       ...this.status,
+      performance: this.performanceState ? structuredClone(this.performanceState) : null,
       animating: this.animating ?? false,
       reducedMotion: this.motion.matches,
       capabilities: { ...this.capabilities },
@@ -105,14 +111,34 @@ export class GlassController {
       this.render();
     });
   }
+  setGeometryProvider(provider = null) {
+    if (provider !== null && typeof provider !== "function")
+      throw new TypeError("Geometry provider must be a function or null");
+    this.geometryProvider = provider;
+    this.invalidate();
+  }
+  setScenePainter(painter = null) {
+    if (painter !== null && typeof painter !== "function")
+      throw new TypeError("Scene painter must be a function or null");
+    this.scene.painter = painter;
+    this.invalidateScene();
+  }
+  invalidateScene() {
+    this.needsBackground = true;
+    this.invalidate();
+  }
   async setSettings(patch, { preserveImageRequest = false } = {}) {
     if (this.disposed) return;
+    patch = settingPatch(patch);
     if (patch.background !== undefined && !preserveImageRequest) {
       this.imageGeneration = (this.imageGeneration ?? 0) + 1;
       this.scene.imageToken++;
     }
     const backendChanged =
-      patch.backend !== undefined && patch.backend !== this.settings.backend;
+      (patch.backend !== undefined && patch.backend !== this.settings.backend) ||
+      (this.budgetBlocked && patch.backend !== undefined) ||
+      (patch.performance !== undefined && (this.budgetBlocked ||
+        (patch.performance?.preset==='minimal') !== (this.settings.performance?.preset==='minimal')));
     const captureChanged =
       patch.capture !== undefined && patch.capture !== this.settings.capture;
     this.settings = {
@@ -121,7 +147,8 @@ export class GlassController {
       controls: { ...this.settings.controls, ...patch.controls },
     };
     this.stage.dataset.theme = this.settings.theme;
-    if (["theme", "background", "quality"].some((k) => patch[k] !== undefined))
+    if (patch.performance!==undefined||patch.backend!==undefined){this.budgetBlocked=false;this.performanceState=null;}
+    if (["theme", "background", "quality", "performance"].some((k) => patch[k] !== undefined))
       this.needsBackground = true;
     if (backendChanged) {
       this.blocked.clear();
@@ -148,7 +175,8 @@ export class GlassController {
     };
     this.emit();
     const failures = reason ? [reason] : [];
-    for (const backend of candidates(this.settings.backend, this.blocked)) {
+    const requested=this.settings.performance?.preset==='minimal'||this.budgetBlocked?'solid':this.settings.backend;
+    for (const backend of candidates(requested, this.blocked)) {
       const canvas = document.createElement("canvas");
       canvas.className = "lg-gpu";
       canvas.setAttribute("aria-hidden", "true");
@@ -258,8 +286,11 @@ export class GlassController {
     this.invalidate();
   }
   dpr() {
+    if(this.performanceState)return this.performanceState.dpr;
     return Math.min(
       window.devicePixelRatio || 1,
+      this.settings.performance
+        ? this.settings.performance.overrides.dprCap ?? ({minimal:1,economy:1,balanced:1.5,full:2,custom:2}[this.settings.performance.preset]) :
       this.settings.quality === "low"
         ? 1
         : this.settings.quality === "medium"
@@ -270,41 +301,58 @@ export class GlassController {
   render() {
     if (!this.renderer || this.disposed) return;
     try {
-      const start = performance.now(),
-        r = this.stage.getBoundingClientRect(),
-        dpr = this.dpr();
-      const w = Math.round(r.width * dpr),
-        h = Math.round(r.height * dpr);
-      if (
-        this.needsBackground ||
-        this.scene.canvas.width !== w ||
-        this.scene.canvas.height !== h
-      ) {
-        this.scene.paint(r.width, r.height, dpr, this.settings, this.phase);
-        this.needsBackground = false;
+      const start = performance.now();
+      const registered = this.settings.enabled
+        ? [...this.surfaces.values()].sort((a,b)=>a.zIndex-b.zIndex) : [];
+      let frame;
+      this.status.geometryReason = null;
+      if (this.geometryProvider) {
+        try {
+          frame = this.geometryProvider();
+          if (!validateGeometry(frame, registered)) {
+            frame = null;
+            this.status.geometryReason = "Geometry snapshot incomplete or invalid; measuring DOM";
+          }
+        } catch (e) {
+          frame = null;
+          this.status.geometryReason = String(e.message ?? e);
+        }
       }
-      const source = this.nativeScene ?? this.scene;
-      const surfaces = (
-        this.settings.enabled
-          ? [...this.surfaces.values()].sort((a, b) => a.zIndex - b.zIndex)
-          : []
-      ).map((s) => {
-        const b = s.element.getBoundingClientRect();
+      this.status.geometryMode = frame ? "provided" : "dom";
+      const r = frame ?? this.stage.getBoundingClientRect();
+      const surfaces = registered.map((s) => {
+        const b = frame ? frame.surfaces.get(s.id) : s.element.getBoundingClientRect();
+        const scale = frame ? b.scale ?? 1 : 1;
+        const width = frame ? b.w : b.width, height = frame ? b.h : b.height;
+        const cssRadius = Math.min(this.settings.controls.radius ?? s.radius, width / scale / 2, height / scale / 2);
         return {
           ...s,
+          cssRadius,
           bounds: {
-            x: b.left - r.left,
-            y: b.top - r.top,
-            w: b.width,
-            h: b.height,
-            radius: Math.min(
-              this.settings.controls.radius ?? s.radius,
-              b.width / 2,
-              b.height / 2,
-            ),
+            x: frame ? b.x : b.left - r.left,
+            y: frame ? b.y : b.top - r.top,
+            w: width, h: height, radius: cssRadius * scale,
+            ...(frame ? { scale } : {}),
           },
         };
       });
+      const visible=surfaces.filter(s=>s.bounds.w>0&&s.bounds.h>0&&s.bounds.x<r.width&&s.bounds.y<r.height&&s.bounds.x+s.bounds.w>0&&s.bounds.y+s.bounds.h>0);
+      const plan=resolvePerformance(this.settings,r.width,r.height,window.devicePixelRatio||1,visible.map(s=>s.kind),this.budgetBlocked?this.budgetBackend:this.status.activeBackend,(this.budgetBlocked?this.budgetMaxDimension:this.renderer.maxTextureDimension)??Infinity);
+      if(this.budgetBlocked){plan.requiredTextureBytes=plan.estimatedTextureBytes;plan.estimatedTextureBytes=0;plan.adjustmentReasons.push('budget-solid');}
+      this.performanceState=plan;
+      if(this.settings.performance&&plan.budgetExceeded&&['webgpu','webgl'].includes(this.status.activeBackend)){
+        this.budgetBlocked=true;this.budgetBackend=this.status.activeBackend;this.budgetMaxDimension=this.renderer.maxTextureDimension;
+        this.ready=this.selectRenderer('Performance budget exceeded; using solid');return;
+      }
+      if(this.budgetBlocked&&!plan.budgetExceeded){this.budgetBlocked=false;this.ready=this.selectRenderer();return;}
+      const dpr=plan.dpr,w=Math.max(1,Math.round(r.width*dpr)),h=Math.max(1,Math.round(r.height*dpr));
+      const effective=this.settings.performance?{...this.settings,layered:plan.layered,controlsByKind:plan.controlsByKind}:this.settings;
+      if(this.needsBackground||this.scene.canvas.width!==w||this.scene.canvas.height!==h||
+         (this.animationDirty&&(!this.settings.performance||start-(this.lastScenePaint??-Infinity)>=1000/plan.animationHz-1))){
+        this.scene.paint(r.width,r.height,dpr,effective,this.phase);this.needsBackground=false;this.animationDirty=false;this.lastScenePaint=start;
+        this.status.sceneReason=this.scene.painterError;
+      }
+      const source=this.nativeScene??this.scene;
       this.stage.classList.toggle("glass-disabled", !this.settings.enabled);
       for (const s of surfaces) {
         const c = this.settings.controls;
@@ -317,10 +365,10 @@ export class GlassController {
           `${c.shadowBlur ?? 32}px`,
         );
         s.element.style.setProperty("--lg-shadow-y", `${c.shadowY ?? 14}px`);
-        s.element.style.borderRadius = `${s.bounds.radius}px`;
+        s.element.style.borderRadius = `${s.cssRadius}px`;
         s.element.style.setProperty(
           "--lg-highlight",
-          material(s.kind, this.settings.controls).highlight,
+          material(s.kind, plan.controlsByKind[s.kind]??this.settings.controls).highlight,
         );
       }
       if (
@@ -330,7 +378,7 @@ export class GlassController {
         void this.selectSource();
         return;
       }
-      this.renderer.render(source, surfaces, this.settings, dpr);
+      this.renderer.render(source, surfaces, effective, dpr);
       this.draws++;
       this.times.push(performance.now() - start);
       if (this.times.length > 60) this.times.shift();
@@ -370,11 +418,12 @@ export class GlassController {
     const tick = () => {
       if (!this.animating || this.disposed) return;
       this.phase += 0.022;
-      this.needsBackground = true;
+      this.animationDirty = true;
       this.invalidate();
       this.animationRaf = requestAnimationFrame(tick);
     };
     if (this.animating) tick();
+    else {this.needsBackground=true;this.invalidate();}
     this.emit();
   }
   async retry() {
@@ -405,5 +454,6 @@ export class GlassController {
     this.scene.canvas.remove();
     this.listeners.clear();
     this.surfaces.clear();
+    this.geometryProvider = null;
   }
 }

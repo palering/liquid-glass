@@ -1,0 +1,24 @@
+{
+  "compiler": "naga-30.0.0",
+  "target": "GLSL ES 300 / WebGL2",
+  "inputs": {
+    "scripts/shaders.mjs": "83f61aa180fbc9a6c470f9e03147d060ac20b065ad85dab152663d093a454978",
+    "src/shaders/image-vertex.wgsl": "34e45e463271fdb9628e912a1c30810cf691266f5cf4a0676709bdb23437eabf",
+    "src/shaders/image.wgsl": "d702ee611a45624f48aa4eb842700f8b58085b106b9fbc61141f777d27855a10",
+    "src/shaders/optics-vertex.wgsl": "cf331f31e1bae4cc5a4fb98add4aa611624202528da0366384c9001c77db3178",
+    "src/shaders/optics.wgsl": "0aacd3d76ddb8d973ba93dbb61484e77421acbb3e7e7edf3f75f6c7c3303cf32",
+    "tools/shader-translator/Cargo.lock": "bf3109a5f0a92170111955b15b8ffaaa08751167223e6cdc9d9932069e039fa5",
+    "tools/shader-translator/Cargo.toml": "f05a9e926db9df64a160334b187ec94da8929d5222d788b573157c9d655bc954",
+    "tools/shader-translator/src/main.rs": "f1ebfef9ea8384aafeb97805bb660b09deb4e13b47f10e546522c4e18466de36",
+    "vendor/studio/src/shaders-wgsl/lib/color.wgsl": "44f28ff18052912bb8484b70abeb1eaa05f578535fb72b37f7763ab9820074b8",
+    "vendor/studio/src/shaders-wgsl/lib/math.wgsl": "5bebade00d25fe1cb475e0dbaddf3264613550371f00c63e9857392f6d6d4aad",
+    "vendor/studio/src/shaders-wgsl/lib/sdf.wgsl": "f8b300f9c21b05e64300b7265c35b330d7e8390f7ae2237316ceaa418ba60ba1"
+  },
+  "outputs": {
+    "optics-vertex.json": "4a09a7fd60642762e7d916d8b4421fecb07c3567ec5ac97c786d8a3a33dbd3eb",
+    "optics.json": "2bc57239218084df3bcc4c47a29b82fe24ab93a5d1876012c56b758eb6e460eb",
+    "image-vertex.json": "1231b1853300a6680decd8739fdfee7ea84d6ad234a256a4a5da27dfe1d6b30d",
+    "image.json": "206918267f8d4bb9cde3caebe03ba810239688319532441f3cfb05c4ad54e04d",
+    "packers.js": "9e11c67566678b6d69df0057234850a00cd5a0c6839d41f4e5adb73434590fd4"
+  }
+}

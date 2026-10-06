@@ -61,12 +61,15 @@ execFileSync(
   { cwd: consumer, stdio: "pipe" },
 );
 const code = `
-import { createPreset, looks, GlassController } from '@workspace/liquid-glass';
+import { createPreset, parsePreset, looks, GlassController, performanceProfiles, textureInventory } from '@workspace/liquid-glass';
 import { GlassProvider, GlassSurface } from '@workspace/liquid-glass/react';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 if (typeof document !== 'undefined') throw new Error('SSR test must have no DOM');
-if (createPreset('consumer', {controls:looks.frosted}).version !== 1) throw new Error('Preset export');
+const preset = createPreset('consumer', {controls:looks.frosted, performance:{preset:'economy'}});
+if (preset.version !== 2 || parsePreset(preset).settings.performance.preset !== 'economy') throw new Error('Preset export');
+if (parsePreset({schema:'workspace-liquid-glass',version:1,name:'old',settings:{}}).settings.performance !== null) throw new Error('Preset migration');
+if (performanceProfiles.economy.dprCap !== 1 || textureInventory(100,100,1,[]).bytes !== 40000) throw new Error('Performance exports');
 const html = renderToString(React.createElement(GlassProvider, null, React.createElement(GlassSurface, {as:'button'}, 'hello')));
 if (!html.includes('hello') || !html.includes('lg-stage')) throw new Error('SSR markup');
 console.log(JSON.stringify({coreImport:true,reactSSR:true,domRequiredAtImport:false}));`;

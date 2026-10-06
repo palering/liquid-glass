@@ -1,0 +1,1002 @@
+{
+  "method": "Nearest-rank; all raw samples retained; three repeats pooled within each workload/radius/variant",
+  "quality": [
+    {
+      "file": "paired-quality.json",
+      "cases": 84,
+      "passed": 79,
+      "maxDelta": 14,
+      "alphaMax": 0,
+      "failures": [
+        {
+          "backend": "webgpu",
+          "dpr": 1,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 537600,
+          "changedChannels": 6453,
+          "maxDelta": 14,
+          "alphaMax": 0,
+          "meanDelta": 0.012146577380952381,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 50996,
+          "baselineHash": "bc9c18530c9d93483386ecd19ae30d6812017850e1ad5bc6f171e5260f5e99bd",
+          "currentHash": "abb922f7d6b2a0d7909c7ae1b97285291066b839490fa6152d402ba281ae3ba5",
+          "passed": false
+        },
+        {
+          "backend": "webgpu",
+          "dpr": 2,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 2150400,
+          "changedChannels": 51920,
+          "maxDelta": 9,
+          "alphaMax": 0,
+          "meanDelta": 0.024373604910714285,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 205732,
+          "baselineHash": "0a24c976cecec0caaca6bad800169d67df01a7a0d35fdd2ff6818bb4d915ea50",
+          "currentHash": "4f78dcb575027bb36ab10fc6875af00eef3a6003214c04ecf9ff7128a2ab7f32",
+          "passed": false
+        },
+        {
+          "backend": "webgl",
+          "dpr": 1,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 537600,
+          "changedChannels": 6842,
+          "maxDelta": 9,
+          "alphaMax": 0,
+          "meanDelta": 0.012849702380952382,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 50996,
+          "baselineHash": "2f1acc39a6c81a9b881d18388e7e6c4ea311312062f736d99259c012298762f0",
+          "currentHash": "d55df53c4672e18919fcbba35243027770bc36ccf08fb919352c0187d036c46d",
+          "passed": false
+        },
+        {
+          "backend": "webgl",
+          "dpr": 2,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 2150400,
+          "changedChannels": 55000,
+          "maxDelta": 11,
+          "alphaMax": 0,
+          "meanDelta": 0.025776134672619046,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 205732,
+          "baselineHash": "b881f2b0d548823cfd88263e448eb4ff78d4a968029976ab6f259b95c924de34",
+          "currentHash": "80c41396b32e51cddfa88c237f174d932b58db034dd2e348d0a946bf95244b58",
+          "passed": false
+        },
+        {
+          "backend": "webgl",
+          "dpr": 1,
+          "look": "reading",
+          "background": "image",
+          "shape": "normal",
+          "layered": true,
+          "width": 503,
+          "height": 291,
+          "bytes": 585492,
+          "changedChannels": 873,
+          "maxDelta": 2,
+          "alphaMax": 0,
+          "meanDelta": 0.001492761643199224,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 146373,
+          "baselineHash": "d3ed4c08e0a6c0114361d762083268d23a9509e2b5714ec3d8d96b0e30cfbaf7",
+          "currentHash": "69efe6d7e18f91d8a55ab408a088dbf07fd10dc6b180584c1d40385c668f4854",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "file": "paired-quality-repeat.json",
+      "cases": 84,
+      "passed": 79,
+      "maxDelta": 14,
+      "alphaMax": 0,
+      "failures": [
+        {
+          "backend": "webgpu",
+          "dpr": 1,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 537600,
+          "changedChannels": 6453,
+          "maxDelta": 14,
+          "alphaMax": 0,
+          "meanDelta": 0.012146577380952381,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 50996,
+          "baselineHash": "bc9c18530c9d93483386ecd19ae30d6812017850e1ad5bc6f171e5260f5e99bd",
+          "currentHash": "abb922f7d6b2a0d7909c7ae1b97285291066b839490fa6152d402ba281ae3ba5",
+          "passed": false
+        },
+        {
+          "backend": "webgpu",
+          "dpr": 2,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 2150400,
+          "changedChannels": 51920,
+          "maxDelta": 9,
+          "alphaMax": 0,
+          "meanDelta": 0.024373604910714285,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 205732,
+          "baselineHash": "0a24c976cecec0caaca6bad800169d67df01a7a0d35fdd2ff6818bb4d915ea50",
+          "currentHash": "4f78dcb575027bb36ab10fc6875af00eef3a6003214c04ecf9ff7128a2ab7f32",
+          "passed": false
+        },
+        {
+          "backend": "webgl",
+          "dpr": 1,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 537600,
+          "changedChannels": 6842,
+          "maxDelta": 9,
+          "alphaMax": 0,
+          "meanDelta": 0.012849702380952382,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 50996,
+          "baselineHash": "2f1acc39a6c81a9b881d18388e7e6c4ea311312062f736d99259c012298762f0",
+          "currentHash": "d55df53c4672e18919fcbba35243027770bc36ccf08fb919352c0187d036c46d",
+          "passed": false
+        },
+        {
+          "backend": "webgl",
+          "dpr": 2,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 2150400,
+          "changedChannels": 55000,
+          "maxDelta": 11,
+          "alphaMax": 0,
+          "meanDelta": 0.025776134672619046,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 205732,
+          "baselineHash": "b881f2b0d548823cfd88263e448eb4ff78d4a968029976ab6f259b95c924de34",
+          "currentHash": "80c41396b32e51cddfa88c237f174d932b58db034dd2e348d0a946bf95244b58",
+          "passed": false
+        },
+        {
+          "backend": "webgl",
+          "dpr": 1,
+          "look": "reading",
+          "background": "image",
+          "shape": "normal",
+          "layered": true,
+          "width": 503,
+          "height": 291,
+          "bytes": 585492,
+          "changedChannels": 873,
+          "maxDelta": 2,
+          "alphaMax": 0,
+          "meanDelta": 0.001492761643199224,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 146373,
+          "baselineHash": "d3ed4c08e0a6c0114361d762083268d23a9509e2b5714ec3d8d96b0e30cfbaf7",
+          "currentHash": "69efe6d7e18f91d8a55ab408a088dbf07fd10dc6b180584c1d40385c668f4854",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "file": "paired-quality-final.json",
+      "cases": 84,
+      "passed": 79,
+      "maxDelta": 14,
+      "alphaMax": 0,
+      "failures": [
+        {
+          "backend": "webgpu",
+          "dpr": 1,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 537600,
+          "changedChannels": 6453,
+          "maxDelta": 14,
+          "alphaMax": 0,
+          "meanDelta": 0.012146577380952381,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 50996,
+          "baselineHash": "bc9c18530c9d93483386ecd19ae30d6812017850e1ad5bc6f171e5260f5e99bd",
+          "currentHash": "abb922f7d6b2a0d7909c7ae1b97285291066b839490fa6152d402ba281ae3ba5",
+          "passed": false
+        },
+        {
+          "backend": "webgpu",
+          "dpr": 2,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 2150400,
+          "changedChannels": 51920,
+          "maxDelta": 9,
+          "alphaMax": 0,
+          "meanDelta": 0.024373604910714285,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 205732,
+          "baselineHash": "0a24c976cecec0caaca6bad800169d67df01a7a0d35fdd2ff6818bb4d915ea50",
+          "currentHash": "4f78dcb575027bb36ab10fc6875af00eef3a6003214c04ecf9ff7128a2ab7f32",
+          "passed": false
+        },
+        {
+          "backend": "webgl",
+          "dpr": 1,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 537600,
+          "changedChannels": 6842,
+          "maxDelta": 9,
+          "alphaMax": 0,
+          "meanDelta": 0.012849702380952382,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 50996,
+          "baselineHash": "2f1acc39a6c81a9b881d18388e7e6c4ea311312062f736d99259c012298762f0",
+          "currentHash": "d55df53c4672e18919fcbba35243027770bc36ccf08fb919352c0187d036c46d",
+          "passed": false
+        },
+        {
+          "backend": "webgl",
+          "dpr": 2,
+          "look": "frosted",
+          "background": "image",
+          "shape": "normal",
+          "bytes": 2150400,
+          "changedChannels": 55000,
+          "maxDelta": 11,
+          "alphaMax": 0,
+          "meanDelta": 0.025776134672619046,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 205732,
+          "baselineHash": "b881f2b0d548823cfd88263e448eb4ff78d4a968029976ab6f259b95c924de34",
+          "currentHash": "80c41396b32e51cddfa88c237f174d932b58db034dd2e348d0a946bf95244b58",
+          "passed": false
+        },
+        {
+          "backend": "webgl",
+          "dpr": 1,
+          "look": "reading",
+          "background": "image",
+          "shape": "normal",
+          "layered": true,
+          "width": 503,
+          "height": 291,
+          "bytes": 585492,
+          "changedChannels": 873,
+          "maxDelta": 2,
+          "alphaMax": 0,
+          "meanDelta": 0.001492761643199224,
+          "nonblank": true,
+          "nonzeroAlphaPixels": 146373,
+          "baselineHash": "d3ed4c08e0a6c0114361d762083268d23a9509e2b5714ec3d8d96b0e30cfbaf7",
+          "currentHash": "69efe6d7e18f91d8a55ab408a088dbf07fd10dc6b180584c1d40385c668f4854",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "file": "paired-direct-blur.json",
+      "cases": 54,
+      "passed": 54,
+      "maxDelta": 1,
+      "alphaMax": 1,
+      "failures": []
+    }
+  ],
+  "timing": [
+    {
+      "file": "paired-blur-timing.json",
+      "radius": 0.5,
+      "variant": "baseline",
+      "gpu": {
+        "samples": 120,
+        "mean": 1.2118698666666672,
+        "p50": 0.8519680000000001,
+        "p95": 2.228224,
+        "p99": 2.555904,
+        "max": 2.555904
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.150833331545194,
+        "p50": 0.19999992847442627,
+        "p95": 0.30000007152557373,
+        "p99": 0.30000007152557373,
+        "max": 0.3999999761581421
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.673333332935968,
+        "p50": 16.699999928474426,
+        "p95": 17.5,
+        "p99": 18.300000071525574,
+        "max": 18.399999976158142
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 1.0862591999999998,
+          "p50": 0.786432,
+          "p95": 2.097152,
+          "p99": 2.555904,
+          "max": 2.555904
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 1.2582912000000002,
+          "p50": 0.9175040000000001,
+          "p95": 2.162688,
+          "p99": 2.228224,
+          "max": 2.228224
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 1.2910591999999994,
+          "p50": 0.9175040000000001,
+          "p95": 2.29376,
+          "p99": 2.555904,
+          "max": 2.555904
+        }
+      ]
+    },
+    {
+      "file": "paired-blur-timing.json",
+      "radius": 0.5,
+      "variant": "paired",
+      "gpu": {
+        "samples": 120,
+        "mean": 0.9601023999999999,
+        "p50": 0.45875200000000005,
+        "p95": 1.9660799999999998,
+        "p99": 3.014656,
+        "max": 7.929856
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.15499999125798544,
+        "p50": 0.19999992847442627,
+        "p95": 0.2999999523162842,
+        "p99": 0.30000007152557373,
+        "max": 0.30000007152557373
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.67666666706403,
+        "p50": 16.699999928474426,
+        "p95": 17.399999976158142,
+        "p99": 17.5,
+        "max": 17.799999952316284
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 0.8814591999999998,
+          "p50": 0.458752,
+          "p95": 1.835008,
+          "p99": 1.9660799999999998,
+          "max": 1.9660799999999998
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 0.8765439999999998,
+          "p50": 0.45875200000000005,
+          "p95": 1.835008,
+          "p99": 2.097152,
+          "max": 2.097152
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 1.1223040000000002,
+          "p50": 0.786432,
+          "p95": 2.29376,
+          "p99": 7.929856,
+          "max": 7.929856
+        }
+      ]
+    },
+    {
+      "file": "paired-blur-timing.json",
+      "radius": 3,
+      "variant": "baseline",
+      "gpu": {
+        "samples": 120,
+        "mean": 1.3423957333333336,
+        "p50": 0.9175040000000001,
+        "p95": 2.6214399999999998,
+        "p99": 3.735552,
+        "max": 4.521984
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.1691666603088379,
+        "p50": 0.19999992847442627,
+        "p95": 0.30000007152557373,
+        "p99": 0.30000007152557373,
+        "max": 0.30000007152557373
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.677500000596048,
+        "p50": 16.699999928474426,
+        "p95": 17.5,
+        "p99": 17.700000047683716,
+        "max": 18.5
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 1.204224,
+          "p50": 0.8519680000000001,
+          "p95": 2.228224,
+          "p99": 2.359296,
+          "max": 2.359296
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 1.4204927999999999,
+          "p50": 1.048576,
+          "p95": 2.6214399999999998,
+          "p99": 4.521984,
+          "max": 4.521984
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 1.4024704,
+          "p50": 0.9175040000000001,
+          "p95": 3.211264,
+          "p99": 3.735552,
+          "max": 3.735552
+        }
+      ]
+    },
+    {
+      "file": "paired-blur-timing.json",
+      "radius": 3,
+      "variant": "paired",
+      "gpu": {
+        "samples": 120,
+        "mean": 0.9797631999999996,
+        "p50": 0.5242880000000001,
+        "p95": 2.031616,
+        "p99": 2.818048,
+        "max": 5.505024000000001
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.16999998986721038,
+        "p50": 0.19999992847442627,
+        "p95": 0.2999999523162842,
+        "p99": 0.30000007152557373,
+        "max": 0.30000007152557373
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.677500000596048,
+        "p50": 16.699999928474426,
+        "p95": 17.200000047683716,
+        "p99": 17.5,
+        "max": 17.5
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 0.8732672000000002,
+          "p50": 0.5242880000000001,
+          "p95": 1.900544,
+          "p99": 2.097152,
+          "max": 2.097152
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 1.1698176000000002,
+          "p50": 0.786432,
+          "p95": 2.162688,
+          "p99": 5.505024000000001,
+          "max": 5.505024000000001
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 0.8962048000000001,
+          "p50": 0.5242880000000001,
+          "p95": 1.9660800000000003,
+          "p99": 2.686976,
+          "max": 2.686976
+        }
+      ]
+    },
+    {
+      "file": "paired-blur-timing.json",
+      "radius": 18,
+      "variant": "baseline",
+      "gpu": {
+        "samples": 120,
+        "mean": 1.4789290666666666,
+        "p50": 0.720896,
+        "p95": 3.801088,
+        "p99": 5.5705599999999995,
+        "max": 22.60992
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.1758333404858907,
+        "p50": 0.19999992847442627,
+        "p95": 0.30000007152557373,
+        "p99": 0.3999999761581421,
+        "max": 0.40000009536743164
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.67500000099341,
+        "p50": 16.699999928474426,
+        "p95": 17.399999976158142,
+        "p99": 17.59999990463257,
+        "max": 17.600000023841858
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 1.8415615999999997,
+          "p50": 0.98304,
+          "p95": 3.538944,
+          "p99": 22.60992,
+          "max": 22.60992
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 1.0846208,
+          "p50": 0.39321599999999995,
+          "p95": 3.4078720000000002,
+          "p99": 3.801088,
+          "max": 3.801088
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 1.5106047999999999,
+          "p50": 0.720896,
+          "p95": 3.866624,
+          "p99": 5.5705599999999995,
+          "max": 5.5705599999999995
+        }
+      ]
+    },
+    {
+      "file": "paired-blur-timing.json",
+      "radius": 18,
+      "variant": "paired",
+      "gpu": {
+        "samples": 120,
+        "mean": 1.6782677333333331,
+        "p50": 0.393216,
+        "p95": 4.390912,
+        "p99": 20.905984,
+        "max": 22.675456
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.189166663090388,
+        "p50": 0.19999992847442627,
+        "p95": 0.30000007152557373,
+        "p99": 0.3999999761581421,
+        "max": 0.3999999761581421
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.679166665673257,
+        "p50": 16.699999928474426,
+        "p95": 17.300000071525574,
+        "p99": 17.600000023841858,
+        "max": 17.700000047683716
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 1.8628607999999995,
+          "p50": 0.393216,
+          "p95": 4.325375999999999,
+          "p99": 20.905984,
+          "max": 20.905984
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 1.2271616,
+          "p50": 0.393216,
+          "p95": 4.128768,
+          "p99": 5.57056,
+          "max": 5.57056
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 1.9447807999999998,
+          "p50": 0.393216,
+          "p95": 4.390912,
+          "p99": 22.675456,
+          "max": 22.675456
+        }
+      ]
+    },
+    {
+      "file": "paired-pipeline-timing.json",
+      "radius": 0.5,
+      "variant": "baseline",
+      "gpu": {
+        "samples": 120,
+        "mean": 2.502382933333334,
+        "p50": 2.031616,
+        "p95": 4.980736,
+        "p99": 13.303808,
+        "max": 14.417919999999999
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.29250000019868216,
+        "p50": 0.2999999523162842,
+        "p95": 0.5,
+        "p99": 0.7000000476837158,
+        "max": 0.7000000476837158
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.674166667461396,
+        "p50": 16.700000047683716,
+        "p95": 17.90000009536743,
+        "p99": 18.899999976158142,
+        "max": 26.100000023841858
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 2.5001984,
+          "p50": 2.0971520000000003,
+          "p95": 4.58752,
+          "p99": 5.701632,
+          "max": 5.701632
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 2.721382399999999,
+          "p50": 2.097152,
+          "p95": 4.980736,
+          "p99": 14.417919999999999,
+          "max": 14.417919999999999
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 2.285568,
+          "p50": 1.7039360000000001,
+          "p95": 3.2768,
+          "p99": 13.303808,
+          "max": 13.303808
+        }
+      ]
+    },
+    {
+      "file": "paired-pipeline-timing.json",
+      "radius": 0.5,
+      "variant": "paired",
+      "gpu": {
+        "samples": 120,
+        "mean": 1.5182506666666664,
+        "p50": 0.917504,
+        "p95": 3.342336,
+        "p99": 6.750208,
+        "max": 7.602176
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.33916666408379875,
+        "p50": 0.30000007152557373,
+        "p95": 0.5,
+        "p99": 0.6000000238418579,
+        "max": 0.6000000238418579
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.66416666607062,
+        "p50": 16.699999928474426,
+        "p95": 17.59999990463257,
+        "p99": 17.899999976158142,
+        "max": 17.899999976158142
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 1.3533184000000003,
+          "p50": 0.917504,
+          "p95": 3.342336,
+          "p99": 3.538944,
+          "max": 3.538944
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 1.6809984,
+          "p50": 0.8519680000000001,
+          "p95": 4.325376,
+          "p99": 7.602176,
+          "max": 7.602176
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 1.5204351999999999,
+          "p50": 1.114112,
+          "p95": 3.145728,
+          "p99": 3.735552,
+          "max": 3.735552
+        }
+      ]
+    },
+    {
+      "file": "paired-pipeline-timing.json",
+      "radius": 3,
+      "variant": "baseline",
+      "gpu": {
+        "samples": 120,
+        "mean": 2.2779221333333335,
+        "p50": 2.031616,
+        "p95": 4.063231999999999,
+        "p99": 5.439488,
+        "max": 5.8982399999999995
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.3216666708389918,
+        "p50": 0.30000007152557373,
+        "p95": 0.5,
+        "p99": 0.6000000238418579,
+        "max": 0.7000000476837158
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.684166666865348,
+        "p50": 16.700000047683716,
+        "p95": 17.799999952316284,
+        "p99": 18.5,
+        "max": 26.5
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 1.8644991999999998,
+          "p50": 1.5073280000000002,
+          "p95": 3.6044799999999997,
+          "p99": 5.373952,
+          "max": 5.373952
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 2.3314432,
+          "p50": 2.097152,
+          "p95": 3.735552,
+          "p99": 3.8666240000000003,
+          "max": 3.8666240000000003
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 2.6378239999999997,
+          "p50": 2.1626879999999997,
+          "p95": 5.111808,
+          "p99": 5.8982399999999995,
+          "max": 5.8982399999999995
+        }
+      ]
+    },
+    {
+      "file": "paired-pipeline-timing.json",
+      "radius": 3,
+      "variant": "paired",
+      "gpu": {
+        "samples": 120,
+        "mean": 2.0862293333333333,
+        "p50": 1.572864,
+        "p95": 4.718592,
+        "p99": 13.697023999999999,
+        "max": 15.073279999999999
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.3508333325386047,
+        "p50": 0.30000007152557373,
+        "p95": 0.6000000238418579,
+        "p99": 0.7999999523162842,
+        "max": 1
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.681666667262714,
+        "p50": 16.600000023841858,
+        "p95": 18.299999952316284,
+        "p99": 25.300000071525574,
+        "max": 25.600000023841858
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 2.5903104000000003,
+          "p50": 2.0971520000000003,
+          "p95": 5.046272,
+          "p99": 15.073279999999999,
+          "max": 15.073279999999999
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 2.21184,
+          "p50": 1.6384,
+          "p95": 3.3423359999999995,
+          "p99": 13.697023999999999,
+          "max": 13.697023999999999
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 1.4565376,
+          "p50": 0.9830400000000001,
+          "p95": 3.145728,
+          "p99": 5.046272,
+          "max": 5.046272
+        }
+      ]
+    },
+    {
+      "file": "paired-pipeline-timing.json",
+      "radius": 18,
+      "variant": "baseline",
+      "gpu": {
+        "samples": 120,
+        "mean": 2.090052266666667,
+        "p50": 0.8519680000000001,
+        "p95": 5.2428799999999995,
+        "p99": 24.24832,
+        "max": 31.522816000000002
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.3691666583220164,
+        "p50": 0.3999999761581421,
+        "p95": 0.6000000238418579,
+        "p99": 0.7000000476837158,
+        "max": 1
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.66916666726271,
+        "p50": 16.699999928474426,
+        "p95": 17.600000023841858,
+        "p99": 17.799999952316284,
+        "max": 17.799999952316284
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 2.8966911999999994,
+          "p50": 1.6383999999999999,
+          "p95": 6.22592,
+          "p99": 24.24832,
+          "max": 24.24832
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 2.2167551999999997,
+          "p50": 1.179648,
+          "p95": 4.58752,
+          "p99": 31.522816000000002,
+          "max": 31.522816000000002
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 1.1567104,
+          "p50": 0.458752,
+          "p95": 3.407872,
+          "p99": 3.866624,
+          "max": 3.866624
+        }
+      ]
+    },
+    {
+      "file": "paired-pipeline-timing.json",
+      "radius": 18,
+      "variant": "paired",
+      "gpu": {
+        "samples": 120,
+        "mean": 1.8377386666666669,
+        "p50": 0.851968,
+        "p95": 4.849664,
+        "p99": 6.1603840000000005,
+        "max": 7.143424
+      },
+      "cpu": {
+        "samples": 120,
+        "mean": 0.31833333770434064,
+        "p50": 0.2999999523162842,
+        "p95": 0.5,
+        "p99": 0.6000000238418579,
+        "max": 0.8000000715255737
+      },
+      "raf": {
+        "samples": 120,
+        "mean": 16.67666666706403,
+        "p50": 16.699999928474426,
+        "p95": 18.100000023841858,
+        "p99": 20.600000023841858,
+        "max": 27.799999952316284
+      },
+      "perRepeatGpu": [
+        {
+          "repeat": 1,
+          "samples": 40,
+          "mean": 2.4264704,
+          "p50": 1.7694720000000002,
+          "p95": 5.308416,
+          "p99": 7.143424,
+          "max": 7.143424
+        },
+        {
+          "repeat": 2,
+          "samples": 40,
+          "mean": 1.7498112,
+          "p50": 0.720896,
+          "p95": 4.849664,
+          "p99": 6.029312000000001,
+          "max": 6.029312000000001
+        },
+        {
+          "repeat": 3,
+          "samples": 40,
+          "mean": 1.3369344,
+          "p50": 0.458752,
+          "p95": 4.063232,
+          "p99": 4.325376,
+          "max": 4.325376
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 import { GPUImagePass } from "./blur-wgpu.js";
-import { gpuVertex, gpuFragment } from "../shaders.js";
-import { surfaceUniforms, material } from "../policy.js";
+import { gpuVertex, gpuFragment, opticalBindings } from "../shaders.js";
+import { uniformData } from "./uniforms.js";
+import { packOpticsU } from "../shaders/generated/packers.js";
+import { surfaceUniforms, material, controlsFor } from "../policy.js";
 export class WebGPURenderer {
   static async create(canvas, onFailure) {
     if (!navigator.gpu) throw new Error("WebGPU API 未开放");
@@ -21,6 +23,9 @@ export class WebGPURenderer {
     this.device = device;
     this.textures = new Map();
     this.buffers = new Map();
+    this.uniformData = new Map();
+    this.groups = new Map();
+    this.views = new WeakMap();
     this.disposed = false;
     this.fail = onFailure;
     device.lost.then((info) => {
@@ -33,6 +38,7 @@ export class WebGPURenderer {
     device.addEventListener("uncapturederror", this.error);
   }
   async init() {
+    this.maxTextureDimension=this.device.limits.maxTextureDimension2D;
     const d = this.device;
     this.context = this.canvas.getContext("webgpu");
     if (!this.context) throw new Error("WebGPU canvas context 不可用");
@@ -141,46 +147,23 @@ export class WebGPURenderer {
     }
     return item.texture;
   }
+  view(texture) {
+    let view = this.views.get(texture);
+    if (!view) { view = texture.createView(); this.views.set(texture, view); }
+    return view;
+  }
   uniform(id, u) {
     let b = this.buffers.get(id);
     if (!b) {
       b = this.device.createBuffer({
-        size: 160,
+        size: opticalBindings.uniforms.u.size,
         usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
       });
       this.buffers.set(id, b);
     }
-    const data = new ArrayBuffer(160),
-      f = new Float32Array(data),
-      i = new Int32Array(data);
-    f.set(u.u_resolution, 0);
-    f[2] = u.u_dpr;
-    f.set(u.u_mouseSpring, 6);
-    f[8] = u.u_shapeWidth;
-    f[9] = u.u_shapeHeight;
-    f[10] = u.u_shapeRadius;
-    f[11] = u.u_shapeRoundness;
-    f[12] = u.u_mergeRate;
-    f[13] = u.u_glareAngle;
-    i[21] = u.u_showShape1;
-    i[23] = u.u_blurEdge;
-    f.set(u.u_tint, 24);
-    for (const [n, index] of [
-      ["u_refThickness", 28],
-      ["u_refFactor", 29],
-      ["u_refDispersion", 30],
-      ["u_refFresnelRange", 31],
-      ["u_refFresnelHardness", 32],
-      ["u_refFresnelFactor", 33],
-      ["u_glareRange", 34],
-      ["u_glareHardness", 35],
-      ["u_glareConvergence", 36],
-      ["u_glareOppositeFactor", 37],
-      ["u_glareFactor", 38],
-      ["u_refDistance", 39],
-    ])
-      f[index] = u[n];
-    this.device.queue.writeBuffer(b, 0, data);
+    let data = this.uniformData.get(id);
+    if (!data) { data = uniformData(opticalBindings.uniforms.u); this.uniformData.set(id, data); }
+    this.device.queue.writeBuffer(b, 0, packOpticsU(data, u));
     return b;
   }
   render(scene, surfaces, settings, dpr) {
@@ -210,9 +193,11 @@ export class WebGPURenderer {
       if (!surfaceIds.has(k)) {
         b.destroy();
         this.buffers.delete(k);
+        this.uniformData.delete(k);
+        this.groups.delete(k);
       }
     const radii = new Set(
-      visible.map((s) => String(material(s.kind, settings.controls).blur)),
+      visible.map((s) => String(material(s.kind, controlsFor(settings,s.kind)).blur)),
     );
     this.imagePass.prune(radii);
     const bg = this.upload("bg", scene.canvas, signature),
@@ -252,19 +237,24 @@ export class WebGPURenderer {
           h,
           dpr,
           s.kind,
-          settings.controls,
+          controlsFor(settings,s.kind),
           settings.theme,
         ),
       );
+      let cached = this.groups.get(s.id);
+      if (!cached || cached.buffer !== buffer || cached.blur !== blur || cached.input !== input || cached.pipeline !== pipeline) {
       const group = d.createBindGroup({
         layout: pipeline.getBindGroupLayout(0),
         entries: [
           { binding: 0, resource: { buffer } },
-          { binding: 1, resource: blur.createView() },
-          { binding: 2, resource: input.createView() },
+          { binding: 1, resource: this.view(blur) },
+          { binding: 2, resource: this.view(input) },
           { binding: 3, resource: this.sampler },
         ],
       });
+      cached = {buffer, blur, input, pipeline, group};
+      this.groups.set(s.id, cached);
+      }
       const pass =
         sharedPass ??
         encoder.beginRenderPass({
@@ -279,7 +269,7 @@ export class WebGPURenderer {
         });
       pass.setPipeline(pipeline);
       pass.setVertexBuffer(0, this.vertex);
-      pass.setBindGroup(0, group);
+      pass.setBindGroup(0, cached.group);
       const x = Math.max(0, Math.floor(r.x * dpr) - 2),
         y = Math.max(0, Math.floor(r.y * dpr) - 2);
       const sw = Math.min(w - x, Math.ceil((r.x + r.w) * dpr) + 2 - x),
@@ -299,7 +289,7 @@ export class WebGPURenderer {
         const blur = this.imagePass.blur(
           encoder,
           input,
-          material(s.kind, settings.controls).blur,
+          material(s.kind, controlsFor(settings,s.kind)).blur,
           dpr,
           signature,
           w,
@@ -314,7 +304,7 @@ export class WebGPURenderer {
           s,
           input,
           blur,
-          output.createView(),
+          this.view(output),
           "load",
           this.layerPipeline,
         );
@@ -328,7 +318,7 @@ export class WebGPURenderer {
         blur: this.imagePass.blur(
           encoder,
           bg,
-          material(s.kind, settings.controls).blur,
+          material(s.kind, controlsFor(settings,s.kind)).blur,
           dpr,
           `${signature}:${dpr}`,
           w,
@@ -365,6 +355,9 @@ export class WebGPURenderer {
     this.vertex?.destroy();
     this.textures.clear();
     this.buffers.clear();
+    this.uniformData.clear();
+    this.groups.clear();
+    this.views = new WeakMap();
     this.context?.unconfigure();
     this.device.destroy();
   }

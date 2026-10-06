@@ -1,6 +1,7 @@
 import { opticalFields, looks } from "./config.js";
+import {normalizePerformance} from './performance.js';
 // A portable preset contains settings, never image blobs, DOM, functions or URLs.
-export const PRESET_VERSION = 1;
+export const PRESET_VERSION = 2;
 export function normalizeSettings(input = {}) {
   if (!input || typeof input !== "object" || Array.isArray(input))
     throw new Error("settings 必须是对象");
@@ -53,6 +54,7 @@ export function normalizeSettings(input = {}) {
     controls.tintColor = raw.tintColor.toLowerCase();
   }
   settings.controls = controls;
+  settings.performance=normalizePerformance(input.performance??null);
   return settings;
 }
 export function createPreset(name, settings) {
@@ -80,8 +82,11 @@ export function parsePreset(raw) {
   if (
     !raw ||
     raw.schema !== "workspace-liquid-glass" ||
-    raw.version !== PRESET_VERSION
+    ![1,PRESET_VERSION].includes(raw.version)
   )
     throw new Error("不支持的预设格式或版本");
-  return createPreset(raw.name, raw.settings);
+  if(raw.version===1&&raw.settings!==undefined&&(!raw.settings||typeof raw.settings!=='object'||Array.isArray(raw.settings)))
+    throw new Error("settings 必须是对象");
+  // v1 did not define performance: ignore extensions there and restore legacy.
+  return createPreset(raw.name,raw.version===1?{...raw.settings,performance:null}:raw.settings);
 }

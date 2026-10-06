@@ -1,0 +1,357 @@
+{
+  "source": "c54d8b1d181309ab76fea17820583d6ee9e66744d943bf264cc8c3ac908d656f",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+  "dpr": 2,
+  "frames": 1350,
+  "rows": [
+    {
+      "backend": "webgpu",
+      "frame": 0,
+      "preset": "legacy",
+      "active": "webgpu",
+      "bytes": 2764800,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "frame": 60,
+      "preset": "economy",
+      "active": "webgpu",
+      "bytes": 453600,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "frame": 120,
+      "preset": "balanced",
+      "active": "webgpu",
+      "bytes": 1731720,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "frame": 180,
+      "preset": "full",
+      "active": "webgpu",
+      "bytes": 1036800,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "frame": 240,
+      "preset": "minimal",
+      "active": "solid",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "frame": 300,
+      "preset": "legacy",
+      "active": "webgpu",
+      "bytes": 1389420,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "frame": 360,
+      "preset": "economy",
+      "active": "webgpu",
+      "bytes": 230400,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "frame": 420,
+      "preset": "balanced",
+      "active": "webgpu",
+      "bytes": 839160,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "frame": 480,
+      "preset": "full",
+      "active": "webgpu",
+      "bytes": 3078240,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "frame": 540,
+      "preset": "minimal",
+      "active": "solid",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "case": "atomic-and-recovery",
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "frame": 0,
+      "preset": "legacy",
+      "active": "webgl",
+      "bytes": 2764800,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "frame": 60,
+      "preset": "economy",
+      "active": "webgl",
+      "bytes": 453600,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "frame": 120,
+      "preset": "balanced",
+      "active": "webgl",
+      "bytes": 1731720,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "frame": 180,
+      "preset": "full",
+      "active": "webgl",
+      "bytes": 1036800,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "frame": 240,
+      "preset": "minimal",
+      "active": "solid",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "frame": 300,
+      "preset": "legacy",
+      "active": "webgl",
+      "bytes": 1389420,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "frame": 360,
+      "preset": "economy",
+      "active": "webgl",
+      "bytes": 230400,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "frame": 420,
+      "preset": "balanced",
+      "active": "webgl",
+      "bytes": 839160,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "frame": 480,
+      "preset": "full",
+      "active": "webgl",
+      "bytes": 3078240,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "frame": 540,
+      "preset": "minimal",
+      "active": "solid",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "case": "atomic-and-recovery",
+      "passed": true
+    },
+    {
+      "backend": "svg",
+      "frame": 0,
+      "preset": "legacy",
+      "active": "svg",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "svg",
+      "frame": 10,
+      "preset": "economy",
+      "active": "svg",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "svg",
+      "frame": 20,
+      "preset": "balanced",
+      "active": "svg",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "svg",
+      "frame": 30,
+      "preset": "full",
+      "active": "svg",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "svg",
+      "frame": 40,
+      "preset": "minimal",
+      "active": "solid",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "svg",
+      "case": "atomic-and-recovery",
+      "passed": true
+    },
+    {
+      "backend": "css",
+      "frame": 0,
+      "preset": "legacy",
+      "active": "css",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "css",
+      "frame": 10,
+      "preset": "economy",
+      "active": "css",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "css",
+      "frame": 20,
+      "preset": "balanced",
+      "active": "css",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "css",
+      "frame": 30,
+      "preset": "full",
+      "active": "css",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "css",
+      "frame": 40,
+      "preset": "minimal",
+      "active": "solid",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "css",
+      "case": "atomic-and-recovery",
+      "passed": true
+    },
+    {
+      "backend": "solid",
+      "frame": 0,
+      "preset": "legacy",
+      "active": "solid",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "solid",
+      "frame": 10,
+      "preset": "economy",
+      "active": "solid",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "solid",
+      "frame": 20,
+      "preset": "balanced",
+      "active": "solid",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "solid",
+      "frame": 30,
+      "preset": "full",
+      "active": "solid",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "solid",
+      "frame": 40,
+      "preset": "minimal",
+      "active": "solid",
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "backend": "solid",
+      "case": "atomic-and-recovery",
+      "passed": true
+    }
+  ],
+  "cleanup": [
+    {
+      "backend": "webgpu",
+      "surfaces": 0,
+      "listeners": 0,
+      "canvases": 0,
+      "radii": 0,
+      "buffers": 0
+    },
+    {
+      "backend": "webgl",
+      "surfaces": 0,
+      "listeners": 0,
+      "canvases": 0,
+      "radii": 0,
+      "buffers": 0
+    },
+    {
+      "backend": "svg",
+      "surfaces": 0,
+      "listeners": 0,
+      "canvases": 0,
+      "radii": 0,
+      "buffers": 0
+    },
+    {
+      "backend": "css",
+      "surfaces": 0,
+      "listeners": 0,
+      "canvases": 0,
+      "radii": 0,
+      "buffers": 0
+    },
+    {
+      "backend": "solid",
+      "surfaces": 0,
+      "listeners": 0,
+      "canvases": 0,
+      "radii": 0,
+      "buffers": 0
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

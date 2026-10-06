@@ -1,0 +1,73 @@
+{
+  "english": "Effective performance · DPR 1 · Standard blur · Effective blur 1 px · Estimated textures 5.80 MiB · Animation limit 30 Hz · Dispersion disabled",
+  "exported": {
+    "schema": "workspace-liquid-glass",
+    "version": 2,
+    "name": "Custom material",
+    "settings": {
+      "backend": "auto",
+      "capture": "scene",
+      "theme": "light",
+      "background": "testchart",
+      "quality": "high",
+      "enabled": true,
+      "layered": false,
+      "controls": {
+        "distance": 0.05,
+        "thickness": 20,
+        "ior": 1.4,
+        "dispersion": 7,
+        "blurPx": 1,
+        "tintOpacity": 0,
+        "fresnelRange": 30,
+        "fresnelHardness": 0.2,
+        "fresnelFactor": 0.2,
+        "glareRange": 30,
+        "glareHardness": 0.2,
+        "glareFactor": 0.9,
+        "glareAngle": -45,
+        "glareConvergence": 0.5,
+        "glareOpposite": 0.8,
+        "radius": 78,
+        "roundness": 2.6,
+        "shadowOpacity": 0.16,
+        "shadowBlur": 32,
+        "shadowY": 14,
+        "blurEdge": true,
+        "tintColor": "auto"
+      },
+      "performance": {
+        "preset": "economy",
+        "fidelity": "approximate",
+        "overrides": {},
+        "adaptive": false
+      }
+    }
+  },
+  "v1RestoredLegacy": true,
+  "chinese": "实际性能 · DPR 1 · 标准模糊 · 实际模糊 1 px · 纹理估算 5.80 MiB · 动画上限 30 Hz · 色散已关闭",
+  "v2RestoredEconomy": true,
+  "mobileZh": {
+    "lang": "zh-CN",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  "mobileEn": {
+    "detail": "Effective performance · DPR 1 · Standard blur · Effective blur 1 px · Estimated textures 1.80 MiB · Animation limit 30 Hz · Dispersion disabled",
+    "lang": "en",
+    "profile": "economy",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  "minimal": {
+    "backend": "solid",
+    "detail": "Effective performance · DPR 1 · Standard blur · Effective blur 1 px · Estimated textures 0.00 MiB · Animation limit 30 Hz · Dispersion disabled, Solid profile",
+    "qualityDisabled": true
+  },
+  "legacy": {
+    "backend": "webgpu",
+    "detail": "Effective performance · DPR 2 · Standard blur · Effective blur 1 px · Estimated textures 23.20 MiB · Animation limit 60 Hz · No adjustment",
+    "dispersion": "7",
+    "qualityEnabled": true
+  }
+}

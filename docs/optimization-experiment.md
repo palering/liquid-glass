@@ -73,4 +73,4 @@ DOM 能力是背景像素获取与内容合成的一部分。后两个项目还�
 3. Render pair 选择质量组合；Check invalidation and allocations 检查共享、失效及清理；Run paired performance 运行成对矩阵。记录页内 Evidence JSON，保持标签可见，不改变窗口。
 4. 核对 baseline revision、core source hash、fixture hash、分辨率和样本条件后，才解释改动收益。测试 fixture 不进入库包或 Pages 构建。
 
-SVG 缓存已通过这轮实测，保留在实现中。下一轮优先做公共 bounds/样式 profiler 和真实消费方 pan/zoom/输入/端口验收；随后单独试 GPU 快路径与局部 blur。高度场、融合、多灯光和 DOM 采集仍是候选，不能靠新增参数或 TS 改名算作完成。
+SVG 缓存已通过这轮实测，保留在实现中。公共 bounds/样式 profiler 与条件样式缓存试验已完成，后者收益不稳定而撤回，见 [第二轮实验](shared-update-experiment.md)。继续真实消费方 pan/zoom/输入/端口与读写调度验收；随后单独试 GPU 快路径与局部 blur。高度场、融合、多灯光和 DOM 采集仍是候选，不能靠新增参数或 TS 改名算作完成。

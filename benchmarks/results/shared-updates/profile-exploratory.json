@@ -1,0 +1,5098 @@
+{
+  "baselineRevision": "8cdf48d117d82273c7dd445da5a09cfad7f05569",
+  "environment": {
+    "devicePixelRatio": 1,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "viewport": [
+      1440,
+      1024
+    ]
+  },
+  "profiles": [
+    {
+      "backend": "solid",
+      "samples": [
+        {
+          "cpu": 8.699999928474426,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.09999990463256836
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 8.199999928474426
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 10,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 9.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 10.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 10
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 11.599999904632568,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 11.099999904632568
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 12.799999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 12.199999928474426
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 13.299999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 12.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 13.300000071525574,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 12.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 14.899999976158142,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 14.299999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 16.699999928474426,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 16
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 17.600000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 16.899999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.2999999523162842
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 18.600000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 17.899999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.19999992847442627
+          }
+        },
+        {
+          "cpu": 18.699999928474423,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 18
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.19999992847442627
+          }
+        },
+        {
+          "cpu": 19.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 18.899999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 20.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 19.899999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 20.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.09999990463256836
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 19.899999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 21.899999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 21.299999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 22.800000071525577,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 22.300000071525577
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 23.300000071525577,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 22.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 24.799999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 24.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 27.600000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 27.100000023841854
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 27.600000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 26
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.8999999761581421
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.20000004768371585
+          }
+        },
+        {
+          "cpu": 29.899999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 29.09999990463257
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 28,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 27.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 31.799999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 1.2000000476837158
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 30.100000023841854
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 4.399999976158142,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 3.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 5.100000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 4.599999904632568
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 5.600000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 5.100000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 6.799999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.09999990463256836
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 6.299999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 7.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 7
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 8.700000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 8.100000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        }
+      ],
+      "variant": "baseline"
+    },
+    {
+      "backend": "webgpu",
+      "samples": [
+        {
+          "cpu": 9.400000095367432,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.4000000953674317
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 8.600000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.20000004768371585
+          }
+        },
+        {
+          "cpu": 11.100000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 10.300000071525574
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.30000007152557373
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 11.900000095367432,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.4000000953674317
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 11.100000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 12.699999928474426,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.5
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 11.800000071525574
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 14,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 13.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 14,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 13.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 15.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 14.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 16.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 15.899999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.30000007152557373
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 17,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 16.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 17.600000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 16.899999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 18.799999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 18.09999990463257
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 19.700000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 18.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 20.100000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 19.399999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 21.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 20.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.30000007152557373
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 23,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 22
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 22.700000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 22
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 24.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.4000000953674317
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 23.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 25.699999928474423,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 25
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 27.299999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.7000000476837158
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 26.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.20000004768371585
+          }
+        },
+        {
+          "cpu": 27,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.5
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 26.100000023841854
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 28.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 27.800000071525577
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 29.299999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 28.59999990463257
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 29.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 28.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 33.39999997615814,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 32.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.2999999523162842
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 34.39999997615814,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 33.60000002384186
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 35.10000002384186,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 34.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.19999992847442627
+          }
+        },
+        {
+          "cpu": 40.79999995231629,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.5
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 40
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 45.10000002384186,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 44.20000004768371
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 43.60000002384186,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 43
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 38.89999997615814,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.7999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 37.699999928474426
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        }
+      ],
+      "variant": "baseline"
+    },
+    {
+      "backend": "svg",
+      "samples": [
+        {
+          "cpu": 31.100000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 26.800000071525577
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 4
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 5.600000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.6000000238418579
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 4.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 6.599999904632568,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.6999999284744263
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 5.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 55.800000071525574,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 48.89999997615814
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 6.399999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 27.90000009536743,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 20.90000009536743
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 6.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 28.100000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 19.5
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 8.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 26.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 17.700000047683716
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 8.399999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 28.199999928474423,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 18.100000023841854
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 9.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 11.700000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.6000000238418579
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 10.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 33.199999928474426,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 21.199999928474423
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 11.599999904632568
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 25.899999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 13.299999952316284
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 12.100000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.19999992847442627
+          }
+        },
+        {
+          "cpu": 14.300000071525574,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.6000000238418579
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 13.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 36.59999990463257,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 21.59999990463257
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 14.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 26.799999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 12.399999976158142
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 14
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.19999992847442627
+          }
+        },
+        {
+          "cpu": 22.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 5.899999976158142
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 16.100000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 25,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 7.299999952316284
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 17.300000071525574
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 17.399999976158142,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.8999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 16.299999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 25.899999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 7.600000023841858
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 17.899999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.2999999523162842
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 24.299999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 4.199999928474426
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 19.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.20000004768371585
+          }
+        },
+        {
+          "cpu": 25.09999990463257,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 4.899999976158142
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 19.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 26.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 6.100000023841858
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 19.899999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.20000004768371585
+          }
+        },
+        {
+          "cpu": 25.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 2.700000047683716
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 22.399999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 23.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.5
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 22.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 26.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 3
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 23.100000023841854
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 27.90000009536743,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 2.700000047683716
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 24.800000071525577
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 28.899999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 3
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 25.40000009536743
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 29.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 1.899999976158142
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 27.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 29.700000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.5
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 28.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 33.800000071525574,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 3.3000000715255737
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 30
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 30,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.7000000476837158
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 28.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.2999999523162842
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        }
+      ],
+      "variant": "baseline"
+    },
+    {
+      "backend": "solid",
+      "samples": [
+        {
+          "cpu": 33.60000002384186,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 33.10000002384186
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 33.200000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 32.39999997615814
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 31.800000071525577,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 31.300000071525577
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.2999999523162842
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 30.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.09999990463256836
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 29.899999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.30000007152557373
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 28.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 27.899999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 27.40000009536743,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 26.800000071525577
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 26.100000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 25.600000023841854
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 25.600000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 25.100000023841854
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 24,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 23.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.2999999523162842
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 25.300000071525577,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 24.800000071525577
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 22.899999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 22.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 22.700000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 22.299999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 21.100000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 20.600000023841854
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 20.200000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 19.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.20000004768371585
+          }
+        },
+        {
+          "cpu": 19,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.19999992847442627
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 18.399999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 17.899999976158142,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 17.299999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 17.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 17
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.3999999761581421
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 16.200000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 15.600000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.30000007152557373
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 15.799999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 15.399999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 14.900000095367432,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 14.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 14,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 13.299999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.3999999761581421
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 13.100000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 12.600000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 12.200000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 11.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 12.199999928474426,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.09999990463256836
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 11.699999928474426
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.30000007152557373
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 11.200000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 10.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 9.100000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 8.800000071525574
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 9.100000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 8.600000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 7.399999976158142,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 6.800000071525574
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 7.100000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.20000004768371585
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 6.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 6.600000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 5.899999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        }
+      ],
+      "variant": "current"
+    },
+    {
+      "backend": "webgpu",
+      "samples": [
+        {
+          "cpu": 10.100000023841858,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.4000000953674317
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 9.299999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 10.800000071525574,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 10.100000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 11.800000071525574,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 11
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.20000004768371585
+          }
+        },
+        {
+          "cpu": 12.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 11.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 13,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 12.099999904632568
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 14.299999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.5
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 13.399999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 16.09999990463257,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 15.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.2999999523162842
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 16,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.4000000953674317
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 15.100000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 16.899999976158142,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 16.100000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 17.399999976158142,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 16.600000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.20000004768371585
+          }
+        },
+        {
+          "cpu": 19.300000071525577,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.5
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 18.399999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 19.100000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 18.399999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 21.100000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 20.299999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 20.600000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 19.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 22.799999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 22
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 23.100000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 22.40000009536743
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 24.300000071525577,
+          "notifications": {
+            "calls": 1,
+            "ms": 0.10000002384185792
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 23.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 25.199999928474423,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.5
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 24.299999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 26.799999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.6000000238418579
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 25.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 27.699999928474423,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 26.90000009536743
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 28.800000071525577,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.4000000953674317
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 27.899999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 28.600000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.4000000953674317
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 27.899999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 30.09999990463257,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 29.399999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.2999999523162842
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 31.100000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 30.199999928474423
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 32.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.3999999761581421
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 31.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 33.90000009536743,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.4000000953674317
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 33
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 34.800000071525574,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 34
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 35.700000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 35
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 36.79999995231629,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.2999999523162842
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 36.10000002384186
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 37,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.30000007152557373
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 36.300000071525574
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        }
+      ],
+      "variant": "current"
+    },
+    {
+      "backend": "svg",
+      "samples": [
+        {
+          "cpu": 27.799999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 1.7000000476837158
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 25.699999928474423
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 25.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.6000000238418579
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 24.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 24.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 1.100000023841858
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 22.899999976158146
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 30.699999928474423,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 6.699999928474426
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 23.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 28.600000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 6.700000047683716
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 21.600000023841854
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 29,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 7.600000023841858
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 21.100000023841854
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 28.199999928474423,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 8
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 19.800000071525577
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 26.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 6.600000023841858
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 19.200000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 18.200000047683716,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.7000000476837158
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 17.100000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 29.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 12.100000023841858
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 16.899999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 26.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 9.199999928474426
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 17
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 15.899999976158142,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.6999999284744263
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 14.899999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 28.800000071525577,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 13.700000047683716
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 14.800000071525574
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 30,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 15.800000071525574
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 13.700000047683716
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.20000004768371585
+          }
+        },
+        {
+          "cpu": 25.800000071525577,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 12.399999976158142
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 12.699999928474426
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 24.100000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 11.399999976158142
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 12.199999928474426
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 12,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.6000000238418579
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 10.899999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.2999999523162842
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 33.39999997615814,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 22.199999928474423
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 10.800000071525574
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 27.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 17.600000023841858
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 9.399999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 26.299999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 16.700000047683716
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 9
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.19999992847442627
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.20000004768371585
+          }
+        },
+        {
+          "cpu": 26.399999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 18.09999990463257
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 7.899999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.30000007152557373
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 27.899999976158146,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 20.199999928474423
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 7.199999928474426
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 6.899999976158142,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.6999999284744263
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 5.899999976158142
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 39.20000004768371,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 33.300000071525574
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 5.5
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 25.40000009536743,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 20.700000047683716
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 4.300000071525574
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.09999990463256836
+          }
+        },
+        {
+          "cpu": 25.799999952316284,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 21.600000023841854
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 3.799999952316284
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.09999990463256836
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 24.100000023841854,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 20.5
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 3.100000023841858
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 3.5,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.7000000476837158
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 2.3000000715255737
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0
+          }
+        },
+        {
+          "cpu": 48.39999997615814,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 46.60000002384186
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 1.3000000715255735
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.10000002384185792
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        },
+        {
+          "cpu": 36,
+          "notifications": {
+            "calls": 1,
+            "ms": 0
+          },
+          "renderer": {
+            "calls": 1,
+            "ms": 0.6000000238418579
+          },
+          "scenePaint": {
+            "calls": 0,
+            "ms": 0
+          },
+          "stageBounds": {
+            "calls": 1,
+            "ms": 34.89999997615814
+          },
+          "styleMutations": 100,
+          "styleProperties": {
+            "calls": 400,
+            "ms": 0.20000004768371585
+          },
+          "surfaceBounds": {
+            "calls": 100,
+            "ms": 0.10000002384185792
+          }
+        }
+      ],
+      "variant": "current"
+    }
+  ],
+  "protocol": {
+    "count": 100,
+    "dpr": 1,
+    "frames": 30,
+    "height": 540,
+    "note": "Diagnostic wrappers and MutationObserver add overhead. Compare phases within this run; use uninstrumented paired runs for performance claims.",
+    "warmup": 8,
+    "width": 960
+  }
+}

@@ -117,16 +117,20 @@ async function checks() {
   }
   show(); status.textContent="Checks complete; evidence JSON contains cache invalidation, input and cleanup results.";
 }
-async function runPerformance() {
+async function runPerformance(geometryExperiment = false) {
   pair.forEach(c=>c.dispose());pair=[];evidence.performance=[];
   const host=document.querySelector("#performance-host"); const specs=[];
-  for(let repeat=1;repeat<=3;repeat++) for(const backend of ["svg","webgpu","solid"]) for(const count of [10,50,100]) for(const variant of repeat%2 ? ["baseline","current"] : ["current","baseline"]) specs.push({repeat,backend,count,variant});
+  const variants=geometryExperiment?["dom","provided"]:["baseline","current"];
+  for(let repeat=1;repeat<=3;repeat++) for(const backend of ["svg","webgpu","solid"]) for(const count of [10,50,100]) for(const variant of repeat%2 ? variants : [...variants].reverse()) specs.push({repeat,backend,count,variant});
   const protocol={width:960,height:540,dpr:1,warmup:8,frames:30,repeats:3,look:"studio",background:"testchart",workload:"move",note:"Paired development-source experiment. Not directly comparable with the 60-frame production archive. No measurement wrappers."};
   evidence.protocol=protocol;evidence.performanceStartedAt=new Date().toISOString();
+  if(geometryExperiment)protocol.note="Same current source: live DOM geometry vs complete model-provided geometry. CPU submission can defer browser work; rAF is separately reported.";
   for(const [index,spec] of specs.entries()) {
     status.textContent=`Performance ${index+1}/${specs.length}: ${JSON.stringify(spec)}`;
     const stage=document.createElement("div");stage.className="lg-stage";stage.style.cssText="width:960px;height:540px";host.replaceChildren(stage);stage.scrollIntoView({block:"center"});
-    const Controller=classes[spec.variant]; const c=new Controller(stage,{backend:spec.backend,theme:"light",background:"testchart",quality:"low",controls:{...looks.studio,radius:12,shadowOpacity:0}});
+    const Controller=geometryExperiment?Current:classes[spec.variant]; const c=new Controller(stage,{backend:spec.backend,theme:"light",background:"testchart",quality:"low",controls:{...looks.studio,radius:12,shadowOpacity:0}});
+    let geometryFrame=0;
+    if(spec.variant==="provided")c.setGeometryProvider(()=>({width:960,height:540,surfaces:new Map(nodes.map((e,i)=>[`perf-${i}`,{x:17+(i%10)*94+Math.sin(geometryFrame*.3+i)*3,y:15+Math.floor(i/10)*50+Math.cos(geometryFrame*.3+i)*3,w:82,h:38,scale:1}]))}));
     const nodes=[],off=[];let hidden=document.visibilityState!=="visible", resized=false;
     const onVisibility=()=>{if(document.visibilityState!=="visible")hidden=true;};const onResize=()=>{resized=true;};
     document.addEventListener("visibilitychange",onVisibility);window.addEventListener("resize",onResize);
@@ -138,13 +142,13 @@ async function runPerformance() {
       for(let frame=0;frame<=protocol.warmup+protocol.frames;frame++) {
         const time=await raf();if(frame>protocol.warmup)cadence.push(time-last);last=time;
         if(frame===protocol.warmup+protocol.frames)break;
-        const start=performance.now();nodes.forEach((e,i)=>{e.style.transform=`translate(${Math.sin(frame*.3+i)*3}px,${Math.cos(frame*.3+i)*3}px)`;});c.render();
+        const start=performance.now();geometryFrame=frame;nodes.forEach((e,i)=>{e.style.transform=`translate(${Math.sin(frame*.3+i)*3}px,${Math.cos(frame*.3+i)*3}px)`;});c.render();
         if(frame>=protocol.warmup)cpu.push(performance.now()-start);
       }
       if(hidden||resized)throw Error("Tab hidden or viewport resized");
       if(c.getState().activeBackend!==spec.backend)throw Error("Backend changed");
       const resourceCounts={maps:c.renderer.maps?.size??null,svgEntries:c.renderer.svgEntries?.size??null};
-      evidence.performance.push({...spec,status:"ok",cpuSamples:cpu,rafSamples:cadence,cpu:summarize(cpu),raf:summarize(cadence),resourceCounts});
+      evidence.performance.push({...spec,status:"ok",geometryMode:c.getState().geometryMode,cpuSamples:cpu,rafSamples:cadence,cpu:summarize(cpu),raf:summarize(cadence),resourceCounts});
     }catch(e){evidence.performance.push({...spec,status:"failed",reason:e.message});}
     finally {document.removeEventListener("visibilitychange",onVisibility);window.removeEventListener("resize",onResize);off.forEach(fn=>fn());nodes.forEach(e=>e.remove());c.render();c.dispose();}
     show();
@@ -152,7 +156,136 @@ async function runPerformance() {
   evidence.performanceFinishedAt=new Date().toISOString();show();status.textContent=`Performance complete: ${evidence.performance.filter(r=>r.status==="ok").length}/${specs.length} valid`;
   document.querySelector("#status").scrollIntoView();
 }
-for(const [id,action] of [["render",renderPair],["checks",checks],["benchmark",runPerformance]])document.querySelector(`#${id}`).onclick=async()=>{
+async function profileUpdates() {
+  pair.forEach(c => c.dispose()); pair = []; evidence.profiles = [];
+  const host = document.querySelector("#performance-host");
+  evidence.profileProtocol = { count: 100, warmup: 8, frames: 30, width: 960, height: 540, dpr: 1, workloads:["move","idle"],
+    note: "Diagnostic wrappers and MutationObserver add overhead. Compare phases within this run; use uninstrumented paired runs for performance claims." };
+  for (const variant of ["baseline", "current"]) for (const backend of ["solid", "webgpu", "svg"]) for (const workload of ["move","idle"]) {
+    status.textContent = `Profiling ${variant} / ${backend} / 100 surfaces / ${workload}`;
+    const stage = document.createElement("div"); stage.className = "lg-stage";
+    stage.style.cssText = "width:960px;height:540px"; host.replaceChildren(stage); stage.scrollIntoView({block: "center"});
+    const c = new classes[variant](stage, { backend, theme: "light", background: "testchart", quality: "low", controls: {...looks.studio, radius: 12, shadowOpacity: 0} });
+    const nodes = [], off = [], samples = [], restores = [];
+    const observer = new MutationObserver(() => {});
+    let hidden=document.visibilityState!=="visible",resized=false;
+    const onVisibility=()=>{if(document.visibilityState!=="visible")hidden=true;},onResize=()=>{resized=true;};
+    document.addEventListener("visibilitychange",onVisibility);window.addEventListener("resize",onResize);
+    const freshCounters = () => Object.fromEntries(["stageBounds", "surfaceBounds", "styleProperties", "scenePaint", "renderer", "notifications"].map(k => [k, {ms: 0, calls: 0}]));
+    let counters = freshCounters();
+    function wrap(target, name, phase) {
+      const own = Object.getOwnPropertyDescriptor(target, name), original = target[name];
+      target[name] = function(...args) {
+        const start = performance.now();
+        try { return original.apply(this, args); }
+        finally { counters[phase].ms += performance.now() - start; counters[phase].calls++; }
+      };
+      restores.push(() => own ? Object.defineProperty(target, name, own) : delete target[name]);
+    }
+    try {
+      for (let i = 0; i < 100; i++) { const e = node(stage, i, 100); nodes.push(e); off.push(c.register(e, {id: `profile-${i}`, radius: 12, zIndex: i})); }
+      await settle(c);
+      if (c.getState().activeBackend !== backend) throw Error("Backend unavailable");
+      const rect=stage.getBoundingClientRect();if(rect.left<0||rect.top<0||rect.right>innerWidth||rect.bottom>innerHeight||devicePixelRatio!==1)throw Error("Profile viewport/DPR mismatch");
+      wrap(stage, "getBoundingClientRect", "stageBounds");
+      nodes.forEach(e => wrap(e, "getBoundingClientRect", "surfaceBounds"));
+      wrap(CSSStyleDeclaration.prototype, "setProperty", "styleProperties");
+      wrap(c.scene, "paint", "scenePaint"); wrap(c.renderer, "render", "renderer"); wrap(c, "emit", "notifications");
+      observer.observe(stage, {subtree: true, attributes: true, attributeFilter: ["style"]});
+      for (let frame = 0; frame < 38; frame++) {
+        await raf();
+        counters = freshCounters();
+        observer.takeRecords(); const start = performance.now();
+        if(workload==="move")nodes.forEach((e, i) => { e.style.transform = `translate(${Math.sin(frame*.3+i)*3}px,${Math.cos(frame*.3+i)*3}px)`; }); c.render();
+        const cpu = performance.now() - start;
+        const styleMutations = observer.takeRecords().length;
+        if (frame >= 8) samples.push({cpu, styleMutations, ...counters});
+      }
+      if(hidden||resized||c.getState().activeBackend!==backend)throw Error("Profile environment/backend changed");
+      evidence.profiles.push({variant, backend, workload, samples});
+    } finally {
+      document.removeEventListener("visibilitychange",onVisibility);window.removeEventListener("resize",onResize);
+      observer.disconnect(); restores.reverse().forEach(fn => fn());
+      off.forEach(fn => fn()); nodes.forEach(e => e.remove()); c.render(); c.dispose();
+    }
+    show();
+  }
+  status.textContent = "Profile complete: 12 diagnostic cases"; document.querySelector("#status").scrollIntoView();
+}
+async function styleChecks() {
+  pair.forEach(c => c.dispose()); pair = []; evidence.styleChecks = [];
+  for (const backend of ["solid", "css", "svg", "webgpu", "webgl"]) {
+    const variants = [];
+    for (const [variant, Controller] of Object.entries(classes)) {
+      status.textContent = `Style contract ${backend} / ${variant}`;
+      const stage = document.querySelector(`#${variant}-stage`); stage.replaceChildren();
+      const c = new Controller(stage, {backend, theme:"light", background:"testchart", controls:{...looks.clear, radius:24}});
+      const nodes = [0,1,2].map(i => node(stage,i));
+      const off = nodes.map((e,i) => c.register(e, {id:`style-${i}`,kind:i===1?"reading":"glass",radius:24}));
+      const samples = []; let submitted;
+      try {
+        await settle(c); if (c.getState().activeBackend !== backend) throw Error("Backend unavailable");
+        const render = c.renderer.render.bind(c.renderer);
+        c.renderer.render = (source,surfaces,...args) => { submitted=surfaces.map(s=>s.bounds); return render(source,surfaces,...args); };
+        const input=nodes[0].querySelector("input"); input.value="Native contract"; input.focus();
+        const capture = name => {
+          cancelAnimationFrame(c.raf); c.raf=0; c.render();
+          const properties=["border-radius","--lg-shadow-opacity","--lg-shadow-blur","--lg-shadow-y","--lg-highlight"];
+          samples.push({name, backend:c.getState().activeBackend, bounds:submitted,
+            sourceSize:[c.scene.canvas.width,c.scene.canvas.height], disabled:stage.classList.contains("glass-disabled"),
+            styles:nodes.map(e=>({inline:properties.map(p=>[p,e.style.getPropertyValue(p),e.style.getPropertyPriority(p)]),
+              computed:[getComputedStyle(e).borderRadius,getComputedStyle(e).boxShadow],
+              layer:[...e.querySelectorAll(".lg-dom-material")].map(l=>[getComputedStyle(l).borderRadius,getComputedStyle(l).background,getComputedStyle(l).backdropFilter])})),
+            inputRetained:nodes[0].querySelector("input")===input&&input.value==="Native contract",focusRetained:document.activeElement===input});
+        };
+        capture("initial");
+        nodes.forEach(e=>e.style.transform="translate(27px,-9px)"); capture("move");
+        stage.style.transform="translate(11px,4px) scale(.8)";capture("ancestor-pan-zoom");stage.style.transform="";
+        nodes[0].style.width="123px";nodes[1].style.height="12px";capture("resize-and-thin");
+        await c.setSettings({theme:"dark",controls:{...looks.frosted,radius:7,shadowOpacity:.3,shadowBlur:9,shadowY:2}});capture("theme-material-shadow");
+        nodes.forEach(e=>{
+          e.style.setProperty("border-radius",e.style.borderRadius,"important");
+          e.style.setProperty("--lg-highlight",".99","important");e.style.removeProperty("--lg-shadow-y");
+          for(const l of e.querySelectorAll(".lg-dom-material")) {l.style.setProperty("background","red","important");l.style.setProperty("backdrop-filter","blur(99px)","important");}
+        });capture("repair-host-edits-and-priority");
+        nodes.forEach(e=>{e.style.cssText="position:absolute;left:45px;top:50px;width:150px;height:80px";for(const l of e.querySelectorAll(".lg-dom-material"))l.style.cssText="";});capture("repair-cssText-reset");
+        nodes[1].style.display="none";capture("hidden");nodes[1].style.display="";capture("shown");
+        await c.setSettings({enabled:false});capture("disabled");await c.setSettings({enabled:true,theme:"light",controls:{...looks.reading,radius:22}});capture("enabled-new-look");
+        stage.style.width="560px";capture("stage-resize");stage.style.width="";
+        const original = CSSStyleDeclaration.prototype.setProperty; let writes=0;
+        CSSStyleDeclaration.prototype.setProperty=function(...args){writes++;return original.apply(this,args);};
+        try {for(let frame=0;frame<12;frame++){nodes.forEach(e=>e.style.transform=`translate(${frame}px,0)`);c.render();}}
+        finally {CSSStyleDeclaration.prototype.setProperty=original;}
+        capture("stable-motion");
+        off.forEach(fn=>fn());c.render();
+        const cleanup={layers:stage.querySelectorAll(".lg-dom-material").length,maps:c.renderer.maps?.size??null};
+        nodes.forEach(e=>e.remove());c.dispose();cleanup.children=stage.children.length;
+        variants.push({variant,samples,stableWrites:writes,cleanup});
+      } finally {c.dispose();stage.style.width="";stage.style.transform="";stage.replaceChildren();}
+    }
+    // display:none returns the viewport's (0,0), giving different stage-relative
+    // origins in the side-by-side fixture. Empty surfaces do not draw; compare
+    // their size/radius, and retain the unmodified coordinates in raw evidence.
+    const comparable = samples => samples.map(s=>({...s,bounds:s.bounds.map(b=>Object.fromEntries(Object.entries(b.w===0||b.h===0?{...b,x:0,y:0}:b).map(([k,v])=>[k,Math.round(v*1000)/1000])))}));
+    const equal=JSON.stringify(comparable(variants[0].samples))===JSON.stringify(comparable(variants[1].samples));
+    const contracts=variants.map(v=>{
+      const byName=Object.fromEntries(v.samples.map(s=>[s.name,s]));
+      return {variant:v.variant,
+        inputAndFocus:v.samples.every(s=>s.inputRetained&&s.focusRetained),
+        backendRetained:v.samples.every(s=>s.backend===backend),
+        hostEditsRepaired:JSON.stringify(byName["theme-material-shadow"].styles)===JSON.stringify(byName["repair-host-edits-and-priority"].styles),
+        thinRadius:byName["resize-and-thin"].bounds[1].radius===6,
+        panZoom:Math.abs(byName["ancestor-pan-zoom"].bounds[0].w-152)<.001,
+        disabled:byName.disabled.disabled&&byName.disabled.bounds.length===0,
+        reenabled:!byName["enabled-new-look"].disabled&&byName["enabled-new-look"].bounds.length===3,
+        cleanup:v.cleanup.layers===0&&v.cleanup.children===0&&(v.cleanup.maps===null||v.cleanup.maps===0)};
+    });
+    const passed=equal&&contracts.every(c=>Object.entries(c).every(([k,v])=>k==="variant"||v===true));
+    evidence.styleChecks.push({backend,equal,passed,contracts,geometryComparison:"0.001 CSS px rounding; empty surface origins ignored; raw bounds retained",variants});show();
+  }
+  status.textContent=`Style checks complete: ${evidence.styleChecks.filter(r=>r.passed).length}/5 passed`;
+}
+for(const [id,action] of [["render",renderPair],["checks",checks],["benchmark",runPerformance],["profile",profileUpdates],["style-checks",styleChecks],["geometry-benchmark",()=>runPerformance(true)]])document.querySelector(`#${id}`).onclick=async()=>{
   const buttons=[...document.querySelectorAll("button")];buttons.forEach(b=>b.disabled=true);
   try{await action();}catch(e){status.textContent=`Failed: ${e.message}`;console.error(e);}finally{buttons.forEach(b=>b.disabled=false);}
 };

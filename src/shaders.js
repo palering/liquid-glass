@@ -1,25 +1,16 @@
-// Optical shader adaptations from Charles Yin / liquid-glass-studio (MIT).
-// Original sources and full license retained under vendor/studio/.
-const raw = import.meta.glob("../vendor/studio/src/shaders*/**/*.{glsl,wgsl}", {
-  query: "?raw",
-  import: "default",
-  eager: true,
-});
-function expand(path) {
-  return raw[path].replace(/#include '\.\/([^']+)'/g, (_, rel) =>
-    expand(path.slice(0, path.lastIndexOf("/") + 1) + rel),
-  );
-}
-const base = "../vendor/studio/src/";
-export const glVertex = expand(base + "shaders/vertex.glsl");
-export const gpuVertex = expand(base + "shaders-wgsl/vertex.wgsl");
-export const glFragment = expand(base + "shaders/fragment-main.glsl").replace(
-  "fragColor = outColor;",
-  "fragColor = vec4(outColor.rgb, 1.0 - smoothstep(-0.5 / u_resolution1x.y, 0.5 / u_resolution1x.y, merged));",
-);
-export const gpuFragment = expand(
-  base + "shaders-wgsl/fragment-main.wgsl",
-).replace(
-  "return outColor;",
-  "return vec4f(outColor.rgb, 1.0 - smoothstep(-0.5 / u_resolution1x.y, 0.5 / u_resolution1x.y, merged));",
-);
+// Generated at build preparation from the WGSL sources in src/shaders/.
+// Studio optical adaptations retain their MIT attribution; see NOTICE.md.
+import optics from './shaders/generated/optics.json' with { type: 'json' };
+import vertex from './shaders/generated/optics-vertex.json' with { type: 'json' };
+import image from './shaders/generated/image.json' with { type: 'json' };
+import imageVertex from './shaders/generated/image-vertex.json' with { type: 'json' };
+export const glVertex = vertex.glsl;
+export const gpuVertex = vertex.wgsl;
+export const glFragment = optics.glsl;
+export const gpuFragment = optics.wgsl;
+export const opticalBindings = optics;
+export const imageBindings = image;
+export const glImageVertex = imageVertex.glsl;
+export const gpuImageVertex = imageVertex.wgsl;
+export const glImageFragment = image.glsl;
+export const gpuImageFragment = image.wgsl;

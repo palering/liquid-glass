@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-06",
+  "decision": "rejected; candidate patch archived, absent from current src",
+  "baselineRevision": "8cdf48d117d82273c7dd445da5a09cfad7f05569",
+  "baselineSourceSha256": "073993999bdc90e5e18ddc77c7fca42ad74c8eee4027e7d8e4cc83c1f736feca",
+  "candidateSourceSha256": "2587a11611f3f3c45aed03c2329c6fbaa83df1d9e55e299953c83ee137306b97",
+  "retainedSourceSha256": "073993999bdc90e5e18ddc77c7fca42ad74c8eee4027e7d8e4cc83c1f736feca",
+  "patchSha256": "496831f431fafad8c8a7749386968812d65beb784ddbc198d8c02bbf784241ce",
+  "finalFixtureSha256": {
+    "tests/browser/optimization.html": "50efe8b36e4e6df51ea3d71a462995a81ad56d88f18e6d0cd9474f9fc35a43bf",
+    "tests/browser/optimization.js": "179d7d9a9fe539c6bb2440348ae93592729335b43a86cda4b9561eae246cf057",
+    "scripts/prepare-optimization-baseline.mjs": "38aefc322407a89cce4980c9ad02e6289ecad102fba224e7484c1d8ed068a8bd"
+  },
+  "performanceFunctionSha256": "fe303bf4338703e246ac7e8abf04bf036f9ebf52a3bd52cd94bab206fbe2e531",
+  "environment": {
+    "devicePixelRatio": 1,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "viewport": [
+      1440,
+      1024
+    ]
+  },
+  "measurementStartedAt": "2026-10-06T06:01:57.831Z",
+  "measurementFinishedAt": "2026-10-06T06:03:24.150Z",
+  "validPerformanceCases": 54,
+  "failedPerformanceCases": 0,
+  "notes": [
+    "performance.json, summary.json, profile-candidate.json and contract-candidate.json describe the rejected candidate, not the retained library.",
+    "Final fixture hashes identify the retained diagnostic tool. Assertions and idle profiling were added after candidate measurement; runPerformance function remained unchanged.",
+    "Exploratory and candidate profiles predate final visibility/resize guards and idle probes; wrappers add overhead.",
+    "retained profiles explicitly call render on idle frames to isolate read/write cost; they do not represent the production idle scheduler.",
+    "No GPU timestamps or compositor traces; the first geometry read includes pending browser work, not just stage arithmetic."
+  ],
+  "verification": {
+    "nodeTests": 14,
+    "typecheck": true,
+    "build": true,
+    "packageImport": true,
+    "reactSSR": true,
+    "retainedStyleBackendsPassed": 5,
+    "browserRuntimeErrorsOrWarnings": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "liquid-glass-experiment-manifest",
+  "version": 1,
+  "date": "2026-10-06",
+  "sourceSha256": "3d8735402c13f24d901acf12c9c152bfe427f8d1d82afd14af1d9ba1657c7505",
+  "consumer": "adjacent infinite-canvas local prototype, no deployment",
+  "warning": "desktop/mobile evidence is Chromium emulation; no real mobile hardware or Safari/Firefox verification",
+  "files": {
+    "matrix.json": "4d5ff180bb0bdb576f960170e974e4f66a68ed0fbcfa3d89e74b0eb1a60a3f93",
+    "interactions.json": "0d9c5060e287962d56bc9e6e9b7c09f72e43d9bd78e577a32d5c6f5b8df70238",
+    "mobile.json": "545a6386367e162c840ae3eec2d6b78ac02773a5494295c19dc3be02f72ea095",
+    "mobile-light.json": "67b54124c02607f005fe7b5ffaee44faced1c8dd2b390ea6778b4df994d81644",
+    "production.json": "9159bf4973f6bd1d0a0099dc7870d14731e718f30c9fedcfb059fd1b53016f0f"
+  },
+  "fixtures": {}
+}

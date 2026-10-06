@@ -2,13 +2,15 @@
 
 Audience: public
 
-2026-10-06：v0.4 独立 Git / GitHub 工程基线，核心库、React 薄适配、实验室与性能 harness 分开管理。未接入无限画布；尚未完成生产稳定性验收。公开仓库和 Pages 展示站已发布并通过本次线上交互检查；发布记录见 [deployment.md](deployment.md)。
+2026-10-06：v0.4 独立 Git / GitHub 工程基线，核心库、React 薄适配、实验室与性能 harness 分开管理。本地已接入 React Flow 无限画布的建筑卡片、加号和工作区侧栏；尚未完成生产稳定性验收。公开仓库和 Pages 展示站已发布并通过本次线上交互检查；发布记录见 [deployment.md](deployment.md)。
 
 公开入口为英文 [README](../README.md) 和 [中文版本](../README.zh-CN.md)，共用两张实际 Clear / WebGPU 效果图。详细接口与运行步骤见 [api.md](api.md) / [development.md](development.md)；实验室、性能页与 React 示例支持 EN / 中文原地切换和携带语言的导航。后续提交使用 Conventional Commits。
 
+当前发布策略：2026-10-06 后续迭代先在本地实施、验证和保留，待用户授权阶段发布后再推送或部署；之前逐轮发布的授权已被此要求覆盖。以下第二、第三轮、WGSL 单源码及光学/TS 准备阶段结果尚未上传。
+
 ## 已实现
 
-Studio 固定 MIT GLSL/WGSL 光学 shader；WebGPU → WebGL2 → SVG → CSS → solid。共享 renderer/context；GPU 降采样低通 + 25 tap 横/纵高斯模糊；纹理按半径缓存并回收，GPU 路径不调用 Canvas 2D 模糊。shader 保持透明输出与逐 surface bounds，未执行上游 demo/utils。
+Studio 固定 MIT 光学模型，以 WGSL 为作者源码、Naga 生成 GLSL ES 300；WebGPU → WebGL2 → SVG → CSS → solid。共享 renderer/context；GPU 降采样低通 + 25 tap 横/纵高斯模糊；纹理按半径缓存并回收，GPU 路径不调用 Canvas 2D 模糊。shader 保持透明输出与逐 surface bounds，未执行上游 demo/utils。
 
 20 个独立滑块、染色、边缘模糊、连续清透度；七个外观预设。光学样片/业务卡片/三层材质场景、效果 on/off、指针/键盘移动。GPU 可选按 zIndex 逐层折射**材质纹理**，不采集前景 DOM 或其文字/照片；默认不叠层。
 
@@ -28,16 +30,30 @@ Studio 固定 MIT GLSL/WGSL 光学 shader；WebGPU → WebGL2 → SVG → CSS �
 
 SVG 位移图/节点缓存已实施并通过第一轮成对验证：54 / 54 性能组有效；10/50/100 移动表面 CPU p95 为 17.0→5.1、64.5→20.2、140.1→44.9 ms。20 组 SVG / 60 个子树输出逐通道一致，另有 10 组后端 smoke；移动时输入/焦点保留，参数失效与注销清理通过。14 个契约测试、类型、生产构建和打包消费检查通过。GPU shader 未改；CPU/rAF 不是 GPU 时间，100 表面仍有长尾。协议、三方可借鉴部分和原始证据见 [optimization-experiment.md](optimization-experiment.md)。旧 147 组归档保留为历史源码基线，不代表当前完整后端矩阵。
 
+第二轮公共更新 profiler 与五后端 DOM 契约检查已在本地完成。100 表面移动时，当前首次 bounds 读取诊断均值约 22–24 ms，静态强制 render 约 0.02 ms；重复样式写入没有等量 attribute 变更。条件样式缓存经过 54 / 54 无包装成对测量，收益不稳定，已撤回；保留诊断工具、原始样本和候选补丁，不改变第二轮检查点的核心源码。最终五后端输入/焦点、平移缩放、宿主样式修复、隐藏/开关及清理断言全部通过；14 测试、类型、构建、包消费通过。详见 [shared-update-experiment.md](shared-update-experiment.md)。
+
+第三轮已完成本地 React Flow 消费、20 组五后端缩放与交互、54 组模型几何性能、84 组 GPU readback（alpha 精确，颜色差异 ≤1/255）、资源失效/回收、12 组资源性能、四实例 DPR 2 / 600 帧和构建/包消费。保留 GPU 绑定/view/uniform data 复用与零色散/mix 端点快路径；局部 blur 的 36 组像素/24 组性能试验无稳定收益，生产不启用。16 个 Node 契约与类型通过。详细协议、数值、真实画布证据和限制见 [consumer-gpu-experiment.md](consumer-gpu-experiment.md)。
+
+WGSL 单一源码阶段已完成本地验证：四对 shader（光学/顶点/图像 pass）由 WGSL 生成 GLSL ES 300，反射驱动 uniform packing；84/84 像素案例、12 组性能、DPR 2 四实例/600 帧及消费矩阵20/20通过。19 个 Node 契约、类型、构建和包消费通过；实际生产 WebGL 连接/拖动/主题验证通过。普通 npm 构建不要求 Rust。具体实现、撤回的 packing/upload 候选、数值和局限见 [WGSL 单源码报告](wgsl-single-source.md)。
+
+光学与 TS 准备阶段已完成 Chrome/Chromium 下的模型对照和最终回归：全解析梯度超阈值，混合梯度收益不稳定，高度场保留独立实验；生产保留有界高光五次幂与部分 settings 原子校验。最终 25/25 Node、84/84 精确 RGBA、12 组资源性能、Chrome 五后端深浅主题10/10、真实消费20/20及生产 WebGL 连线/拖动/主题通过，构建、声明、shader 漂移与包消费通过。已有单光学 pass GPU timestamp 原始样本，不支持稳定加速结论。四实例、DPR2、18,000前台帧限定运行及失败恢复/最终清理通过；协议与边界见 [光学报告](optical-refinement.md)。最终 JS/声明/工具/测试/配置快照已保留，现在已达到当前范围内开始 TS 的门槛；下一阶段按 [TS 入口](ts-migration-plan.md) 小步迁移，运行时仍为 JS。
+
+Shader 研究阶段（档位接入前）已完成三方逐函数对照、数学检查、54个隔离blur案例、三轮各84材质案例及GPU timestamp。paired候选完整保真各79/84、最高差14，收益混合，未换入生产；当时102个JS快照保持一致。来源与候选取舍见 [深入研究](shader-design-research.md)，研究归档保持不变。
+
+**性能档位阶段（2026-10-06）：五个手动档位已在JS实现，双语Lab、实际预算诊断、v2预设/v1读取及类型/包同步完成。** 29/29 Node、四对shader、类型/构建/实际包通过；默认双GPU84/84 RGBA完全一致、30项策略契约、五后端10项smoke、1350帧切档与最终零资源清理、真实消费20/20及图交互通过。取舍、成本和边界见 [实施验收](performance-profile-implementation.md)。新 [JS检查点](../benchmarks/results/performance-profiles/current-source.json) 是 TS 起点，旧光学快照保留。当前达到用户范围内开始TS的门槛，停止在入口，运行时仍JS；没有推送、部署或npm发布。自动硬件分档/其他核与照明模型仍未实现。
+
+**最新Shader优化阶段（2026-10-07）：** 5个优先优化候选各140案例通过，常量准备、CPU/展开权重和GPU递推未获稳定收益，保持实验；生产采用精确零Fresnel/glare跳过。交错三重复的全零光照GPU mean .871902→.592555 ms（约32%），p95 1.441792→1.032192；正常开启p95持平，不宣称全局加速。最终生产140/140通过（134精确，其余RGB最大1/255，alpha精确），29 Node、类型/四对shader/构建/实际包通过；性能30项、1350生命周期帧、Chrome10项及真实消费检查见[验收](shader-preparation.md)。新半圆/凸/Hermite轮廓各140项掩膜/资源检查与样片保持隔离，不是旧look保真或产品视觉验收。新[完整JS快照](../benchmarks/results/shader-preparation/current-source.json)取代旧性能快照作为TS起点；运行时仍JS，未推送/部署。当前优先实验已完成取舍、接口和ABI稳定、回归及恢复点明确，可开始TS；这不代表Shader已最优。
+
 ## 未验证 / 未实现
 
 原生 HTML-in-Canvas 2D 桥存在，但实际采集、命中、resize、焦点和新旧兼容未通过实测；直接 GPU DOM 采集未接入。内置浏览器没有已确认的 flags/启动参数入口；普通 Chrome 的隔离 profile 命令只作为人工实验路线，未运行。
 
-没有 Svelte、React hydration / React Flow 集成、任意 DOM 背景折射、跨浏览器验收、DPR 2 压力测试、长期 soak、GPU 时间/驱动显存、视频、形状融合、多灯光、显微扰动或独立 Acrylic 模型。Apple-inspired looks 是自定义参数，没有实测校准为系统像素一致。浏览器文件下载行为尚未确认；JSON 文本路径已验证。
+没有 Svelte、React hydration、任意 DOM 背景折射、跨浏览器验收、生产长期 soak、GPU 驱动显存、视频、形状融合、多灯光、显微扰动或独立 Acrylic 模型。Apple-inspired looks 是自定义参数，没有实测校准为系统像素一致。浏览器文件下载行为尚未确认；JSON 文本路径已验证。
 
 ## 继续点
 
-固定源码质量复核及建议验收顺序见 [shader-quality-review.md](shader-quality-review.md)。已核对另外两个项目的局部输入、内容图集/纹理分桶、自适应模糊与光学结构，但未引入其运行时或重跑三方基准。SVG 缓存已完成首轮试验；双 GPU 像素等价、真实消费验收、公共更新 profiler 和 GPU 局部处理仍待推进。不要把本次状态/截图 smoke 当作双 shader 数值一致的证明。
+固定源码质量复核及建议验收顺序见 [shader-quality-review.md](shader-quality-review.md)。已核对另外两个项目的局部输入、内容图集/纹理分桶、自适应模糊与光学结构，但未引入其运行时或重跑三方基准。SVG 缓存、公共更新 profiler、真实消费几何、双 GPU 数值与资源/快路径/ROI 已完成三轮本地实施及试验；本轮范围与完成状态见 [continuation-plan.md](continuation-plan.md)。两 GPU 后端之间颜色仍不逐像素相等，原始差异单独保留。
 
-先与用户讨论 [acceptance.md](acceptance.md)，选择默认材质；分析并优化高密度公共更新，补真实画布和跨浏览器验收。原生采集独立推进，不把未开放 API 当作已支持。独立 Git 为 main，公开远端为 [palering/liquid-glass](https://github.com/palering/liquid-glass)；用户已授权 GitHub 仓库与展示站发布，不涉及 npm 发布。整体公开许可待选，上游 MIT 保留；包边界见 [package-contract.md](package-contract.md)。验收稳定后，后续液态玻璃效果统一复用此库。
+当前 Chrome/Chromium 基线的 TS 前门槛见 [acceptance.md](acceptance.md)；其他浏览器与平台兼容明确延后到 WebView 支持阶段，不提前扩展兼容层。高密度长尾、默认材质选择与生产长期稳定仍按独立需求评估。原生采集独立推进，不把未开放 API 当作已支持。独立 Git 为 main，公开远端为 [palering/liquid-glass](https://github.com/palering/liquid-glass)；当前先本地迭代，阶段发布须等待用户授权，不涉及 npm 发布。整体公开许可待选，上游 MIT 保留；包边界见 [package-contract.md](package-contract.md)。验收稳定后，后续液态玻璃效果统一复用此库。
 
 开发服务 4174，原画布 4173。若服务不存在，按根 README 启动。

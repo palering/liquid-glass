@@ -1,0 +1,9 @@
+{
+  "compiler": "naga-30.0.0",
+  "entry": "main",
+  "glsl": "#version 300 es\n\nprecision highp float;\nprecision highp int;\n\n\nvoid main() {\n    uint id = uint(gl_VertexID);\n    vec2 positions[4] = vec2[4](vec2(-1.0, -1.0), vec2(1.0, -1.0), vec2(-1.0, 1.0), vec2(1.0, 1.0));\n    gl_Position = vec4(positions[id], 0.0, 1.0);\n    gl_Position.yz = vec2(-gl_Position.y, gl_Position.z * 2.0 - gl_Position.w);\n    return;\n}\n\n",
+  "stage": "vertex",
+  "textures": {},
+  "uniforms": {},
+  "wgsl": "// Shared fullscreen image pass. Original implementation in this project.\n@vertex\nfn main(@builtin(vertex_index) id: u32) -> @builtin(position) vec4f {\n  let positions = array<vec2f, 4>(\n    vec2f(-1, -1), vec2f(1, -1), vec2f(-1, 1), vec2f(1, 1),\n  );\n  return vec4f(positions[id], 0, 1);\n}\n"
+}

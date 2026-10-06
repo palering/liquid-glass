@@ -1,0 +1,106 @@
+[
+  {
+    "project": "liquid-dom",
+    "revision": "dd342ab663d718e8b4edf4cd39983b9a873360a7",
+    "path": "packages/core/README.md",
+    "bytes": 14079,
+    "sha256": "41f5bc60744fc1743cfa085a7b91bce6f7cb13531c1788e664c4761ccf0ef67e",
+    "url": "https://raw.githubusercontent.com/AndrewPrifer/liquid-dom/dd342ab663d718e8b4edf4cd39983b9a873360a7/packages/core/README.md"
+  },
+  {
+    "project": "liquid-dom",
+    "revision": "dd342ab663d718e8b4edf4cd39983b9a873360a7",
+    "path": "packages/core/src/renderer/dom-content-sync.ts",
+    "bytes": 34912,
+    "sha256": "1d169e157bd2271495bb87b15dffbdc41d02e36d8ba0c0849655911773d8aac5",
+    "url": "https://raw.githubusercontent.com/AndrewPrifer/liquid-dom/dd342ab663d718e8b4edf4cd39983b9a873360a7/packages/core/src/renderer/dom-content-sync.ts"
+  },
+  {
+    "project": "liquid-dom",
+    "revision": "dd342ab663d718e8b4edf4cd39983b9a873360a7",
+    "path": "packages/core/src/renderer/index.ts",
+    "bytes": 12315,
+    "sha256": "237763bb44638805f5d6d7029a10be4fa0373bb39a1aba5b10247d5f3fd22909",
+    "url": "https://raw.githubusercontent.com/AndrewPrifer/liquid-dom/dd342ab663d718e8b4edf4cd39983b9a873360a7/packages/core/src/renderer/index.ts"
+  },
+  {
+    "project": "ybouane",
+    "revision": "59af227103795f06421a96e2c7d3dceb081decd2",
+    "path": "README.md",
+    "bytes": 12537,
+    "sha256": "65c3f90745d8c42419dd17db760a712d2afcc383763ef528b80796ab1644c723",
+    "url": "https://raw.githubusercontent.com/ybouane/liquidglass/59af227103795f06421a96e2c7d3dceb081decd2/README.md"
+  },
+  {
+    "project": "ybouane",
+    "revision": "59af227103795f06421a96e2c7d3dceb081decd2",
+    "path": "src/HtmlCapture.ts",
+    "bytes": 19580,
+    "sha256": "3106046dc3302715c330e9b1cae6d44918fe12d221bf76358726a28b19a60706",
+    "url": "https://raw.githubusercontent.com/ybouane/liquidglass/59af227103795f06421a96e2c7d3dceb081decd2/src/HtmlCapture.ts"
+  },
+  {
+    "project": "ybouane",
+    "revision": "59af227103795f06421a96e2c7d3dceb081decd2",
+    "path": "src/GlassRenderer.ts",
+    "bytes": 14340,
+    "sha256": "8a77b115249760bc9328fe12201722f2bd9302aaa5fbb2dbe1f9d341b6e63c2b",
+    "url": "https://raw.githubusercontent.com/ybouane/liquidglass/59af227103795f06421a96e2c7d3dceb081decd2/src/GlassRenderer.ts"
+  },
+  {
+    "project": "liquid-dom",
+    "revision": "dd342ab663d718e8b4edf4cd39983b9a873360a7",
+    "path": "packages/core/src/renderer/core.ts",
+    "bytes": 34635,
+    "sha256": "9758fba1ea5fed7f5632d33671d3f0344133efab822a1ed478fc8094e7ba2fd4",
+    "url": "https://raw.githubusercontent.com/AndrewPrifer/liquid-dom/dd342ab663d718e8b4edf4cd39983b9a873360a7/packages/core/src/renderer/core.ts"
+  },
+  {
+    "project": "liquid-dom",
+    "revision": "dd342ab663d718e8b4edf4cd39983b9a873360a7",
+    "path": "packages/core/src/shaders.ts",
+    "bytes": 35713,
+    "sha256": "ad782df17860930c45ce0605ae6b0025a3c29d75c6047b4409a1fc2303bd4c20",
+    "url": "https://raw.githubusercontent.com/AndrewPrifer/liquid-dom/dd342ab663d718e8b4edf4cd39983b9a873360a7/packages/core/src/shaders.ts"
+  },
+  {
+    "project": "liquid-dom",
+    "revision": "dd342ab663d718e8b4edf4cd39983b9a873360a7",
+    "path": "packages/core/src/renderer/adaptive-blur.ts",
+    "bytes": 6938,
+    "sha256": "ae8a7493fa52497d850c7b767225a821b06b00694c6ce0baadab3d9ebff7fc26",
+    "url": "https://raw.githubusercontent.com/AndrewPrifer/liquid-dom/dd342ab663d718e8b4edf4cd39983b9a873360a7/packages/core/src/renderer/adaptive-blur.ts"
+  },
+  {
+    "project": "liquid-dom",
+    "revision": "dd342ab663d718e8b4edf4cd39983b9a873360a7",
+    "path": "packages/core/tests/adaptive-blur.test.ts",
+    "bytes": 1178,
+    "sha256": "e7ccbefb0cdf5d145c74c694f07c56d490c2308788e44526434bb88702693273",
+    "url": "https://raw.githubusercontent.com/AndrewPrifer/liquid-dom/dd342ab663d718e8b4edf4cd39983b9a873360a7/packages/core/tests/adaptive-blur.test.ts"
+  },
+  {
+    "project": "ybouane",
+    "revision": "59af227103795f06421a96e2c7d3dceb081decd2",
+    "path": "src/shaders.ts",
+    "bytes": 10768,
+    "sha256": "af0e7034a2f038d7ec06a25fd203179da2a6cfef363e93e7918fa7a120802d5c",
+    "url": "https://raw.githubusercontent.com/ybouane/liquidglass/59af227103795f06421a96e2c7d3dceb081decd2/src/shaders.ts"
+  },
+  {
+    "project": "ybouane",
+    "revision": "59af227103795f06421a96e2c7d3dceb081decd2",
+    "path": "src/LiquidGlass.ts",
+    "bytes": 51964,
+    "sha256": "006efc9687789a780e1f41437a320907034309b0207b0689e01d7d4971e3eee6",
+    "url": "https://raw.githubusercontent.com/ybouane/liquidglass/59af227103795f06421a96e2c7d3dceb081decd2/src/LiquidGlass.ts"
+  },
+  {
+    "project": "ybouane",
+    "revision": "59af227103795f06421a96e2c7d3dceb081decd2",
+    "path": "src/defaults.ts",
+    "bytes": 2516,
+    "sha256": "3ce5f1a113512ec9176fff6a377dbfdee4d40355ff5024cab5f9c8c4979b08d6",
+    "url": "https://raw.githubusercontent.com/ybouane/liquidglass/59af227103795f06421a96e2c7d3dceb081decd2/src/defaults.ts"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "schema": "liquid-glass-experiment-manifest",
+  "version": 1,
+  "date": "2026-10-06",
+  "baselineRevision": "8cdf48d117d82273c7dd445da5a09cfad7f05569",
+  "sourceSha256": "3d8735402c13f24d901acf12c9c152bfe427f8d1d82afd14af1d9ba1657c7505",
+  "resourcePerformanceSource": "8d746c09224c53e4f6c5ac049688d8f8944441adc897ea9ccf48eb625894dc39",
+  "qualitySource": "feaf4beaec6f99a1fcceb4e76ffefd3819452d8f63713c2fedddfa2b65e021b4",
+  "roiSource": "8d746c09224c53e4f6c5ac049688d8f8944441adc897ea9ccf48eb625894dc39",
+  "roiPerformanceAndStressSource": "feaf4beaec6f99a1fcceb4e76ffefd3819452d8f63713c2fedddfa2b65e021b4",
+  "warning": "Same-backend quality permits <=1/255 color, exact alpha; cross-backend colors are not equal. CPU/rAF are not GPU timings.",
+  "roi": "candidate lives only in fixture; memory allocation and full texture clears are not reduced",
+  "fixture": "tests/browser/gpu-quality.js",
+  "files": {
+    "quality.json": "432a044ac867fac925f695240728aec218382b3957025376fe1fe0135891d8a2",
+    "performance.json": "460f9d02fec80c18c30d1a52b3a47272e99c37a89f37c665002782942eabacd0",
+    "roi.json": "9d17aaed4ce4536dc6953779ff558b2409f7876299484e5393523d989da87b56",
+    "roi-performance.json": "363b2a0663f6bad378c29c9f38346d0e0f3af8c555e3f5e93b47994613d75f8b",
+    "stress.json": "dca682f4e4a2d905778e5334686c2f9664163e2edcf8d6133215f4e9febf3fae",
+    "summary.json": "35563c27e35c5b6396c037ce94f2c2ebfc276a9b064fcca2fa8793c2c37afb63"
+  },
+  "fixtures": {
+    "tests/browser/gpu-quality.js": "b3378a16b6527b3f82e21dbc3ddb9100c3b856fe415ae431c2dd377887d1aba1"
+  }
+}

@@ -30,6 +30,7 @@ export interface Controls {
   tintColor?: "auto" | `#${string}`;
 }
 export interface Settings {
+  performance?: PerformanceOptions | null;
   backend?: Backend;
   capture?: Capture;
   theme?: "dark" | "light";
@@ -40,6 +41,10 @@ export interface Settings {
   controls?: Controls;
 }
 export interface State {
+  performance: PerformanceState | null;
+  sceneReason?: string | null;
+  geometryMode?: "dom" | "provided";
+  geometryReason?: string | null;
   requestedBackend: Backend;
   activeBackend: Exclude<Backend, "auto"> | null;
   activeCapture: Capture;
@@ -55,11 +60,53 @@ export interface State {
   draws: number;
   cpuMs: number;
 }
+export type PerformancePreset = 'minimal' | 'economy' | 'balanced' | 'full' | 'custom';
+export interface PerformanceOverrides {
+  dprCap?: number;
+  textureBudgetMiB?: number;
+  maxBlurRadii?: number;
+  animationHz?: number;
+  dispersion?: 'off' | 'preserve';
+  layered?: boolean;
+}
+export interface PerformanceOptions {
+  preset: PerformancePreset;
+  fidelity?: 'preserve' | 'approximate';
+  overrides?: PerformanceOverrides;
+  adaptive?: false;
+}
+export interface PerformanceState {
+  preset: PerformancePreset | 'legacy';
+  requested: PerformanceOptions | null;
+  dpr: number;
+  blurKernel: 'dense25';
+  animationHz: number;
+  layered: boolean;
+  sourceWidth: number;
+  sourceHeight: number;
+  estimatedTextureBytes: number;
+  requiredTextureBytes?: number;
+  textureBudgetBytes: number | null;
+  blurRadii: number[];
+  adjustmentReasons: string[];
+  budgetExceeded: boolean;
+  controlsByKind: Record<string, Controls>;
+}
+export const performanceProfiles: Readonly<Record<PerformancePreset, Readonly<Required<PerformanceOverrides>>>>;
+export function textureInventory(width:number,height:number,dpr:number,radii?:number[],layered?:boolean):{
+  width:number;height:number;bytes:number;
+  chains:{radius:number;width:number;height:number;levels:number;bytes:number;passes:number}[];
+};
 export interface SurfaceOptions {
   id?: string;
   kind?: SurfaceKind;
   radius?: number;
   zIndex?: number;
+}
+export interface GeometryFrame {
+  width: number;
+  height: number;
+  surfaces: ReadonlyMap<string, { x: number; y: number; w: number; h: number; scale?: number }>;
 }
 export class GlassController {
   constructor(stage: HTMLElement, options?: Settings);
@@ -73,6 +120,9 @@ export class GlassController {
   setImage(url: string | null): Promise<boolean>;
   setAnimation(enabled: boolean): void;
   invalidate(): void;
+  invalidateScene(): void;
+  setGeometryProvider(provider?: (() => GeometryFrame | null) | null): void;
+  setScenePainter(painter?: ((context: CanvasRenderingContext2D, frame: {width:number; height:number; dpr:number; settings:Settings; phase:number}) => void) | null): void;
   render(): void;
   retry(): Promise<void>;
   simulateLoss(): void;
@@ -108,10 +158,10 @@ export const opticalFields: [
   string,
 ][];
 export function clarityControls(amount: number): Controls;
-export const PRESET_VERSION: 1;
+export const PRESET_VERSION: 2;
 export interface Preset {
   schema: "workspace-liquid-glass";
-  version: 1;
+  version: 2;
   name: string;
   settings: Settings;
 }

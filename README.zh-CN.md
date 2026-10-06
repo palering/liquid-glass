@@ -22,6 +22,7 @@
 - 深浅主题、内置场景、示例图片与本地图片导入。
 - 命名预设与 JSON 导入导出；表面可拖动，内容保留原生 DOM 交互。
 - 每个 controller 共享一个 renderer，复用模糊资源，静态场景按变化重绘。
+- 五个手动[性能档位](docs/performance-profiles.md)、可观察的纹理预算与可恢复的画质取舍（本地已实现，在线站尚未更新）。
 
 ## 本地运行
 
@@ -57,7 +58,7 @@ await glass.setSettings({ controls: { blurPx: 0, thickness: 30 } });
 
 GPU 和 SVG 取样的是库自己的场景与传入图片，不会自动采集页面任意 DOM。原生 HTML-in-Canvas 仍属实验能力，本轮验证所用浏览器尚未开放。SVG 提供位移近似，CSS 提供背景模糊，效果与 GPU 光学路径不同。
 
-当前是实验性库。跨浏览器、React Flow 接入、DPR 2 压力测试和长期稳定性尚未验收。已测结果与限制见 [当前状态](docs/status.md) 和 [性能证据](docs/performance.md)。
+当前是实验性库。本地 React Flow 接入和短窗口 DPR 2 压力检查已通过；跨浏览器与长期稳定性尚未验收。已测结果与限制见 [当前状态](docs/status.md) 和 [性能证据](docs/performance.md)。
 
 ## 文档
 

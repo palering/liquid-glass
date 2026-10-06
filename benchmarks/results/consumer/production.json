@@ -1,0 +1,49 @@
+{
+  "backend": "webgpu",
+  "geometryMode": "provided",
+  "gpuCanvases": 1,
+  "images": true,
+  "overflow": false,
+  "qa": 0,
+  "surfaces": 3,
+  "backends": [
+    {
+      "requested": "webgpu",
+      "active": "webgpu",
+      "theme": "light"
+    },
+    {
+      "requested": "webgl",
+      "active": "webgl",
+      "theme": "light"
+    },
+    {
+      "requested": "svg",
+      "active": "svg",
+      "theme": "light"
+    },
+    {
+      "requested": "css",
+      "active": "css",
+      "theme": "light"
+    },
+    {
+      "requested": "solid",
+      "active": "solid",
+      "theme": "light"
+    }
+  ],
+  "portConnection": {
+    "from": [
+      625.2216796875,
+      704.7598266601562
+    ],
+    "to": [
+      558.736572265625,
+      443.9910583496094
+    ],
+    "edges": 9
+  },
+  "logs": [],
+  "passed": true
+}

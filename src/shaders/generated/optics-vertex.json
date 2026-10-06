@@ -1,0 +1,9 @@
+{
+  "compiler": "naga-30.0.0",
+  "entry": "vs_main",
+  "glsl": "#version 300 es\n\nprecision highp float;\nprecision highp int;\n\nstruct VertexOutput {\n    vec4 position;\n    vec2 uv;\n};\nlayout(location = 0) in vec2 _p2vs_location0;\nsmooth out vec2 _vs2fs_location0;\n\nvoid main() {\n    vec2 a_position = _p2vs_location0;\n    VertexOutput out_ = VertexOutput(vec4(0.0), vec2(0.0));\n    vec2 uv = ((a_position + vec2(1.0)) * 0.5);\n    out_.uv = vec2(uv.x, (1.0 - uv.y));\n    out_.position = vec4(a_position, 0.0, 1.0);\n    VertexOutput _e17 = out_;\n    gl_Position = _e17.position;\n    _vs2fs_location0 = _e17.uv;\n    gl_Position.yz = vec2(-gl_Position.y, gl_Position.z * 2.0 - gl_Position.w);\n    return;\n}\n\n",
+  "stage": "vertex",
+  "textures": {},
+  "uniforms": {},
+  "wgsl": "// Adapted from Liquid Glass Studio, Charles Yin, MIT. See NOTICE.md.\n// Fullscreen quad vertex shader for WebGPU\n// Similar to vertex.glsl but with v_uv.y flipped so that v_uv=(0,0) is top-left,\n// matching WebGPU's texture/framebuffer coordinate convention.\n\nstruct VertexOutput {\n  @builtin(position) position: vec4f,\n  @location(0) uv: vec2f,\n};\n\n@vertex\nfn vs_main(@location(0) a_position: vec2f) -> VertexOutput {\n  var out: VertexOutput;\n  let uv = (a_position + 1.0) * 0.5;\n  // Flip Y: in WebGPU, texture v=0 is top, but clip y=+1 is top.\n  // So top of screen has uv.y=0, bottom has uv.y=1.\n  out.uv = vec2f(uv.x, 1.0 - uv.y);\n  out.position = vec4f(a_position, 0.0, 1.0);\n  return out;\n}\n"
+}

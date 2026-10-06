@@ -2,9 +2,38 @@
 
 Audience: public
 
+本轮当前实施与取舍见 [光学报告](optical-refinement.md)：解析/混合梯度、高度场已有实际试验，有界高光与输入校验已保留。追加的逐函数分析、轮廓推导、合并采样试验及外部算法依据见 [Shader 深入研究](shader-design-research.md)，后续档位规范见 [性能档位](performance-profiles.md)。下文固定上游质量复核与早期建议仍用于说明来源；未保留候选不能视为生产功能。其他浏览器兼容留到后续 WebView 阶段。
+
 2026-10-06。复核本库 `8f6b9ff` 的光学、两种 GPU renderer、模糊、公共 controller 和 SVG 路径；重新读取另外两个项目的固定版本源码。本文记录源码观察、既有运行证据和待验证提案，不把静态复杂度当作质量或性能排名。本轮没有安装或运行上游项目，没有生成新的 GPU 基准，也没有修改渲染行为。
 
-本文是试验前的源码复核记录。后续已建立 30 组质量 fixture 并完成 SVG 缓存的首轮像素/生命周期/54 组成对性能验证，见 [optimization-experiment.md](optimization-experiment.md)；本页提案表中的其余工作仍未实现。
+本文主体是试验前的源码复核记录，后面的 shader 调用描述和提案状态以该检查点为准。后续已经完成三轮实施及试验，当前落地映射如下；不可再将原提案表全部视为尚未实施。固定源码、原始数据和阶段差异见 [consumer-gpu-experiment.md](consumer-gpu-experiment.md) 与 [continuation-plan.md](continuation-plan.md)。
+
+## 复核后落地映射
+
+| 原建议 | 当前实现 / 实验结果 | 证据 |
+| --- | --- | --- |
+| P0 统一质量 fixture | 已建立双 GPU 独立 readback，84 个案例；同后端改动前后 alpha 精确，颜色最大差 1/255。三种上游实现仍未进行同条件运行对比 | [第三轮报告](consumer-gpu-experiment.md) |
+| P0 真实消费接入 | React Flow 实际使用同一 controller 与模型几何/场景绘制接口；20 个缩放/后端案例和实际输入、端口、故障验证。任意 DOM 背景采集仍未实现 | [第三轮报告](consumer-gpu-experiment.md) |
+| P1 公共更新 profiler / 条件样式缓存 | profiler 完成；样式缓存 54 组无稳定收益，候选撤回。后续完整几何供给减少同步 DOM 测量 | [第二轮](shared-update-experiment.md)、[第三轮](consumer-gpu-experiment.md) |
+| P1 SVG / GPU 稳定资源复用 | SVG 位移图及节点缓存、WebGPU bind group/view/uniform data 复用和 GL attribute location 缓存已保留 | [第一轮](optimization-experiment.md)、[第三轮](consumer-gpu-experiment.md) |
+| P1 局部输入 / blur ROI | ROI 36 个像素案例完全一致，24 组性能无稳定收益，生产未启用。局部裁切图集、资源尺寸分桶和渐进上采样仍未实施 | [第三轮报告](consumer-gpu-experiment.md) |
+| P2 shader 精确快路径 | 零色散与 sharp/blur 端点采样减少已保留；与资源复用共同测量，没有独立 GPU 时间结论 | [第三轮报告](consumer-gpu-experiment.md) |
+| P2 数值 / 类型契约 | 几何/部分设置校验、异常恢复和消费类型检查已实施；WGSL最终分支与反射ABI/packer已实施；解析/混合梯度已试验但未保留，有界高光已保留；完整物理模型未验收 | [光学报告](optical-refinement.md)、[WGSL单源码](wgsl-single-source.md) |
+| P2 新光学模型 / 滤波 | 高度场独立试验，未进生产；形状融合、多灯光/微扰仍拟议；合并高斯候选54纹理案例通过，但三轮完整光学各79/84，不替换默认 | [深入研究](shader-design-research.md) |
+
+这些实施主要来自对本库的测量与改造。局部输入、变更驱动更新、共享资源等与另两个项目的设计相互印证，但没有移植它们的运行时代码，也没有因此获得它们的 DOM 采集或完整光学能力。
+
+## WGSL 单一源码可行性复核（历史调研）
+
+以下为实施前判断；后续已完成转换与实际验证，当前事实以 [单源码报告](wgsl-single-source.md) 为准。运行时已不再手动维护 GLSL，两 API 的资源层继续分开。
+
+2026-10-06：**仅完成工具文档与当前代码检查，未运行本项目转换实验、未改动运行时。** 正确名称为 WGSL。Naga 支持 WGSL 输入与 GLSL ES 300 输出，并提供 WebGL 目标标记、绑定映射与纹理/uniform reflection；可作为构建期候选。[Naga](https://github.com/gfx-rs/wgpu/tree/trunk/naga)、[GLSL 支持](https://docs.rs/naga/30.0.1/naga/back/glsl/index.html)、[目标版本](https://docs.rs/naga/30.0.1/naga/back/glsl/enum.Version.html)、[reflection](https://docs.rs/naga/30.0.1/naga/back/glsl/struct.ReflectionInfo.html)。
+
+拟议流程为维护 WGSL → 构建时解析/校验 → 保留 WGSL 给 WebGPU，生成 GLSL ES 300 给 WebGL2。目标包含主光学、顶点和自有 blur/blit passes；仅统一主片元 shader 还不能宣称全部 GPU shader 单一源码。生成 GLSL 应由工具产出，禁止人工维护补丁；保留上游原件、许可和固定基线。
+
+转换不能替代 WebGPU/WebGL 两套资源/API 适配。当前 WebGL 是独立 uniform 上传与翻转 Canvas 纹理，WGSL 使用 uniform struct/分离 texture+sampler，并显式转换 frag_coord 与折射偏移 Y；GLSL 输出需要统一坐标/上传约定和绑定元数据，而非转换后直接替换字符串。编译器的顶点坐标调整选项也不能单独证明 fragment/UV/纹理输入已对齐。
+
+当前 shader 主要使用两目标共有的浮点、片元与纹理功能，源码检查未见必须依赖 compute 的主光学逻辑，因此适合先尝试转换；这仍是推断，实际 parser/validator、WebGL compile/link、像素及成本结果尚未获得。后续先用固定版本 Naga 转换顶点与主光学并完成像素验收，再逐步统一自有 passes；不能以生成成功代替可运行和视觉一致。
 
 ## 评估深度与结论
 
@@ -23,6 +52,8 @@ Audience: public
 此次核对是 scoped source review，并非逐文件审计整个上游仓库。下载副本仅在本地忽略的工作目录，固定 commit、URL、字节数和 SHA-256 已记录；外部源码没有加入运行时或公开库包。
 
 ## 三个方案的优点与代价
+
+以下逐项描述保留最初固定版本的检查结果；后续已实施项以开头的当前落地表、[WGSL 报告](wgsl-single-source.md) 和 [光学报告](optical-refinement.md) 为准。
 
 ### Studio：材质调试基础
 
@@ -50,7 +81,7 @@ Audience: public
 
 代价：普通 HTML 依赖异步 html-to-image 快照，背景可能暂时使用旧缓存；字体、样式、跨域资源和复杂 DOM 保真仍需真实页面检查。玻璃要求是 root 直接子元素，嵌套 root 和 React Flow 变换需适配。GPU 输出再经 drawImage 写入逐元素 2D canvas，存在额外复制路径。FBO 按精确尺寸缓存，在所查代码中 resize/destroy 时释放，持续产生新尺寸的增长值得压力测试；这不是已验证的泄漏。
 
-## 当前 shader 如何工作
+## 原基线 shader 如何工作（后续修改见光学报告）
 
 1. Controller 读 stage/surface 的 DOM bounds；surfaceUniforms 映射屏幕位置、DPR、材质与参数，关闭上游第一形状并固定最终绘制阶段。
 2. shader 用圆角/超椭圆距离近似求内外与边缘深度。边缘像素通过四次距离场采样求梯度；当前梯度带经验缩放，不是直接的三维表面法线。
@@ -72,7 +103,7 @@ Audience: public
 
 完整基线见 [performance.md](performance.md)。960×540、DPR 1、固定短窗口下，100 个移动表面的 WebGPU CPU 提交 p95 48.90 ms，solid 也有 42.80 ms 长尾。公共 bounds/样式/布局更新是值得 profiler 验证的瓶颈候选；不能将全部成本归咎于 shader。SVG 每次重绘重建 80×80 位移图与 filter，也有与其高成本相符的代码证据。
 
-## 建议增强：待实施，不是已支持
+## 最初建议清单（部分已完成，当前状态见落地表）
 
 | 优先级 | 工作 | 验收方式 |
 | --- | --- | --- |

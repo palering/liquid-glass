@@ -1,5 +1,5 @@
 import { uniqueId } from "../id.js";
-import { material, tintRGB } from "../policy.js";
+import { controlsFor, material, tintRGB } from "../policy.js";
 const ns = "http://www.w3.org/2000/svg";
 function make(name, attrs = {}) {
   const el = document.createElementNS(ns, name);
@@ -77,17 +77,21 @@ export class DOMRenderer {
         s.element.prepend(layer);
         this.layers.set(s.id, layer);
       }
-      const p = material(s.kind, settings.controls),
+      const p = material(s.kind, controlsFor(settings,s.kind)),
         light = settings.theme === "light";
-      layer.style.borderRadius = `${s.bounds.radius}px`;
-      const rgb = tintRGB(settings.controls.tintColor, light)
+      const scale = s.bounds.scale ?? 1;
+      layer.style.borderRadius = `${s.cssRadius ?? s.bounds.radius}px`;
+      const rgb = tintRGB(controlsFor(settings,s.kind).tintColor, light)
         .map((v) => Math.round(v * 255))
         .join(" ");
       layer.style.background = `rgb(${rgb} / ${this.backend === "solid" ? 1 : p.tint})`;
       layer.style.backdropFilter =
-        this.backend === "css" ? `blur(${p.blur}px) saturate(1.12)` : "none";
+        this.backend === "css" ? `blur(${p.blur / scale}px) saturate(1.12)` : "none";
       if (this.backend === "svg") {
-        const r = s.bounds;
+        // The layer lives inside the transformed DOM surface. SVG dimensions
+        // and crop coordinates must be unscaled, whereas GPU bounds are already
+        // in the stage's screen space.
+        const r = scale === 1 ? s.bounds : Object.fromEntries(["x","y","w","h","radius"].map(k=>[k,s.bounds[k]/scale]));
         let entry = this.svgEntries.get(s.id);
         if (!entry) {
           const svg = make("svg", {
@@ -129,20 +133,20 @@ export class DOMRenderer {
         }
         // Position and backdrop are separate from the local shape field. Share
         // only identical fields; keep at most the keys needed by live surfaces.
-        const key = JSON.stringify([r.w, r.h, r.radius, p.thickness]);
+        const key = JSON.stringify([r.w, r.h, r.radius, p.thickness / scale]);
         usedMaps.add(key);
-        if (!this.maps.has(key)) this.maps.set(key, displacementImage(r, p.thickness));
+        if (!this.maps.has(key)) this.maps.set(key, displacementImage(r, p.thickness / scale));
         update(entry.svg, { viewBox: `0 0 ${r.w} ${r.h}` });
         update(entry.filter, { width: r.w + 60, height: r.h + 60 });
         update(entry.mapImage, { href: this.maps.get(key), width: r.w, height: r.h });
         update(entry.displacement, {
-          scale: settings.controls.distance === undefined
-            ? p.refraction * 55 : settings.controls.distance * 1600,
+          scale: controlsFor(settings,s.kind).distance === undefined
+            ? p.refraction * 55 / scale : controlsFor(settings,s.kind).distance * 1600 / scale,
         });
-        update(entry.blur, { stdDeviation: p.blur * 0.3 });
+        update(entry.blur, { stdDeviation: p.blur * 0.3 / scale });
         update(entry.image, {
           href: bg, x: -r.x, y: -r.y,
-          width: scene.canvas.width / dpr, height: scene.canvas.height / dpr,
+          width: scene.canvas.width / dpr / scale, height: scene.canvas.height / dpr / scale,
         });
         update(entry.tint, { width: r.w, height: r.h, fill: `rgb(${rgb})`, opacity: p.tint });
       }

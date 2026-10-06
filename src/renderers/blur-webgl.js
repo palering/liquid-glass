@@ -1,12 +1,6 @@
-const vs = `#version 300 es
-layout(location=0) in vec2 position; out vec2 uv; void main(){uv=position*.5+.5;gl_Position=vec4(position,0,1);}`;
-const fs = `#version 300 es
-precision highp float;in vec2 uv;uniform sampler2D image;uniform vec2 offset;uniform float sigma;uniform int mode;out vec4 color;
-void main(){
- if(mode==1){color=texture(image,uv);return;}
- if(mode==2){color=(texture(image,uv+offset)+texture(image,uv-offset)+texture(image,uv+vec2(offset.x,-offset.y))+texture(image,uv+vec2(-offset.x,offset.y)))*.25;return;}
- color=texture(image,uv);float total=1.;for(int i=1;i<=12;i++){float t=float(i);float weight=exp(-.5*t*t/(sigma*sigma));vec2 delta=offset*t;color+=(texture(image,uv+delta)+texture(image,uv-delta))*weight;total+=2.*weight;}color/=total;
-}`;
+import { glImageVertex as vs, glImageFragment as fs, imageBindings } from '../shaders.js';
+import { uniformData, bindUniformBlock } from './uniforms.js';
+import { packImageU } from '../shaders/generated/packers.js';
 export class GLImagePass {
   constructor(gl) {
     this.gl = gl;
@@ -29,18 +23,12 @@ export class GLImagePass {
       gl.linkProgram(this.program);
       if (!gl.getProgramParameter(this.program, gl.LINK_STATUS))
         throw new Error(gl.getProgramInfoLog(this.program));
-      this.image = gl.getUniformLocation(this.program, "image");
-      this.sigma = gl.getUniformLocation(this.program, "sigma");
-      this.mode = gl.getUniformLocation(this.program, "mode");
-      this.offset = gl.getUniformLocation(this.program, "offset");
+      this.image = gl.getUniformLocation(this.program, imageBindings.textures.image.name);
+      bindUniformBlock(gl, this.program, imageBindings.uniforms.u, 1);
+      this.params = uniformData(imageBindings.uniforms.u);
+      this.paramsBuffer = gl.createBuffer();
+      gl.bindBuffer(gl.UNIFORM_BUFFER, this.paramsBuffer);
       this.fbo = gl.createFramebuffer();
-      this.vertex = gl.createBuffer();
-      gl.bindBuffer(gl.ARRAY_BUFFER, this.vertex);
-      gl.bufferData(
-        gl.ARRAY_BUFFER,
-        new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]),
-        gl.STATIC_DRAW,
-      );
     } catch (e) {
       this.dispose();
       throw e;
@@ -94,15 +82,13 @@ export class GLImagePass {
     g.disable(g.SCISSOR_TEST);
     g.disable(g.BLEND);
     g.useProgram(this.program);
-    g.bindBuffer(g.ARRAY_BUFFER, this.vertex);
-    g.enableVertexAttribArray(0);
-    g.vertexAttribPointer(0, 2, g.FLOAT, false, 0, 0);
     g.activeTexture(g.TEXTURE0);
     g.bindTexture(g.TEXTURE_2D, input);
     g.uniform1i(this.image, 0);
-    g.uniform2f(this.offset, x, y);
-    g.uniform1f(this.sigma, sigma);
-    g.uniform1i(this.mode, mode);
+    g.bindBuffer(g.UNIFORM_BUFFER, this.paramsBuffer);
+    packImageU(this.params, { step: [x, y], size: [w, h], sigma, mode });
+    g.bufferData(g.UNIFORM_BUFFER, this.params.bytes, g.STREAM_DRAW);
+    g.bindBufferBase(g.UNIFORM_BUFFER, 1, this.paramsBuffer);
     g.drawArrays(g.TRIANGLE_STRIP, 0, 4);
   }
   blur(input, radius, dpr, signature, w, h, force = false) {
@@ -194,7 +180,7 @@ export class GLImagePass {
     for (const item of this.items.values()) this.destroyItem(item);
     this.items.clear();
     if (this.program) g.deleteProgram(this.program);
-    if (this.vertex) g.deleteBuffer(this.vertex);
+    if (this.paramsBuffer) g.deleteBuffer(this.paramsBuffer);
     if (this.fbo) g.deleteFramebuffer(this.fbo);
   }
 }

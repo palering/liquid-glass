@@ -1,4 +1,5 @@
 export const BACKENDS = ["webgpu", "webgl", "svg", "css", "solid"];
+export function controlsFor(settings,kind){return settings.controlsByKind?.[kind]??settings.controls;}
 export function candidates(requested, blocked = new Set()) {
   const start = requested === "auto" ? 0 : BACKENDS.indexOf(requested);
   if (start < 0) throw new Error(`Unknown backend: ${requested}`);
@@ -79,7 +80,7 @@ export function surfaceUniforms(r, width, height, dpr, kind, controls, theme) {
     u_mouseSpring: [(r.x + r.w / 2) * dpr, height - (r.y + r.h / 2) * dpr],
     u_shapeWidth: r.w,
     u_shapeHeight: r.h,
-    u_shapeRadius: Math.min(controls?.radius ?? r.radius, r.w / 2, r.h / 2),
+    u_shapeRadius: Math.min(r.scale === undefined ? controls?.radius ?? r.radius : r.radius, r.w / 2, r.h / 2),
     u_shapeRoundness: controls?.roundness ?? 2.6,
     u_showShape1: 0,
     u_mergeRate: 0.00001,

@@ -1,0 +1,419 @@
+{
+  "environment": {
+    "userAgent": "Chromium 154 / macOS",
+    "viewport": [
+      1440,
+      1024
+    ],
+    "devicePixelRatio": 1
+  },
+  "interactions": [
+    {
+      "test": "drag",
+      "before": {
+        "h": 242.59490966796875,
+        "transform": "translate(80px, 490px)",
+        "w": 164.76739501953125,
+        "x": 461.1769409179687,
+        "y": 587.0784912109375
+      },
+      "after": {
+        "h": 242.594970703125,
+        "transform": "translate(176.864px, 416.66px)",
+        "w": 164.76739501953125,
+        "x": 531.1769409179688,
+        "y": 534.0784912109375
+      },
+      "passed": true
+    },
+    {
+      "test": "drag-geometry",
+      "evidence": {
+        "backend": "webgpu",
+        "comparisons": [
+          {
+            "actual": {
+              "h": 1000,
+              "w": 236,
+              "x": 76,
+              "y": 12
+            },
+            "id": "workspace-sidebar",
+            "maxDelta": 0,
+            "provided": {
+              "h": 1000,
+              "scale": 1,
+              "w": 236,
+              "x": 76,
+              "y": 12
+            }
+          },
+          {
+            "actual": {
+              "h": 242.594970703125,
+              "w": 164.76739501953125,
+              "x": 531.1769409179688,
+              "y": 534.0784912109375
+            },
+            "id": "card-building",
+            "maxDelta": 0.0056938641588146766,
+            "provided": {
+              "h": 242.5892768389662,
+              "scale": 0.7226640159045725,
+              "w": 164.76739562624255,
+              "x": 531.1769383697813,
+              "y": 534.0785288270378
+            }
+          },
+          {
+            "actual": {
+              "h": 24.570556640625,
+              "w": 24.570556640625,
+              "x": 621.9204711914062,
+              "y": 540.9762573242188
+            },
+            "id": "edge-building-fire",
+            "maxDelta": 0.000019900130464378663,
+            "provided": {
+              "h": 24.570576540755464,
+              "scale": 0.7226640159045725,
+              "w": 24.570576540755464,
+              "x": 621.9204771371769,
+              "y": 540.9762673956262
+            }
+          }
+        ],
+        "geometryMode": "provided",
+        "gpuCanvases": 1,
+        "handles": 16,
+        "overflow": false,
+        "registered": 3,
+        "stageReads": 0,
+        "submitted": [
+          {
+            "bounds": {
+              "h": 1000,
+              "radius": 17,
+              "scale": 1,
+              "w": 236,
+              "x": 76,
+              "y": 12
+            },
+            "cssRadius": 17,
+            "id": "workspace-sidebar"
+          },
+          {
+            "bounds": {
+              "h": 242.5892768389662,
+              "radius": 8.67196819085487,
+              "scale": 0.7226640159045725,
+              "w": 164.76739562624255,
+              "x": 531.1769383697813,
+              "y": 534.0785288270378
+            },
+            "cssRadius": 12,
+            "id": "card-building"
+          },
+          {
+            "bounds": {
+              "h": 24.570576540755464,
+              "radius": 12.285288270377732,
+              "scale": 0.7226640159045725,
+              "w": 24.570576540755464,
+              "x": 621.9204771371769,
+              "y": 540.9762673956262
+            },
+            "cssRadius": 17,
+            "id": "edge-building-fire"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "test": "port-connect",
+      "before": 8,
+      "after": 9,
+      "passed": true
+    },
+    {
+      "test": "edit",
+      "passed": true
+    },
+    {
+      "test": "add",
+      "nodes": 9,
+      "registered": 4,
+      "geometry": {
+        "backend": "webgpu",
+        "comparisons": [
+          {
+            "actual": {
+              "h": 1000,
+              "w": 236,
+              "x": 76,
+              "y": 12
+            },
+            "id": "workspace-sidebar",
+            "maxDelta": 0,
+            "provided": {
+              "h": 1000,
+              "scale": 1,
+              "w": 236,
+              "x": 76,
+              "y": 12
+            }
+          },
+          {
+            "actual": {
+              "h": 212.03436279296875,
+              "w": 148.4326171875,
+              "x": 555.936279296875,
+              "y": 647.4415893554688
+            },
+            "id": "card-building",
+            "maxDelta": 0.005136544862921255,
+            "provided": {
+              "h": 212.02922624810583,
+              "scale": 0.6510204605583753,
+              "w": 148.43266500730957,
+              "x": 555.9362554599118,
+              "y": 647.4415699181536
+            }
+          },
+          {
+            "actual": {
+              "h": 22.13470458984375,
+              "w": 22.13470458984375,
+              "x": 709.6213989257812,
+              "y": 704.709716796875
+            },
+            "id": "edge-building-fire",
+            "maxDelta": 0.000025603892254366656,
+            "provided": {
+              "h": 22.134695658984757,
+              "scale": 0.6510204605583753,
+              "w": 22.134695658984757,
+              "x": 709.6213969402049,
+              "y": 704.7097424007673
+            }
+          },
+          {
+            "actual": {
+              "h": 202.66061401367188,
+              "w": 148.4326171875,
+              "x": 620.638916015625,
+              "y": 57.470184326171875
+            },
+            "id": "card-review-1791268986736",
+            "maxDelta": 0.00004781980956636289,
+            "provided": {
+              "h": 202.66063493288297,
+              "scale": 0.6510204605583753,
+              "w": 148.43266500730957,
+              "x": 620.6389134477863,
+              "y": 57.47017246583982
+            }
+          }
+        ],
+        "geometryMode": "provided",
+        "gpuCanvases": 1,
+        "handles": 18,
+        "overflow": false,
+        "registered": 4,
+        "stageReads": 0,
+        "submitted": [
+          {
+            "bounds": {
+              "h": 1000,
+              "radius": 17,
+              "scale": 1,
+              "w": 236,
+              "x": 76,
+              "y": 12
+            },
+            "cssRadius": 17,
+            "id": "workspace-sidebar"
+          },
+          {
+            "bounds": {
+              "h": 212.02922624810583,
+              "radius": 7.812245526700503,
+              "scale": 0.6510204605583753,
+              "w": 148.43266500730957,
+              "x": 555.9362554599118,
+              "y": 647.4415699181536
+            },
+            "cssRadius": 12,
+            "id": "card-building"
+          },
+          {
+            "bounds": {
+              "h": 22.134695658984757,
+              "radius": 11.06734782949238,
+              "scale": 0.6510204605583753,
+              "w": 22.134695658984757,
+              "x": 709.6213969402049,
+              "y": 704.7097424007673
+            },
+            "cssRadius": 17,
+            "id": "edge-building-fire"
+          },
+          {
+            "bounds": {
+              "h": 202.66063493288297,
+              "radius": 7.812245526700503,
+              "scale": 0.6510204605583753,
+              "w": 148.43266500730957,
+              "x": 620.6389134477863,
+              "y": 57.47017246583982
+            },
+            "cssRadius": 12,
+            "id": "card-review-1791268986736"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "test": "insert",
+      "nodes": 10,
+      "edges": 10,
+      "passed": true
+    },
+    {
+      "test": "search",
+      "passed": true
+    },
+    {
+      "test": "delete-unregister",
+      "nodes": 9,
+      "evidence": {
+        "backend": "webgpu",
+        "comparisons": [
+          {
+            "actual": {
+              "h": 1000,
+              "w": 236,
+              "x": 76,
+              "y": 12
+            },
+            "id": "workspace-sidebar",
+            "maxDelta": 0,
+            "provided": {
+              "h": 1000,
+              "scale": 1,
+              "w": 236,
+              "x": 76,
+              "y": 12
+            }
+          },
+          {
+            "actual": {
+              "h": 341.9801025390625,
+              "w": 239.39996337890625,
+              "x": 492.9441528320313,
+              "y": 1337.7618408203125
+            },
+            "id": "card-building",
+            "maxDelta": 0.008227539062488631,
+            "provided": {
+              "h": 341.971875,
+              "scale": 1.05,
+              "w": 239.4,
+              "x": 492.9441540577716,
+              "y": 1337.7618638239342
+            }
+          },
+          {
+            "actual": {
+              "h": 326.8616943359375,
+              "w": 239.3999938964844,
+              "x": 233.3956298828125,
+              "y": 447.28265380859375
+            },
+            "id": "card-review-1791269036533",
+            "maxDelta": 0.0000323251934446489,
+            "provided": {
+              "h": 326.86171875,
+              "scale": 1.05,
+              "w": 239.4,
+              "x": 233.3956384607088,
+              "y": 447.2826214834003
+            }
+          }
+        ],
+        "geometryMode": "provided",
+        "gpuCanvases": 1,
+        "handles": 18,
+        "overflow": false,
+        "registered": 3,
+        "stageReads": 0,
+        "submitted": [
+          {
+            "bounds": {
+              "h": 1000,
+              "radius": 17,
+              "scale": 1,
+              "w": 236,
+              "x": 76,
+              "y": 12
+            },
+            "cssRadius": 17,
+            "id": "workspace-sidebar"
+          },
+          {
+            "bounds": {
+              "h": 341.971875,
+              "radius": 12.6,
+              "scale": 1.05,
+              "w": 239.4,
+              "x": 492.9441540577716,
+              "y": 1337.7618638239342
+            },
+            "cssRadius": 12,
+            "id": "card-building"
+          },
+          {
+            "bounds": {
+              "h": 326.86171875,
+              "radius": 12.6,
+              "scale": 1.05,
+              "w": 239.4,
+              "x": 233.3956384607088,
+              "y": 447.2826214834003
+            },
+            "cssRadius": 12,
+            "id": "card-review-1791269036533"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "test": "webgpu-loss",
+      "passed": true
+    },
+    {
+      "test": "lock",
+      "passed": true
+    },
+    {
+      "test": "webgl-loss",
+      "passed": true
+    },
+    {
+      "test": "svg-loss",
+      "passed": true
+    },
+    {
+      "test": "css-loss",
+      "passed": true
+    },
+    {
+      "test": "disable",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "liquid-glass-shader-performance-archive",
+  "version": 1,
+  "date": "2026-10-06",
+  "baselineSource": "bc2a5ad508a4350aac24d05a9c3519188573ee974398a39322f839ee46434bb7",
+  "frozenSource": "../optical-refinement/current-source.json",
+  "frozenFilesVerified": 102,
+  "productionChanged": false,
+  "candidate": {
+    "baselineSource": "bc2a5ad508a4350aac24d05a9c3519188573ee974398a39322f839ee46434bb7",
+    "compiler": "naga-30.0.0",
+    "candidate": "paired-gaussian",
+    "translatorInputs": {
+      "tools/shader-translator/Cargo.lock": "bf3109a5f0a92170111955b15b8ffaaa08751167223e6cdc9d9932069e039fa5",
+      "tools/shader-translator/Cargo.toml": "f05a9e926db9df64a160334b187ec94da8929d5222d788b573157c9d655bc954",
+      "tools/shader-translator/src/main.rs": "f1ebfef9ea8384aafeb97805bb660b09deb4e13b47f10e546522c4e18466de36"
+    },
+    "translatorBinarySha256": "8037f86e077cdad8a839a7f6a743a2cccf45ad78646d4cf24724b73233d803e2",
+    "wgslSha256": "e201e3dd927fe34a02797a55c516968028e82f17fad653d431478943dc5daa82",
+    "artifactSha256": "d9e2d7e8ca3671a124d031e2d2df46357130288566e4b2bd8760d9a12dba4803"
+  },
+  "decision": "Keep isolated: final optical fidelity fails, measured timing is mixed",
+  "environment": "Chromium 154 on macOS, browser1280x720 DPR2; GPU test scene960x540 DPR1; timestamp-query available; hardware/thermal state not freshly probed",
+  "sourceHashes": {
+    "experiments/performance/image-paired.wgsl": "e201e3dd927fe34a02797a55c516968028e82f17fad653d431478943dc5daa82",
+    "experiments/performance/analyze.mjs": "19e8ff6e93f3ea1aeaa7fab750eb7ab263ace0648d4fa423eb94eb66001c564f",
+    "scripts/prepare-performance-experiments.mjs": "4d5737e1d8a85625f8111654f91ac91468b52c71271119b26e166211b755c4e9",
+    "scripts/analyze-performance-research.mjs": "a976a56e202d2db60c2fe2400c72b10c922ab0cb2bfa1b191a9284d1479bf308",
+    "tests/browser/performance-research.html": "6db4887adde8fdd20811076bc846c9338c1d962315dcd4d592b83621c67e5301",
+    "tests/browser/performance-research.js": "98ec262298a3b7ff179403a058520cb22be471d01a069520c591472333c85ed6",
+    "benchmarks/statistics.js": "2a8768dd6a2890c732cbd0fafb7ec2c445dd5a3192c36677f583ea18fc9ee69b"
+  },
+  "files": {
+    "candidate-image.json": {
+      "bytes": 5850,
+      "sha256": "d9e2d7e8ca3671a124d031e2d2df46357130288566e4b2bd8760d9a12dba4803"
+    },
+    "cpu-analysis.json": {
+      "bytes": 27096,
+      "sha256": "ca2d59853d0d153066b53d8543a010a26d043dac03da0fa1285f35fcf271bc60"
+    },
+    "frosted-comparison.png": {
+      "bytes": 59109,
+      "sha256": "503549402375fe02161ef10b8e398df7c7cdf7451038e9fab4016288287f9206"
+    },
+    "paired-blur-timing.json": {
+      "bytes": 70639,
+      "sha256": "f05e3634195011338b962329cb56ed6d662b703acaf2f28d7ec4c90ed6810004"
+    },
+    "paired-direct-blur.json": {
+      "bytes": 31552,
+      "sha256": "c2681a9fd409f1dae56ae7e17249c40f545e4534efb9e384c09a547e0728b09a"
+    },
+    "paired-pipeline-timing.json": {
+      "bytes": 69290,
+      "sha256": "e6703f785c795115d3528c2d49d7ba483e4605f9e6939a5143052228b604de65"
+    },
+    "paired-quality-final.json": {
+      "bytes": 64457,
+      "sha256": "6541e70cd7aeda14061bde18dc098bb6e67bdc0a02c79f4059b0184c6dae64dd"
+    },
+    "paired-quality-repeat.json": {
+      "bytes": 63990,
+      "sha256": "b3b6f4781afe72ffae098dc4f91cc365feaf7c2813fdcefb779bd3f5604c8365"
+    },
+    "paired-quality.json": {
+      "bytes": 63989,
+      "sha256": "1fa4dcca76091ebca6ccf6ac80c3b7710a238902a1a6c211e9658f3a3417d318"
+    },
+    "summary.json": {
+      "bytes": 27183,
+      "sha256": "c10dee308c9273c600139a93548a067dff36391b7b4fd1b4e04cc96db906715b"
+    },
+    "upstream-sources.json": {
+      "bytes": 4923,
+      "sha256": "751005350a659a1f740318f9c1ae79aa23c4f35fd90cceca5d1d1d562ace46bd"
+    },
+    "README.md": {
+      "bytes": 5335,
+      "sha256": "da3800862f4324bc5dfa7c1df7d8e39d9e19b59c84079a0d6fadfde0509922b5"
+    }
+  },
+  "checks": {
+    "nodeContracts": "25/25",
+    "typecheck": "passed",
+    "shaderPairs": "4/4",
+    "referenceFiles": 13,
+    "quality": "79/84 in all three rounds, exact final alpha",
+    "isolatedBlur": "54/54 max RGBA delta1; alpha delta up to1",
+    "blurTimingGroups": 18,
+    "pipelineTimingGroups": 18,
+    "consoleErrorsOrWarnings": 0,
+    "packageDryRun": "13 files; research, local cache and Rust tools excluded",
+    "publicLocalLinks": "137 checked",
+    "documentationStructure": {
+      "errors": 0,
+      "ignoredDependencyCacheWarnings": 13
+    }
+  },
+  "limitations": [
+    "No matched three-upstream runtime benchmark",
+    "No production profile API or TS migration",
+    "GPU times exclude upload/copy gaps and include synchronization effects on rAF",
+    "No multi-hardware, WebGL GPU timing, thermal control or driver-memory measurement"
+  ],
+  "fixtureNote": "Source hashes describe final reproducible fixture, including the isolated readback button and frozen config import added after initial timing; measured timing functions and candidate artifact remained the same."
+}

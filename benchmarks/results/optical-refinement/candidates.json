@@ -1,0 +1,22 @@
+{
+  "baselineSource": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25",
+  "compiler": "naga-30.0.0",
+  "candidates": {
+    "analytic": {
+      "wgslSha256": "6708e5b1252635c4f557ad4c741bd0525e348a6dd072e64a1ec880a99006aa58",
+      "artifactSha256": "339aac298475c9e0127cd770ba258ac663aebacf6c79ad3e09cca4315eb442a4"
+    },
+    "hybrid": {
+      "wgslSha256": "88f1e2dada98af44bfa512c4549cd18a34dfa865213cbacb6256d9cff62d895e",
+      "artifactSha256": "ed3d135be9d75050109392895ee8d23f7faf2471f5d20d4c4ecbc8d05a3adfd6"
+    },
+    "height": {
+      "wgslSha256": "369f682de5996b2d4578135571626713b2babe60cdf978af4bc24c65978af0f2",
+      "artifactSha256": "0f8b2d9783ee24fab391af098f0215be8286bf1c6471e744080bb4f89b400374"
+    },
+    "bounded": {
+      "wgslSha256": "2658c67c3d475a0ae926582a620ec8eed0af3d24a17eef4c9765c51d94bc4ad8",
+      "artifactSha256": "fca42c654bce397969e6c32cb76a54d6cd51ba3b92dcfd5529faa79b81c607a3"
+    }
+  }
+}

@@ -25,6 +25,22 @@ export class SceneSource {
     c.height = Math.max(1, Math.round(h * dpr));
     const x = this.ctx;
     x.setTransform(dpr, 0, 0, dpr, 0, 0);
+    this.painterError = null;
+    if (this.painter) {
+      x.save();
+      try { this.painter(x, {width:w,height:h,dpr,settings,phase}); }
+      catch (error) { this.painterError = String(error.message ?? error); }
+      finally { x.restore(); }
+      if (!this.painterError) {
+        this.version++;
+        this.blurs.clear();
+        return;
+      }
+      // A consumer callback failure is a source failure, not a GPU failure.
+      // Reset the partial canvas/state before drawing the built-in fallback.
+      c.width = c.width;
+      x.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
     const light = settings.theme === "light";
     x.fillStyle = light ? "#e9eaed" : "#090b0c";
     x.fillRect(0, 0, w, h);
@@ -150,6 +166,7 @@ export class SceneSource {
     this.blurs.clear();
     this.canvas.width = this.canvas.height = 1;
     this.image = null;
+    this.painter = null;
     this.imageToken++;
   }
 }

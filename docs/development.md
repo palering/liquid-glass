@@ -23,6 +23,27 @@ npm run test:package
 
 契约测试、TypeScript 消费与实际打包/离线安装/无 DOM 导入/React SSR 分别覆盖不同边界；这些检查不证明跨浏览器视觉或生产稳定性。浏览器证据见 [validation.md](validation.md)，性能复跑见 [performance.md](performance.md)，Pages 子路径与发布见 [deployment.md](deployment.md)。
 
+当前性能阶段：29 个 Node 契约；五档 API、v2 输出/v1 读取和实际包导出。浏览器 `tests/browser/performance-profiles.html` 提供默认像素、策略契约和稳定性三个按钮，需要先按 [实施验收](performance-profile-implementation.md) 恢复冻结 BC2 fixture。TS 起点是新的性能阶段 JS 快照，旧光学快照保持独立。
+
+## Shader 开发
+
+主光学、顶点与自有降采样/模糊/合成 shader 只维护 `src/shaders/*.wgsl`。Studio 的固定 WGSL 库仍保留上游出处。`src/shaders/generated/` 是检查进版本库的 WGSL/GLSL、绑定/布局元数据和 CPU 打包函数；禁止手动修改生成 GLSL。正常 `npm ci`、dev/build 仅校验产物，不需要 Rust，也不在浏览器运行转换器。
+
+修改 shader 或转换工具时，需要 Rust/Cargo（Naga 要求 Rust 1.87+；本次使用 1.98.1）：
+
+```sh
+npm run shaders:generate
+npm run shaders:check
+npm test
+npm run build
+```
+
+生成命令使用 `tools/shader-translator/Cargo.lock` 和固定 Naga 30.0.0，在 `.local/` 缓存依赖及编译工具。首跑需访问 Rust 包仓库；不会全局安装。源代码、工具/lock 或生成产物不一致会使 dev/build 失败。shader 与 uniform 结构变化还需运行实际 GPU 像素、生命周期和消费验收，见 [单源码验收](wgsl-single-source.md)。
+
+## 光学实验与迁移入口
+
+运行 node scripts/prepare-optical-experiments.mjs（需要同一锁定 Rust 工具），然后 npm run dev，打开 /tests/browser/optical-refinement.html。候选由 WGSL 编译，原始基线从逐文件哈希快照恢复到 .local；默认生产实现不受切换候选影响。报告见 [光学试验](optical-refinement.md)，下一阶段顺序见 [TS 重构入口](ts-migration-plan.md)。本轮限 Chrome/Chromium，其他浏览器在 WebView 阶段再处理。
+
 ## 本地包使用
 
 包未发布到 npm。先在本仓库构建并生成 tarball：

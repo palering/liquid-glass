@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-06：独立 Git / GitHub 仓库，`main` 分支；包 `@workspace/liquid-glass@0.4.0` 保持 private。公开源码远端为 [palering/liquid-glass](https://github.com/palering/liquid-glass)，用户已授权展示站发布；没有 npm 发行；整体许可尚未选择，Studio MIT 源码及 shader 改编仍保留原版权声明。
+2026-10-06：独立 Git / GitHub 仓库，`main` 分支；包 `@workspace/liquid-glass@0.4.0` 保持 private。公开源码远端为 [palering/liquid-glass](https://github.com/palering/liquid-glass)，历史展示站已发布；当前后续迭代只在本地，阶段推送/部署需新授权；没有 npm 发行；整体许可尚未选择，Studio MIT 源码及 shader 改编仍保留原版权声明。
 
 ## 实际目录边界
 
@@ -10,8 +10,8 @@ Audience: public
 | --- | --- | --- |
 | src/controller.js | 共享生命周期、surface 注册、后端/采集状态、dirty 重绘 | 构建为 ESM |
 | src/capture/ | scene；实验性原生 DOM 2D 桥 | 构建为 ESM |
-| src/renderers/、src/shaders.js | GPU / GL / SVG / CSS / solid，GPU 模糊与合成 | 构建为 ESM |
-| src/config.js、preset.js、policy.js | 参数、预设校验、后端顺序 | 构建为 ESM |
+| src/renderers/、src/shaders.js、src/shaders/ | GPU / GL / SVG / CSS / solid；WGSL 单源码及生成 GLSL，GPU 模糊与合成 | 构建为 ESM |
+| src/config.js、preset.js、policy.js、settings.js、performance.js | 参数、预设校验、后端顺序和性能预算 | 构建为 ESM |
 | src/react.js | 共享 controller 的 React 19 薄适配 | 独立 React 入口 |
 | types/ | 实际 API 的声明，消费者类型检查 | 是 |
 | src/glass.css | DOM / 装饰层与阴影样式 | 是，显式导入 |
@@ -34,7 +34,7 @@ ESM-only，暂不承诺 CJS / UMD。核心入口不导入 React；React 可选 p
 
 React 目前同包子入口足够；稳定后才考虑 `core` / `react` 分包。Svelte 将复用核心，独立验证挂载/销毁、响应式更新、SSR/hydration 与事件语义。Acrylic 尚未实现；Frosted 目前是参数 look，不声称具备完整独立散射模型。
 
-验收后将此库作为后续液态玻璃效果的默认复用实现。首个消费应用先接少量表面，再验证 React Flow 端口、边、平移缩放和面板遮挡背景；当前没有修改原应用。
+验收后将此库作为后续液态玻璃效果的默认复用实现。首个消费应用先接少量表面，再验证 React Flow 端口、边、平移缩放和面板遮挡背景；相邻 React Flow 原型已接入三个代表表面，其他表面扩展另行验收。
 
 ## 展示站发布边界
 

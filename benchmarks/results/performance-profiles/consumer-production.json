@@ -1,0 +1,36 @@
+{
+  "before": {
+    "backend": "webgl",
+    "edges": 8,
+    "nodes": 8,
+    "position": "translate(80px, 490px)",
+    "qa": false,
+    "theme": "light"
+  },
+  "connected": {
+    "backend": "webgl",
+    "edges": 9
+  },
+  "final": {
+    "backend": "webgl",
+    "canvases": 1,
+    "overflow": false,
+    "position": "translate(156.377px, 461.631px)",
+    "qa": false,
+    "registered": 3,
+    "theme": "light"
+  },
+  "passed": true,
+  "mobileLight": {
+    "backend": "webgl",
+    "scrollWidth": 390,
+    "theme": "light",
+    "width": 390
+  },
+  "mobileDark": {
+    "backend": "webgl",
+    "scrollWidth": 390,
+    "theme": "dark",
+    "width": 390
+  }
+}

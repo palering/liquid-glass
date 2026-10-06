@@ -1,0 +1,587 @@
+{
+  "ior": 1.45,
+  "samples": 10001,
+  "maxSlope": 4,
+  "minimumRoot": 0.001,
+  "maxOffsetPerBevel": {
+    "hermite": 0.07371137769696887,
+    "semicircle": 0.06342966309959026,
+    "convex": 0.10266924655779318
+  },
+  "gain": {
+    "hermite": 1,
+    "semicircle": 1.1620963141682683,
+    "convex": 0.7179499233538863
+  },
+  "checks": [
+    {
+      "kind": "hermite",
+      "ior": 1.01,
+      "t": 0,
+      "height": 0,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.01,
+      "t": 1e-8,
+      "height": 1.4999999900000003e-16,
+      "slope": 2.9999999700000005e-8,
+      "offset": 4.455445470297033e-26,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.01,
+      "t": 0.001,
+      "height": 0.000001499,
+      "slope": 0.002997,
+      "offset": 4.448022576452444e-11,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.01,
+      "t": 0.1,
+      "height": 0.014000000000000002,
+      "slope": 0.2700000000000001,
+      "offset": 0.000037412379258197533,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.01,
+      "t": 0.5,
+      "height": 0.25,
+      "slope": 0.75,
+      "offset": 0.0018513453968476612,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.01,
+      "t": 0.999,
+      "height": 0.49999850100000004,
+      "slope": 0.0029970000000000027,
+      "offset": 0.000014836588529955848,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.01,
+      "t": 1,
+      "height": 0.5,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.45,
+      "t": 0,
+      "height": 0,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.45,
+      "t": 1e-8,
+      "height": 1.4999999900000003e-16,
+      "slope": 2.9999999700000005e-8,
+      "offset": 1.3965517008620693e-24,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.45,
+      "t": 0.001,
+      "height": 0.000001499,
+      "slope": 0.002997,
+      "offset": 1.3942237288199998e-9,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.45,
+      "t": 0.1,
+      "height": 0.014000000000000002,
+      "slope": 0.2700000000000001,
+      "offset": 0.0011641069244176375,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.45,
+      "t": 0.5,
+      "height": 0.25,
+      "slope": 0.75,
+      "offset": 0.05508757940679659,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.45,
+      "t": 0.999,
+      "height": 0.49999850100000004,
+      "slope": 0.0029970000000000027,
+      "offset": 0.0004650498829010214,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 1.45,
+      "t": 1,
+      "height": 0.5,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 2.5,
+      "t": 0,
+      "height": 0,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 2.5,
+      "t": 1e-8,
+      "height": 1.4999999900000003e-16,
+      "slope": 2.9999999700000005e-8,
+      "offset": 2.699999955000001e-24,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 2.5,
+      "t": 0.001,
+      "height": 0.000001499,
+      "slope": 0.002997,
+      "offset": 2.69549889468604e-9,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 2.5,
+      "t": 0.1,
+      "height": 0.014000000000000002,
+      "slope": 0.2700000000000001,
+      "offset": 0.0022486213211376223,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 2.5,
+      "t": 0.5,
+      "height": 0.25,
+      "slope": 0.75,
+      "offset": 0.10603301291611321,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 2.5,
+      "t": 0.999,
+      "height": 0.49999850100000004,
+      "slope": 0.0029970000000000027,
+      "offset": 0.0008990963354170635,
+      "passed": true
+    },
+    {
+      "kind": "hermite",
+      "ior": 2.5,
+      "t": 1,
+      "height": 0.5,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.01,
+      "t": 0,
+      "height": 0,
+      "slope": 4,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.01,
+      "t": 1e-8,
+      "height": 0.00007071067794187806,
+      "slope": 4,
+      "offset": 0.0000026097558733869724,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.01,
+      "t": 0.001,
+      "height": 0.02235508890610816,
+      "slope": 4,
+      "offset": 0.0008250709266393747,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.01,
+      "t": 0.1,
+      "height": 0.21794494717703367,
+      "slope": 1.032370802417528,
+      "offset": 0.0022162055856827746,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.01,
+      "t": 0.5,
+      "height": 0.4330127018922193,
+      "slope": 0.2886751345948129,
+      "offset": 0.001237118660245386,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.01,
+      "t": 0.999,
+      "height": 0.49999974999993746,
+      "slope": 0.000500000250000188,
+      "offset": 0.0000024752475217193922,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.01,
+      "t": 1,
+      "height": 0.5,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.45,
+      "t": 0,
+      "height": 0,
+      "slope": 4,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.45,
+      "t": 1e-8,
+      "height": 0.00007071067794187806,
+      "slope": 4,
+      "offset": 0.00004763914477544677,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.45,
+      "t": 0.001,
+      "height": 0.02235508890610816,
+      "slope": 4,
+      "offset": 0.015061053688969695,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.45,
+      "t": 0.1,
+      "height": 0.21794494717703367,
+      "slope": 1.032370802417528,
+      "offset": 0.06339614282959706,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.45,
+      "t": 0.5,
+      "height": 0.4330127018922193,
+      "slope": 0.2886751345948129,
+      "offset": 0.03845384048477787,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.45,
+      "t": 0.999,
+      "height": 0.49999974999993746,
+      "slope": 0.000500000250000188,
+      "offset": 0.00007758620482081898,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 1.45,
+      "t": 1,
+      "height": 0.5,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 2.5,
+      "t": 0,
+      "height": 0,
+      "slope": 4,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 2.5,
+      "t": 1e-8,
+      "height": 0.00007071067794187806,
+      "slope": 4,
+      "offset": 0.00009428090392250407,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 2.5,
+      "t": 0.001,
+      "height": 0.02235508890610816,
+      "slope": 4,
+      "offset": 0.029806785208144213,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 2.5,
+      "t": 0.1,
+      "height": 0.21794494717703367,
+      "slope": 1.032370802417528,
+      "offset": 0.1218824667364668,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 2.5,
+      "t": 0.5,
+      "height": 0.4330127018922193,
+      "slope": 0.2886751345948129,
+      "offset": 0.07426986267167938,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 2.5,
+      "t": 0.999,
+      "height": 0.49999974999993746,
+      "slope": 0.000500000250000188,
+      "offset": 0.000149999995499996,
+      "passed": true
+    },
+    {
+      "kind": "semicircle",
+      "ior": 2.5,
+      "t": 1,
+      "height": 0.5,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.01,
+      "t": 0,
+      "height": 0,
+      "slope": 4,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.01,
+      "t": 1e-8,
+      "height": 0.00009999999955734857,
+      "slope": 4,
+      "offset": 0.0000036907521435164115,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.01,
+      "t": 0.001,
+      "height": 0.0315990664379502,
+      "slope": 4,
+      "offset": 0.0011662432270522142,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.01,
+      "t": 0.1,
+      "height": 0.293214938227915,
+      "slope": 1.2431153821933705,
+      "offset": 0.003581982848807167,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.01,
+      "t": 0.5,
+      "height": 0.4841229182759271,
+      "slope": 0.12909944487358055,
+      "offset": 0.0006187613378961131,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.01,
+      "t": 0.999,
+      "height": 0.49999999999975,
+      "slope": 1.0000000000005028e-9,
+      "offset": 4.950495049504969e-12,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.01,
+      "t": 1,
+      "height": 0.5,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.45,
+      "t": 0,
+      "height": 0,
+      "slope": 4,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.45,
+      "t": 1e-8,
+      "height": 0.00009999999955734857,
+      "slope": 4,
+      "offset": 0.00006737192451149922,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.45,
+      "t": 0.001,
+      "height": 0.0315990664379502,
+      "slope": 4,
+      "offset": 0.02128889928114991,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.45,
+      "t": 0.1,
+      "height": 0.293214938227915,
+      "slope": 1.2431153821933705,
+      "offset": 0.09914037847549811,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.45,
+      "t": 0.5,
+      "height": 0.4841229182759271,
+      "slope": 0.12909944487358055,
+      "offset": 0.019362092795890636,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.45,
+      "t": 0.999,
+      "height": 0.49999999999975,
+      "slope": 1.0000000000005028e-9,
+      "offset": 1.5517241379310383e-10,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 1.45,
+      "t": 1,
+      "height": 0.5,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 2.5,
+      "t": 0,
+      "height": 0,
+      "slope": 4,
+      "offset": 0,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 2.5,
+      "t": 1e-8,
+      "height": 0.00009999999955734857,
+      "slope": 4,
+      "offset": 0.0001333333327431314,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 2.5,
+      "t": 0.001,
+      "height": 0.0315990664379502,
+      "slope": 4,
+      "offset": 0.042132088583933594,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 2.5,
+      "t": 0.1,
+      "height": 0.293214938227915,
+      "slope": 1.2431153821933705,
+      "offset": 0.19060282150072497,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 2.5,
+      "t": 0.5,
+      "height": 0.4841229182759271,
+      "slope": 0.12909944487358055,
+      "offset": 0.03742540934122839,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 2.5,
+      "t": 0.999,
+      "height": 0.49999999999975,
+      "slope": 1.0000000000005028e-9,
+      "offset": 3.0000000000000077e-10,
+      "passed": true
+    },
+    {
+      "kind": "convex",
+      "ior": 2.5,
+      "t": 1,
+      "height": 0.5,
+      "slope": 0,
+      "offset": 0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "boundary": "Unit distance gradient and IOR 1.45 calibration; root floor and slope cap are stability conventions, not strict derivatives at the floor. Not a match to Studio or all IOR values."
+}

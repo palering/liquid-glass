@@ -1,0 +1,127 @@
+{
+  "source": "c54d8b1d181309ab76fea17820583d6ee9e66744d943bf264cc8c3ac908d656f",
+  "baselineSource": "bc2a5ad508a4350aac24d05a9c3519188573ee974398a39322f839ee46434bb7",
+  "defaultQuality": {
+    "cases": 84,
+    "identical": 84,
+    "maxDelta": 0,
+    "alphaMax": 0
+  },
+  "profileRows": 30,
+  "stabilityFrames": 1350,
+  "smokeRows": 10,
+  "shaderAndVendorUnchanged": true,
+  "animation": [
+    {
+      "backend": "webgpu",
+      "case": "animation-and-idle",
+      "frames": 90,
+      "scenePaints": 46,
+      "draws": 120,
+      "explicitInvalidation": true,
+      "idle": true,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "case": "animation-and-idle",
+      "frames": 90,
+      "scenePaints": 45,
+      "draws": 119,
+      "explicitInvalidation": true,
+      "idle": true,
+      "passed": true
+    }
+  ],
+  "cost": [
+    {
+      "backend": "webgpu",
+      "preset": "legacy",
+      "samples": 40,
+      "dpr": 2,
+      "ownedMiB": 19.3743896484375,
+      "cpuMeanMs": 0.3375,
+      "cpuP95Ms": 0.5,
+      "rafMeanMs": 16.669999998807906,
+      "rafP95Ms": 17.5
+    },
+    {
+      "backend": "webgpu",
+      "preset": "full",
+      "samples": 40,
+      "dpr": 2,
+      "ownedMiB": 19.3743896484375,
+      "cpuMeanMs": 0.27000000774860383,
+      "cpuP95Ms": 0.5,
+      "rafMeanMs": 16.675,
+      "rafP95Ms": 18.100000023841858
+    },
+    {
+      "backend": "webgpu",
+      "preset": "economy",
+      "samples": 40,
+      "dpr": 1,
+      "ownedMiB": 2.84271240234375,
+      "cpuMeanMs": 0.2849999964237213,
+      "cpuP95Ms": 0.5,
+      "rafMeanMs": 16.675,
+      "rafP95Ms": 18
+    },
+    {
+      "backend": "webgpu",
+      "preset": "balanced",
+      "samples": 40,
+      "dpr": 1.5,
+      "ownedMiB": 10.901527404785156,
+      "cpuMeanMs": 0.3199999898672104,
+      "cpuP95Ms": 0.5999999046325684,
+      "rafMeanMs": 16.672500002384187,
+      "rafP95Ms": 17.59999990463257
+    },
+    {
+      "backend": "webgl",
+      "preset": "legacy",
+      "samples": 40,
+      "dpr": 2,
+      "ownedMiB": 19.3743896484375,
+      "cpuMeanMs": 2.655000001192093,
+      "cpuP95Ms": 3,
+      "rafMeanMs": 16.669999998807906,
+      "rafP95Ms": 16.899999976158142
+    },
+    {
+      "backend": "webgl",
+      "preset": "full",
+      "samples": 40,
+      "dpr": 2,
+      "ownedMiB": 19.3743896484375,
+      "cpuMeanMs": 2.7274999916553497,
+      "cpuP95Ms": 2.9000000953674316,
+      "rafMeanMs": 16.672499999403954,
+      "rafP95Ms": 16.899999976158142
+    },
+    {
+      "backend": "webgl",
+      "preset": "economy",
+      "samples": 40,
+      "dpr": 1,
+      "ownedMiB": 2.84271240234375,
+      "cpuMeanMs": 2.019999992847443,
+      "cpuP95Ms": 2.299999952316284,
+      "rafMeanMs": 16.672500002384187,
+      "rafP95Ms": 16.899999976158142
+    },
+    {
+      "backend": "webgl",
+      "preset": "balanced",
+      "samples": 40,
+      "dpr": 1.5,
+      "ownedMiB": 10.901527404785156,
+      "cpuMeanMs": 2.6599999904632567,
+      "cpuP95Ms": 3,
+      "rafMeanMs": 16.672500002384187,
+      "rafP95Ms": 17.100000023841858
+    }
+  ],
+  "boundary": "Single-device short CPU/source/submit and rAF samples; logical owned RGBA8 allocation, not GPU time, FPS, VRAM or energy. Economy changes resolution, blur radii and dispersion."
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "liquid-glass-experiment-manifest",
+  "version": 1,
+  "date": "2026-10-06",
+  "measuredSource": "504e570c6e2537bcf6339db6d9493ac5ac59ea4a1e264deecd91056c633bbbf5",
+  "comparison": "same controller code, DOM vs model snapshot",
+  "warning": "CPU submission can move browser layout to a later phase; interpret together with rAF",
+  "fixture": "tests/browser/optimization.js",
+  "files": {
+    "performance.json": "386eaddd62ae6cf8dddaef9c5131a3c8e1096da4f833e30757128610e6fc4f19",
+    "summary.json": "3b217b8d9c15c1719c359d05d0f165629d9269371ab2a18078929b085b83c79c"
+  },
+  "fixtures": {
+    "tests/browser/optimization.js": "1577f7e36eb1847f008b4042d20bcd293a48376335b80e46b6090159b00599d5"
+  }
+}

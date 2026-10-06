@@ -1,0 +1,82 @@
+diff --git a/src/controller.js b/src/controller.js
+index c18f4a1..c4e3abd 100644
+--- a/src/controller.js
++++ b/src/controller.js
+@@ -1,4 +1,5 @@
+ import { uniqueId } from "./id.js";
++import { setStyle } from "./style.js";
+ import { SceneSource } from "./capture/scene.js";
+ import { createNativeSource, nativeCapability } from "./capture/native-dom.js";
+ import { WebGPURenderer } from "./renderers/webgpu.js";
+@@ -308,17 +309,17 @@ export class GlassController {
+       this.stage.classList.toggle("glass-disabled", !this.settings.enabled);
+       for (const s of surfaces) {
+         const c = this.settings.controls;
+-        s.element.style.setProperty(
++        setStyle(s.element.style,
+           "--lg-shadow-opacity",
+           c.shadowOpacity ?? 0.16,
+         );
+-        s.element.style.setProperty(
++        setStyle(s.element.style,
+           "--lg-shadow-blur",
+           `${c.shadowBlur ?? 32}px`,
+         );
+-        s.element.style.setProperty("--lg-shadow-y", `${c.shadowY ?? 14}px`);
+-        s.element.style.borderRadius = `${s.bounds.radius}px`;
+-        s.element.style.setProperty(
++        setStyle(s.element.style, "--lg-shadow-y", `${c.shadowY ?? 14}px`);
++        setStyle(s.element.style, "border-radius", `${s.bounds.radius}px`);
++        setStyle(s.element.style,
+           "--lg-highlight",
+           material(s.kind, this.settings.controls).highlight,
+         );
+diff --git a/src/renderers/dom.js b/src/renderers/dom.js
+index 6c6bd82..142e628 100644
+--- a/src/renderers/dom.js
++++ b/src/renderers/dom.js
+@@ -1,4 +1,5 @@
+ import { uniqueId } from "../id.js";
++import { setStyle } from "../style.js";
+ import { material, tintRGB } from "../policy.js";
+ const ns = "http://www.w3.org/2000/svg";
+ function make(name, attrs = {}) {
+@@ -79,13 +80,13 @@ export class DOMRenderer {
+       }
+       const p = material(s.kind, settings.controls),
+         light = settings.theme === "light";
+-      layer.style.borderRadius = `${s.bounds.radius}px`;
++      setStyle(layer.style, "border-radius", `${s.bounds.radius}px`);
+       const rgb = tintRGB(settings.controls.tintColor, light)
+         .map((v) => Math.round(v * 255))
+         .join(" ");
+-      layer.style.background = `rgb(${rgb} / ${this.backend === "solid" ? 1 : p.tint})`;
+-      layer.style.backdropFilter =
+-        this.backend === "css" ? `blur(${p.blur}px) saturate(1.12)` : "none";
++      setStyle(layer.style, "background", `rgb(${rgb} / ${this.backend === "solid" ? 1 : p.tint})`);
++      setStyle(layer.style, "backdrop-filter",
++        this.backend === "css" ? `blur(${p.blur}px) saturate(1.12)` : "none");
+       if (this.backend === "svg") {
+         const r = s.bounds;
+         let entry = this.svgEntries.get(s.id);
+diff --git a/src/style.js b/src/style.js
+new file mode 100644
+--- /dev/null
++++ b/src/style.js
+@@ -0,0 +1,16 @@
++// Browsers serialize colors and shorthands differently from their input. Keep
++// both forms, and inspect the live declaration so host edits are repaired.
++// Weak keys do not retain surfaces or layers after unregistration/disposal.
++const declarations = new WeakMap();
++
++export function setStyle(style, property, value) {
++  const desired = String(value);
++  let properties = declarations.get(style);
++  const previous = properties?.get(property);
++  if (previous?.desired === desired &&
++      style.getPropertyValue(property) === previous.actual &&
++      style.getPropertyPriority(property) === "") return;
++  style.setProperty(property, desired);
++  if (!properties) declarations.set(style, properties = new Map());
++  properties.set(property, { desired, actual: style.getPropertyValue(property) });
++}

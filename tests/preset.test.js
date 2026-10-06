@@ -41,7 +41,7 @@ test("invalid preset cannot inject NaN, invalid options or future versions", () 
     assert.throws(() => createPreset("test", settings));
   assert.throws(() => parsePreset("{"));
   assert.throws(() =>
-    parsePreset({ schema: "workspace-liquid-glass", version: 2, name: "x" }),
+    parsePreset({ schema: "workspace-liquid-glass", version: 99, name: "x" }),
   );
   assert.throws(() => createPreset("", {}));
 });

@@ -1,14 +1,6 @@
-// Shared separable Gaussian blur and blit passes. No DOM capture or CPU blur.
-const vertex = `@vertex fn main(@builtin(vertex_index) id:u32)->@builtin(position) vec4f { let p=array<vec2f,4>(vec2f(-1,-1),vec2f(1,-1),vec2f(-1,1),vec2f(1,1)); return vec4f(p[id],0,1); }`;
-const fragment = `struct U { step:vec2f, size:vec2f, sigma:f32, mode:f32, pad:vec2f }; @group(0) @binding(0) var image:texture_2d<f32>; @group(0) @binding(1) var sampling:sampler; @group(0) @binding(2) var<uniform> u:U;
-@fragment fn main(@builtin(position) p:vec4f)->@location(0) vec4f {
- let uv=p.xy/u.size;
- if(u.mode==1.0){return textureSampleLevel(image,sampling,uv,0);}
- if(u.mode==2.0){return (textureSampleLevel(image,sampling,uv+u.step,0)+textureSampleLevel(image,sampling,uv-u.step,0)+textureSampleLevel(image,sampling,uv+vec2f(u.step.x,-u.step.y),0)+textureSampleLevel(image,sampling,uv+vec2f(-u.step.x,u.step.y),0))*.25;}
- var c=textureSampleLevel(image,sampling,uv,0);var total=1.0;
- for(var i=1;i<=12;i++){let t=f32(i);let weight=exp(-.5*t*t/(u.sigma*u.sigma));let delta=u.step*t;c+=(textureSampleLevel(image,sampling,uv+delta,0)+textureSampleLevel(image,sampling,uv-delta,0))*weight;total+=2.0*weight;}
- return c/total;
-}`;
+import { gpuImageVertex as vertex, gpuImageFragment as fragment, imageBindings } from '../shaders.js';
+import { uniformData } from './uniforms.js';
+import { packImageU } from '../shaders/generated/packers.js';
 export class GPUImagePass {
   static async create(device, outputFormat) {
     const r = new GPUImagePass(device);
@@ -19,6 +11,8 @@ export class GPUImagePass {
     this.device = device;
     this.items = new Map();
     this.blits = new Map();
+    this.groups = new WeakMap();
+    this.views = new WeakMap();
   }
   async init(format) {
     const d = this.device,
@@ -63,25 +57,35 @@ export class GPUImagePass {
   }
   params(x, y, w, h, sigma = 1, mode = 0) {
     const b = this.device.createBuffer({
-      size: 32,
+      size: imageBindings.uniforms.u.size,
       usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
     });
     this.device.queue.writeBuffer(
       b,
       0,
-      new Float32Array([x, y, w, h, sigma, mode, 0, 0]),
+      packImageU(uniformData(imageBindings.uniforms.u), { step: [x, y], size: [w, h], sigma, mode }),
     );
     return b;
   }
+  view(texture) {
+    let view = this.views.get(texture);
+    if (!view) { view = texture.createView(); this.views.set(texture, view); }
+    return view;
+  }
   draw(encoder, input, view, pipeline, buffer) {
+    let cached = this.groups.get(buffer);
+    if (!cached || cached.input !== input || cached.pipeline !== pipeline) {
     const group = this.device.createBindGroup({
       layout: pipeline.getBindGroupLayout(0),
       entries: [
-        { binding: 0, resource: input.createView() },
+        { binding: 0, resource: this.view(input) },
         { binding: 1, resource: this.sampler },
         { binding: 2, resource: { buffer } },
       ],
     });
+    cached = {input, pipeline, group};
+    this.groups.set(buffer, cached);
+    }
     const pass = encoder.beginRenderPass({
       colorAttachments: [
         {
@@ -93,7 +97,7 @@ export class GPUImagePass {
       ],
     });
     pass.setPipeline(pipeline);
-    pass.setBindGroup(0, group);
+    pass.setBindGroup(0, cached.group);
     pass.draw(4);
     pass.end();
   }
@@ -141,7 +145,7 @@ export class GPUImagePass {
         this.draw(
           encoder,
           downsampled,
-          level.texture.createView(),
+          this.view(level.texture),
           this.blurPipeline,
           level.buffer,
         );
@@ -150,14 +154,14 @@ export class GPUImagePass {
       this.draw(
         encoder,
         downsampled,
-        item.a.createView(),
+        this.view(item.a),
         this.blurPipeline,
         item.x,
       );
       this.draw(
         encoder,
         item.a,
-        item.b.createView(),
+        this.view(item.b),
         this.blurPipeline,
         item.y,
       );
@@ -196,5 +200,7 @@ export class GPUImagePass {
     for (const b of this.blits.values()) b.destroy();
     this.items.clear();
     this.blits.clear();
+    this.groups = new WeakMap();
+    this.views = new WeakMap();
   }
 }

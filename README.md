@@ -22,6 +22,7 @@ A glass material library and interactive lab for the web. Explore clear refracti
 - Light and dark themes, built-in scenes, sample images and local image upload.
 - Named presets with JSON import/export; draggable surfaces and native DOM interaction.
 - One shared renderer per controller, reusable blur resources and static redraw on change.
+- Five manual [performance profiles](docs/performance-profiles.md), observable texture budgets and reversible quality tradeoffs (local development; not yet in the live demo).
 
 ## Run locally
 
@@ -57,7 +58,7 @@ Give `stage` the `lg-stage` class and an explicit size; wrap foreground content 
 
 GPU and SVG renderers sample the library's own scenes and supplied images. They do not automatically capture arbitrary page DOM. Native HTML-in-Canvas is experimental and unavailable in the browser used for the current validation. SVG approximates displacement; CSS provides blur; their output differs from GPU optics.
 
-This is an experimental library. Cross-browser coverage, React Flow integration, DPR 2 stress testing and long-term stability remain unverified. See [current status](docs/status.md) and [performance evidence](docs/performance.md) for measured results and limits.
+This is an experimental library. Local React Flow integration and a short DPR 2 stress run have passed. Cross-browser coverage and long-term stability remain unverified. See [current status](docs/status.md) and [performance evidence](docs/performance.md) for measured results and limits.
 
 ## Documentation
 

@@ -1,0 +1,6693 @@
+{
+  "baselineRevision": "8cdf48d117d82273c7dd445da5a09cfad7f05569",
+  "environment": {
+    "devicePixelRatio": 1,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "viewport": [
+      1440,
+      1024
+    ]
+  },
+  "styleChecks": [
+    {
+      "backend": "solid",
+      "contracts": [
+        {
+          "backendRetained": true,
+          "cleanup": true,
+          "disabled": true,
+          "hostEditsRepaired": true,
+          "inputAndFocus": true,
+          "panZoom": true,
+          "reenabled": true,
+          "thinRadius": true,
+          "variant": "baseline"
+        },
+        {
+          "backendRetained": true,
+          "cleanup": true,
+          "disabled": true,
+          "hostEditsRepaired": true,
+          "inputAndFocus": true,
+          "panZoom": true,
+          "reenabled": true,
+          "thinRadius": true,
+          "variant": "current"
+        }
+      ],
+      "equal": true,
+      "geometryComparison": "0.001 CSS px rounding; empty surface origins ignored; raw bounds retained",
+      "passed": true,
+      "variants": [
+        {
+          "cleanup": {
+            "children": 0,
+            "layers": 0,
+            "maps": 0
+          },
+          "samples": [
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 80,
+                  "y": 70
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 210,
+                  "y": 105
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 340,
+                  "y": 140
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "initial",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "move",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 85.60000610351562,
+                  "y": 48.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 189.6000061035156,
+                  "y": 76.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 151.99996948242188,
+                  "x": 293.6000061035156,
+                  "y": 104.79998779296876
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "ancestor-pan-zoom",
+              "sourceSize": [
+                480,
+                288
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "resize-and-thin",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "theme-material-shadow",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-host-edits-and-priority",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-cssText-reset",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 0,
+                  "radius": 0,
+                  "w": 0,
+                  "x": -20,
+                  "y": -282.8046875
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "hidden",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "shown",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [],
+              "disabled": true,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "disabled",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "enabled-new-look",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stage-resize",
+              "sourceSize": [
+                560,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stable-motion",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            }
+          ],
+          "stableWrites": 144,
+          "variant": "baseline"
+        },
+        {
+          "cleanup": {
+            "children": 0,
+            "layers": 0,
+            "maps": 0
+          },
+          "samples": [
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 80,
+                  "y": 70
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 210,
+                  "y": 105
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 340,
+                  "y": 140
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "initial",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "move",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 85.5999755859375,
+                  "y": 48.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 189.5999755859375,
+                  "y": 76.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 293.5999755859375,
+                  "y": 104.79998779296876
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "ancestor-pan-zoom",
+              "sourceSize": [
+                480,
+                288
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "resize-and-thin",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "theme-material-shadow",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-host-edits-and-priority",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-cssText-reset",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 0,
+                  "radius": 0,
+                  "w": 0,
+                  "x": -640,
+                  "y": -282.8046875
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "hidden",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "shown",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [],
+              "disabled": true,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "disabled",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "enabled-new-look",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stage-resize",
+              "sourceSize": [
+                560,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "solid",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stable-motion",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            }
+          ],
+          "stableWrites": 144,
+          "variant": "current"
+        }
+      ]
+    },
+    {
+      "backend": "css",
+      "contracts": [
+        {
+          "backendRetained": true,
+          "cleanup": true,
+          "disabled": true,
+          "hostEditsRepaired": true,
+          "inputAndFocus": true,
+          "panZoom": true,
+          "reenabled": true,
+          "thinRadius": true,
+          "variant": "baseline"
+        },
+        {
+          "backendRetained": true,
+          "cleanup": true,
+          "disabled": true,
+          "hostEditsRepaired": true,
+          "inputAndFocus": true,
+          "panZoom": true,
+          "reenabled": true,
+          "thinRadius": true,
+          "variant": "current"
+        }
+      ],
+      "equal": true,
+      "geometryComparison": "0.001 CSS px rounding; empty surface origins ignored; raw bounds retained",
+      "passed": true,
+      "variants": [
+        {
+          "cleanup": {
+            "children": 0,
+            "layers": 0,
+            "maps": 0
+          },
+          "samples": [
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 80,
+                  "y": 70
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 210,
+                  "y": 105
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 340,
+                  "y": 140
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "initial",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "move",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 85.60000610351562,
+                  "y": 48.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 189.6000061035156,
+                  "y": 76.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 151.99996948242188,
+                  "x": 293.6000061035156,
+                  "y": 104.79998779296876
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "ancestor-pan-zoom",
+              "sourceSize": [
+                480,
+                288
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "resize-and-thin",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "theme-material-shadow",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-host-edits-and-priority",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-cssText-reset",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 0,
+                  "radius": 0,
+                  "w": 0,
+                  "x": -20,
+                  "y": -282.8046875
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "hidden",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "shown",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [],
+              "disabled": true,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "disabled",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "enabled-new-look",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stage-resize",
+              "sourceSize": [
+                560,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stable-motion",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            }
+          ],
+          "stableWrites": 144,
+          "variant": "baseline"
+        },
+        {
+          "cleanup": {
+            "children": 0,
+            "layers": 0,
+            "maps": 0
+          },
+          "samples": [
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 80,
+                  "y": 70
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 210,
+                  "y": 105
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 340,
+                  "y": 140
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "initial",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "move",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 85.5999755859375,
+                  "y": 48.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 189.5999755859375,
+                  "y": 76.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 293.5999755859375,
+                  "y": 104.79998779296876
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "ancestor-pan-zoom",
+              "sourceSize": [
+                480,
+                288
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "resize-and-thin",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "theme-material-shadow",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-host-edits-and-priority",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-cssText-reset",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 0,
+                  "radius": 0,
+                  "w": 0,
+                  "x": -640,
+                  "y": -282.8046875
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "hidden",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "shown",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [],
+              "disabled": true,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "disabled",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "enabled-new-look",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stage-resize",
+              "sourceSize": [
+                560,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "css",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stable-motion",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            }
+          ],
+          "stableWrites": 144,
+          "variant": "current"
+        }
+      ]
+    },
+    {
+      "backend": "svg",
+      "contracts": [
+        {
+          "backendRetained": true,
+          "cleanup": true,
+          "disabled": true,
+          "hostEditsRepaired": true,
+          "inputAndFocus": true,
+          "panZoom": true,
+          "reenabled": true,
+          "thinRadius": true,
+          "variant": "baseline"
+        },
+        {
+          "backendRetained": true,
+          "cleanup": true,
+          "disabled": true,
+          "hostEditsRepaired": true,
+          "inputAndFocus": true,
+          "panZoom": true,
+          "reenabled": true,
+          "thinRadius": true,
+          "variant": "current"
+        }
+      ],
+      "equal": true,
+      "geometryComparison": "0.001 CSS px rounding; empty surface origins ignored; raw bounds retained",
+      "passed": true,
+      "variants": [
+        {
+          "cleanup": {
+            "children": 0,
+            "layers": 0,
+            "maps": 0
+          },
+          "samples": [
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 80,
+                  "y": 70
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 210,
+                  "y": 105
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 340,
+                  "y": 140
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "initial",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "move",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 85.60000610351562,
+                  "y": 48.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 189.6000061035156,
+                  "y": 76.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 151.99996948242188,
+                  "x": 293.6000061035156,
+                  "y": 104.79998779296876
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "ancestor-pan-zoom",
+              "sourceSize": [
+                480,
+                288
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "resize-and-thin",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "theme-material-shadow",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-host-edits-and-priority",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-cssText-reset",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 0,
+                  "radius": 0,
+                  "w": 0,
+                  "x": -20,
+                  "y": -282.8046875
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "hidden",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "shown",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [],
+              "disabled": true,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "disabled",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "enabled-new-look",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stage-resize",
+              "sourceSize": [
+                560,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stable-motion",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            }
+          ],
+          "stableWrites": 144,
+          "variant": "baseline"
+        },
+        {
+          "cleanup": {
+            "children": 0,
+            "layers": 0,
+            "maps": 0
+          },
+          "samples": [
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 80,
+                  "y": 70
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 210,
+                  "y": 105
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 340,
+                  "y": 140
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "initial",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "move",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 85.5999755859375,
+                  "y": 48.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 189.5999755859375,
+                  "y": 76.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 293.5999755859375,
+                  "y": 104.79998779296876
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "ancestor-pan-zoom",
+              "sourceSize": [
+                480,
+                288
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "resize-and-thin",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "theme-material-shadow",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-host-edits-and-priority",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-cssText-reset",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 0,
+                  "radius": 0,
+                  "w": 0,
+                  "x": -640,
+                  "y": -282.8046875
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "hidden",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "shown",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [],
+              "disabled": true,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "disabled",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "enabled-new-look",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stage-resize",
+              "sourceSize": [
+                560,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "svg",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stable-motion",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            }
+          ],
+          "stableWrites": 144,
+          "variant": "current"
+        }
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "contracts": [
+        {
+          "backendRetained": true,
+          "cleanup": true,
+          "disabled": true,
+          "hostEditsRepaired": true,
+          "inputAndFocus": true,
+          "panZoom": true,
+          "reenabled": true,
+          "thinRadius": true,
+          "variant": "baseline"
+        },
+        {
+          "backendRetained": true,
+          "cleanup": true,
+          "disabled": true,
+          "hostEditsRepaired": true,
+          "inputAndFocus": true,
+          "panZoom": true,
+          "reenabled": true,
+          "thinRadius": true,
+          "variant": "current"
+        }
+      ],
+      "equal": true,
+      "geometryComparison": "0.001 CSS px rounding; empty surface origins ignored; raw bounds retained",
+      "passed": true,
+      "variants": [
+        {
+          "cleanup": {
+            "children": 0,
+            "layers": 0,
+            "maps": null
+          },
+          "samples": [
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 80,
+                  "y": 70
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 210,
+                  "y": 105
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 340,
+                  "y": 140
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "initial",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "move",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 85.60000610351562,
+                  "y": 48.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 189.6000061035156,
+                  "y": 76.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 151.99996948242188,
+                  "x": 293.6000061035156,
+                  "y": 104.79998779296876
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "ancestor-pan-zoom",
+              "sourceSize": [
+                480,
+                288
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "resize-and-thin",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "theme-material-shadow",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-host-edits-and-priority",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-cssText-reset",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 0,
+                  "radius": 0,
+                  "w": 0,
+                  "x": -20,
+                  "y": -282.8046875
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "hidden",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "shown",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [],
+              "disabled": true,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "disabled",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "enabled-new-look",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stage-resize",
+              "sourceSize": [
+                560,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stable-motion",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            }
+          ],
+          "stableWrites": 144,
+          "variant": "baseline"
+        },
+        {
+          "cleanup": {
+            "children": 0,
+            "layers": 0,
+            "maps": null
+          },
+          "samples": [
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 80,
+                  "y": 70
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 210,
+                  "y": 105
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 340,
+                  "y": 140
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "initial",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "move",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 85.5999755859375,
+                  "y": 48.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 189.5999755859375,
+                  "y": 76.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 293.5999755859375,
+                  "y": 104.79998779296876
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "ancestor-pan-zoom",
+              "sourceSize": [
+                480,
+                288
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "resize-and-thin",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "theme-material-shadow",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-host-edits-and-priority",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-cssText-reset",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 0,
+                  "radius": 0,
+                  "w": 0,
+                  "x": -640,
+                  "y": -282.8046875
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "hidden",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "shown",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [],
+              "disabled": true,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "disabled",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "enabled-new-look",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stage-resize",
+              "sourceSize": [
+                560,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgpu",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stable-motion",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            }
+          ],
+          "stableWrites": 144,
+          "variant": "current"
+        }
+      ]
+    },
+    {
+      "backend": "webgl",
+      "contracts": [
+        {
+          "backendRetained": true,
+          "cleanup": true,
+          "disabled": true,
+          "hostEditsRepaired": true,
+          "inputAndFocus": true,
+          "panZoom": true,
+          "reenabled": true,
+          "thinRadius": true,
+          "variant": "baseline"
+        },
+        {
+          "backendRetained": true,
+          "cleanup": true,
+          "disabled": true,
+          "hostEditsRepaired": true,
+          "inputAndFocus": true,
+          "panZoom": true,
+          "reenabled": true,
+          "thinRadius": true,
+          "variant": "current"
+        }
+      ],
+      "equal": true,
+      "geometryComparison": "0.001 CSS px rounding; empty surface origins ignored; raw bounds retained",
+      "passed": true,
+      "variants": [
+        {
+          "cleanup": {
+            "children": 0,
+            "layers": 0,
+            "maps": null
+          },
+          "samples": [
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 80,
+                  "y": 70
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 210,
+                  "y": 105
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 340,
+                  "y": 140
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "initial",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "move",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 85.60000610351562,
+                  "y": 48.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 189.6000061035156,
+                  "y": 76.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 151.99996948242188,
+                  "x": 293.6000061035156,
+                  "y": 104.79998779296876
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "ancestor-pan-zoom",
+              "sourceSize": [
+                480,
+                288
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "resize-and-thin",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "theme-material-shadow",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-host-edits-and-priority",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-cssText-reset",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 0,
+                  "radius": 0,
+                  "w": 0,
+                  "x": -20,
+                  "y": -282.8046875
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "hidden",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "shown",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [],
+              "disabled": true,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "disabled",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "enabled-new-look",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stage-resize",
+              "sourceSize": [
+                560,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stable-motion",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            }
+          ],
+          "stableWrites": 144,
+          "variant": "baseline"
+        },
+        {
+          "cleanup": {
+            "children": 0,
+            "layers": 0,
+            "maps": null
+          },
+          "samples": [
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 80,
+                  "y": 70
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 210,
+                  "y": 105
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 340,
+                  "y": 140
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "initial",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "move",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 85.5999755859375,
+                  "y": 48.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 189.5999755859375,
+                  "y": 76.79998779296875
+                },
+                {
+                  "h": 104,
+                  "radius": 24,
+                  "w": 152,
+                  "x": 293.5999755859375,
+                  "y": 104.79998779296876
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "ancestor-pan-zoom",
+              "sourceSize": [
+                480,
+                288
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 24,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "resize-and-thin",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "theme-material-shadow",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 123,
+                  "x": 107,
+                  "y": 61
+                },
+                {
+                  "h": 12,
+                  "radius": 6,
+                  "w": 190,
+                  "x": 237,
+                  "y": 96
+                },
+                {
+                  "h": 130,
+                  "radius": 7,
+                  "w": 190,
+                  "x": 367,
+                  "y": 131
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-host-edits-and-priority",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "repair-cssText-reset",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 0,
+                  "radius": 0,
+                  "w": 0,
+                  "x": -640,
+                  "y": -282.8046875
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "hidden",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 7,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "shown",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [],
+              "disabled": true,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "disabled",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "enabled-new-look",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 45,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stage-resize",
+              "sourceSize": [
+                560,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            },
+            {
+              "backend": "webgl",
+              "bounds": [
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                },
+                {
+                  "h": 80,
+                  "radius": 22,
+                  "w": 150,
+                  "x": 56,
+                  "y": 50
+                }
+              ],
+              "disabled": false,
+              "focusRetained": true,
+              "inputRetained": true,
+              "name": "stable-motion",
+              "sourceSize": [
+                600,
+                360
+              ],
+              "styles": [
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                },
+                {
+                  "computed": "[MaxDepth]",
+                  "inline": "[MaxDepth]",
+                  "layer": "[MaxDepth]"
+                }
+              ]
+            }
+          ],
+          "stableWrites": 144,
+          "variant": "current"
+        }
+      ]
+    }
+  ]
+}

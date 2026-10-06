@@ -14,7 +14,17 @@ v0.3 当前差异：GPU 已使用降采样低通 + 横纵高斯 pass；半径缓
 
 当前 SVG renderer 按 surface 保留 filter/image/tint 节点，按宽、高、有效圆角和厚度复用 80×80 位移图；位置与背景更新独立处理。缓存只保留本帧活跃形状，注销及 dispose 释放。该优化不改变 SVG 光学公式，也不新增 DOM 背景采集能力。证据见 [optimization-experiment.md](optimization-experiment.md)。
 
+公共 render 仍逐帧读取实时几何，先批量读 bounds 再写样式。第二轮已分段测量移动/静态与五后端契约；条件 CSS 缓存候选未显示稳定收益，已撤回。该第二轮检查点没有持久 bounds 缓存；第三轮新增可选完整模型坐标接口，并在实际 React Flow 消费方验收。证据见 [shared-update-experiment.md](shared-update-experiment.md) 和 [consumer-gpu-experiment.md](consumer-gpu-experiment.md)。
+
+当前消费者通过 `setGeometryProvider` 提供每帧完整 stage-local CSS bounds，通过 `setScenePainter` / `invalidateScene` 绘制自有点阵环境；默认 DOM 测量仍保留。失败快照整帧回到 DOM，绘制回调失败只回到内置 scene，不降级 GPU。屏幕 bounds 与 logical DOM radius 通过 uniform scale 分开；DOM fallback 在 transform 下补偿取样坐标和滤镜强度。GPU bind group/view/uniform data 已按输入身份复用，零色散和 mix 端点快路径已通过像素阈值；局部 blur 候选未显示稳定收益，不进入默认实现。
+
+当前 GPU shader 仅维护四份 WGSL，构建工具生成 WGSL/GLSL JSON 与反射固定 packer。Naga 处理 GLSL ES 300 顶点空间，内部光学 origin 参数保持两个 API 的纹理坐标契约；GL 使用反射 UBO，GPU 使用同一 layout。WebGPU/WebGL JS 资源层仍分别存在。已生成文件随源码保存，普通构建只做漂移检查；详见 [单源码报告](wgsl-single-source.md)。
+
+当前光学数值保护与内部部分 settings 校验已实施，现有 look 默认值和公开接口保留；解析/混合梯度与高度场留在实验目录。输入校验不复用会注入绝对 look 默认值的预设规范化逻辑。Chrome/Chromium 是现阶段验收范围，其他引擎与平台兼容明确延后到 WebView 支持阶段。TS 重构只迁移语言与类型，不并行扩展光学/采集/兼容策略；见 [光学报告](optical-refinement.md) 和 [TS 入口](ts-migration-plan.md)。
+
 ## 两条独立能力轴
+
+performance.js 是已实现的独立预算层：normalizePerformance 校验请求，resolvePerformance 按可见 kind 生成内部 controlsByKind、DPR、叠层与资源清单；controller 在分配前处理预算降级/恢复，并仅对自有动画限频。getState 保留请求与生效诊断；performance:null 继续 quality 的旧 DPR 行为。预设 v2 保存策略，v1 读取恢复 null。详见 [档位 API](performance-profiles.md) 和 [实施验收](performance-profile-implementation.md)。全部 GPU 档位保留 dense25；主光学已增加精确零Fresnel/glare跳过，接口与160/32字节ABI保持，见[实测取舍](shader-preparation.md)。新模型、其他核与 prepass 仍在 [Shader 研究](shader-design-research.md) 的候选阶段。
 
 `Renderer` 决定如何绘制玻璃；`BackdropSource` 决定哪里来的背景像素。HTML-in-Canvas 属于后者，也涉及 DOM 命中几何，并不等于一种高于 WebGPU 的渲染器。
 

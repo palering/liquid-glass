@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-06",
+  "source": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25",
+  "baselineSource": "3d8735402c13f24d901acf12c9c152bfe427f8d1d82afd14af1d9ba1657c7505",
+  "baseline": "Frozen local round-three source, not published Git HEAD",
+  "compiler": "naga 30.0.0",
+  "target": "GLSL ES 300 / WebGL2",
+  "inputs": {
+    "tests/browser/wgsl-quality.html": "c93667cc61e4275f49a9b4b6a2c545920ff7833b5129b450b835ef2bbde15d4f",
+    "tests/browser/wgsl-quality.js": "a3d150bb657ac07e9a61c88f062b6f23279efa352557a3b73ac620c527df8fd7",
+    "scripts/prepare-wgsl-baseline.mjs": "0a619c9b24994fa1c609c955243b0cca86592753e28ac3e76faa25614596a23a",
+    "scripts/shaders.mjs": "83f61aa180fbc9a6c470f9e03147d060ac20b065ad85dab152663d093a454978",
+    "tools/shader-translator/Cargo.toml": "f05a9e926db9df64a160334b187ec94da8929d5222d788b573157c9d655bc954",
+    "tools/shader-translator/Cargo.lock": "bf3109a5f0a92170111955b15b8ffaaa08751167223e6cdc9d9932069e039fa5",
+    "tools/shader-translator/src/main.rs": "f1ebfef9ea8384aafeb97805bb660b09deb4e13b47f10e546522c4e18466de36",
+    "src/shaders/generated/manifest.json": "b1d7f0d3910c5bae47366a90e5ce374af2d2d56800d96dfb2f95cb89b84b5943"
+  },
+  "files": {
+    "quality-main.json": {
+      "sha256": "106619e5d7166eb07f1a0e01a1331a018c4c66ec973d3198c75273f05cf22fea",
+      "source": "d22120f3c33062b266a090ffcd29e62838d5eac96a9132527c58dd17923d45a7"
+    },
+    "performance-loop-packing.json": {
+      "sha256": "e8bb8ace6783be39dde4238215d512fcb39f872652a66a70febb80f49a373eed",
+      "source": "ff02a80f3d69b8a055ee9a6bde437a96efbe88d88013162e69c49013bf2fceaa"
+    },
+    "performance-subdata.json": {
+      "sha256": "88f1ecde2fab715048e2f0cdb1b12b30886e92de1c170def7b2c73e373ed75f4",
+      "source": "faa3cb1dd69fdbde2ac377b3f525dfd75083ef42dc9717dc48ee68178e40bb1a"
+    },
+    "quality-all.json": {
+      "sha256": "106619e5d7166eb07f1a0e01a1331a018c4c66ec973d3198c75273f05cf22fea",
+      "source": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25"
+    },
+    "performance-stream.json": {
+      "sha256": "3f0b67d8cfa57c84a50328c437edc7427cf40cba4265d7a464176d54c9e2722b",
+      "source": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25"
+    },
+    "stress.json": {
+      "sha256": "037bed4b5e5110f9d2308bb6c0b36117b243122197a7da27521d612c83c7f302",
+      "source": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25"
+    },
+    "consumer-matrix.json": {
+      "sha256": "9bbce043314520928df8233ce655ff9c45edaf83c44f61cd8278fe9b0a410479",
+      "source": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25"
+    },
+    "consumer-production.json": {
+      "sha256": "7d7f16752b109515d74fde8c4ebe97b9db1c8ced202b109447fb77d14e3ed67f",
+      "source": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25"
+    },
+    "consumer-webgl-dark.jpg": {
+      "sha256": "9343257bdf9fbb27f6c9f2012abca6d303fecf863b525a5de3b5fd5520b58918",
+      "source": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25"
+    },
+    "consumer-webgl-light.jpg": {
+      "sha256": "6d8ad295273cfefdcfe04d867c3b7422d8cc7c144298de30651c7eba46557ae7",
+      "source": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25"
+    },
+    "summary.json": {
+      "sha256": "4aee5454c5b0bb27b50cf98e75f6bccff3e7d9071b7dc5ec2e03940a7dc893c6",
+      "source": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25"
+    },
+    "baseline-source.json": {
+      "sha256": "202180691c0ea6161c8b2f2d0d44988b56b3d353c48bd7fcb3e51e24638077b4",
+      "source": "3d8735402c13f24d901acf12c9c152bfe427f8d1d82afd14af1d9ba1657c7505"
+    },
+    "verification.json": {
+      "source": "e5d574cc22f21762df39fbd2a795259915c9382d5016a19c446bf342ae635d25",
+      "sha256": "3d13fa20c109c34de04451142b93833a74fb45020aad24a54a0375046bcc5967"
+    }
+  }
+}

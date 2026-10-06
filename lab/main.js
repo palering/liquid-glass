@@ -31,7 +31,7 @@ document.querySelector("#app").innerHTML = localizeHtml(`
 <div class="control-section"><p class="section-label">01 / ENVIRONMENT</p><div class="theme-buttons" role="group" aria-label="主题"><button class="selected" data-theme="dark">◐ 深色</button><button data-theme="light">◑ 浅色</button></div><label class="field">背景<select id="background" aria-label="背景"><option value="testchart">光学测试图</option><option value="gradient">环境渐变</option><option value="grid">点阵网格</option><option value="checker">棋盘测试</option><option value="image">示例图片</option></select></label><label class="upload-label">导入本地图片 <span>↗</span><input type="file" id="image-file" accept="image/*"></label></div>
 <div class="control-section"><p class="section-label">02 / MATERIAL</p><label class="field">材质预设<select id="look" aria-label="材质预设"><option value="studio">Studio · 光学基准</option><option value="clear">Clear · 厚边透明</option><option value="frosted">Frosted · 磨砂</option><option value="subtle">Subtle · 业务克制</option><option value="regular">Regular · 均衡可读</option><option value="tinted">Tinted · 降低干扰</option><option value="reading">Reading · 阅读优先</option><option value="custom" disabled>Custom · 自定义</option></select></label><p class="control-hint">20 个独立参数，另有染色和连续清透度。先用「光学基准 + 测试图」看折射，再切业务卡片。不同后端会禁用不支持的参数。</p><div class="clarity-control"><label class="slider-label" for="clarity">清透 → 浓染 <output id="clarity-value">自定义光学</output></label><input id="clarity" aria-label="清透至浓染" type="range" min="0" max="100" step="1" value="0"><p class="control-hint">联动折射、散射与遮罩；借鉴 Apple 可读性原则，非系统参数复刻。</p></div><div class="optical-fields">${opticalFields.map((f) => `<div><label class="slider-label" for="${f[0]}">${f[1]} <output id="${f[0]}-value">${formatValue(f, f[5])}</output></label><input aria-label="${f[1]}" id="${f[0]}" type="range" min="${f[2]}" max="${f[3]}" step="${f[4]}" value="${f[5]}"></div>`).join("")}</div><label class="field tint-field">玻璃染色 <input id="tint-color" type="color" aria-label="玻璃染色" value="#d8e6cc"></label><label class="toggle-row"><span>跟随主题染色</span><input id="auto-tint" type="checkbox" checked></label><label class="toggle-row"><span>同时模糊折射边缘</span><input id="blur-edge" type="checkbox" checked></label></div>
 <div class="control-section preset-section"><p class="section-label">03 / PRESETS</p><label class="field">我的预设<select id="saved-preset" aria-label="我的预设"><option value="">选择已保存预设</option></select></label><label class="field">名称<input id="preset-name" aria-label="预设名称" maxlength="80" placeholder="例如：柔光侧栏"></label><div class="preset-actions"><button id="save-preset">保存为预设</button><button id="export-preset">生成 JSON</button></div><details class="preset-json"><summary>JSON 导入 / 查看</summary><textarea id="preset-json" aria-label="预设 JSON" spellcheck="false" placeholder="粘贴预设 JSON"></textarea><div class="preset-actions"><button id="import-preset">校验并导入</button><button id="copy-preset">复制 JSON</button></div><a id="download-preset" class="download-preset" hidden download="liquid-glass-preset.json">下载 JSON 文件 ↓</a><label class="upload-label">导入 JSON 文件<input type="file" id="preset-file" accept=".json,application/json"></label></details><p id="preset-status" class="control-hint" aria-live="polite">预设保存在本浏览器；JSON 不包含本地图片。</p></div>
-<div class="control-section"><p class="section-label">04 / RENDERING</p><label class="field">后端<select id="backend" aria-label="后端"><option value="auto">Auto · GPU 优先</option><option value="webgpu">WebGPU</option><option value="webgl">WebGL 2</option><option value="svg">SVG · 位移近似</option><option value="css">CSS · 毛玻璃</option><option value="solid">Solid · 实色</option></select></label><label class="field">背景采集<select id="capture" aria-label="背景采集"><option value="scene">Scene · 场景纹理</option><option value="native-dom">HTML-in-Canvas · 实验</option></select></label><label class="field">质量<select id="quality" aria-label="质量"><option value="high">High · DPR ≤ 2</option><option value="medium">Medium · DPR ≤ 1.5</option><option value="low">Low · DPR 1</option></select></label><label class="toggle-row"><span>玻璃材质相互折射</span><input id="layered" type="checkbox"></label><p class="control-hint" id="layer-note">GPU 逐层合成；SVG/CSS 保留各自的降级效果。</p><label class="toggle-row"><span>背景流动</span><input id="animation" type="checkbox" role="switch"></label>
+<div class="control-section"><p class="section-label">04 / RENDERING</p><label class="field">后端<select id="backend" aria-label="后端"><option value="auto">Auto · GPU 优先</option><option value="webgpu">WebGPU</option><option value="webgl">WebGL 2</option><option value="svg">SVG · 位移近似</option><option value="css">CSS · 毛玻璃</option><option value="solid">Solid · 实色</option></select></label><label class="field">背景采集<select id="capture" aria-label="背景采集"><option value="scene">Scene · 场景纹理</option><option value="native-dom">HTML-in-Canvas · 实验</option></select></label><label class="field">性能档位<select id="performance" aria-label="性能档位"><option value="legacy">兼容 · 原质量设置</option><option value="minimal">最低开销 · 实色</option><option value="economy">节能 · DPR 1 / 无色散</option><option value="balanced">均衡 · DPR ≤ 1.5</option><option value="full">完整 · DPR ≤ 2</option><option value="custom">自定义 · JSON 参数</option></select></label><p id="performance-detail" class="control-hint" aria-live="polite"></p><label class="field">质量<select id="quality" aria-label="质量"><option value="high">High · DPR ≤ 2</option><option value="medium">Medium · DPR ≤ 1.5</option><option value="low">Low · DPR 1</option></select></label><label class="toggle-row"><span>玻璃材质相互折射</span><input id="layered" type="checkbox"></label><p class="control-hint" id="layer-note">GPU 逐层合成；SVG/CSS 保留各自的降级效果。</p><label class="toggle-row"><span>背景流动</span><input id="animation" type="checkbox" role="switch"></label>
 <div class="runtime-status" aria-live="polite"><div><i></i><span id="active-backend">Initializing…</span></div><p id="status-detail">检测渲染能力与首帧。</p></div><details class="native-info"><summary>HTML-in-Canvas 能力诊断</summary><pre id="native-report"></pre><p class="control-hint">页面参数无法启用原生 API。普通 Chrome 可在 chrome://flags/#canvas-draw-element 实验；内置浏览器暂无已确认的启动参数入口。</p><a href="https://developer.chrome.com/blog/html-in-canvas-ot-changes" target="_blank" rel="noopener">Chrome 实验 API 变更 ↗</a></details><button class="fault-button" id="simulate-loss">模拟当前后端故障 ↘</button></div>
 </aside></div><div class="reference-links">参考演示 <a href="https://liquid-glass-studio.vercel.app/" target="_blank" rel="noopener">Studio ↗</a><a href="https://liquid-glass.ybouane.com/" target="_blank" rel="noopener">ybouane ↗</a><a href="https://liquid-dom-showcase.vercel.app/" target="_blank" rel="noopener">Liquid DOM ↗</a><span>不同背景 / 采集方式，不作为性能排名。</span></div><footer class="page-footer"><span>SEVEN LOOKS. ONE MATERIAL LANGUAGE.</span><span>GPU OPTICS / DOM CONTENT</span></footer></main>`);
 const $ = (s) => document.querySelector(s),
@@ -88,6 +88,10 @@ controller.subscribe((state) => {
   $("#backend").value = state.settings.backend;
   $("#capture").value = state.settings.capture;
   $("#quality").value = state.settings.quality;
+  $("#quality").disabled=Boolean(state.settings.performance);
+  $("#performance").value=state.settings.performance?.preset??"legacy";
+  const perf=state.performance;
+  $("#performance-detail").textContent=perf?t(`实际性能 · DPR ${perf.dpr} · ${perf.blurKernel} · 实际模糊 ${perf.blurRadii.join(" / ")||"0"} px · 纹理估算 ${(perf.estimatedTextureBytes/2**20).toFixed(2)} MiB · 动画上限 ${perf.animationHz} Hz · ${perf.adjustmentReasons.join(", ")||"无调整"}`):"";
   $("#animation").checked = state.animating;
   $("#animation").disabled = state.reducedMotion;
   const backend = state.activeBackend?.toUpperCase() ?? "INITIALIZING";
@@ -203,6 +207,7 @@ $("#auto-tint").onchange = (e) =>
   void controller.setSettings({
     controls: { tintColor: e.target.checked ? "auto" : $("#tint-color").value },
   });
+$("#performance").onchange=e=>void controller.setSettings({performance:e.target.value==="legacy"?null:{preset:e.target.value}});
 for (const id of ["backend", "quality", "capture"])
   $("#" + id).onchange = (e) =>
     void controller.setSettings({ [id]: e.target.value });
@@ -238,6 +243,7 @@ $("#reset").onclick = async () => {
     capture: "scene",
     background: "testchart",
     quality: "high",
+    performance: null,
     enabled: true,
     layered: false,
     controls: { ...looks.studio, blurEdge: true },
@@ -317,7 +323,7 @@ bindDrag(card, $(".grip"));
 bindDrag($("#optical-sample"), $("#optical-sample"));
 bindDrag($("#layer-a"), $("#layer-a"));
 bindDrag($("#layer-b"), $("#layer-b"));
-const storageKey = "workspace-liquid-glass.presets.v1";
+const storageKey = "workspace-liquid-glass.presets.v2";
 let savedPresets = [];
 const presetStatus = (message) => ($("#preset-status").textContent = t(message));
 function refreshPresets() {
@@ -327,7 +333,7 @@ function refreshPresets() {
   );
 }
 try {
-  const raw = JSON.parse(localStorage.getItem(storageKey) ?? "[]");
+  const raw = JSON.parse(localStorage.getItem(storageKey) ?? localStorage.getItem("workspace-liquid-glass.presets.v1") ?? "[]");
   if (!Array.isArray(raw) || raw.length > 100)
     throw new Error("预设列表格式错误");
   savedPresets = raw.map(parsePreset);

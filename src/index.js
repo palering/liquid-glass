@@ -10,3 +10,4 @@ export {
   serializePreset,
 } from "./preset.js";
 export { clarityControls } from "./config.js";
+export {performanceProfiles,textureInventory} from './performance.js';

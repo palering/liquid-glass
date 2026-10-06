@@ -1,0 +1,32 @@
+{
+  "gpu": {
+    "backend": "webgpu",
+    "geometry": "provided",
+    "images": true,
+    "overflow": false,
+    "qa": 0
+  },
+  "webgl": {
+    "backend": "webgl",
+    "dpr": 2,
+    "edges": 8,
+    "geometry": "provided",
+    "images": true,
+    "nodes": 8,
+    "overflow": false,
+    "qa": 0,
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  "connection": {
+    "before": 8,
+    "after": 9
+  },
+  "drag": {
+    "before": "z-index: 0; transform: translate(80px, 490px); pointer-events: all; visibility: visible;",
+    "after": "z-index: 1000; transform: translate(136.738px, 522.733px); pointer-events: all; visibility: visible;"
+  },
+  "logs": []
+}

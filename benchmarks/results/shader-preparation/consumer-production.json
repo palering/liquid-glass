@@ -1,0 +1,58 @@
+{
+  "schema": "consumer-shader-check",
+  "productionScript": "/assets/index-BqHdgeyT.js",
+  "sourceSha256": "0243e339c688c8bcc7f2b762bc330efe370b34eaa3cb088052684c85e55299cd",
+  "matrix": {
+    "phase": "complete",
+    "samples": 20,
+    "maxDeltaPx": 0.015625,
+    "stageReads": 0,
+    "inputAndFocusRetained": true,
+    "setup": "Desktop sidebar opened before QA matrix; initial closed-sidebar invocation failed before samples."
+  },
+  "interactions": {
+    "drag": {
+      "before": "translate(80px, 490px)",
+      "after": "translate(136.738px, 527.098px)"
+    },
+    "connect": {
+      "before": 8,
+      "after": 9,
+      "newEdge": "xy-edge__building-license"
+    },
+    "edit": {
+      "title": "Building Review QA",
+      "visibleArticleCount": 1
+    },
+    "reset": {
+      "nodes": 8,
+      "connections": 8
+    }
+  },
+  "mobile": [
+    {
+      "loadedImages": true,
+      "qa": false,
+      "scrollWidth": 390,
+      "stage": {
+        "backend": "webgpu",
+        "geometryMode": "provided",
+        "surfaceCount": "2",
+        "theme": "light"
+      },
+      "width": 390
+    },
+    {
+      "loadedImages": true,
+      "qa": false,
+      "scrollWidth": 390,
+      "stage": {
+        "backend": "webgpu",
+        "geometryMode": "provided",
+        "surfaceCount": "2",
+        "theme": "dark"
+      },
+      "width": 390
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "phase": "optical-refinement",
+  "sourceHash": "bc2a5ad508a4350aac24d05a9c3519188573ee974398a39322f839ee46434bb7",
+  "dark": {
+    "backend": "webgl",
+    "building": "translate(136.738px, 522.733px)",
+    "connections": 9,
+    "geometry": "provided",
+    "imagesComplete": true,
+    "nodes": 8,
+    "overflow": false,
+    "qa": 0,
+    "scripts": [
+      "/assets/index-aSsFq4uO.js"
+    ]
+  },
+  "light": {
+    "backend": "webgl",
+    "building": "translate(136.738px, 522.733px)",
+    "connections": 9,
+    "overflow": false,
+    "theme": "light"
+  },
+  "expected": {
+    "initialConnections": 8,
+    "afterConnect": 9,
+    "initialBuilding": "translate(80px, 490px)"
+  },
+  "logs": [],
+  "reset": {
+    "nodes": 8,
+    "connections": 8,
+    "backend": "webgl",
+    "verification": "Observed DOM after Reset demo workflow"
+  }
+}

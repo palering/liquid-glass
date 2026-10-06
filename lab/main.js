@@ -1,3 +1,4 @@
+import { labUrl } from "./url.js";
 import {
   GlassController,
   createPreset,
@@ -13,14 +14,14 @@ const icon = (s) =>
   `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${s}</svg>`;
 const plus = icon('<path d="M12 5v14M5 12h14"/>');
 document.querySelector("#app").innerHTML = `
-<header class="topbar"><a class="brand" href="/" aria-label="Liquid lab home"><span class="brand-symbol">◒</span>liquid<span class="brand-slash">/</span><span class="brand-sub">material lab</span></a><div class="edition">EXPERIMENT 001 <span class="edition-dot"></span> STUDIO</div><a class="app-link" href="/benchmark.html">Performance ↗</a></header>
+<header class="topbar"><a class="brand" href="${labUrl("")}" aria-label="Liquid lab home"><span class="brand-symbol">◒</span>liquid<span class="brand-slash">/</span><span class="brand-sub">material lab</span></a><div class="edition">EXPERIMENT 001 <span class="edition-dot"></span> STUDIO</div><a class="app-link" href="${labUrl("benchmark.html")}">Performance ↗</a></header>
 <main><section class="intro"><div><p class="eyebrow">OPTICAL SURFACES / INTERACTIVE STUDY</p><h1>Light, with a little<br><em>less solidity.</em></h1></div><p class="intro-copy">同一种材质，三种表面。<br>探索折射、散射与边缘光，<br>让内容保持清晰，让背景流动。</p></section>
 <div class="workbench"><section class="preview-wrap"><div class="preview-label"><span><i></i> LIVE MATERIAL PREVIEW</span><span id="render-label">INITIALIZING</span></div>
 <div class="experiment-toolbar"><div class="view-buttons" role="group" aria-label="预览场景"><button class="selected" data-view="optics">光学样片</button><button data-view="workflow">业务卡片</button><button data-view="layers">玻璃叠层</button></div><label><input id="effect-enabled" type="checkbox" checked> 玻璃效果 <span>关闭看原背景</span></label></div>
 <div id="stage" class="lg-stage optics-view" data-theme="light">
 <button id="optical-sample" class="surface optical-sample" style="border-radius:78px" aria-label="拖动光学样片" title="拖动样片或使用方向键"><span class="lg-content">⠿</span></button><button id="layer-a" class="surface layer-pane layer-a" aria-label="拖动下层玻璃"><span class="lg-content">⠿</span></button><button id="layer-b" class="surface layer-pane layer-b" aria-label="拖动中层玻璃"><span class="lg-content">⠿</span></button><span class="sample-caption">OPTICAL SAMPLE · DRAG TO INSPECT</span>
 <div class="scene-note">DRAG THE SAMPLE.<br>WATCH THE EDGES.</div>
-<article id="review-card" class="surface review-card" style="border-radius:22px"><div class="lg-content"><div class="card-title"><span class="pixel-mark">✣</span><span>Building Review</span><span class="grip" aria-label="拖动卡片" role="button" tabindex="0" title="拖动，或用方向键移动">⠿</span></div><img src="/assets/storefront.png" alt="建筑审核的餐厅店面" draggable="false"><div class="card-body"><p><span class="muted">Info:</span> Additional info needed</p><div class="inset">Missing structural blueprints for the kitchen area. Applicant notified to upload updated floor plans.</div><div class="tags"><span>Missing Docs</span><span>Medium Priority</span></div></div></div><div class="warm-rim"></div></article>
+<article id="review-card" class="surface review-card" style="border-radius:22px"><div class="lg-content"><div class="card-title"><span class="pixel-mark">✣</span><span>Building Review</span><span class="grip" aria-label="拖动卡片" role="button" tabindex="0" title="拖动，或用方向键移动">⠿</span></div><img src="${labUrl("assets/storefront.png")}" alt="建筑审核的餐厅店面" draggable="false"><div class="card-body"><p><span class="muted">Info:</span> Additional info needed</p><div class="inset">Missing structural blueprints for the kitchen area. Applicant notified to upload updated floor plans.</div><div class="tags"><span>Missing Docs</span><span>Medium Priority</span></div></div></div><div class="warm-rim"></div></article>
 <button id="liquid-button" class="surface liquid-button" style="border-radius:50%" aria-label="添加审核步骤"><span class="lg-content">${plus}</span></button><span class="button-caption">LIQUID CONTROL</span>
 <aside id="frosted-panel" class="surface frosted-panel" style="border-radius:25px"><div class="lg-content"><div class="panel-heading"><h2>Weekly Activity</h2><span>↗</span></div><div class="metric"><p>Total Permit Fees</p><strong>$12,279<span>↗ 12.8%</span></strong><div class="bars">${Array.from({ length: 40 }, (_, i) => `<i style="height:${20 + Math.sin(i * 0.16) * 32 + ((i * 17) % 29)}px"></i>`).join("")}</div><div class="week"><span>Sat</span><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div></div><div class="tasks"><div><i class="status-dot"></i><span>Completed Tasks<small>4 tasks closed · Last: Zoning Review</small></span><span>⌄</span></div><div><i class="pending-dot"></i><span>In progress<small>2 active reviews · Due in 3 days</small></span><span>⌄</span></div></div><div class="panel-foot"><span>112 permits completed</span><span>THIS WEEK</span></div></div></aside>
 <div class="scene-footer"><span id="interaction-note">卡片可拖动 · 加号可点击</span><span>01 / GLASS SYSTEM</span></div></div>
@@ -206,7 +207,7 @@ for (const id of ["backend", "quality", "capture"])
     void controller.setSettings({ [id]: e.target.value });
 $("#background").onchange = async (e) => {
   if (e.target.value === "image")
-    await controller.setImage(imageUrl || "/assets/insights.png");
+    await controller.setImage(imageUrl || labUrl("assets/insights.png"));
   else await controller.setSettings({ background: e.target.value });
 };
 $("#image-file").onchange = async (e) => {
@@ -347,7 +348,7 @@ function storePreset(p) {
 async function applyPreset(p) {
   const validated = parsePreset(p);
   if (validated.settings.background === "image") {
-    if (!(await controller.setImage(imageUrl || "/assets/insights.png")))
+    if (!(await controller.setImage(imageUrl || labUrl("assets/insights.png"))))
       throw new Error("图片请求已取消或加载失败；预设未应用");
   }
   await controller.setSettings(validated.settings);

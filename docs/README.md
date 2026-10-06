@@ -15,3 +15,5 @@ The root README is the project entry and contains setup, actual API and implemen
 - [Package contract](package-contract.md): actual core/framework/lab boundaries, exports, types, licensing and installation.
 - [Performance](performance.md): reproducible protocol, tracked raw samples, CSV and measured limitations.
 - [Acceptance](acceptance.md): completed evidence and user review checklist before consumer integration.
+
+- [GitHub Pages 部署、复跑与线上验证](deployment.md)

@@ -2,7 +2,9 @@
 
 Audience: public
 
-独立的玻璃材质库与交互实验室。2026-10-06：v0.4 本地 Git 基线，包含框架无关核心、React 19 薄适配、类型声明、包验收与可复跑性能矩阵。当前消费范围是实验室；尚未接入无限画布或完成公开发布验收。
+独立的玻璃材质库与交互实验室。2026-10-06：v0.4 独立工程基线，包含框架无关核心、React 19 薄适配、类型声明、包验收与可复跑性能矩阵。当前消费范围是实验室；尚未接入无限画布或完成生产稳定性验收。
+
+[GitHub 仓库](https://github.com/palering/liquid-glass) · [在线实验室](https://palering.github.io/liquid-glass/) · [性能页](https://palering.github.io/liquid-glass/benchmark.html) · [React fixture](https://palering.github.io/liquid-glass/react-smoke.html)。GitHub Pages 部署流程与实际验证见 [部署说明](docs/deployment.md)。
 
 ## 运行
 

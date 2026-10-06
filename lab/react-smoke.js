@@ -1,3 +1,4 @@
+import { labUrl } from "./url.js";
 import React, { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { GlassProvider, GlassSurface, useGlass } from "../src/react.js";
@@ -8,7 +9,7 @@ const controllers = new Set();
 let root,
   clicks = 0;
 document.querySelector("#app").innerHTML =
-  `<header><a href="/">← Material studio</a><span>REACT / STRICT MODE</span><a href="/benchmark.html">Performance ↗</a></header><main><h1>DOM 保持原生。</h1><p class="intro">React 19 开发模式与 StrictMode，挂载 / 卸载 / 更新 / 输入契约。</p><div class="actions"><button id="mount">挂载</button><button id="unmount">卸载</button><button id="cycles">重复挂载 10 次</button></div><p id="status" role="status">等待挂载</p><div id="fixture"></div></main>`;
+  `<header><a href="${labUrl("")}">← Material studio</a><span>REACT / STRICT MODE</span><a href="${labUrl("benchmark.html")}">Performance ↗</a></header><main><h1>DOM 保持原生。</h1><p class="intro">React 19 开发模式与 StrictMode，挂载 / 卸载 / 更新 / 输入契约。</p><div class="actions"><button id="mount">挂载</button><button id="unmount">卸载</button><button id="cycles">重复挂载 10 次</button></div><p id="status" role="status">等待挂载</p><div id="fixture"></div></main>`;
 function Capture() {
   const { controller, state } = useGlass();
   useEffect(() => {

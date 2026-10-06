@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-06：v0.4 独立本地 Git 基线，核心库、React 薄适配、实验室与性能 harness 分开管理。未接入无限画布；尚未完成生产稳定性或公开发布验收。
+2026-10-06：v0.4 独立 Git / GitHub 工程基线，核心库、React 薄适配、实验室与性能 harness 分开管理。未接入无限画布；尚未完成生产稳定性验收。公开仓库已创建，Pages 部署进行中；发布记录见 [deployment.md](deployment.md)。
 
 ## 已实现
 
@@ -28,6 +28,6 @@ Studio 固定 MIT GLSL/WGSL 光学 shader；WebGPU → WebGL2 → SVG → CSS �
 
 ## 继续点
 
-先与用户讨论 [acceptance.md](acceptance.md)，选择默认材质；优化高密度公共更新及 SVG 路径，补真实画布和跨浏览器验收。原生采集独立推进，不把未开放 API 当作已支持。独立 Git 已初始化为 main；没有远端、GitHub 或 npm 发布。整体公开许可待选，上游 MIT 保留；包边界见 [package-contract.md](package-contract.md)。验收稳定后，后续液态玻璃效果统一复用此库。
+先与用户讨论 [acceptance.md](acceptance.md)，选择默认材质；优化高密度公共更新及 SVG 路径，补真实画布和跨浏览器验收。原生采集独立推进，不把未开放 API 当作已支持。独立 Git 为 main，公开远端为 [palering/liquid-glass](https://github.com/palering/liquid-glass)；用户已授权 GitHub 仓库与展示站发布，不涉及 npm 发布。整体公开许可待选，上游 MIT 保留；包边界见 [package-contract.md](package-contract.md)。验收稳定后，后续液态玻璃效果统一复用此库。
 
 开发服务 4174，原画布 4173。若服务不存在，按根 README 启动。

@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-06：用户认为效果已改善，本轮完成独立 Git、包装、React 契约与性能证据。状态是**可讨论验收的工程基线**，不是已宣布生产稳定或全功能完成。
+2026-10-06：用户认为效果已改善，本轮完成独立 Git、包装、React 契约与性能证据。状态是**可讨论验收的工程基线**，不是已宣布生产稳定或全功能完成。随后用户明确授权公开 GitHub 仓库与 Pages 展示站，发布验证单独记录在 [deployment.md](deployment.md)。
 
 ## 本轮已通过
 
@@ -21,6 +21,6 @@ Audience: public
 | 原生采集 | 桥接代码；本机 API 未开放 | 开放实验 API 的隔离浏览器验证采集、输入、几何、resize；直连 GPU 路线仍未实现 |
 | React | mount/update/unmount/SSR 已测 | hydration / React Flow port、pan/zoom、背景遮挡；Svelte 未实现 |
 | 稳定性 | 每组资源清理通过 | 长时间、多实例、大面板、DPR 2、GPU 时间与内存检测 |
-| 发布 | 本地 Git / private 包 / 第三方 notices | 用户选择名称、公开许可、远端与可见性后才发布 |
+| 发布 | 用户已授权公开 GitHub / Pages；private 包 / UNLICENSED / 第三方 notices 保留 | 展示站独立验收；整体许可待选，不发布 npm |
 
 验收稳定后，新液态玻璃效果统一复用这个核心，不再在消费应用各自复制 shader/controller。Frosted 可复用现有参数 look；独立 Acrylic 模型和 Svelte 包另立阶段。原无限画布保持现状，接入将是下一次有证据的消费应用验收。

@@ -1,8 +1,5 @@
-import { readFile, mkdir, writeFile } from "node:fs/promises";
-try {
-  const raw = await readFile("benchmarks/results/latest.json", "utf8");
-  await mkdir("public/benchmarks/results", { recursive: true });
-  await writeFile("public/benchmarks/results/latest.json", raw);
-} catch (e) {
-  if (e.code !== "ENOENT") throw e;
-}
+import { cp, mkdir, rm } from "node:fs/promises";
+// Publish all archived evidence, clearing stale files on repeated builds.
+await rm("public/benchmarks", { recursive: true, force: true });
+await mkdir("public/benchmarks", { recursive: true });
+await cp("benchmarks/results", "public/benchmarks/results", { recursive: true });

@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-06：独立本地 Git 仓库，`main` 分支；包 `@workspace/liquid-glass@0.4.0` 保持 private。没有远端和公开发行；整体许可尚未选择，Studio MIT 源码及 shader 改编仍保留原版权声明。
+2026-10-06：独立 Git / GitHub 仓库，`main` 分支；包 `@workspace/liquid-glass@0.4.0` 保持 private。公开源码远端为 [palering/liquid-glass](https://github.com/palering/liquid-glass)，用户已授权展示站发布；没有 npm 发行；整体许可尚未选择，Studio MIT 源码及 shader 改编仍保留原版权声明。
 
 ## 实际目录边界
 
@@ -35,3 +35,7 @@ ESM-only，暂不承诺 CJS / UMD。核心入口不导入 React；React 可选 p
 React 目前同包子入口足够；稳定后才考虑 `core` / `react` 分包。Svelte 将复用核心，独立验证挂载/销毁、响应式更新、SSR/hydration 与事件语义。Acrylic 尚未实现；Frosted 目前是参数 look，不声称具备完整独立散射模型。
 
 验收后将此库作为后续液态玻璃效果的默认复用实现。首个消费应用先接少量表面，再验证 React Flow 端口、边、平移缩放和面板遮挡背景；当前没有修改原应用。
+
+## 展示站发布边界
+
+GitHub Pages 工作流只上传 `dist/lab`。它包含实验室自有生成图片、性能归档 JSON/CSV/报告和三个 HTML 入口；不包含 `dist/lib`、node_modules、缓存、环境文件、打包 tarball 或临时截图。`VITE_BASE_PATH` 控制站点 URL 前缀，不改变核心库 API。公开仓库与展示站授权不等于选择整体开源许可，private / UNLICENSED 与 vendor MIT/NOTICE 保持原状。详见 [deployment.md](deployment.md)。

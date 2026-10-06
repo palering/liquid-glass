@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-06 最新用户方向：现在整理成独立 Git 项目，补各后端性能数据，休息后讨论验收；稳定后作为后续玻璃效果默认实现。此指令替代早先“全功能验收后才初始化 Git”的阶段门槛。v0.4 已完成本地 main 仓库、独立包边界、React 契约和性能基线；没有创建远端或发布 npm。
+2026-10-06 最新用户方向：现在整理成独立 Git 项目，补各后端性能数据，休息后讨论验收；稳定后作为后续玻璃效果默认实现。此指令替代早先“全功能验收后才初始化 Git”的阶段门槛。v0.4 已完成本地 main 仓库、独立包边界、React 契约和性能基线；随后用户已授权创建公开 GitHub 仓库与 Pages 展示站；没有发布 npm。
 
 ## 现有结构
 
@@ -10,13 +10,13 @@ Audience: public
 
 预设模型与 UI 分离：`opticalFields`、`looks` 在核心导出；`createPreset` / `parsePreset` / `serializePreset` 提供 schema v1。浏览器 localStorage 属于实验室，不成为核心依赖。JSON 不含图片、URL、DOM、后端对象；消费方自行存储和迁移。参数范围是工程映射，不是假定的物理量。
 
-## 完整验收后再进入发布阶段
+## 展示站发布与后续发行
 
 1. **采集与几何**：开放实验 API 的隔离浏览器验证 2D 桥，新旧 API、paint 更新、hit testing、焦点、输入、resize、DPR、取消；明确支持范围后再接 GPU 直接采集。
 2. **首个消费应用**：React 挂载与 StrictMode 清理，React Flow pan/zoom/port/节点拖动及面板下方背景。先接少量表面，不能把实验室纹理自动当作业务 DOM 已采集。
 3. **浏览器与性能矩阵**：真实 Safari/Firefox/移动端回退；DPR 2/多面板压力、GPU 时间及资源占用。叠层需更多 blur/composite pass，不应默认覆盖整个编辑器。
 4. **库包装**：v0.4 已有类型、consumer 本地安装、无 DOM 导入、React SSR、files 白名单与 notices；公开许可、hydration、API 稳定性和消费工程集成仍待验收。开发缓存及截图排除在 Git/包之外，lab 生成素材在 Git 中以便独立运行，但不进库 tarball。
-5. **GitHub/发行**：本地 Git 现在已创建。用户验收及选择名称、公开许可、远端与可见性后再创建 GitHub，决定版本/发布策略和 npm 包名。不要把本地初始提交视为公开发布批准。
+5. **GitHub/发行**：本地 Git 已创建，用户随后明确授权公开仓库与 Pages 展示站，远端为 palering/liquid-glass；实际部署验证见 [deployment.md](deployment.md)。整体开源许可、npm 包名与发行策略仍待选，不随展示站发布自动推进。
 
 ## 可选材质与框架包
 

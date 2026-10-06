@@ -4,6 +4,8 @@ Audience: public
 
 2026-10-06：用户明确授权创建公开 GitHub 仓库与 GitHub Pages 展示站。仓库为 [palering/liquid-glass](https://github.com/palering/liquid-glass)，站点为 [在线实验室](https://palering.github.io/liquid-glass/)。首次部署与线上验证已完成；生产展示站与工程/视觉验收边界分开记录。
 
+2026-10-07 最新阶段：用户授权上传完整TS及Git依赖准备成果，main推送触发现有Pages CI。提交 `43e550685f9bbeb2a345c51b525fd371f502b5c5` 的 [run 37542469416](https://github.com/palering/liquid-glass/actions/runs/37542469416) build/deploy成功；线上fingerprint revision一致、源码hash与TS验收基线相同。实际WebGPU ready、economy有效诊断及中英切换保留档位通过。此前run `37541931808` 的npm10 pack JSON问题已本地复现并修复；安装/包/画布证据见 [Git依赖使用](git-consumption.md)。下面首次部署验收是历史记录，不再代表未接入画布或未迁移TS。
+
 ## 实现与操作
 
 `.github/workflows/pages.yml` 在 main push 或手动 dispatch 时运行：Node 22、npm ci、契约测试、类型检查、核心/实验室构建与打包消费检查。构建任务只有 contents read；部署任务只有 pages write / id-token write，使用 github-pages environment。Pages 配置为 GitHub Actions source；只上传 `dist/lab`，不上传整个仓库或库 tarball。

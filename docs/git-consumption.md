@@ -45,7 +45,23 @@ The Git smoke test starts a new consumer, lets npm prepare an unbuilt Git revisi
 
 首次远端Pages检查 `37541931808` 在 Node22 的 tarball JSON 解析失败；本地隔离官方Node22.23.3/npm10.9.9复现：该版本 `npm pack --ignore-scripts` 仍运行 `prepare`，子构建 stdout 污染 JSON。最终准备入口使用 `scripts/prepare-package.mjs` 将构建日志定向 stderr，保持真实 `npm pack --json` 的stdout只含JSON；tarball检查恢复正常生命周期，Git准备与CI需按最终提交复核。
 
-发布前重新扫描389个候选文件、509个可达历史blob，未发现所检查的凭据、私钥、密码URL、私人路径；禁入文件忽略和未上传提交的noreply身份通过。扫描是模式检查，不是安全审计或绝无敏感信息保证。远端安装、Pages与画布消费结果在实际验证后补充。
+发布前重新扫描389个候选文件、509个可达历史blob，未发现所检查的凭据、私钥、密码URL、私人路径；禁入文件忽略和未上传提交的noreply身份通过。准备入口修复后当前候选再次检查通过。扫描是模式检查，不是安全审计或绝无敏感信息保证。
+
+## Completed stage / 本阶段完成记录
+
+当前推荐消费提交为 [`43e550685f9bbeb2a345c51b525fd371f502b5c5`](https://github.com/palering/liquid-glass/commit/43e550685f9bbeb2a345c51b525fd371f502b5c5)：
+
+```sh
+npm install 'git+https://github.com/palering/liquid-glass.git#43e550685f9bbeb2a345c51b525fd371f502b5c5'
+```
+
+- Node22.23.3/npm10.9.9 与 Node26.7/npm12.1 的最终 tarball 真实打包/类型/SSR 通过；安装文件13个，运行bundle与完整TS验收一致。
+- Node26 的远端 `9bb63a6` 和 Node22 的最终 `43e5506` 均通过真实 Git 安装、声明正反例、核心导入、React SSR 与 `npm ci` 重装。Node22/npm10 会把无用户名的GitHub HTTPS地址在lockfile中规范化为SSH形式，但其hosted安装优先走HTTPS；在命令级 `GIT_SSH_COMMAND=false` 下完整安装/重装再次通过，没有依赖SSH key。npm12保留HTTPS resolved；检查宿主生成的lockfile，避免自行假定传输方式。
+- [Pages run 37542469416](https://github.com/palering/liquid-glass/actions/runs/37542469416) 的Node22安装/prepare、33项测试、typecheck、完整构建、打包消费和部署全部success。线上fingerprint revision匹配 `43e5506`；sourceSha256仍为完整TS基线 `02eadf4c977c5de7cd33553c335b3653b744b156bed1d12cdd7323e376f0aed3`。
+- 实际线上WebGPU ready；中文选择economy后显示DPR1、色散关闭、纹理预算与30Hz背景上限，切英文保留economy。语言导航、预览渲染与档位诊断正常；本轮没有重新跑线上性能基准。
+- infinite-canvas 已锁定该SHA，移除隐式相邻源码alias，保留React dedupe；Node26/npm12真实安装和lockfile `npm ci`重装通过。生产bundle仍为 `index-BIexmT7E.js`（716.79kB / gzip220.12kB），Sites4/4；DEV五后端×四缩放20项、0 render-stage读取、最大误差0.015625px、输入/焦点保留通过。生产WebGPU/WebGL与深浅主题、连接8→9、建筑卡片拖动、改名及重置8/8通过，图片完整、无水平溢出、无warn/error。画布仍是mock/session原型，未部署。
+
+后续文档提交可在该实现SHA之后；消费项目继续固定已验证实现SHA，文档更新不强迫应用升级。自动库发行、npm发布、许可变更、其他浏览器与原生DOM采集不属于本次阶段。
 
 ## Later releases / 后续发行
 

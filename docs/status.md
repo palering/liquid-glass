@@ -8,7 +8,9 @@ Audience: public
 
 当前发布策略（2026-10-07）：用户已授权按固定 GitHub 提交依赖路线处理并上传本阶段成果，再继续无限画布。`prepare` 只构建库，稳定后再安排 CI 预构建发行；没有 npm 发布授权，不改变许可。此前 local-only 阶段为历史记录；实际上传与安装结果以 [Git 依赖使用](git-consumption.md) 为准。
 
-**最新状态（2026-10-07）：核心库完整TS迁移已完成并通过当前Chrome范围的本地验收。** 来源、五后端renderer、controller、React和全部作者运行模块都使用strict TS；公开声明从实现生成，公开ESM/CSS入口不变。33个Node测试、本地Node22/26、140个双GPU精确像素、30项策略、1350帧生命周期、8项异步生命周期、Chrome10项、实际消费20项及生产图交互通过。最新事实以[完整迁移验收](ts-migration-complete.md)为准；下文各轮为历史记录，第一阶段不再是最新继续点。未推送、部署或发布npm。
+**最新状态（2026-10-07）：完整TS成果与固定GitHub依赖路线已上传并验收。** 推荐实现提交 `43e550685f9bbeb2a345c51b525fd371f502b5c5`；Git prepare只构建库，Node22/npm10与Node26/npm12打包通过，真实远端Git安装、类型/SSR、lockfile重装通过。现有Pages CI build/deploy成功，线上性能档位和双语切换已实际确认；无限画布已移除源码alias并锁定此SHA，20项消费矩阵和生产图交互通过。当前事实与操作见 [Git依赖使用](git-consumption.md)。没有npm发行，不改变许可；下一步回到画布业务与材质体验。
+
+**TS迁移验收：** 来源、五后端renderer、controller、React和全部作者运行模块都使用strict TS；公开声明从实现生成，公开ESM/CSS入口不变。33个Node测试、本地Node22/26、140个双GPU精确像素、30项策略、1350帧生命周期、8项异步生命周期、Chrome10项、实际消费20项及生产图交互通过。原始证据以[完整迁移验收](ts-migration-complete.md)为准；下文各轮为历史记录，第一阶段不再是最新继续点。本段原验收为本地检查点，现已由上述发布阶段覆盖。
 
 ## 已实现
 

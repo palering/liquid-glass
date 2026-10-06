@@ -6,7 +6,7 @@ Audience: public
 
 公开入口为英文 [README](../README.md) 和 [中文版本](../README.zh-CN.md)，共用两张实际 Clear / WebGPU 效果图。详细接口与运行步骤见 [api.md](api.md) / [development.md](development.md)；实验室、性能页与 React 示例支持 EN / 中文原地切换和携带语言的导航。后续提交使用 Conventional Commits。
 
-当前发布策略：2026-10-06 后续迭代先在本地实施、验证和保留，待用户授权阶段发布后再推送或部署；之前逐轮发布的授权已被此要求覆盖。以下第二、第三轮、WGSL 单源码及光学/TS 准备阶段结果尚未上传。
+当前发布策略（2026-10-07）：用户已授权按固定 GitHub 提交依赖路线处理并上传本阶段成果，再继续无限画布。`prepare` 只构建库，稳定后再安排 CI 预构建发行；没有 npm 发布授权，不改变许可。此前 local-only 阶段为历史记录；实际上传与安装结果以 [Git 依赖使用](git-consumption.md) 为准。
 
 **最新状态（2026-10-07）：核心库完整TS迁移已完成并通过当前Chrome范围的本地验收。** 来源、五后端renderer、controller、React和全部作者运行模块都使用strict TS；公开声明从实现生成，公开ESM/CSS入口不变。33个Node测试、本地Node22/26、140个双GPU精确像素、30项策略、1350帧生命周期、8项异步生命周期、Chrome10项、实际消费20项及生产图交互通过。最新事实以[完整迁移验收](ts-migration-complete.md)为准；下文各轮为历史记录，第一阶段不再是最新继续点。未推送、部署或发布npm。
 

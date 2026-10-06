@@ -8,6 +8,7 @@ Start with the [English README](../README.md) or [简体中文 README](../README
 
 - [API reference](api.md): current controller, settings, presets, lifecycle and React contracts.
 - [Development](development.md): local setup, build/check commands, local package consumption and commits.
+- [Git consumption](git-consumption.md): pinned GitHub installation, preparation, package checks and the later CI release path.
 - [Package contract](package-contract.md): exports, framework/lab boundaries, types and licensing.
 - [Deployment](deployment.md): GitHub Pages workflow, project paths and actual online verification.
 - [Status](status.md): implemented capabilities, verified results, limits and continuation.

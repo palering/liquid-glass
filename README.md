@@ -22,7 +22,7 @@ A glass material library and interactive lab for the web. Explore clear refracti
 - Light and dark themes, built-in scenes, sample images and local image upload.
 - Named presets with JSON import/export; draggable surfaces and native DOM interaction.
 - One shared renderer per controller, reusable blur resources and static redraw on change.
-- Five manual [performance profiles](docs/performance-profiles.md), observable texture budgets and reversible quality tradeoffs (local development; not yet in the live demo).
+- Five manual [performance profiles](docs/performance-profiles.md), observable texture budgets and reversible quality tradeoffs.
 
 ## Run locally
 
@@ -37,7 +37,13 @@ Open [localhost:4174](http://127.0.0.1:4174/). The lab runs independently of any
 
 ## Use the core
 
-The package is **not published on npm**. Build it from this repository and install the local tarball in your consuming app before using these imports.
+The package is **not published on npm**. Install a pinned GitHub commit in your consuming app (replace `COMMIT_SHA` with a published full commit SHA):
+
+```sh
+npm install 'git+https://github.com/palering/liquid-glass.git#COMMIT_SHA'
+```
+
+Git installation requires Git and Node.js 22.18+. npm installs the build dependencies and runs `prepare` to compile only the library; no Rust or lab build is needed. Commit your app's lockfile and update the SHA deliberately. A local tarball remains available for offline use. See [Git consumption](docs/git-consumption.md) for verification and the later CI release path.
 
 ```js
 import { GlassController } from '@workspace/liquid-glass';

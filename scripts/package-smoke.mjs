@@ -2,6 +2,9 @@ import { execFileSync } from "node:child_process";
 import { mkdir, writeFile, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 const root = process.cwd();
+// Build explicitly: npm pack --json otherwise includes prepare's stdout in its
+// JSON stream on some npm versions. Git preparation has its own end-to-end test.
+execFileSync("npm", ["run", "build:lib"], { stdio: "inherit" });
 await mkdir(".local/packages", { recursive: true });
 const metadata = JSON.parse(
   execFileSync(
@@ -9,6 +12,7 @@ const metadata = JSON.parse(
     [
       "pack",
       "--json",
+      "--ignore-scripts",
       "--pack-destination",
       ".local/packages",
       "--cache",

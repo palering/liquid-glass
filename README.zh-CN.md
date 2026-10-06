@@ -22,7 +22,7 @@
 - 深浅主题、内置场景、示例图片与本地图片导入。
 - 命名预设与 JSON 导入导出；表面可拖动，内容保留原生 DOM 交互。
 - 每个 controller 共享一个 renderer，复用模糊资源，静态场景按变化重绘。
-- 五个手动[性能档位](docs/performance-profiles.md)、可观察的纹理预算与可恢复的画质取舍（本地已实现，在线站尚未更新）。
+- 五个手动[性能档位](docs/performance-profiles.md)、可观察的纹理预算与可恢复的画质取舍。
 
 ## 本地运行
 
@@ -37,7 +37,13 @@ npm run dev
 
 ## 使用核心
 
-包**尚未发布到 npm**。使用以下导入前，先从仓库构建并在消费项目中安装本地 tarball。
+包**尚未发布到 npm**。在消费项目中安装固定的 GitHub 提交（将 `COMMIT_SHA` 替换为已经上传的完整提交 SHA）：
+
+```sh
+npm install 'git+https://github.com/palering/liquid-glass.git#COMMIT_SHA'
+```
+
+Git 安装需要 Git 和 Node.js 22.18+。npm 安装构建依赖并通过 `prepare` 仅构建库，不需要 Rust，也不构建实验室。消费项目提交 lockfile，升级时主动更新 SHA；离线使用仍可安装本地 tarball。安装验证与后续 CI 发行路线见 [Git 依赖使用](docs/git-consumption.md)。
 
 ```js
 import { GlassController } from '@workspace/liquid-glass';

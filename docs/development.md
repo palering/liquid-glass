@@ -10,6 +10,7 @@ Audience: public
 npm ci --cache .local/npm-cache
 npm run dev
 npm run build
+npm run build:lib
 npm run preview
 ```
 
@@ -19,6 +20,7 @@ npm run preview
 npm test
 npm run typecheck
 npm run test:package
+npm run test:git
 ```
 
 契约测试、TypeScript 消费与实际打包/离线安装/无 DOM 导入/React SSR 分别覆盖不同边界；这些检查不证明跨浏览器视觉或生产稳定性。浏览器证据见 [validation.md](validation.md)，性能复跑见 [performance.md](performance.md)，Pages 子路径与发布见 [deployment.md](deployment.md)。
@@ -46,7 +48,11 @@ npm run build
 
 运行 node scripts/prepare-optical-experiments.mjs（需要同一锁定 Rust 工具），然后 npm run dev，打开 /tests/browser/optical-refinement.html。候选由 WGSL 编译，原始基线从逐文件哈希快照恢复到 .local；默认生产实现不受切换候选影响。报告见 [光学试验](optical-refinement.md)，下一阶段顺序见 [TS 重构入口](ts-migration-plan.md)。本轮限 Chrome/Chromium，其他浏览器在 WebView 阶段再处理。
 
-## 本地包使用
+## Git 依赖与本地包使用
+
+当前采用固定 GitHub 提交的依赖安装；`prepare` 调用 `build:lib`，验证 shader 和声明漂移后只生成 `dist/lib`，不复制性能归档、不构建 Lab。Git 克隆中需要开发依赖；安装后的消费包仅保留编译 ESM、CSS、声明与许可。普通源码安装不需要 Rust。说明、锁定提交、真实 Git 安装检查与后续 CI 路线见 [Git 依赖使用](git-consumption.md)。
+
+`npm run test:git` 使用已提交的本地 HEAD，通过 npm 的 Git 协议安装到新的消费目录；尚未提交的工作树修改不会进入检查。`npm run test:git -- 'git+https://github.com/palering/liquid-glass.git#COMMIT_SHA'` 则检查远端固定提交。两者均验证实际安装、React SSR、声明、包边界及 lockfile 重装。
 
 包未发布到 npm。先在本仓库构建并生成 tarball：
 

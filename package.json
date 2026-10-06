@@ -4,6 +4,9 @@
   "private": true,
   "license": "UNLICENSED",
   "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
   "types": "./types/core.d.ts",
   "files": [
     "dist/lib/",
@@ -33,9 +36,12 @@
     "shaders:generate": "node scripts/shaders.mjs && node scripts/shader-types.mjs",
     "shaders:check": "node scripts/shaders.mjs --check",
     "build": "vite build && vite build --config vite.lib.config.js",
+    "build:lib": "npm run shaders:check && npm run types:check && vite build --config vite.lib.config.js",
+    "prepare": "npm run build:lib",
     "test": "node scripts/prepare-ts-baseline.mjs && node --import ./scripts/register-source.mjs --test tests/*.test.js",
     "typecheck": "npm run types:check && tsc --noEmit && tsc -p tsconfig.runtime.json --noEmit",
     "test:package": "node scripts/package-smoke.mjs",
+    "test:git": "node scripts/git-install-smoke.mjs",
     "bench:report": "node scripts/benchmark-report.mjs",
     "preview": "vite preview --host 127.0.0.1 --port 4175 --strictPort",
     "types:generate": "node scripts/shader-types.mjs && node scripts/declarations.mjs",

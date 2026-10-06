@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-06：独立 Git / GitHub 仓库，`main` 分支；包 `@workspace/liquid-glass@0.4.0` 保持 private。公开源码远端为 [palering/liquid-glass](https://github.com/palering/liquid-glass)，历史展示站已发布；当前后续迭代只在本地，阶段推送/部署需新授权；没有 npm 发行；整体许可尚未选择，Studio MIT 源码及 shader 改编仍保留原版权声明。
+独立 Git / GitHub 仓库，`main` 分支；包 `@workspace/liquid-glass@0.4.0` 保持 private。公开源码远端为 [palering/liquid-glass](https://github.com/palering/liquid-glass)。2026-10-07 用户授权本阶段上传并使用固定 GitHub 提交依赖；`prepare` 仅构建库，稳定后再安排 CI 预构建发行。没有 npm 发行；整体许可尚未选择，Studio MIT 源码及 shader 改编仍保留原版权声明。实际上传和安装结果以 [Git 依赖记录](git-consumption.md) 为准。
 
 ## 实际目录边界
 

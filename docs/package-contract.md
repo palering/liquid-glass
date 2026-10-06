@@ -1,0 +1,37 @@
+# Package and framework contract
+
+Audience: public
+
+2026-10-06：独立本地 Git 仓库，`main` 分支；包 `@workspace/liquid-glass@0.4.0` 保持 private。没有远端和公开发行；整体许可尚未选择，Studio MIT 源码及 shader 改编仍保留原版权声明。
+
+## 实际目录边界
+
+| 路径 | 职责 | 进入库 tarball |
+| --- | --- | --- |
+| src/controller.js | 共享生命周期、surface 注册、后端/采集状态、dirty 重绘 | 构建为 ESM |
+| src/capture/ | scene；实验性原生 DOM 2D 桥 | 构建为 ESM |
+| src/renderers/、src/shaders.js | GPU / GL / SVG / CSS / solid，GPU 模糊与合成 | 构建为 ESM |
+| src/config.js、preset.js、policy.js | 参数、预设校验、后端顺序 | 构建为 ESM |
+| src/react.js | 共享 controller 的 React 19 薄适配 | 独立 React 入口 |
+| types/ | 实际 API 的声明，消费者类型检查 | 是 |
+| src/glass.css | DOM / 装饰层与阴影样式 | 是，显式导入 |
+| lab/、public/ | 效果实验室、性能 UI、React fixture、生成素材 | 否 |
+| benchmarks/ | 协议、统计、原始样本、报告 | 否，Git 管理 |
+| vendor/studio/ | 固定上游源码与 notices | 只包含 LICENSE / UPSTREAM |
+| tests/、scripts/、docs/ | 契约、打包/数据工具、交接说明 | 否，根 README 除外 |
+
+`dist/lib/` 与 `dist/lab/` 都可重新构建，不进入 Git。node_modules、.local、output、生成公开数据副本、压缩包与环境文件不进入 Git；npm `files` 再单独限定发布边界。shader 是 bundle 中的字符串，不依赖消费项目访问 vendor 或 Vite raw loader。库 tarball 含完整 vendor MIT notices。
+
+## 入口与约束
+
+ESM-only，暂不承诺 CJS / UMD。核心入口不导入 React；React 可选 peer 19。CSS 由消费方显式引入。`npm run test:package` 实际打包、本地离线安装并验证核心导出、React SSR 和文件范围；没有执行 npm publish。`npm run typecheck` 检查包含错误选项拒绝的 TypeScript 消费 fixture。
+
+无 DOM 环境可以导入核心、参数及预设；`GlassController` 必须在浏览器挂载阶段创建，SSR 不调用构造函数。React Provider 的 effect 创建/释放 controller，Surface effect 注册/注销，useGlass 订阅公开状态。React fixture 已验证 StrictMode 下真实输入、点击更新、后端切换及十次挂载/卸载；记录的是可观察 controller 清理，不是浏览器驱动显存泄漏检测。
+
+消费方负责 stage 尺寸、布局、唯一注册 id、`lg-content` 分层以及 transform/pan/zoom 后的 `invalidate()`。`id` 是玻璃注册 id；不是另一个 DOM id 管理器。`register` 返回清理函数；消费方必须在元素离开 stage 时注销。选择后端与背景采集分别配置；原生 API 不可用时仍报告 scene 回退。
+
+## 后续适配
+
+React 目前同包子入口足够；稳定后才考虑 `core` / `react` 分包。Svelte 将复用核心，独立验证挂载/销毁、响应式更新、SSR/hydration 与事件语义。Acrylic 尚未实现；Frosted 目前是参数 look，不声称具备完整独立散射模型。
+
+验收后将此库作为后续液态玻璃效果的默认复用实现。首个消费应用先接少量表面，再验证 React Flow 端口、边、平移缩放和面板遮挡背景；当前没有修改原应用。

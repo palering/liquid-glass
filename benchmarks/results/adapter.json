@@ -1,0 +1,1 @@
+{"capturedAt":"2026-10-06T00:38:13.966Z","note":"Post-run adapter probe in the same browser; not GPU timing or memory measurement","webgpu":{"vendor":"apple","architecture":"metal-3","device":"","description":""},"webgl":{"vendor":"Google Inc. (Apple)","renderer":"ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)"}}

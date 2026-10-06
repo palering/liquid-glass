@@ -1,0 +1,10 @@
+Pre-release licensing notice
+
+No project-wide public distribution license has been selected yet. This private
+package is marked UNLICENSED while the API and acceptance baseline are reviewed.
+This notice does not change third-party licenses.
+
+The vendored Liquid Glass Studio shader sources and their adaptations retain the
+MIT terms and copyright notice in vendor/studio/LICENSE. See NOTICE.md for source
+provenance. A public release must select the project's license and preserve all
+third-party notices first.

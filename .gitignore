@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.playwright-cli/
+.local/
+output/
+*.tgz
+.DS_Store
+.env
+.env.*
+!.env.example
+public/benchmarks/
+public/benchmark-source.json

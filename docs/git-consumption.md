@@ -39,7 +39,11 @@ npm run test:git
 npm run test:git -- 'git+https://github.com/palering/liquid-glass.git#COMMIT_SHA'
 ```
 
-The Git smoke test starts a new consumer, lets npm prepare an unbuilt Git revision, compiles positive/negative public type examples, imports core without a DOM, renders React on the server, checks installed file boundaries and repeats installation through `npm ci`. Results stay in ignored `.local/git-consumers/`. GPU/browser results are separate; this check is not a production stability claim. 本阶段安装、远端与画布接入结果在验证后补充。
+The Git smoke test starts a new consumer, lets npm prepare an unbuilt Git revision, compiles positive/negative public type examples, imports core without a DOM, renders React on the server, checks installed file boundaries and repeats installation through `npm ci`. Results stay in ignored `.local/git-consumers/`. GPU/browser results are separate; this check is not a production stability claim.
+
+2026-10-07 本地安装验证通过：提交 `2df5583de297524ebc5684a1cedc000725abb066` 经 npm 的 `git+file` 路径从无构建产物的提交自动准备；Node26.7/npm12.1 下声明正反例、无DOM核心导入、预设性能策略、React SSR 和 lockfile `npm ci` 重装通过。安装后仅13个文件，包含双语README/ESM/CSS/声明/完整许可，不含Lab、归档、源码编译器或Rust。33个Node测试、typecheck、完整Lab/库构建与tarball消费检查也通过。新增 `prepare` 会污染部分 npm 版本的 `pack --json` stdout，因此 tarball检查改为显式构建后使用 `--ignore-scripts` 打包；真实Git准备另行端到端检查。
+
+发布前重新扫描389个候选文件、509个可达历史blob，未发现所检查的凭据、私钥、密码URL、私人路径；禁入文件忽略和未上传提交的noreply身份通过。扫描是模式检查，不是安全审计或绝无敏感信息保证。远端安装、Pages与画布消费结果在实际验证后补充。
 
 ## Later releases / 后续发行
 

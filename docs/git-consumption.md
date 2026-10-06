@@ -12,6 +12,8 @@ In the consuming app, replace `COMMIT_SHA` with a published full SHA:
 npm install 'git+https://github.com/palering/liquid-glass.git#COMMIT_SHA'
 ```
 
+If npm reports `EALLOWGIT`, Git dependencies are disabled by the host configuration. For npm versions supporting this policy, use `--allow-git=root` to allow only the Git dependencies declared by this root app. This is a per-command choice; do not disable unrelated installation protections globally. 本机验证遇到了这一限制，使用命令级 `npm_config_allow_git=root`；没有修改全局 npm 配置。
+
 Commit `package.json` and `package-lock.json`. Use `npm ci` on another machine or CI. Update the SHA intentionally; avoid following a moving branch. HTTPS supports public repository reads without an SSH key; Git is still required. Git installation needs Node.js 22.18+ and access to the npm registry for the build dependencies. If the host's npm policy disables dependency lifecycle scripts, the package cannot build its missing `dist/lib`; configure this dependency's preparation under the host's existing policy, or use a prebuilt tarball.
 
 消费项目提交依赖与 lockfile；跨机器运行 `npm ci`。升级时主动更新完整 SHA，不直接跟随 `main`。公开仓库的 HTTPS 读取无需 SSH key，但仍需要 Git、Node.js 22.18+ 与构建依赖下载。禁止依赖生命周期脚本的宿主安装策略会阻止生成 `dist/lib`；按宿主策略允许该包的准备步骤，或安装预构建 tarball。

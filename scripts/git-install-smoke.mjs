@@ -47,7 +47,7 @@ for (const file of ['dist/lib/core.js', 'dist/lib/react.js', 'src/glass.css',
   assert(files.includes(file), `Missing Git package file: ${file}`);
 }
 for (const file of files) {
-  assert(/^(dist\/lib\/|types\/|vendor\/studio\/(LICENSE|UPSTREAM\.md)$|src\/glass\.css$|package\.json$|README\.md$|LICENSE$|NOTICE\.md$)/.test(file),
+  assert(/^(dist\/lib\/|types\/|vendor\/studio\/(LICENSE|UPSTREAM\.md)$|src\/glass\.css$|package\.json$|README(?:\.zh-CN)?\.md$|LICENSE$|NOTICE\.md$)/.test(file),
     `Unexpected Git package file: ${file}`);
 }
 await writeFile(resolve(consumer, 'types-consumer.ts'), await readFile(resolve(root, 'tests/types-consumer.ts'), 'utf8'));

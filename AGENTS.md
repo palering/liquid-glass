@@ -32,6 +32,10 @@ Evaluate models independently of Studio and independently of DOM capture. Preser
 
 2026-10-07: production keeps dense25 and the compatibility model, with exact-zero Fresnel/glare branches now validated. Uniform tint/range preparation and CPU/unrolled/recursive Gaussian weights remain isolated: their timing did not justify adoption. Bounded Hermite/semicircle/convex profiles are experiments, not accepted production models. See docs/shader-preparation.md and benchmarks/results/shader-preparation/current-source.json for the new pre-TS checkpoint. TS must compare exactly against this checkpoint, preserve 160/32-byte reflected ABI and existing policy/JSON behavior, and not accumulate the shader-experiment pixel tolerance. Readiness is distinct from global shader optimality and production stability. No push/deploy.
 
-## TS stage one
+## TS stage one (historical checkpoint)
 
 Local JS baseline commit: f6f329e. Config/settings/preset/policy/performance/geometry now use strict TS. Keep ESM .js specifiers; Vite resolves TS and Node tests use scripts/register-source.mjs. npm consumers use compiled JS and do not receive the loader/compiler. npm test restores the immutable JS reference and compares values, accessor reads, exceptions, JSON and resource policies. Public hand-written declarations remain until stage four; sources/renderers/controller/React remain JS. Continue from docs/ts-migration-stage1.md, preserving old archives. No push/deploy/npm publication.
+
+## Complete TS migration checkpoint
+
+2026-10-07: all authored core runtime modules, source/renderer/controller and React adapter are strict TS. Read docs/ts-migration-complete.md for final evidence and boundaries. src/contracts.ts owns contracts; no source import from types/. Public declarations are generated with npm run types:generate and verified with types:check; shader packer declarations derive from Naga reflection. Preserve ESM .js specifiers, compiled exports and optional React, and keep WGSL/GLSL/JS packing unchanged. Node22.18+ recommended for development tooling. Current Chrome scope verified, other engines/native DOM/hydration/production soak remain separate. Stage-one next steps are completed. Continue local work only; no push/deploy/npm publication.

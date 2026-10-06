@@ -1,0 +1,59 @@
+{
+  "source": "02eadf4c977c5de7cd33553c335b3653b744b156bed1d12cdd7323e376f0aed3",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+  "rows": [
+    {
+      "case": "dispose-during-webgpu-init",
+      "passed": true
+    },
+    {
+      "case": "overlapping-backend-init",
+      "passed": true
+    },
+    {
+      "case": "cancel-image-request",
+      "passed": true
+    },
+    {
+      "case": "scene-callback-isolation-and-recovery",
+      "passed": true
+    },
+    {
+      "case": "geometry-callback-isolation",
+      "passed": true
+    },
+    {
+      "case": "invalid-patch-atomic",
+      "passed": true
+    },
+    {
+      "case": "unavailable-native-capture",
+      "passed": true
+    },
+    {
+      "case": "unsubscribe-return-and-idempotent-dispose",
+      "passed": true
+    }
+  ],
+  "cleanup": [
+    {
+      "surfaces": 0,
+      "listeners": 0,
+      "canvases": 0
+    },
+    {
+      "surfaces": 0,
+      "listeners": 0,
+      "canvases": 0
+    },
+    {
+      "surfaces": 0,
+      "listeners": 0,
+      "canvases": 0
+    }
+  ],
+  "errors": [],
+  "devicesCreated": 2,
+  "devicesDestroyed": 2,
+  "passed": true
+}

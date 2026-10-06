@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, writeFile, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 const root = process.cwd();
 await mkdir(".local/packages", { recursive: true });
@@ -60,6 +60,9 @@ execFileSync(
   ],
   { cwd: consumer, stdio: "pipe" },
 );
+// Compile against the installed tarball, not workspace self-reference declarations.
+await writeFile(`${consumer}/types-consumer.ts`,await readFile(resolve('tests/types-consumer.ts'),'utf8'));
+execFileSync(process.execPath,[resolve('node_modules/typescript/bin/tsc'),'--noEmit','--strict','--skipLibCheck','false','--target','ES2022','--module','NodeNext','--moduleResolution','NodeNext','--lib','ES2022,DOM','types-consumer.ts'],{cwd:consumer,stdio:'pipe'});
 const code = `
 import { createPreset, parsePreset, looks, GlassController, performanceProfiles, textureInventory } from '@workspace/liquid-glass';
 import { GlassProvider, GlassSurface } from '@workspace/liquid-glass/react';
@@ -72,7 +75,7 @@ if (parsePreset({schema:'workspace-liquid-glass',version:1,name:'old',settings:{
 if (performanceProfiles.economy.dprCap !== 1 || textureInventory(100,100,1,[]).bytes !== 40000) throw new Error('Performance exports');
 const html = renderToString(React.createElement(GlassProvider, null, React.createElement(GlassSurface, {as:'button'}, 'hello')));
 if (!html.includes('hello') || !html.includes('lg-stage')) throw new Error('SSR markup');
-console.log(JSON.stringify({coreImport:true,reactSSR:true,domRequiredAtImport:false}));`;
+console.log(JSON.stringify({coreImport:true,reactSSR:true,domRequiredAtImport:false,installedDeclarationsCompile:true}));`;
 // React is resolved from this project's pinned development dependencies; the
 // packed consumer exercises ESM exports and CSS/type presence, not a browser.
 const output = execFileSync(

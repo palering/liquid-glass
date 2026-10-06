@@ -1,3 +1,5 @@
+import type {ComponentPropsWithoutRef,ElementType,ReactNode,ReactElement} from 'react';
+import type {Settings,State,SurfaceOptions} from './contracts.js';
 import {
   createContext,
   createElement,
@@ -7,13 +9,15 @@ import {
   useState,
 } from "react";
 import { GlassController } from "./controller.js";
-const GlassContext = createContext(null);
-export function GlassProvider({ children, settings, className = "", onState, ...props }) {
-  const ref = useRef(null),
-    [controller, setController] = useState(null);
+const GlassContext = createContext<GlassController|null>(null);
+export interface GlassProviderProps extends Omit<ComponentPropsWithoutRef<'div'>,'children'> {children?:ReactNode;settings?:Settings;onState?:(state:State)=>void}
+export type GlassSurfaceProps<T extends ElementType='div'>=SurfaceOptions&{as?:T;children?:ReactNode}&Omit<ComponentPropsWithoutRef<T>,keyof SurfaceOptions|'as'|'children'>;
+export function GlassProvider({ children, settings, className = "", onState, ...props }:GlassProviderProps):ReactElement {
+  const ref = useRef<HTMLDivElement|null>(null),
+    [controller, setController] = useState<GlassController|null>(null);
   const initial = useRef(settings);
   useEffect(() => {
-    const c = new GlassController(ref.current, initial.current);
+    const c = new GlassController(ref.current as HTMLDivElement, initial.current);
     setController(c);
     return () => c.dispose();
   }, []);
@@ -30,6 +34,7 @@ export function GlassProvider({ children, settings, className = "", onState, ...
     createElement(GlassContext.Provider, { value: controller }, children),
   );
 }
+export function GlassSurface<T extends ElementType="div">(props:GlassSurfaceProps<T>):ReactElement;
 export function GlassSurface({
   children,
   kind = "card",
@@ -39,11 +44,11 @@ export function GlassSurface({
   id,
   zIndex = 0,
   ...props
-}) {
+}:SurfaceOptions&{as?:ElementType;children?:ReactNode;className?:unknown}):ReactElement {
   const controller = useContext(GlassContext),
-    ref = useRef(null);
+    ref = useRef<HTMLElement|null>(null);
   useEffect(
-    () => controller?.register(ref.current, { id, kind, radius, zIndex }),
+    () => controller?.register(ref.current as HTMLElement, { id, kind, radius, zIndex }),
     [controller, id, kind, radius, zIndex],
   );
   return createElement(
@@ -58,7 +63,7 @@ export function GlassSurface({
 }
 export function useGlass() {
   const c = useContext(GlassContext);
-  const [state, setState] = useState(null);
+  const [state, setState] = useState<State|null>(null);
   useEffect(() => c?.subscribe(setState), [c]);
   return { controller: c, state };
 }

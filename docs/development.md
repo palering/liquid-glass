@@ -4,7 +4,7 @@ Audience: public
 
 ## 运行与构建
 
-GitHub Pages 的 Node 22 环境已通过构建与检查，本地也使用 Node.js 22 / npm。
+推荐Node.js 22.18+ / npm。本轮本地Node22.23.3与26.7通过；历史Pages CI使用Node22，本轮未推送或重跑远端CI。声明工具的开发依赖要求Node22.18+，不改变库消费者的浏览器运行依赖。
 
 ```sh
 npm ci --cache .local/npm-cache
@@ -23,7 +23,9 @@ npm run test:package
 
 契约测试、TypeScript 消费与实际打包/离线安装/无 DOM 导入/React SSR 分别覆盖不同边界；这些检查不证明跨浏览器视觉或生产稳定性。浏览器证据见 [validation.md](validation.md)，性能复跑见 [performance.md](performance.md)，Pages 子路径与发布见 [deployment.md](deployment.md)。
 
-当前TS第一阶段：31个Node契约，六个纯函数模块以strict检查；公开声明仍单独消费检查。`npm test`先从固定Shader阶段快照恢复忽略目录中的JS参考，再通过仅测试使用的TypeScript加载器保留源码`.js`导入标识；npm消费仍只加载构建后的JS，不需要编译器。文件重命名后应重新加载开发页，必要时重启开发服务。浏览器 `tests/browser/performance-profiles.html` 提供策略契约和稳定性按钮；双GPU像素及精确JS对照见[第一阶段验收](ts-migration-stage1.md)。旧快照保持独立。
+核心运行源码已完整迁移，33个Node契约以strict TS实现及固定JS参考进行检查。`npm test`恢复冻结JS快照后使用仅测试的TS加载器；消费者只加载编译JS。`npm run types:generate`从实现生成公开声明、从Naga reflection生成packer声明；`npm run types:check`、build/typecheck验证漂移。公开声明禁止手改，源码不反向导入`types/`。WebGPU类型`@webgpu/types@0.1.74`、声明打包器`rollup-plugin-dts@6.5.1`与TS5.9.3均为锁定开发依赖。ESM源码继续使用`.js`标识；独立开发alias指向入口时须更新到`src/index.ts`。Node26的测试加载器仍有`module.register()`弃用提示，Node22路径通过。
+
+浏览器检查入口：`tests/browser/shader-preparation.html`选择current跑140项精确对照；`performance-profiles.html`跑策略/切档；`ts-lifecycle.html`跑初始化取消、并发切换与回调隔离；`chrome-smoke.html`、`react-smoke.html`和真实消费项目分别覆盖基础交互/StrictMode/React Flow。复跑需要已恢复的相应实验参考；最新原始结果及边界见[完整验收](ts-migration-complete.md)。
 
 ## Shader 开发
 

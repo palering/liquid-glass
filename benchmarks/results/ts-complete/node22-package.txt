@@ -1,0 +1,2 @@
+{"coreImport":true,"reactSSR":true,"domRequiredAtImport":false,"installedDeclarationsCompile":true}
+{"filename":"workspace-liquid-glass-0.4.0.tgz","bytes":40957,"files":13,"integrity":"sha512-x3pkBRYny+IN2Kjvv4pCgHKoCte3s2PSMxFvDamUSlKglkaw+tQipA+UgwRFAGi0q49Quk5P62ZhJhPh0m+h5Q=="}

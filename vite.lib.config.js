@@ -3,7 +3,7 @@ export default defineConfig({
   build: {
     outDir: "dist/lib",
     lib: {
-      entry: { core: "src/index.js", react: "src/react.js" },
+      entry: { core: "src/index.ts", react: "src/react.ts" },
       formats: ["es"],
     },
     rollupOptions: { external: ["react"] },

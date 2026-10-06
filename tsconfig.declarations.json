@@ -1,0 +1,5 @@
+{
+ "extends":"./tsconfig.runtime.json",
+ "compilerOptions":{"noEmit":false,"declaration":true,"emitDeclarationOnly":true,"stripInternal":true,"outDir":".local/declarations","rootDir":"src"},
+ "include":["src/**/*.ts"]
+}

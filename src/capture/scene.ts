@@ -1,4 +1,13 @@
+import type {ControllerSettings,ScenePainter} from '../contracts.js';
 export class SceneSource {
+  declare canvas:HTMLCanvasElement;
+  declare ctx:CanvasRenderingContext2D|null;
+  declare version:number;
+  declare image:HTMLImageElement|null;
+  declare imageToken:number;
+  declare blurs:Map<number,HTMLCanvasElement>;
+  declare painter:ScenePainter|null|undefined;
+  declare painterError:string|null|undefined;
   constructor() {
     this.canvas = document.createElement("canvas");
     this.ctx = this.canvas.getContext("2d");
@@ -7,7 +16,7 @@ export class SceneSource {
     this.imageToken = 0;
     this.blurs = new Map();
   }
-  async setImage(url) {
+  async setImage(url:string|null) {
     const token = ++this.imageToken;
     if (!url) {
       this.image = null;
@@ -19,17 +28,17 @@ export class SceneSource {
     await img.decode();
     if (token === this.imageToken) this.image = img;
   }
-  paint(w, h, dpr, settings, phase = 0) {
+  paint(w:number, h:number, dpr:number, settings:ControllerSettings, phase = 0) {
     const c = this.canvas;
     c.width = Math.max(1, Math.round(w * dpr));
     c.height = Math.max(1, Math.round(h * dpr));
-    const x = this.ctx;
+    const x = this.ctx as CanvasRenderingContext2D;
     x.setTransform(dpr, 0, 0, dpr, 0, 0);
     this.painterError = null;
     if (this.painter) {
       x.save();
       try { this.painter(x, {width:w,height:h,dpr,settings,phase}); }
-      catch (error) { this.painterError = String(error.message ?? error); }
+      catch (error) { this.painterError = String((error as Error).message ?? error); }
       finally { x.restore(); }
       if (!this.painterError) {
         this.version++;
@@ -128,11 +137,11 @@ export class SceneSource {
       x.stroke();
     }
     if (!["grid", "testchart", "checker"].includes(settings.background)) {
-      for (const [px, py, r, color] of [
+      for (const [px, py, r, color] of ([
         [0.17, 0.6, 75, light ? "#bdc8ef" : "#575186"],
         [0.72, 0.28, 120, light ? "#efe0b9" : "#a27647"],
         [0.86, 0.72, 85, light ? "#b7d9c5" : "#295a45"],
-      ]) {
+      ] as [number,number,number,string][])) {
         const g = x.createRadialGradient(
           w * px + shift,
           h * py,
@@ -150,13 +159,13 @@ export class SceneSource {
     this.version++;
     this.blurs.clear();
   }
-  getBlur(radius, dpr) {
+  getBlur(radius:number, dpr:number):HTMLCanvasElement {
     const key = Math.round(radius * dpr);
-    if (this.blurs.has(key)) return this.blurs.get(key);
+    if (this.blurs.has(key)) return this.blurs.get(key) as HTMLCanvasElement;
     const c = document.createElement("canvas");
     c.width = this.canvas.width;
     c.height = this.canvas.height;
-    const x = c.getContext("2d");
+    const x = c.getContext("2d") as CanvasRenderingContext2D;
     x.filter = `blur(${key}px)`;
     x.drawImage(this.canvas, 0, 0);
     this.blurs.set(key, c);

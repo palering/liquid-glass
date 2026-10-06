@@ -1,5 +1,16 @@
 {
- "extends":"./tsconfig.json",
- "compilerOptions":{"allowJs":true,"checkJs":false,"verbatimModuleSyntax":true},
- "include":["src/**/*.ts","tests/ts-runtime-consumer.ts"]
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "types": [
+      "@webgpu/types",
+      "react"
+    ],
+    "allowJs": false
+  },
+  "include": [
+    "src/**/*.ts",
+    "tests/ts-runtime-consumer.ts"
+  ]
 }

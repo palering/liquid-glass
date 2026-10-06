@@ -1,19 +1,22 @@
+import type {SurfaceBounds,SceneTexture,RenderSurface,ControllerSettings,EffectiveSettings,FailureCallback} from '../contracts.js';
 import { uniqueId } from "../id.js";
 import { controlsFor, material, tintRGB } from "../policy.js";
+// The historical spelling is probed only with typeof; no global DOM augmentation.
+declare const SVGFEdisplacementMapElement:unknown;
 const ns = "http://www.w3.org/2000/svg";
-function make(name, attrs = {}) {
+function make(name:string, attrs:Record<string,string|number|undefined> = {}) {
   const el = document.createElementNS(ns, name);
-  for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+  for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v as string);
   return el;
 }
-function update(el, attrs) {
+function update(el:Element, attrs:Record<string,string|number|undefined>) {
   for (const [key, value] of Object.entries(attrs))
-    if (el.getAttribute(key) !== String(value)) el.setAttribute(key, value);
+    if (el.getAttribute(key) !== String(value)) el.setAttribute(key, value as string);
 }
-function displacementImage(r, thickness) {
+function displacementImage(r:SurfaceBounds, thickness:number) {
   const map = document.createElement("canvas");
   map.width = map.height = 80;
-  const ctx = map.getContext("2d"), data = ctx.createImageData(80, 80);
+  const ctx = map.getContext("2d") as CanvasRenderingContext2D, data = ctx.createImageData(80, 80);
   for (let y = 0; y < 80; y++)
     for (let x = 0; x < 80; x++) {
       const px = (x / 79 - 0.5) * r.w,
@@ -36,7 +39,15 @@ function displacementImage(r, thickness) {
   return map.toDataURL();
 }
 export class DOMRenderer {
-  static async create(canvas, onFailure, backend) {
+  declare prefix:string;
+  declare backend:'svg'|'css'|'solid';
+  declare layers:Map<string,HTMLDivElement>;
+  declare svgEntries:Map<string,Record<'svg'|'filter'|'mapImage'|'displacement'|'blur'|'image'|'tint',SVGElement>>;
+  declare maps:Map<string,string>;
+  declare source:SceneTexture|undefined;
+  declare version:number|undefined;
+  declare bg:string|undefined;
+  static async create(canvas:HTMLCanvasElement, onFailure:FailureCallback|null, backend:'svg'|'css'|'solid') {
     if (backend === "css" && !CSS.supports("backdrop-filter", "blur(1px)"))
       throw new Error("CSS backdrop-filter 不可用");
     if (
@@ -47,14 +58,14 @@ export class DOMRenderer {
       throw new Error("SVG displacement 不可用");
     return new DOMRenderer(backend);
   }
-  constructor(backend) {
+  constructor(backend:'svg'|'css'|'solid') {
     this.prefix = uniqueId();
     this.backend = backend;
     this.layers = new Map();
     this.svgEntries = new Map();
     this.maps = new Map();
   }
-  render(scene, surfaces, settings, dpr) {
+  render(scene:SceneTexture, surfaces:RenderSurface[], settings:ControllerSettings&EffectiveSettings, dpr:number) {
     const alive = new Set();
     const usedMaps = new Set();
     let bg;
@@ -91,7 +102,7 @@ export class DOMRenderer {
         // The layer lives inside the transformed DOM surface. SVG dimensions
         // and crop coordinates must be unscaled, whereas GPU bounds are already
         // in the stage's screen space.
-        const r = scale === 1 ? s.bounds : Object.fromEntries(["x","y","w","h","radius"].map(k=>[k,s.bounds[k]/scale]));
+        const r = scale === 1 ? s.bounds : Object.fromEntries(["x","y","w","h","radius"].map(k=>[k,s.bounds[k as keyof Pick<SurfaceBounds,'x'|'y'|'w'|'h'|'radius'>]/scale])) as unknown as SurfaceBounds;
         let entry = this.svgEntries.get(s.id);
         if (!entry) {
           const svg = make("svg", {
@@ -141,7 +152,7 @@ export class DOMRenderer {
         update(entry.mapImage, { href: this.maps.get(key), width: r.w, height: r.h });
         update(entry.displacement, {
           scale: controlsFor(settings,s.kind).distance === undefined
-            ? p.refraction * 55 / scale : controlsFor(settings,s.kind).distance * 1600 / scale,
+            ? p.refraction * 55 / scale : (controlsFor(settings,s.kind).distance as number) * 1600 / scale,
         });
         update(entry.blur, { stdDeviation: p.blur * 0.3 / scale });
         update(entry.image, {

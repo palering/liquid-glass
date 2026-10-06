@@ -11,3 +11,5 @@ export {
 } from "./preset.js";
 export { clarityControls } from "./config.js";
 export {performanceProfiles,textureInventory} from './performance.js';
+
+export type {Backend,Capture,SurfaceKind,Controls,Settings,State,PerformancePreset,PerformanceOptions,PerformanceOverrides,PerformanceState,SurfaceOptions,GeometryFrame,Material,Preset} from './contracts.js';

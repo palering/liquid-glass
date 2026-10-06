@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-07。用户已授权检查敏感信息、建立本地Git基线并开始TS迁移。JS基线提交为`f6f329e`；第一组纯函数已迁移，验收与后续入口见[迁移状态](ts-migration-stage1.md)。当前先验收 Chrome/Chromium，Safari/Firefox 与平台差异延后到 WebView 支持阶段。迁移进展不等于生产稳定或跨平台完成。
+2026-10-07。用户已授权检查敏感信息、建立本地Git基线并开始TS迁移。JS基线提交为`f6f329e`；完整核心迁移与最终消费验收已完成，当前状态见[完整验收](ts-migration-complete.md)；[第一阶段](ts-migration-stage1.md)保留为历史检查点。当前先验收 Chrome/Chromium，Safari/Firefox 与平台差异延后到 WebView 支持阶段。迁移进展不等于生产稳定或跨平台完成。
 
 ## 本阶段边界
 
@@ -23,7 +23,7 @@ Audience: public
 
 精确完成状态与未验证边界以 [status.md](status.md)、[Shader优化验收](shader-preparation.md)、[性能实施验收](performance-profile-implementation.md) 和 [光学报告](optical-refinement.md) 为准。保持 requested controls 与 effective controlsByKind 分离，预算失败/尺寸恢复、档位清除、显式 invalidation、预设迁移和零资源清理都是 TS 必须保留的契约。
 
-## 迁移顺序
+## 迁移顺序（五组已完成）
 
 1. **基础数据与纯函数。** config、settings、preset、policy、geometry、performance。区分外部可选 Settings/Controls、规范化 PerformanceOptions、内部完整设置、生效资源计划、校验后的几何帧与 material/uniform 值。保留 ESM .js 导入路径及既有数值行为；逐组开启 strict 检查，避免全仓一次性改后缀。
 2. **来源与 renderer 契约。** 定义 scene/source 的 canvas、version、resize/dispose；DOM renderer、GPU image pass 与光学 renderer 使用明确的生命周期和资源类型。DOM 使用标准浏览器类型；WebGPU 类型单独引入并锁定，安装/编译验证后才记录具体依赖版本。

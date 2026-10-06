@@ -1,0 +1,68 @@
+npm notice run @workspace/liquid-glass@0.4.0 test
+npm notice run node scripts/prepare-ts-baseline.mjs && node --import ./scripts/register-source.mjs --test tests/*.test.js
+Prepared frozen JS reference 0243e339c688c8bcc7f2b762bc330efe370b34eaa3cb088052684c85e55299cd
+(node:81768) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ provided geometry is atomic and rejects nonfinite or missing bounds (0.516625ms)
+✔ scaled geometry keeps screen radius and stage-local shader coordinates (0.484ms)
+(node:81769) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ analytic gradient matches independent finite-difference distance derivatives away from kinks (5.499708ms)
+✔ height profile joins a flat center continuously and its analytic slope matches the derivative (0.673416ms)
+✔ height ray obeys Snell tangential ratio and remains finite across supported IOR/slope bounds (0.170458ms)
+(node:81770) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ profiles preserve requested materials and enforce explicit approximations (0.999208ms)
+✔ texture inventory counts actual odd dimensions, shared radii and layered allocations (0.142416ms)
+✔ budget planning reduces DPR before allocation and reports impossible fits (0.165667ms)
+✔ invalid performance settings reject atomically and portable v1 restores legacy (0.449958ms)
+(node:81771) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ auto priority and failure exclusion (0.687875ms)
+✔ capture capability is independent from backend (0.075541ms)
+✔ bounds share CSS-pixel material and bottom-up shader coordinates (0.198208ms)
+✔ absolute optical controls retain units and legacy defaults (0.092834ms)
+(node:81772) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ portable preset roundtrip retains backend, capture and optical values (1.01125ms)
+✔ preset clamps numeric ranges and excludes URLs, DOM and prototype keys (0.098333ms)
+✔ invalid preset cannot inject NaN, invalid options or future versions (0.21ms)
+✔ tint color becomes normalized RGB channel inputs (0.164958ms)
+(node:81773) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ GL renderer rejects exhausted shader allocation and removes its loss listener (0.829791ms)
+✔ GL image pass releases compiled shaders if program allocation fails (0.160209ms)
+(node:81774) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ partial controller settings preserve per-kind defaults and unrelated controls (0.664542ms)
+✔ invalid controller input rejects before DOM mutation and before replacing existing settings (0.338708ms)
+✔ controller optical bounds produce finite values and preserve legacy aliases (0.10275ms)
+(node:81775) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ clean shader checks need no compiler and reject source drift or edited GLSL (181.9705ms)
+(node:81776) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ nearest-rank percentiles preserve stalls and reject invalid input (0.462916ms)
+✔ aggregation excludes fallback failures and separates acquisition/resolution (0.166125ms)
+(node:81777) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ explicit locale wins, saved locale follows, invalid values use English (0.329542ms)
+✔ every optical label has English copy without changing field identifiers (3.272125ms)
+✔ dynamic status switches both directions and retains opaque diagnostic details (3.821209ms)
+✔ translation is idempotent for runtime copy and keeps counters (0.263875ms)
+(node:81778) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ TS pure functions preserve the frozen JS values, normalization and errors (7.560375ms)
+✔ TS budgets, uniforms and portable JSON remain exact across fixed boundary combinations (16.158875ms)
+(node:81779) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ shared optical ABI retains integer bits, aligned tint and coordinates (0.469667ms)
+✔ image ABI packs fractional steps and mode without stale padding (0.345458ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 427.531125

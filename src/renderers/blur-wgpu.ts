@@ -1,20 +1,31 @@
+import type {BlurItem} from '../contracts.js';
 import { gpuImageVertex as vertex, gpuImageFragment as fragment, imageBindings } from '../shaders.js';
 import { uniformData } from './uniforms.js';
 import { packImageU } from '../shaders/generated/packers.js';
+type Item=BlurItem<GPUTexture,{texture:GPUTexture;buffer:GPUBuffer}>&{x:GPUBuffer;y:GPUBuffer};
 export class GPUImagePass {
-  static async create(device, outputFormat) {
+ declare device:GPUDevice;
+ declare items:Map<string,Item>;
+ declare blits:Map<string,GPUBuffer>;
+ declare groups:WeakMap<GPUBuffer,{input:GPUTexture;pipeline:GPURenderPipeline;group:GPUBindGroup}>;
+ declare views:WeakMap<GPUTexture,GPUTextureView>;
+ // Assigned by init before create returns; constructor is internal to the factory.
+ declare blurPipeline:GPURenderPipeline;
+ declare screenPipeline:GPURenderPipeline;
+ declare sampler:GPUSampler;
+  static async create(device:GPUDevice, outputFormat:GPUTextureFormat) {
     const r = new GPUImagePass(device);
     await r.init(outputFormat);
     return r;
   }
-  constructor(device) {
+  private constructor(device:GPUDevice) {
     this.device = device;
     this.items = new Map();
     this.blits = new Map();
     this.groups = new WeakMap();
     this.views = new WeakMap();
   }
-  async init(format) {
+  async init(format:GPUTextureFormat) {
     const d = this.device,
       vs = d.createShaderModule({ code: vertex }),
       fs = d.createShaderModule({ code: fragment });
@@ -24,7 +35,7 @@ export class GPUImagePass {
       );
       if (e.length) throw new Error(e.map((x) => x.message).join("\n"));
     }
-    const make = (target) =>
+    const make = (target:GPUTextureFormat) =>
       d.createRenderPipelineAsync({
         layout: "auto",
         vertex: { module: vs, entryPoint: "main" },
@@ -44,7 +55,7 @@ export class GPUImagePass {
       addressModeV: "clamp-to-edge",
     });
   }
-  texture(w, h) {
+  texture(w:number, h:number) {
     return this.device.createTexture({
       size: [w, h],
       format: "rgba8unorm",
@@ -55,7 +66,7 @@ export class GPUImagePass {
         GPUTextureUsage.COPY_DST,
     });
   }
-  params(x, y, w, h, sigma = 1, mode = 0) {
+  params(x:number, y:number, w:number, h:number, sigma = 1, mode = 0) {
     const b = this.device.createBuffer({
       size: imageBindings.uniforms.u.size,
       usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
@@ -67,12 +78,12 @@ export class GPUImagePass {
     );
     return b;
   }
-  view(texture) {
+  view(texture:GPUTexture) {
     let view = this.views.get(texture);
     if (!view) { view = texture.createView(); this.views.set(texture, view); }
     return view;
   }
-  draw(encoder, input, view, pipeline, buffer) {
+  draw(encoder:GPUCommandEncoder, input:GPUTexture, view:GPUTextureView, pipeline:GPURenderPipeline, buffer:GPUBuffer) {
     let cached = this.groups.get(buffer);
     if (!cached || cached.input !== input || cached.pipeline !== pipeline) {
     const group = this.device.createBindGroup({
@@ -101,10 +112,10 @@ export class GPUImagePass {
     pass.draw(4);
     pass.end();
   }
-  blur(encoder, input, radius, dpr, signature, w, h, force = false) {
+  blur(encoder:GPUCommandEncoder, input:GPUTexture, radius:number, dpr:number, signature:string, w:number, h:number, force = false) {
     if (radius <= 0) return input;
     const key = String(radius);
-    let item = this.items.get(key);
+    let item:Item|null|undefined = this.items.get(key);
     if (item && (item.w !== w || item.h !== h || item.dpr !== dpr)) {
       this.destroyItem(item);
       this.items.delete(key);
@@ -169,23 +180,23 @@ export class GPUImagePass {
     }
     return item.b;
   }
-  blit(encoder, input, view, w, h) {
+  blit(encoder:GPUCommandEncoder, input:GPUTexture, view:GPUTextureView, w:number, h:number) {
     const key = `${w}:${h}`;
     if (!this.blits.has(key)) {
       for (const b of this.blits.values()) b.destroy();
       this.blits.clear();
       this.blits.set(key, this.params(0, 0, w, h, 1, 1));
     }
-    this.draw(encoder, input, view, this.screenPipeline, this.blits.get(key));
+    this.draw(encoder, input, view, this.screenPipeline, this.blits.get(key) as GPUBuffer);
   }
-  prune(radii) {
+  prune(radii:Set<string>) {
     for (const [k, item] of this.items)
       if (!radii.has(k)) {
         this.destroyItem(item);
         this.items.delete(k);
       }
   }
-  destroyItem(item) {
+  destroyItem(item:Item) {
     for (const level of item.pyramid) {
       level.texture.destroy();
       level.buffer.destroy();

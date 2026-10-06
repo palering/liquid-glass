@@ -1,5 +1,7 @@
-import type {ActiveBackend,Backend,CaptureRequest,Controls,EffectiveSettings,Material,Settings,SurfaceBounds,SurfaceKind} from './contracts.js';
+import type {ControllerSettings,ActiveBackend,Backend,CaptureRequest,Controls,EffectiveSettings,Material,Settings,SurfaceBounds,SurfaceKind} from './contracts.js';
 export const BACKENDS: ActiveBackend[] = ["webgpu", "webgl", "svg", "css", "solid"];
+export function controlsFor(settings:ControllerSettings&EffectiveSettings,kind:string):Controls;
+export function controlsFor(settings:EffectiveSettings,kind:string):Controls|undefined;
 export function controlsFor(settings: EffectiveSettings,kind: string){return settings.controlsByKind?.[kind]??settings.controls;}
 export function candidates(requested: Backend, blocked = new Set<string>()) {
   const start = requested === "auto" ? 0 : BACKENDS.indexOf(requested);

@@ -1,3 +1,4 @@
+import type {Settings,SettingsPatch,State,SurfaceOptions,RegisteredSurface,Renderer,ControllerSettings,GeometryProvider,ScenePainter,PerformanceState,ActiveBackend,GeometryFrame} from './contracts.js';
 import { uniqueId } from "./id.js";
 import { SceneSource } from "./capture/scene.js";
 import { createNativeSource, nativeCapability } from "./capture/native-dom.js";
@@ -9,8 +10,44 @@ import { settingPatch } from "./settings.js";
 import { validateGeometry } from "./geometry.js";
 import {resolvePerformance} from './performance.js';
 export class GlassController {
-  constructor(stage, options = {}) {
-    options = settingPatch(options);
+  declare readonly stage:HTMLElement;
+  declare settings:ControllerSettings;
+  declare ready:Promise<void>;
+  declare private listeners:Set<(state:State)=>void>;
+  declare private surfaces:Map<string,RegisteredSurface>;
+  declare private blocked:Set<string>;
+  declare private scene:SceneSource;
+  declare private generation:number;
+  declare private draws:number;
+  declare private times:number[];
+  declare private disposed:boolean;
+  declare private phase:number;
+  declare private needsBackground:boolean;
+  declare private capabilities:State['capabilities'];
+  declare private status:Pick<State,'requestedBackend'|'activeBackend'|'activeCapture'|'nativeSupported'|'phase'|'fallbackReason'|'captureReason'|'geometryMode'|'geometryReason'|'sceneReason'|'imageReason'>;
+  declare private ro:ResizeObserver;
+  declare private scroll:()=>void;
+  declare private motion:MediaQueryList;
+  declare private motionChange:()=>void;
+  declare private performanceState:PerformanceState|null|undefined;
+  declare private renderer:Renderer|null|undefined;
+  declare private canvas:HTMLCanvasElement|null|undefined;
+  declare private native:Awaited<ReturnType<typeof createNativeSource>>|null|undefined;
+  declare private nativeScene:SceneSource|null|undefined;
+  declare private geometryProvider:GeometryProvider|null|undefined;
+  declare private raf:number|undefined;
+  declare private animationRaf:number|undefined;
+  declare private animating:boolean|undefined;
+  declare private animationDirty:boolean|undefined;
+  declare private lastScenePaint:number|undefined;
+  declare private sourceGeneration:number|undefined;
+  declare private imageGeneration:number|undefined;
+  declare private budgetBlocked:boolean|undefined;
+  declare private budgetBackend:ActiveBackend|undefined;
+  declare private budgetMaxDimension:number|undefined;
+
+  constructor(stage:HTMLElement, options:Settings = {}) {
+    options = settingPatch(options) as Settings;
     this.stage = stage;
     this.settings = {
       backend: "auto",
@@ -23,7 +60,7 @@ export class GlassController {
       performance: null,
       controls: { blur: 1, refraction: 1, highlight: 1, tint: 0 },
       ...options,
-    };
+    } as ControllerSettings;
     this.listeners = new Set();
     this.surfaces = new Map();
     this.blocked = new Set();
@@ -67,12 +104,12 @@ export class GlassController {
     this.stage.dataset.theme = this.settings.theme;
     this.ready = this.selectRenderer().then(() => this.selectSource());
   }
-  subscribe(fn) {
+  subscribe(fn:(state:State)=>void):()=>void {
     this.listeners.add(fn);
     fn(this.getState());
     return () => this.listeners.delete(fn);
   }
-  getState() {
+  getState():State {
     return {
       ...this.status,
       performance: this.performanceState ? structuredClone(this.performanceState) : null,
@@ -86,12 +123,12 @@ export class GlassController {
         : 0,
     };
   }
-  emit() {
+  private emit() {
     for (const fn of this.listeners) fn(this.getState());
   }
   register(
-    element,
-    { id = uniqueId(), kind = "card", radius = 20, zIndex = 0 } = {},
+    element:HTMLElement,
+    { id = uniqueId(), kind = "card", radius = 20, zIndex = 0 }:SurfaceOptions = {},
   ) {
     element.dataset.glassSurface = id;
     element.classList.add("lg-surface");
@@ -111,13 +148,13 @@ export class GlassController {
       this.render();
     });
   }
-  setGeometryProvider(provider = null) {
+  setGeometryProvider(provider:GeometryProvider|null = null) {
     if (provider !== null && typeof provider !== "function")
       throw new TypeError("Geometry provider must be a function or null");
     this.geometryProvider = provider;
     this.invalidate();
   }
-  setScenePainter(painter = null) {
+  setScenePainter(painter:ScenePainter|null = null) {
     if (painter !== null && typeof painter !== "function")
       throw new TypeError("Scene painter must be a function or null");
     this.scene.painter = painter;
@@ -127,9 +164,12 @@ export class GlassController {
     this.needsBackground = true;
     this.invalidate();
   }
-  async setSettings(patch, { preserveImageRequest = false } = {}) {
+  setSettings(patch:Settings):Promise<void>;
+  /** @internal Controller image-request coordination; omitted from package declarations. */
+  setSettings(patch:Settings, options:{preserveImageRequest?:boolean}):Promise<void>;
+  async setSettings(patch:Settings, { preserveImageRequest = false } = {}):Promise<void> {
     if (this.disposed) return;
-    patch = settingPatch(patch);
+    patch=settingPatch(patch) as Settings;
     if (patch.background !== undefined && !preserveImageRequest) {
       this.imageGeneration = (this.imageGeneration ?? 0) + 1;
       this.scene.imageToken++;
@@ -145,10 +185,10 @@ export class GlassController {
       ...this.settings,
       ...patch,
       controls: { ...this.settings.controls, ...patch.controls },
-    };
+    } as ControllerSettings;
     this.stage.dataset.theme = this.settings.theme;
     if (patch.performance!==undefined||patch.backend!==undefined){this.budgetBlocked=false;this.performanceState=null;}
-    if (["theme", "background", "quality", "performance"].some((k) => patch[k] !== undefined))
+    if (["theme", "background", "quality", "performance"].some((k) => patch[k as keyof Settings] !== undefined))
       this.needsBackground = true;
     if (backendChanged) {
       this.blocked.clear();
@@ -159,7 +199,7 @@ export class GlassController {
     this.invalidate();
     this.emit();
   }
-  async selectRenderer(reason = null) {
+  private async selectRenderer(reason:string|null = null):Promise<void> {
     this.times = [];
     const token = ++this.generation;
     this.renderer?.dispose();
@@ -180,7 +220,7 @@ export class GlassController {
       const canvas = document.createElement("canvas");
       canvas.className = "lg-gpu";
       canvas.setAttribute("aria-hidden", "true");
-      let renderer;
+      let renderer:Renderer|undefined;
       try {
         renderer =
           backend === "webgpu"
@@ -216,19 +256,19 @@ export class GlassController {
         this.capabilities[backend] = false;
         renderer?.dispose();
         canvas.remove();
-        failures.push(`${backend}: ${e.message}`);
+        failures.push(`${backend}: ${(e as Error).message}`);
       }
     }
     this.status.phase = "failed";
     this.status.fallbackReason = failures.join(" · ");
     this.emit();
   }
-  failBackend(backend, reason) {
+  private failBackend(backend:ActiveBackend|null, reason:string) {
     if (this.disposed || this.status.activeBackend !== backend) return;
-    this.blocked.add(backend);
+    this.blocked.add(backend as ActiveBackend);
     this.ready = this.selectRenderer(`${backend}: ${reason}`);
   }
-  async selectSource() {
+  private async selectSource():Promise<void> {
     const token = (this.sourceGeneration ?? 0) + 1;
     this.sourceGeneration = token;
     this.native?.dispose();
@@ -249,15 +289,15 @@ export class GlassController {
       this.emit();
       return;
     }
-    let native, source;
+    let native:Awaited<ReturnType<typeof createNativeSource>>|undefined, source:SceneSource|undefined;
     try {
       const r = this.stage.getBoundingClientRect(),
         dpr = this.dpr();
       source = new SceneSource();
       native = await createNativeSource(r.width, r.height, dpr, () => {
         if (this.disposed || this.sourceGeneration !== token) return;
-        source.version++;
-        source.blurs.clear();
+        (source as SceneSource).version++;
+        (source as SceneSource).blurs.clear();
         this.invalidate();
       });
       source.canvas = native.canvas;
@@ -280,12 +320,12 @@ export class GlassController {
       native?.dispose();
       source?.dispose();
       if (this.disposed || this.sourceGeneration !== token) return;
-      this.status.captureReason = e.message;
+      this.status.captureReason = (e as Error).message;
     }
     this.emit();
     this.invalidate();
   }
-  dpr() {
+  private dpr() {
     if(this.performanceState)return this.performanceState.dpr;
     return Math.min(
       window.devicePixelRatio || 1,
@@ -304,7 +344,7 @@ export class GlassController {
       const start = performance.now();
       const registered = this.settings.enabled
         ? [...this.surfaces.values()].sort((a,b)=>a.zIndex-b.zIndex) : [];
-      let frame;
+      let frame:GeometryFrame|null|undefined;
       this.status.geometryReason = null;
       if (this.geometryProvider) {
         try {
@@ -315,13 +355,13 @@ export class GlassController {
           }
         } catch (e) {
           frame = null;
-          this.status.geometryReason = String(e.message ?? e);
+          this.status.geometryReason = String((e as Error).message ?? e);
         }
       }
       this.status.geometryMode = frame ? "provided" : "dom";
       const r = frame ?? this.stage.getBoundingClientRect();
       const surfaces = registered.map((s) => {
-        const b = frame ? frame.surfaces.get(s.id) : s.element.getBoundingClientRect();
+        const b = (frame ? frame.surfaces.get(s.id) : s.element.getBoundingClientRect()) as {x:number;y:number;w:number;h:number;scale?:number}&DOMRect;
         const scale = frame ? b.scale ?? 1 : 1;
         const width = frame ? b.w : b.width, height = frame ? b.h : b.height;
         const cssRadius = Math.min(this.settings.controls.radius ?? s.radius, width / scale / 2, height / scale / 2);
@@ -329,19 +369,19 @@ export class GlassController {
           ...s,
           cssRadius,
           bounds: {
-            x: frame ? b.x : b.left - r.left,
-            y: frame ? b.y : b.top - r.top,
+            x: frame ? b.x : b.left - (r as DOMRect).left,
+            y: frame ? b.y : b.top - (r as DOMRect).top,
             w: width, h: height, radius: cssRadius * scale,
             ...(frame ? { scale } : {}),
           },
         };
       });
       const visible=surfaces.filter(s=>s.bounds.w>0&&s.bounds.h>0&&s.bounds.x<r.width&&s.bounds.y<r.height&&s.bounds.x+s.bounds.w>0&&s.bounds.y+s.bounds.h>0);
-      const plan=resolvePerformance(this.settings,r.width,r.height,window.devicePixelRatio||1,visible.map(s=>s.kind),this.budgetBlocked?this.budgetBackend:this.status.activeBackend,(this.budgetBlocked?this.budgetMaxDimension:this.renderer.maxTextureDimension)??Infinity);
+      const plan=resolvePerformance(this.settings,r.width,r.height,window.devicePixelRatio||1,visible.map(s=>s.kind),(this.budgetBlocked?this.budgetBackend:this.status.activeBackend) as ActiveBackend,(this.budgetBlocked?this.budgetMaxDimension:this.renderer.maxTextureDimension)??Infinity);
       if(this.budgetBlocked){plan.requiredTextureBytes=plan.estimatedTextureBytes;plan.estimatedTextureBytes=0;plan.adjustmentReasons.push('budget-solid');}
       this.performanceState=plan;
-      if(this.settings.performance&&plan.budgetExceeded&&['webgpu','webgl'].includes(this.status.activeBackend)){
-        this.budgetBlocked=true;this.budgetBackend=this.status.activeBackend;this.budgetMaxDimension=this.renderer.maxTextureDimension;
+      if(this.settings.performance&&plan.budgetExceeded&&['webgpu','webgl'].includes(this.status.activeBackend as ActiveBackend)){
+        this.budgetBlocked=true;this.budgetBackend=this.status.activeBackend as ActiveBackend;this.budgetMaxDimension=this.renderer.maxTextureDimension;
         this.ready=this.selectRenderer('Performance budget exceeded; using solid');return;
       }
       if(this.budgetBlocked&&!plan.budgetExceeded){this.budgetBlocked=false;this.ready=this.selectRenderer();return;}
@@ -358,7 +398,7 @@ export class GlassController {
         const c = this.settings.controls;
         s.element.style.setProperty(
           "--lg-shadow-opacity",
-          c.shadowOpacity ?? 0.16,
+          String(c.shadowOpacity ?? 0.16),
         );
         s.element.style.setProperty(
           "--lg-shadow-blur",
@@ -368,7 +408,7 @@ export class GlassController {
         s.element.style.borderRadius = `${s.cssRadius}px`;
         s.element.style.setProperty(
           "--lg-highlight",
-          material(s.kind, plan.controlsByKind[s.kind]??this.settings.controls).highlight,
+          String(material(s.kind, plan.controlsByKind[s.kind]??this.settings.controls).highlight),
         );
       }
       if (
@@ -384,10 +424,10 @@ export class GlassController {
       if (this.times.length > 60) this.times.shift();
       this.emit();
     } catch (e) {
-      this.failBackend(this.status.activeBackend, e.message);
+      this.failBackend(this.status.activeBackend, (e as Error).message);
     }
   }
-  async setImage(url) {
+  async setImage(url:string|null):Promise<boolean> {
     const token = (this.imageGeneration ?? 0) + 1;
     this.imageGeneration = token;
     try {
@@ -400,7 +440,7 @@ export class GlassController {
       this.status.imageReason = null;
     } catch (e) {
       if (token !== this.imageGeneration || this.disposed) return false;
-      this.status.imageReason = `图片加载失败：${e.message}，已回退网格`;
+      this.status.imageReason = `图片加载失败：${(e as Error).message}，已回退网格`;
       await this.scene.setImage(null);
       await this.setSettings(
         { background: "grid" },
@@ -412,9 +452,9 @@ export class GlassController {
     this.emit();
     return true;
   }
-  setAnimation(enabled) {
+  setAnimation(enabled:boolean) {
     this.animating = enabled && !this.motion.matches;
-    cancelAnimationFrame(this.animationRaf);
+    cancelAnimationFrame(this.animationRaf as number);
     const tick = () => {
       if (!this.animating || this.disposed) return;
       this.phase += 0.022;
@@ -440,8 +480,8 @@ export class GlassController {
     this.disposed = true;
     this.generation++;
     this.sourceGeneration = (this.sourceGeneration ?? 0) + 1;
-    cancelAnimationFrame(this.raf);
-    cancelAnimationFrame(this.animationRaf);
+    cancelAnimationFrame(this.raf as number);
+    cancelAnimationFrame(this.animationRaf as number);
     this.ro.disconnect();
     window.removeEventListener("scroll", this.scroll, true);
     window.removeEventListener("resize", this.scroll);

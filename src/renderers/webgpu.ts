@@ -1,10 +1,35 @@
+import type {SceneTexture,RenderSurface,ControllerSettings,EffectiveSettings,FailureCallback,OpticalUniforms} from '../contracts.js';
+import type {UniformData} from '../shaders/generated/packers.js';
 import { GPUImagePass } from "./blur-wgpu.js";
 import { gpuVertex, gpuFragment, opticalBindings } from "../shaders.js";
 import { uniformData } from "./uniforms.js";
 import { packOpticsU } from "../shaders/generated/packers.js";
 import { surfaceUniforms, material, controlsFor } from "../policy.js";
 export class WebGPURenderer {
-  static async create(canvas, onFailure) {
+ declare canvas:HTMLCanvasElement;
+ declare device:GPUDevice;
+ declare textures:Map<string,{texture:GPUTexture;w:number;h:number;signature?:string}>;
+ declare buffers:Map<string,GPUBuffer>;
+ declare uniformData:Map<string,UniformData>;
+ declare groups:Map<string,{buffer:GPUBuffer;blur:GPUTexture;input:GPUTexture;pipeline:GPURenderPipeline;group:GPUBindGroup}>;
+ declare views:WeakMap<GPUTexture,GPUTextureView>;
+ declare disposed:boolean;
+ declare fail:FailureCallback;
+ declare error:(event:GPUUncapturedErrorEvent)=>void;
+ declare maxTextureDimension:number;
+ declare context:GPUCanvasContext;
+ declare format:GPUTextureFormat;
+ declare pipeline:GPURenderPipeline;
+ declare layerPipeline:GPURenderPipeline;
+ declare imagePass:GPUImagePass;
+ declare vertex:GPUBuffer;
+ declare sampler:GPUSampler;
+ declare source:SceneTexture|undefined;
+ declare sourceId:number|undefined;
+ declare layers:[GPUTexture,GPUTexture]|null|undefined;
+ declare layerWidth:number|undefined;
+ declare layerHeight:number|undefined;
+  static async create(canvas:HTMLCanvasElement, onFailure:FailureCallback) {
     if (!navigator.gpu) throw new Error("WebGPU API 未开放");
     const adapter = await navigator.gpu.requestAdapter();
     if (!adapter) throw new Error("没有可用的 GPU adapter");
@@ -18,7 +43,7 @@ export class WebGPURenderer {
       throw e;
     }
   }
-  constructor(canvas, device, onFailure) {
+  private constructor(canvas:HTMLCanvasElement, device:GPUDevice, onFailure:FailureCallback) {
     this.canvas = canvas;
     this.device = device;
     this.textures = new Map();
@@ -40,7 +65,7 @@ export class WebGPURenderer {
   async init() {
     this.maxTextureDimension=this.device.limits.maxTextureDimension2D;
     const d = this.device;
-    this.context = this.canvas.getContext("webgpu");
+    this.context = this.canvas.getContext("webgpu") as GPUCanvasContext;
     if (!this.context) throw new Error("WebGPU canvas context 不可用");
     this.format = navigator.gpu.getPreferredCanvasFormat();
     this.context.configure({
@@ -59,7 +84,7 @@ export class WebGPURenderer {
         if (errors.length)
           throw new Error(errors.map((e) => e.message).join("\n"));
       }
-      const makePipeline = (format) =>
+      const makePipeline = (format:GPUTextureFormat) =>
         d.createRenderPipelineAsync({
           layout: "auto",
           vertex: {
@@ -117,7 +142,7 @@ export class WebGPURenderer {
       if (!scoped) await d.popErrorScope();
     }
   }
-  upload(key, source, signature) {
+  upload(key:string, source:HTMLCanvasElement, signature:string) {
     const d = this.device;
     let item = this.textures.get(key);
     if (!item || item.w !== source.width || item.h !== source.height) {
@@ -147,12 +172,12 @@ export class WebGPURenderer {
     }
     return item.texture;
   }
-  view(texture) {
+  view(texture:GPUTexture) {
     let view = this.views.get(texture);
     if (!view) { view = texture.createView(); this.views.set(texture, view); }
     return view;
   }
-  uniform(id, u) {
+  uniform(id:string, u:OpticalUniforms) {
     let b = this.buffers.get(id);
     if (!b) {
       b = this.device.createBuffer({
@@ -166,7 +191,7 @@ export class WebGPURenderer {
     this.device.queue.writeBuffer(b, 0, packOpticsU(data, u));
     return b;
   }
-  render(scene, surfaces, settings, dpr) {
+  render(scene:SceneTexture, surfaces:RenderSurface[], settings:ControllerSettings&EffectiveSettings, dpr:number) {
     const d = this.device,
       w = scene.canvas.width,
       h = scene.canvas.height;
@@ -220,13 +245,13 @@ export class WebGPURenderer {
       this.layerHeight = h;
     }
     const drawSurface = (
-      s,
-      input,
-      blur,
-      view,
-      loadOp,
-      pipeline,
-      sharedPass = null,
+      s:RenderSurface,
+      input:GPUTexture,
+      blur:GPUTexture,
+      view:GPUTextureView,
+      loadOp:GPULoadOp,
+      pipeline:GPURenderPipeline,
+      sharedPass:GPURenderPassEncoder|null = null,
     ) => {
       const r = s.bounds;
       const buffer = this.uniform(
@@ -282,8 +307,8 @@ export class WebGPURenderer {
     };
     const screen = this.context.getCurrentTexture().createView();
     if (layered) {
-      let input = this.layers[0],
-        output = this.layers[1];
+      let input = (this.layers as [GPUTexture,GPUTexture])[0],
+        output = (this.layers as [GPUTexture,GPUTexture])[1];
       encoder.copyTextureToTexture({ texture: bg }, { texture: input }, [w, h]);
       for (const s of visible) {
         const blur = this.imagePass.blur(

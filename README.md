@@ -16,7 +16,7 @@ A glass material library and interactive lab for the web. Explore clear refracti
 
 ## Features
 
-- Framework-independent core, an optional React 19 adapter and TypeScript declarations.
+- Framework-independent core, an optional React 19 adapter, a TypeScript implementation and generated declarations.
 - WebGPU first, with WebGL2 → SVG → CSS → solid fallback on initialization failure or device/context loss.
 - Seven material presets, 20 optical controls, tint, blur and adjustable clarity.
 - Light and dark themes, built-in scenes, sample images and local image upload.
@@ -26,7 +26,7 @@ A glass material library and interactive lab for the web. Explore clear refracti
 
 ## Run locally
 
-Requires Node.js 22 and npm.
+Requires Node.js 22.18+ and npm.
 
 ```sh
 npm ci --cache .local/npm-cache

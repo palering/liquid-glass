@@ -1,0 +1,2153 @@
+{
+  "source": "02eadf4c977c5de7cd33553c335b3653b744b156bed1d12cdd7323e376f0aed3",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+  "dpr": 2,
+  "rows": [
+    {
+      "backend": "webgpu",
+      "preset": "legacy",
+      "active": "webgpu",
+      "dpr": 2,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": null,
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 16401600,
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "textureBudgetBytes": null,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 16401600,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "preset": "full",
+      "active": "webgpu",
+      "dpr": 2,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "full",
+        "fidelity": "preserve",
+        "overrides": {},
+        "adaptive": false
+      },
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 16401600,
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "textureBudgetBytes": 134217728,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 16401600,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "preset": "economy",
+      "active": "webgpu",
+      "dpr": 1,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        }
+      },
+      "layered": false,
+      "requested": {
+        "preset": "economy",
+        "fidelity": "approximate",
+        "overrides": {},
+        "adaptive": false
+      },
+      "blurKernel": "dense25",
+      "animationHz": 30,
+      "estimatedTextureBytes": 1324800,
+      "sourceWidth": 640,
+      "sourceHeight": 360,
+      "textureBudgetBytes": 33554432,
+      "blurRadii": [
+        9
+      ],
+      "adjustmentReasons": [
+        "blur-radius-consolidation",
+        "dispersion-disabled",
+        "layered-disabled"
+      ],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 1324800,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "preset": "balanced",
+      "active": "webgpu",
+      "dpr": 1.5,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "balanced",
+        "fidelity": "preserve",
+        "overrides": {},
+        "adaptive": false
+      },
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 9227040,
+      "sourceWidth": 960,
+      "sourceHeight": 540,
+      "textureBudgetBytes": 67108864,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 9227040,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "preset": "minimal",
+      "active": "solid",
+      "dpr": 1,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        }
+      },
+      "layered": false,
+      "requested": {
+        "preset": "minimal",
+        "fidelity": "approximate",
+        "overrides": {},
+        "adaptive": false
+      },
+      "blurKernel": "dense25",
+      "animationHz": 30,
+      "estimatedTextureBytes": 0,
+      "sourceWidth": 640,
+      "sourceHeight": 360,
+      "textureBudgetBytes": 33554432,
+      "blurRadii": [
+        9
+      ],
+      "adjustmentReasons": [
+        "blur-radius-consolidation",
+        "dispersion-disabled",
+        "layered-disabled",
+        "minimal-solid"
+      ],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 0,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "preset": "custom",
+      "active": "webgpu",
+      "dpr": 2,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "custom",
+        "fidelity": "preserve",
+        "overrides": {},
+        "adaptive": false
+      },
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 16401600,
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "textureBudgetBytes": 67108864,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 16401600,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "preset": "legacy",
+      "active": "webgpu",
+      "dpr": 2,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": null,
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 16401600,
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "textureBudgetBytes": null,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 16401600,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "case": "exact-radius-budget",
+      "dpr": 2,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "custom",
+        "fidelity": "preserve",
+        "overrides": {
+          "maxBlurRadii": 1
+        },
+        "adaptive": false
+      },
+      "preset": "custom",
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 0,
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "textureBudgetBytes": 67108864,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [
+        "blur-radius-limit-unmet",
+        "budget-solid"
+      ],
+      "budgetExceeded": true,
+      "requiredTextureBytes": 16401600,
+      "active": "solid",
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "case": "budget-blocked",
+      "dpr": 0.5,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "custom",
+        "fidelity": "preserve",
+        "overrides": {
+          "textureBudgetMiB": 1
+        },
+        "adaptive": false
+      },
+      "preset": "custom",
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 0,
+      "sourceWidth": 480,
+      "sourceHeight": 270,
+      "textureBudgetBytes": 1048576,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [
+        "dpr-budget-reduction",
+        "texture-budget-exceeded",
+        "budget-solid"
+      ],
+      "budgetExceeded": true,
+      "requiredTextureBytes": 3208320,
+      "active": "solid",
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "case": "budget-recovered",
+      "dpr": 0.75,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "custom",
+        "fidelity": "preserve",
+        "overrides": {
+          "textureBudgetMiB": 1
+        },
+        "adaptive": false
+      },
+      "preset": "custom",
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 752040,
+      "sourceWidth": 240,
+      "sourceHeight": 135,
+      "textureBudgetBytes": 1048576,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [
+        "dpr-budget-reduction"
+      ],
+      "budgetExceeded": false,
+      "active": "webgpu",
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "case": "animation-and-idle",
+      "frames": 90,
+      "scenePaints": 46,
+      "draws": 120,
+      "explicitInvalidation": true,
+      "idle": true,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "case": "dynamic-source-cost",
+      "preset": "legacy",
+      "performance": {
+        "dpr": 2,
+        "controlsByKind": {
+          "card": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "control": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "panel": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          }
+        },
+        "layered": false,
+        "requested": null,
+        "preset": "legacy",
+        "blurKernel": "dense25",
+        "animationHz": 60,
+        "estimatedTextureBytes": 20315520,
+        "sourceWidth": 1920,
+        "sourceHeight": 1080,
+        "textureBudgetBytes": null,
+        "blurRadii": [
+          9,
+          3,
+          20
+        ],
+        "adjustmentReasons": [],
+        "budgetExceeded": false
+      },
+      "cpuSamples": [
+        0.3999999761581421,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.5,
+        0.5,
+        0.6000000238418579,
+        0.5,
+        0.5,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.6000000238418579,
+        0.5,
+        0.5,
+        0.5,
+        0.3999999761581421,
+        0.6000000238418579,
+        0.5,
+        0.3999999761581421,
+        0.5,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.2999999523162842,
+        0.40000009536743164,
+        0.5,
+        0.5999999046325684,
+        0.6000000238418579,
+        0.3999999761581421,
+        0.5,
+        0.3999999761581421,
+        0.5,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.5,
+        0.5,
+        0.5,
+        0.3999999761581421,
+        0.3999999761581421
+      ],
+      "rafSamples": [
+        16.799999952316284,
+        16.5,
+        16.700000047683716,
+        16.699999928474426,
+        16.700000047683716,
+        16.799999952316284,
+        16.5,
+        16.600000023841858,
+        16.799999952316284,
+        16.600000023841858,
+        16.800000071525574,
+        16.59999990463257,
+        16.700000047683716,
+        16.600000023841858,
+        16.699999928474426,
+        16.800000071525574,
+        16.5,
+        15.799999952316284,
+        17.5,
+        16.200000047683716,
+        16.299999952316284,
+        17.200000047683716,
+        17,
+        16.699999928474426,
+        16.700000047683716,
+        16.700000047683716,
+        16.59999990463257,
+        16.700000047683716,
+        16.399999976158142,
+        17,
+        16.600000023841858,
+        16.399999976158142,
+        17,
+        16.600000023841858,
+        16.799999952316284,
+        16.700000047683716,
+        16.5,
+        16.700000047683716,
+        16.699999928474426,
+        16.700000047683716
+      ],
+      "actualOwnedTextureBytes": 20315520,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "case": "dynamic-source-cost",
+      "preset": "full",
+      "performance": {
+        "dpr": 2,
+        "controlsByKind": {
+          "card": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "control": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "panel": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          }
+        },
+        "layered": false,
+        "requested": {
+          "preset": "full",
+          "fidelity": "preserve",
+          "overrides": {},
+          "adaptive": false
+        },
+        "preset": "full",
+        "blurKernel": "dense25",
+        "animationHz": 60,
+        "estimatedTextureBytes": 20315520,
+        "sourceWidth": 1920,
+        "sourceHeight": 1080,
+        "textureBudgetBytes": 134217728,
+        "blurRadii": [
+          9,
+          3,
+          20
+        ],
+        "adjustmentReasons": [],
+        "budgetExceeded": false
+      },
+      "cpuSamples": [
+        0.5,
+        0.6000000238418579,
+        0.40000009536743164,
+        0.6000000238418579,
+        0.5999999046325684,
+        0.5,
+        0.3999999761581421,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.5,
+        0.5,
+        0.6000000238418579,
+        0.5,
+        0.5,
+        0.40000009536743164,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.2999999523162842,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.5,
+        0.40000009536743164,
+        0.5,
+        0.5,
+        0.3999999761581421,
+        0.6000000238418579,
+        0.5,
+        0.5,
+        0.5,
+        0.40000009536743164,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.40000009536743164,
+        0.3999999761581421,
+        0.5,
+        0.5,
+        0.3999999761581421,
+        0.5
+      ],
+      "rafSamples": [
+        16.600000023841858,
+        16.799999952316284,
+        16.5,
+        16.800000071525574,
+        16.600000023841858,
+        16.09999990463257,
+        17.40000009536743,
+        16.5,
+        16.59999990463257,
+        16.200000047683716,
+        17.200000047683716,
+        16.09999990463257,
+        16.700000047683716,
+        17.299999952316284,
+        16.5,
+        16.600000023841858,
+        16.800000071525574,
+        16.699999928474426,
+        16.600000023841858,
+        16.899999976158142,
+        15.899999976158142,
+        17.40000009536743,
+        16.5,
+        16.699999928474426,
+        16.200000047683716,
+        17.299999952316284,
+        16.5,
+        16.700000047683716,
+        16.699999928474426,
+        16.700000047683716,
+        16.700000047683716,
+        16.59999990463257,
+        16.800000071525574,
+        16.5,
+        16.699999928474426,
+        16.800000071525574,
+        16.5,
+        16.699999928474426,
+        15.900000095367432,
+        17.5
+      ],
+      "actualOwnedTextureBytes": 20315520,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "case": "dynamic-source-cost",
+      "preset": "economy",
+      "performance": {
+        "dpr": 1,
+        "controlsByKind": {
+          "card": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0,
+            "dispersion": 0,
+            "blurPx": 9
+          },
+          "control": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0,
+            "dispersion": 0,
+            "blurPx": 9
+          },
+          "panel": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0,
+            "dispersion": 0,
+            "blurPx": 9
+          }
+        },
+        "layered": false,
+        "requested": {
+          "preset": "economy",
+          "fidelity": "approximate",
+          "overrides": {},
+          "adaptive": false
+        },
+        "preset": "economy",
+        "blurKernel": "dense25",
+        "animationHz": 30,
+        "estimatedTextureBytes": 2980800,
+        "sourceWidth": 960,
+        "sourceHeight": 540,
+        "textureBudgetBytes": 33554432,
+        "blurRadii": [
+          9
+        ],
+        "adjustmentReasons": [
+          "blur-radius-consolidation",
+          "dispersion-disabled"
+        ],
+        "budgetExceeded": false
+      },
+      "cpuSamples": [
+        0.3999999761581421,
+        0.30000007152557373,
+        0.6000000238418579,
+        0.3999999761581421,
+        0.5,
+        0.6000000238418579,
+        0.3999999761581421,
+        0.5,
+        0.3999999761581421,
+        0.5,
+        0.30000007152557373,
+        0.3999999761581421,
+        0.5,
+        0.2999999523162842,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.40000009536743164,
+        0.3999999761581421,
+        0.5999999046325684,
+        0.5,
+        0.3999999761581421,
+        0.40000009536743164,
+        0.6000000238418579,
+        0.5,
+        0.5999999046325684,
+        0.5,
+        0.6000000238418579,
+        0.5,
+        0.5,
+        0.3999999761581421,
+        0.40000009536743164,
+        0.5,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.5,
+        0.5,
+        0.40000009536743164,
+        0.6000000238418579,
+        0.3999999761581421,
+        0.30000007152557373
+      ],
+      "rafSamples": [
+        16.800000071525574,
+        16.59999990463257,
+        16.800000071525574,
+        16.5,
+        16.699999928474426,
+        16.700000047683716,
+        16.700000047683716,
+        16.699999928474426,
+        16.600000023841858,
+        16.700000047683716,
+        16.699999928474426,
+        15.800000071525574,
+        17.59999990463257,
+        16.600000023841858,
+        16.600000023841858,
+        16.100000023841858,
+        17.199999928474426,
+        16.700000047683716,
+        16.700000047683716,
+        16.699999928474426,
+        16.600000023841858,
+        16.799999952316284,
+        16.700000047683716,
+        16.5,
+        16.700000047683716,
+        16.799999952316284,
+        16.600000023841858,
+        15.699999928474426,
+        17.700000047683716,
+        16.600000023841858,
+        16.699999928474426,
+        15.700000047683716,
+        17.600000023841858,
+        16.699999928474426,
+        16.600000023841858,
+        16.800000071525574,
+        15.599999904632568,
+        17.600000023841858,
+        15.800000071525574,
+        17.59999990463257
+      ],
+      "actualOwnedTextureBytes": 2980800,
+      "passed": true
+    },
+    {
+      "backend": "webgpu",
+      "case": "dynamic-source-cost",
+      "preset": "balanced",
+      "performance": {
+        "dpr": 1.5,
+        "controlsByKind": {
+          "card": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "control": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "panel": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          }
+        },
+        "layered": false,
+        "requested": {
+          "preset": "balanced",
+          "fidelity": "preserve",
+          "overrides": {},
+          "adaptive": false
+        },
+        "preset": "balanced",
+        "blurKernel": "dense25",
+        "animationHz": 60,
+        "estimatedTextureBytes": 11431080,
+        "sourceWidth": 1440,
+        "sourceHeight": 810,
+        "textureBudgetBytes": 67108864,
+        "blurRadii": [
+          9,
+          3,
+          20
+        ],
+        "adjustmentReasons": [],
+        "budgetExceeded": false
+      },
+      "cpuSamples": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.6000000238418579,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.2999999523162842,
+        0.5,
+        0.6000000238418579,
+        0.5,
+        0.5,
+        0.5,
+        0.3999999761581421,
+        0.5,
+        0.5,
+        0.5,
+        0.3999999761581421,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.3999999761581421,
+        0.5,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.3999999761581421,
+        0.5,
+        0.5999999046325684,
+        0.6000000238418579,
+        0.5,
+        0.3999999761581421,
+        0.6000000238418579
+      ],
+      "rafSamples": [
+        16.699999928474426,
+        16.600000023841858,
+        16.700000047683716,
+        16.600000023841858,
+        16.799999952316284,
+        16.600000023841858,
+        16.699999928474426,
+        16.600000023841858,
+        16.800000071525574,
+        16.59999990463257,
+        16.700000047683716,
+        16.5,
+        16.799999952316284,
+        16.600000023841858,
+        16.700000047683716,
+        16.600000023841858,
+        16.799999952316284,
+        16.600000023841858,
+        16.600000023841858,
+        16.699999928474426,
+        16.800000071525574,
+        16.699999928474426,
+        16.5,
+        16.800000071525574,
+        16.59999990463257,
+        16.800000071525574,
+        16.600000023841858,
+        16.59999990463257,
+        16.700000047683716,
+        16.700000047683716,
+        16.699999928474426,
+        16.700000047683716,
+        16.600000023841858,
+        16.699999928474426,
+        16.600000023841858,
+        16.700000047683716,
+        15.799999952316284,
+        17.600000023841858,
+        16.600000023841858,
+        16.699999928474426
+      ],
+      "actualOwnedTextureBytes": 11431080,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "preset": "legacy",
+      "active": "webgl",
+      "dpr": 2,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": null,
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 16401600,
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "textureBudgetBytes": null,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 16401600,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "preset": "full",
+      "active": "webgl",
+      "dpr": 2,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "full",
+        "fidelity": "preserve",
+        "overrides": {},
+        "adaptive": false
+      },
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 16401600,
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "textureBudgetBytes": 134217728,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 16401600,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "preset": "economy",
+      "active": "webgl",
+      "dpr": 1,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        }
+      },
+      "layered": false,
+      "requested": {
+        "preset": "economy",
+        "fidelity": "approximate",
+        "overrides": {},
+        "adaptive": false
+      },
+      "blurKernel": "dense25",
+      "animationHz": 30,
+      "estimatedTextureBytes": 1324800,
+      "sourceWidth": 640,
+      "sourceHeight": 360,
+      "textureBudgetBytes": 33554432,
+      "blurRadii": [
+        9
+      ],
+      "adjustmentReasons": [
+        "blur-radius-consolidation",
+        "dispersion-disabled",
+        "layered-disabled"
+      ],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 1324800,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "preset": "balanced",
+      "active": "webgl",
+      "dpr": 1.5,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "balanced",
+        "fidelity": "preserve",
+        "overrides": {},
+        "adaptive": false
+      },
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 9227040,
+      "sourceWidth": 960,
+      "sourceHeight": 540,
+      "textureBudgetBytes": 67108864,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 9227040,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "preset": "minimal",
+      "active": "solid",
+      "dpr": 1,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0,
+          "dispersion": 0,
+          "blurPx": 9
+        }
+      },
+      "layered": false,
+      "requested": {
+        "preset": "minimal",
+        "fidelity": "approximate",
+        "overrides": {},
+        "adaptive": false
+      },
+      "blurKernel": "dense25",
+      "animationHz": 30,
+      "estimatedTextureBytes": 0,
+      "sourceWidth": 640,
+      "sourceHeight": 360,
+      "textureBudgetBytes": 33554432,
+      "blurRadii": [
+        9
+      ],
+      "adjustmentReasons": [
+        "blur-radius-consolidation",
+        "dispersion-disabled",
+        "layered-disabled",
+        "minimal-solid"
+      ],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 0,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "preset": "custom",
+      "active": "webgl",
+      "dpr": 2,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "custom",
+        "fidelity": "preserve",
+        "overrides": {},
+        "adaptive": false
+      },
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 16401600,
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "textureBudgetBytes": 67108864,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 16401600,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "preset": "legacy",
+      "active": "webgl",
+      "dpr": 2,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": null,
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 16401600,
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "textureBudgetBytes": null,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [],
+      "budgetExceeded": false,
+      "actualOwnedTextureBytes": 16401600,
+      "inputKept": true,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "case": "exact-radius-budget",
+      "dpr": 2,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "custom",
+        "fidelity": "preserve",
+        "overrides": {
+          "maxBlurRadii": 1
+        },
+        "adaptive": false
+      },
+      "preset": "custom",
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 0,
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "textureBudgetBytes": 67108864,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [
+        "blur-radius-limit-unmet",
+        "budget-solid"
+      ],
+      "budgetExceeded": true,
+      "requiredTextureBytes": 16401600,
+      "active": "solid",
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "case": "budget-blocked",
+      "dpr": 0.5,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "custom",
+        "fidelity": "preserve",
+        "overrides": {
+          "textureBudgetMiB": 1
+        },
+        "adaptive": false
+      },
+      "preset": "custom",
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 0,
+      "sourceWidth": 480,
+      "sourceHeight": 270,
+      "textureBudgetBytes": 1048576,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [
+        "dpr-budget-reduction",
+        "texture-budget-exceeded",
+        "budget-solid"
+      ],
+      "budgetExceeded": true,
+      "requiredTextureBytes": 3208320,
+      "active": "solid",
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "case": "budget-recovered",
+      "dpr": 0.75,
+      "controlsByKind": {
+        "card": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "control": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        },
+        "panel": {
+          "blur": 1,
+          "refraction": 1,
+          "highlight": 1,
+          "tint": 0
+        }
+      },
+      "layered": true,
+      "requested": {
+        "preset": "custom",
+        "fidelity": "preserve",
+        "overrides": {
+          "textureBudgetMiB": 1
+        },
+        "adaptive": false
+      },
+      "preset": "custom",
+      "blurKernel": "dense25",
+      "animationHz": 60,
+      "estimatedTextureBytes": 752040,
+      "sourceWidth": 240,
+      "sourceHeight": 135,
+      "textureBudgetBytes": 1048576,
+      "blurRadii": [
+        9,
+        3,
+        20
+      ],
+      "adjustmentReasons": [
+        "dpr-budget-reduction"
+      ],
+      "budgetExceeded": false,
+      "active": "webgl",
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "case": "animation-and-idle",
+      "frames": 90,
+      "scenePaints": 46,
+      "draws": 119,
+      "explicitInvalidation": true,
+      "idle": true,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "case": "dynamic-source-cost",
+      "preset": "legacy",
+      "performance": {
+        "dpr": 2,
+        "controlsByKind": {
+          "card": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "control": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "panel": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          }
+        },
+        "layered": false,
+        "requested": null,
+        "preset": "legacy",
+        "blurKernel": "dense25",
+        "animationHz": 60,
+        "estimatedTextureBytes": 20315520,
+        "sourceWidth": 1920,
+        "sourceHeight": 1080,
+        "textureBudgetBytes": null,
+        "blurRadii": [
+          9,
+          3,
+          20
+        ],
+        "adjustmentReasons": [],
+        "budgetExceeded": false
+      },
+      "cpuSamples": [
+        1.5,
+        2,
+        1.8000000715255737,
+        1.5,
+        1.600000023841858,
+        1.600000023841858,
+        1.8000000715255737,
+        1.399999976158142,
+        1.5999999046325684,
+        1.7000000476837158,
+        1.899999976158142,
+        1.600000023841858,
+        1.7000000476837158,
+        1.600000023841858,
+        1.6999999284744263,
+        1.5999999046325684,
+        1.600000023841858,
+        1.9000000953674316,
+        2,
+        1.7000000476837158,
+        1.7000000476837158,
+        1.600000023841858,
+        1.899999976158142,
+        1.7000000476837158,
+        1.899999976158142,
+        2.100000023841858,
+        2.200000047683716,
+        2.100000023841858,
+        1.899999976158142,
+        2,
+        1.600000023841858,
+        1.5999999046325684,
+        1.7000000476837158,
+        1.399999976158142,
+        1.600000023841858,
+        1.600000023841858,
+        1.600000023841858,
+        1.6999999284744263,
+        1.5,
+        1.7999999523162842
+      ],
+      "rafSamples": [
+        16,
+        17.299999952316284,
+        16.700000047683716,
+        16.59999990463257,
+        16.700000047683716,
+        16.600000023841858,
+        16.699999928474426,
+        16.700000047683716,
+        16.700000047683716,
+        16.699999928474426,
+        16.600000023841858,
+        16.799999952316284,
+        16.600000023841858,
+        16.600000023841858,
+        16.700000047683716,
+        16.5,
+        16.799999952316284,
+        16.799999952316284,
+        16.700000047683716,
+        16.5,
+        16.799999952316284,
+        16.700000047683716,
+        16.600000023841858,
+        16.699999928474426,
+        16.600000023841858,
+        16.700000047683716,
+        16.699999928474426,
+        16.700000047683716,
+        16.600000023841858,
+        16.699999928474426,
+        16.700000047683716,
+        16.700000047683716,
+        16.59999990463257,
+        16.700000047683716,
+        15.799999952316284,
+        17.600000023841858,
+        16.700000047683716,
+        16.600000023841858,
+        16.399999976158142,
+        16.899999976158142
+      ],
+      "actualOwnedTextureBytes": 20315520,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "case": "dynamic-source-cost",
+      "preset": "full",
+      "performance": {
+        "dpr": 2,
+        "controlsByKind": {
+          "card": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "control": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "panel": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          }
+        },
+        "layered": false,
+        "requested": {
+          "preset": "full",
+          "fidelity": "preserve",
+          "overrides": {},
+          "adaptive": false
+        },
+        "preset": "full",
+        "blurKernel": "dense25",
+        "animationHz": 60,
+        "estimatedTextureBytes": 20315520,
+        "sourceWidth": 1920,
+        "sourceHeight": 1080,
+        "textureBudgetBytes": 134217728,
+        "blurRadii": [
+          9,
+          3,
+          20
+        ],
+        "adjustmentReasons": [],
+        "budgetExceeded": false
+      },
+      "cpuSamples": [
+        1.8000000715255737,
+        2.399999976158142,
+        1.7000000476837158,
+        1.8000000715255737,
+        1.7999999523162842,
+        1.8000000715255737,
+        1.5,
+        1.6999999284744263,
+        1.600000023841858,
+        1.7000000476837158,
+        1.5,
+        1.7000000476837158,
+        1.600000023841858,
+        1.5,
+        1.5,
+        1.5,
+        1.5999999046325684,
+        1.8000000715255737,
+        1.7999999523162842,
+        2.0999999046325684,
+        1.8000000715255737,
+        2.100000023841858,
+        2,
+        2.200000047683716,
+        1.6999999284744263,
+        1.5,
+        1.600000023841858,
+        1.899999976158142,
+        1.600000023841858,
+        1.600000023841858,
+        1.5,
+        2.100000023841858,
+        1.899999976158142,
+        2,
+        2,
+        1.7000000476837158,
+        2.100000023841858,
+        1.9000000953674316,
+        1.899999976158142,
+        1.899999976158142
+      ],
+      "rafSamples": [
+        16.899999976158142,
+        16.200000047683716,
+        17.399999976158142,
+        16.5,
+        16.700000047683716,
+        16.699999928474426,
+        16.600000023841858,
+        16.700000047683716,
+        16.699999928474426,
+        16.700000047683716,
+        16.700000047683716,
+        16.699999928474426,
+        16.600000023841858,
+        16.700000047683716,
+        16.59999990463257,
+        16.800000071525574,
+        16.5,
+        16.799999952316284,
+        16.600000023841858,
+        16.200000047683716,
+        17.199999928474426,
+        16.600000023841858,
+        16.700000047683716,
+        16.699999928474426,
+        16.700000047683716,
+        16.600000023841858,
+        16.699999928474426,
+        16.700000047683716,
+        16.699999928474426,
+        16.600000023841858,
+        16.700000047683716,
+        16.600000023841858,
+        16.699999928474426,
+        16.700000047683716,
+        16.699999928474426,
+        16.600000023841858,
+        16.700000047683716,
+        16.699999928474426,
+        16.700000047683716,
+        16.600000023841858
+      ],
+      "actualOwnedTextureBytes": 20315520,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "case": "dynamic-source-cost",
+      "preset": "economy",
+      "performance": {
+        "dpr": 1,
+        "controlsByKind": {
+          "card": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0,
+            "dispersion": 0,
+            "blurPx": 9
+          },
+          "control": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0,
+            "dispersion": 0,
+            "blurPx": 9
+          },
+          "panel": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0,
+            "dispersion": 0,
+            "blurPx": 9
+          }
+        },
+        "layered": false,
+        "requested": {
+          "preset": "economy",
+          "fidelity": "approximate",
+          "overrides": {},
+          "adaptive": false
+        },
+        "preset": "economy",
+        "blurKernel": "dense25",
+        "animationHz": 30,
+        "estimatedTextureBytes": 2980800,
+        "sourceWidth": 960,
+        "sourceHeight": 540,
+        "textureBudgetBytes": 33554432,
+        "blurRadii": [
+          9
+        ],
+        "adjustmentReasons": [
+          "blur-radius-consolidation",
+          "dispersion-disabled"
+        ],
+        "budgetExceeded": false
+      },
+      "cpuSamples": [
+        1.2999999523162842,
+        1.2999999523162842,
+        1.3000000715255737,
+        1.5,
+        1.3000000715255737,
+        1,
+        1.0999999046325684,
+        1,
+        1.100000023841858,
+        1.100000023841858,
+        1.2000000476837158,
+        1.100000023841858,
+        1.1999999284744263,
+        1,
+        0.8999999761581421,
+        1.100000023841858,
+        1,
+        1,
+        1.1999999284744263,
+        1.2000000476837158,
+        1.2000000476837158,
+        1,
+        1,
+        1.2000000476837158,
+        1,
+        1.100000023841858,
+        1,
+        1,
+        1.3000000715255737,
+        1.100000023841858,
+        1.0999999046325684,
+        1,
+        1,
+        1.0999999046325684,
+        1.100000023841858,
+        1.100000023841858,
+        1.1999999284744263,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.0999999046325684
+      ],
+      "rafSamples": [
+        16.700000047683716,
+        16.600000023841858,
+        16.59999990463257,
+        16.100000023841858,
+        17.399999976158142,
+        16.600000023841858,
+        16.800000071525574,
+        16.5,
+        16.699999928474426,
+        16.600000023841858,
+        16.700000047683716,
+        16.799999952316284,
+        16.600000023841858,
+        16.600000023841858,
+        16,
+        17.399999976158142,
+        16.600000023841858,
+        16.699999928474426,
+        16.700000047683716,
+        16.299999952316284,
+        17,
+        16.700000047683716,
+        16.699999928474426,
+        16.700000047683716,
+        16.700000047683716,
+        16.59999990463257,
+        16.800000071525574,
+        16.5,
+        16.699999928474426,
+        16.600000023841858,
+        16.800000071525574,
+        15.699999928474426,
+        17.700000047683716,
+        16.5,
+        16.799999952316284,
+        16.600000023841858,
+        16.700000047683716,
+        16.59999990463257,
+        16.700000047683716,
+        16.700000047683716
+      ],
+      "actualOwnedTextureBytes": 2980800,
+      "passed": true
+    },
+    {
+      "backend": "webgl",
+      "case": "dynamic-source-cost",
+      "preset": "balanced",
+      "performance": {
+        "dpr": 1.5,
+        "controlsByKind": {
+          "card": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "control": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          },
+          "panel": {
+            "blur": 1,
+            "refraction": 1,
+            "highlight": 1,
+            "tint": 0
+          }
+        },
+        "layered": false,
+        "requested": {
+          "preset": "balanced",
+          "fidelity": "preserve",
+          "overrides": {},
+          "adaptive": false
+        },
+        "preset": "balanced",
+        "blurKernel": "dense25",
+        "animationHz": 60,
+        "estimatedTextureBytes": 11431080,
+        "sourceWidth": 1440,
+        "sourceHeight": 810,
+        "textureBudgetBytes": 67108864,
+        "blurRadii": [
+          9,
+          3,
+          20
+        ],
+        "adjustmentReasons": [],
+        "budgetExceeded": false
+      },
+      "cpuSamples": [
+        1.899999976158142,
+        2,
+        1.899999976158142,
+        1.6999999284744263,
+        1.899999976158142,
+        1.600000023841858,
+        1.5,
+        1.899999976158142,
+        1.899999976158142,
+        1.8000000715255737,
+        1.600000023841858,
+        1.600000023841858,
+        1.600000023841858,
+        1.600000023841858,
+        1.6999999284744263,
+        2.0999999046325684,
+        1.5,
+        2,
+        1.6999999284744263,
+        1.7000000476837158,
+        2.4000000953674316,
+        1.8000000715255737,
+        1.7000000476837158,
+        1.6999999284744263,
+        1.5,
+        1.7000000476837158,
+        1.6999999284744263,
+        1.5,
+        1.6999999284744263,
+        1.600000023841858,
+        1.5,
+        1.5,
+        1.5,
+        2.200000047683716,
+        1.600000023841858,
+        1.5,
+        1.7999999523162842,
+        1.5,
+        1.899999976158142,
+        1.8000000715255737
+      ],
+      "rafSamples": [
+        16.600000023841858,
+        16.699999928474426,
+        15.900000095367432,
+        17.5,
+        16.699999928474426,
+        16.600000023841858,
+        16.600000023841858,
+        16.799999952316284,
+        16.600000023841858,
+        16.700000047683716,
+        16.699999928474426,
+        16.600000023841858,
+        16.399999976158142,
+        16.899999976158142,
+        16.800000071525574,
+        16.600000023841858,
+        16.699999928474426,
+        16.700000047683716,
+        16.600000023841858,
+        16.59999990463257,
+        16,
+        17.5,
+        16.600000023841858,
+        16.700000047683716,
+        16.699999928474426,
+        16.700000047683716,
+        16.600000023841858,
+        16.699999928474426,
+        16.300000071525574,
+        17,
+        16.600000023841858,
+        16.799999952316284,
+        16.600000023841858,
+        16.699999928474426,
+        16.700000047683716,
+        16.5,
+        16.700000047683716,
+        16.699999928474426,
+        16.800000071525574,
+        16.59999990463257
+      ],
+      "actualOwnedTextureBytes": 11431080,
+      "passed": true
+    }
+  ],
+  "cleanup": [
+    {
+      "backend": "webgpu",
+      "surfaces": 0,
+      "listeners": 0,
+      "canvases": 0,
+      "blurRadii": 0,
+      "buffers": 0
+    },
+    {
+      "backend": "webgl",
+      "surfaces": 0,
+      "listeners": 0,
+      "canvases": 0,
+      "blurRadii": 0,
+      "buffers": 0
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

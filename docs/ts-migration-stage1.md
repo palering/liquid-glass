@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-07。敏感信息与提交范围检查通过后，已建立本地JS基线提交`f6f329e`，随后开始TS迁移。当前完成第一组，不把整个库标为迁移完成；后续按[完整迁移计划](ts-migration-plan.md)继续。
+2026-10-07。敏感信息与提交范围检查通过后，已建立本地JS基线提交`f6f329e`，随后开始TS迁移。本文保留第一组历史验收；之后剩余组已完成，最新状态见[完整迁移验收](ts-migration-complete.md)。
 
 ## 已迁移
 
@@ -22,7 +22,7 @@ Node加载器使用`module.register()`兼容现有Node22工具路线；本轮实
 
 当前源码指纹`914562889b0999ef52547a7eb53d7df9926dec78e45ee636f6b0d35be95d5185`。文件更名与类型文本使源指纹改变，像素哈希和策略行为没有改变。原始结果与SHA清单见[本轮归档](../benchmarks/results/ts-stage1/README.md)；旧Shader/光学/性能归档不覆盖。
 
-## 继续点
+## 当时的继续点（现已完成）
 
 下一组为scene/source与renderer的生命周期、纹理/缓冲资源和uniform契约，随后controller与React。renderer/controller/React目前仍为JS；公开声明仍手写，暂时作为内部类型依赖，生成声明与移除这项依赖在第四组完成。WGSL、实验fixture、Lab和Rust工具不要求改写成TS。
 

@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-07 TS第一阶段：config/settings/preset/policy/performance/geometry已迁移为strict TypeScript；来源、renderer、controller与React适配仍为JS。构建后ESM入口与WGSL/生成ABI不变；内部契约与公开手写声明暂时分开，后续实现声明生成按[迁移入口](ts-migration-plan.md)执行。
+2026-10-07 完整TS迁移：全部作者核心运行模块、scene/native桥、五后端renderer、controller与React适配使用strict TypeScript；`contracts.ts`是共享类型来源，公开core/react声明从实现生成，不再反向依赖手写声明。GPU Shader仍以WGSL编写，GLSL/JS packer和反射派生packer类型自动生成。现有ESM/CSS入口与语义保留，完整证据见[迁移验收](ts-migration-complete.md)。Lab、benchmark、Rust和独立实验不属于本轮TS迁移范围。
 
 2026-10-06 v0.4：实际目录职责及导出见 [package-contract.md](package-contract.md)，实现与证据见 [status.md](status.md)。下文保留早期目标接口和演进方案，`system` theme、snapshot、任意 DOM SVG backdrop、采集要求驱动后端选择仍未实现；现有 API 是 [api.md](api.md) 中的 flat settings。
 

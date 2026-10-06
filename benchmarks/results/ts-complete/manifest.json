@@ -1,0 +1,30 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "README.md": "2ee49f111f1517ec90487d362984665c9a60385b9424ce864b19ef3a01e2545d",
+    "checks.json": "e5ad1781bab74382b2346e18175c2a9ceafb741492ef9bf644facf76041a97d4",
+    "chrome.json": "6423860141727812f0c1223b72e42a8532095aa58625f85542dd18e9c4c19c99",
+    "consumer-desktop.png": "dd30c8cd29c5e2a2bbc2018eb7da533e44aaa223558c704919f6f05c77f80f51",
+    "consumer-matrix-attempt.json": "d80bbfa960bca3a010654200d8240befca57a03db4ea0b9f98a780d8f006480e",
+    "consumer-matrix.json": "406edba4afabf8686a02e9036eab786a84ad55f6ad3b46b744a9316d56ce5bc6",
+    "consumer-mobile-dark.png": "e5d43d08dc2e306e59ab8503897dc6c137835b78b221fde574357b9012431136",
+    "consumer-mobile-light.png": "1ddc7b1937beddbb82846ce921e224371cf49b8ae5b6aa9d34bdaf908aa95a74",
+    "consumer-production.json": "ba751728df41a0241a09d1375cdf2cfad67ea92c7ccb83bcf99a00854dc11f00",
+    "contracts.json": "c597fbcc99af1059e19c9619f37e76a7f7c7e9c916ec6c9d178f33921c0ee5e5",
+    "dependency-audit.json": "12afd07bd3eb04eb5b315c11ce8d7b097fb26c3a3856145232d5b2ceb7e0d281",
+    "failure-cascade.json": "798129bb4c525e09063aa5489e2015ca95681bda048322c1fa66154faa337cdf",
+    "lifecycle.json": "44457e8b579f4c2e145a1e5a03a69ee4e578c8f414db7fac57d9071182e268df",
+    "node22-build.txt": "51074c5c40ebdefad7baf9152f496e66bef2ebe044e0fc0df60f72f6b1bde19a",
+    "node22-package.txt": "4e8eaeffe128dbd47eff2d41540da735f7a291552d1f6e781329738e8096bd76",
+    "node22-tests.txt": "ae794e4a4fffc9f5a05655ea3359ee665c04eaa266baac0507167795823ce371",
+    "node26-build.txt": "9f8299f6cad22cc03c0a0a59d96197555d7fb04f943f6be087a71b258cd79b5b",
+    "node26-package.txt": "85a321ba41602e8a0679e1b0a55678211f03d40cd1cc6c7f68b7bdce00a3d10d",
+    "node26-tests.txt": "fcb8da927fd494db8043944a2f6064fa315ae9e5af49707a30d8e9b529cd791a",
+    "quality.json": "b60a3feeeaf479d4802df362972ccbf689b7cf3057794309d5fc2b71a0ab3797",
+    "quality.png": "ccfe8bc7780b5458f5b2354ae99bd71b3258f88f331bf46cba03441398709e62",
+    "react-strictmode.json": "67e4b95506974aa38df1fc5a1bd1f8794a681d2715d43f1077fe2a01e61eb2c7",
+    "source-manifest.json": "367972b45c2c15856c0f80ec74773bc40d3edfebd50f3c5d7a807effc89fe64e",
+    "stability.json": "d2cf135d15b9312ba78151b924bce932efce177ee3da01cb51a7ac7eb11d6013",
+    "types.txt": "0d3fe590c16f5fdda6a2f6d0a7036becc4a2057e77464f33eeb71f3a577353aa"
+  }
+}

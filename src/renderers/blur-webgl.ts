@@ -1,28 +1,41 @@
+import type {BlurItem} from '../contracts.js';
+import type {UniformData} from '../shaders/generated/packers.js';
 import { glImageVertex as vs, glImageFragment as fs, imageBindings } from '../shaders.js';
 import { uniformData, bindUniformBlock } from './uniforms.js';
 import { packImageU } from '../shaders/generated/packers.js';
+interface Level {texture:WebGLTexture|null;w:number;h:number;x:number;y:number}
+type Item=BlurItem<WebGLTexture|null,Level>&{tw:number;th:number;scale:number};
 export class GLImagePass {
-  constructor(gl) {
+ declare gl:WebGL2RenderingContext;
+ declare items:Map<string,Item>;
+ declare program:WebGLProgram;
+ declare image:WebGLUniformLocation|null;
+ declare params:UniformData;
+ declare paramsBuffer:WebGLBuffer|null;
+ declare fbo:WebGLFramebuffer|null;
+  constructor(gl:WebGL2RenderingContext) {
     this.gl = gl;
     this.items = new Map();
-    const shaders = [];
+    const shaders:WebGLShader[] = [];
     try {
-      for (const [type, source] of [
+      for (const [type, source] of ([
         [gl.VERTEX_SHADER, vs],
         [gl.FRAGMENT_SHADER, fs],
-      ]) {
+      ] as [number,string][])) {
         const s = gl.createShader(type);
+        if(!s)throw new Error("WebGL shader allocation failed");
         shaders.push(s);
         gl.shaderSource(s, source);
         gl.compileShader(s);
         if (!gl.getShaderParameter(s, gl.COMPILE_STATUS))
-          throw new Error(gl.getShaderInfoLog(s));
+          throw new Error(gl.getShaderInfoLog(s) as string);
       }
-      this.program = gl.createProgram();
+      this.program = gl.createProgram() as WebGLProgram;
+      if(!this.program)throw new Error("WebGL program allocation failed");
       for (const s of shaders) gl.attachShader(this.program, s);
       gl.linkProgram(this.program);
       if (!gl.getProgramParameter(this.program, gl.LINK_STATUS))
-        throw new Error(gl.getProgramInfoLog(this.program));
+        throw new Error(gl.getProgramInfoLog(this.program) as string);
       this.image = gl.getUniformLocation(this.program, imageBindings.textures.image.name);
       bindUniformBlock(gl, this.program, imageBindings.uniforms.u, 1);
       this.params = uniformData(imageBindings.uniforms.u);
@@ -36,7 +49,7 @@ export class GLImagePass {
       for (const s of shaders) gl.deleteShader(s);
     }
   }
-  texture(w, h) {
+  texture(w:number, h:number) {
     const g = this.gl,
       t = g.createTexture();
     g.bindTexture(g.TEXTURE_2D, t);
@@ -60,7 +73,7 @@ export class GLImagePass {
       g.texParameteri(g.TEXTURE_2D, key, value);
     return t;
   }
-  target(texture, w, h) {
+  target(texture:WebGLTexture|null|undefined, w:number, h:number) {
     const g = this.gl;
     g.bindFramebuffer(g.FRAMEBUFFER, texture ? this.fbo : null);
     if (texture) {
@@ -76,7 +89,7 @@ export class GLImagePass {
     }
     g.viewport(0, 0, w, h);
   }
-  draw(input, target, x, y, w, h, sigma = 1, mode = 1) {
+  draw(input:WebGLTexture|null, target:WebGLTexture|null|undefined, x:number, y:number, w:number, h:number, sigma = 1, mode = 1) {
     const g = this.gl;
     this.target(target, w, h);
     g.disable(g.SCISSOR_TEST);
@@ -91,10 +104,10 @@ export class GLImagePass {
     g.bindBufferBase(g.UNIFORM_BUFFER, 1, this.paramsBuffer);
     g.drawArrays(g.TRIANGLE_STRIP, 0, 4);
   }
-  blur(input, radius, dpr, signature, w, h, force = false) {
+  blur(input:WebGLTexture|null, radius:number, dpr:number, signature:string, w:number, h:number, force = false) {
     if (radius <= 0) return input;
     const key = String(radius);
-    let item = this.items.get(key);
+    let item:Item|null|undefined = this.items.get(key);
     if (item && (item.w !== w || item.h !== h || item.dpr !== dpr)) {
       this.destroyItem(item);
       this.items.delete(key);
@@ -163,14 +176,14 @@ export class GLImagePass {
     }
     return item.b;
   }
-  prune(radii) {
+  prune(radii:Set<string>) {
     for (const [k, item] of this.items)
       if (!radii.has(k)) {
         this.destroyItem(item);
         this.items.delete(k);
       }
   }
-  destroyItem(item) {
+  destroyItem(item:Item) {
     for (const level of item.pyramid) this.gl.deleteTexture(level.texture);
     this.gl.deleteTexture(item.a);
     this.gl.deleteTexture(item.b);

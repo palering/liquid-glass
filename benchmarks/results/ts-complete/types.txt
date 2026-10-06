@@ -1,0 +1,6 @@
+npm notice run @workspace/liquid-glass@0.4.0 typecheck
+npm notice run npm run types:check && tsc --noEmit && tsc -p tsconfig.runtime.json --noEmit
+npm notice run @workspace/liquid-glass@0.4.0 types:check
+npm notice run node scripts/shader-types.mjs --check && node scripts/declarations.mjs --check
+Verified reflection-derived shader packer types
+Verified implementation-derived core and React declarations

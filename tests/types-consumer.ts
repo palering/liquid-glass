@@ -31,3 +31,17 @@ GlassSurface({ as: "button", kind: "control", onClick: () => {}, zIndex: 2 });
 // @ts-expect-error Unknown backend must not silently enter a public typed configuration.
 const invalid: Settings = { backend: "webgl1" };
 void invalid;
+
+// Generated React declarations must retain the same nominal controller identity.
+import {useGlass} from '@workspace/liquid-glass/react';
+const hookController:GlassController|null=useGlass().controller;
+void hookController;
+GlassSurface({as:'a',href:'/example',kind:'card'});
+// @ts-expect-error button does not accept href.
+GlassSurface({as:'button',href:'/example'});
+// @ts-expect-error Scene painter receives typed dimensions, never a string width.
+glass.setScenePainter((_context,frame)=>{const width:string=frame.width;void width;});
+// @ts-expect-error Adaptive performance is deliberately not implemented.
+void glass.setSettings({performance:{preset:'balanced',adaptive:true}});
+// @ts-expect-error Native bridge experimental auto is not a public Capture option.
+void glass.setSettings({capture:'auto'});

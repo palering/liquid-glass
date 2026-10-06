@@ -8,13 +8,13 @@ Audience: public
 
 | 路径 | 职责 | 进入库 tarball |
 | --- | --- | --- |
-| src/controller.js | 共享生命周期、surface 注册、后端/采集状态、dirty 重绘 | 构建为 ESM |
+| src/controller.ts | 共享生命周期、surface 注册、后端/采集状态、dirty 重绘 | 构建为 ESM |
 | src/capture/ | scene；实验性原生 DOM 2D 桥 | 构建为 ESM |
-| src/renderers/、src/shaders.js、src/shaders/ | GPU / GL / SVG / CSS / solid；WGSL 单源码及生成 GLSL，GPU 模糊与合成 | 构建为 ESM |
+| src/renderers/、src/shaders.ts、src/shaders/ | GPU / GL / SVG / CSS / solid；WGSL 单源码及生成 GLSL，GPU 模糊与合成 | 构建为 ESM |
 | src/config.ts、preset.ts、policy.ts、settings.ts、performance.ts、geometry.ts | 严格类型的参数、预设校验、后端顺序、性能预算和几何验证 | 构建为 ESM JS |
-| src/contracts.ts | 第一阶段内部类型；公开声明保持原接口 | 类型擦除，不单独分发 |
-| src/react.js | 共享 controller 的 React 19 薄适配 | 独立 React 入口 |
-| types/ | 实际 API 的声明，消费者类型检查 | 是 |
+| src/contracts.ts | 共享公开与内部类型；实现生成公开声明 | 类型擦除，不单独分发 |
+| src/react.ts | 共享 controller 的 React 19 薄适配 | 独立 React 入口 |
+| types/ | 从实现生成的core/react声明，消费者类型检查 | 是 |
 | src/glass.css | DOM / 装饰层与阴影样式 | 是，显式导入 |
 | lab/、public/ | 双语效果实验室、性能 UI、React fixture、生成素材 | 否 |
 | benchmarks/ | 协议、统计、原始样本、报告 | 否，Git 管理 |
@@ -42,3 +42,5 @@ React 目前同包子入口足够；稳定后才考虑 `core` / `react` 分包�
 README 截图位于 docs/images，属于源码文档资产，不进入库 tarball 或 Pages。
 
 GitHub Pages 工作流只上传 `dist/lab`。它包含实验室自有生成图片、性能归档 JSON/CSV/报告和三个 HTML 入口；不包含 `dist/lib`、node_modules、缓存、环境文件、打包 tarball 或临时截图。`VITE_BASE_PATH` 控制站点 URL 前缀，不改变核心库 API。公开仓库与展示站授权不等于选择整体开源许可，private / UNLICENSED 与 vendor MIT/NOTICE 保持原状。详见 [deployment.md](deployment.md)。
+
+2026-10-07：作者运行源码已完整迁移为strict TS，只有反射生成的packer保持JS。`npm run types:generate`生成packer类型和公开声明，`types:check`验证漂移；消费者仍只获得13文件的编译JS/CSS/声明/README/许可，编译器、WebGPU开发类型、实验和测试加载器不进入包。core声明不依赖React或WebGPU类型包；React声明引用同一个core controller，保持类型身份。见[完整验收](ts-migration-complete.md)。

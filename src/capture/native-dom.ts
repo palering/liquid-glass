@@ -1,14 +1,17 @@
+// Experimental APIs remain scoped to this bridge, not global DOM augmentation.
+interface NativeCanvas extends HTMLCanvasElement {requestPaint():void}
+interface NativeContext extends CanvasRenderingContext2D {drawElementImage(element:HTMLElement,x:number,y:number):DOMMatrix|undefined}
 // Native HTML-in-Canvas bridge. Experimental; never substitutes DOM screenshots.
 export function nativeCapability() {
   return (
     typeof CanvasRenderingContext2D !== "undefined" &&
-    typeof CanvasRenderingContext2D.prototype.drawElementImage === "function" &&
-    typeof HTMLCanvasElement.prototype.requestPaint === "function"
+    typeof (CanvasRenderingContext2D.prototype as NativeContext).drawElementImage === "function" &&
+    typeof (HTMLCanvasElement.prototype as NativeCanvas).requestPaint === "function"
   );
 }
-export async function createNativeSource(w, h, dpr, onPaint) {
+export async function createNativeSource(w:number, h:number, dpr:number, onPaint:(canvas:HTMLCanvasElement)=>void) {
   if (!nativeCapability()) throw new Error("原生 HTML-in-Canvas API 未开放");
-  const canvas = document.createElement("canvas");
+  const canvas = document.createElement("canvas") as NativeCanvas;
   canvas.className = "native-source";
   canvas.width = Math.round(w * dpr);
   canvas.height = Math.round(h * dpr);
@@ -23,15 +26,15 @@ export async function createNativeSource(w, h, dpr, onPaint) {
   host.innerHTML =
     '<p style="font-size:12px;letter-spacing:3px">NATIVE HTML SOURCE</p><h2 style="font-size:66px;margin-top:140px">Live DOM.</h2><button type="button" style="padding:12px 20px">HTML button · 0</button>';
   let count = 0;
-  host.querySelector("button").onclick = (e) => {
-    e.currentTarget.textContent = `HTML button · ${++count}`;
+  (host.querySelector("button") as HTMLButtonElement).onclick = (e) => {
+    (e.currentTarget as HTMLButtonElement).textContent = `HTML button · ${++count}`;
     canvas.requestPaint();
   };
   canvas.append(host);
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d") as NativeContext;
   let disposed = false;
-  let firstResolve, firstReject;
-  const first = new Promise((r, j) => {
+  let firstResolve:()=>void, firstReject:(reason:unknown)=>void;
+  const first = new Promise<void>((r, j) => {
     firstResolve = r;
     firstReject = j;
   });

@@ -16,7 +16,7 @@
 
 ## 功能
 
-- 框架无关核心、可选 React 19 薄适配与 TypeScript 类型声明。
+- 框架无关核心、可选 React 19 薄适配、TypeScript 实现与自动生成的类型声明。
 - 优先使用 WebGPU，初始化失败或设备/上下文丢失时降级到 WebGL2 → SVG → CSS → solid。
 - 七种材质预设、20 个光学参数，以及染色、模糊和连续清透度控制。
 - 深浅主题、内置场景、示例图片与本地图片导入。
@@ -26,7 +26,7 @@
 
 ## 本地运行
 
-需要 Node.js 22 和 npm。
+需要 Node.js 22.18+ 和 npm。
 
 ```sh
 npm ci --cache .local/npm-cache

@@ -1,0 +1,208 @@
+TAP version 13
+# Subtest: provided geometry is atomic and rejects nonfinite or missing bounds
+ok 1 - provided geometry is atomic and rejects nonfinite or missing bounds
+  ---
+  duration_ms: 0.454959
+  type: 'test'
+  ...
+# Subtest: scaled geometry keeps screen radius and stage-local shader coordinates
+ok 2 - scaled geometry keeps screen radius and stage-local shader coordinates
+  ---
+  duration_ms: 1.159458
+  type: 'test'
+  ...
+# Subtest: analytic gradient matches independent finite-difference distance derivatives away from kinks
+ok 3 - analytic gradient matches independent finite-difference distance derivatives away from kinks
+  ---
+  duration_ms: 13.511584
+  type: 'test'
+  ...
+# Subtest: height profile joins a flat center continuously and its analytic slope matches the derivative
+ok 4 - height profile joins a flat center continuously and its analytic slope matches the derivative
+  ---
+  duration_ms: 0.6175
+  type: 'test'
+  ...
+# Subtest: height ray obeys Snell tangential ratio and remains finite across supported IOR/slope bounds
+ok 5 - height ray obeys Snell tangential ratio and remains finite across supported IOR/slope bounds
+  ---
+  duration_ms: 0.24275
+  type: 'test'
+  ...
+# Subtest: profiles preserve requested materials and enforce explicit approximations
+ok 6 - profiles preserve requested materials and enforce explicit approximations
+  ---
+  duration_ms: 1.079292
+  type: 'test'
+  ...
+# Subtest: texture inventory counts actual odd dimensions, shared radii and layered allocations
+ok 7 - texture inventory counts actual odd dimensions, shared radii and layered allocations
+  ---
+  duration_ms: 0.1325
+  type: 'test'
+  ...
+# Subtest: budget planning reduces DPR before allocation and reports impossible fits
+ok 8 - budget planning reduces DPR before allocation and reports impossible fits
+  ---
+  duration_ms: 0.320709
+  type: 'test'
+  ...
+# Subtest: invalid performance settings reject atomically and portable v1 restores legacy
+ok 9 - invalid performance settings reject atomically and portable v1 restores legacy
+  ---
+  duration_ms: 0.510542
+  type: 'test'
+  ...
+# Subtest: auto priority and failure exclusion
+ok 10 - auto priority and failure exclusion
+  ---
+  duration_ms: 0.902584
+  type: 'test'
+  ...
+# Subtest: capture capability is independent from backend
+ok 11 - capture capability is independent from backend
+  ---
+  duration_ms: 0.174292
+  type: 'test'
+  ...
+# Subtest: bounds share CSS-pixel material and bottom-up shader coordinates
+ok 12 - bounds share CSS-pixel material and bottom-up shader coordinates
+  ---
+  duration_ms: 0.279458
+  type: 'test'
+  ...
+# Subtest: absolute optical controls retain units and legacy defaults
+ok 13 - absolute optical controls retain units and legacy defaults
+  ---
+  duration_ms: 0.168916
+  type: 'test'
+  ...
+# Subtest: portable preset roundtrip retains backend, capture and optical values
+ok 14 - portable preset roundtrip retains backend, capture and optical values
+  ---
+  duration_ms: 0.954375
+  type: 'test'
+  ...
+# Subtest: preset clamps numeric ranges and excludes URLs, DOM and prototype keys
+ok 15 - preset clamps numeric ranges and excludes URLs, DOM and prototype keys
+  ---
+  duration_ms: 0.074
+  type: 'test'
+  ...
+# Subtest: invalid preset cannot inject NaN, invalid options or future versions
+ok 16 - invalid preset cannot inject NaN, invalid options or future versions
+  ---
+  duration_ms: 0.177125
+  type: 'test'
+  ...
+# Subtest: tint color becomes normalized RGB channel inputs
+ok 17 - tint color becomes normalized RGB channel inputs
+  ---
+  duration_ms: 0.164833
+  type: 'test'
+  ...
+# Subtest: GL renderer rejects exhausted shader allocation and removes its loss listener
+ok 18 - GL renderer rejects exhausted shader allocation and removes its loss listener
+  ---
+  duration_ms: 1.357
+  type: 'test'
+  ...
+# Subtest: GL image pass releases compiled shaders if program allocation fails
+ok 19 - GL image pass releases compiled shaders if program allocation fails
+  ---
+  duration_ms: 0.233125
+  type: 'test'
+  ...
+# Subtest: partial controller settings preserve per-kind defaults and unrelated controls
+ok 20 - partial controller settings preserve per-kind defaults and unrelated controls
+  ---
+  duration_ms: 0.702875
+  type: 'test'
+  ...
+# Subtest: invalid controller input rejects before DOM mutation and before replacing existing settings
+ok 21 - invalid controller input rejects before DOM mutation and before replacing existing settings
+  ---
+  duration_ms: 0.3465
+  type: 'test'
+  ...
+# Subtest: controller optical bounds produce finite values and preserve legacy aliases
+ok 22 - controller optical bounds produce finite values and preserve legacy aliases
+  ---
+  duration_ms: 0.109542
+  type: 'test'
+  ...
+# Subtest: clean shader checks need no compiler and reject source drift or edited GLSL
+ok 23 - clean shader checks need no compiler and reject source drift or edited GLSL
+  ---
+  duration_ms: 160.104459
+  type: 'test'
+  ...
+# Subtest: nearest-rank percentiles preserve stalls and reject invalid input
+ok 24 - nearest-rank percentiles preserve stalls and reject invalid input
+  ---
+  duration_ms: 0.545417
+  type: 'test'
+  ...
+# Subtest: aggregation excludes fallback failures and separates acquisition/resolution
+ok 25 - aggregation excludes fallback failures and separates acquisition/resolution
+  ---
+  duration_ms: 0.855584
+  type: 'test'
+  ...
+# Subtest: explicit locale wins, saved locale follows, invalid values use English
+ok 26 - explicit locale wins, saved locale follows, invalid values use English
+  ---
+  duration_ms: 0.324292
+  type: 'test'
+  ...
+# Subtest: every optical label has English copy without changing field identifiers
+ok 27 - every optical label has English copy without changing field identifiers
+  ---
+  duration_ms: 1.592291
+  type: 'test'
+  ...
+# Subtest: dynamic status switches both directions and retains opaque diagnostic details
+ok 28 - dynamic status switches both directions and retains opaque diagnostic details
+  ---
+  duration_ms: 1.89825
+  type: 'test'
+  ...
+# Subtest: translation is idempotent for runtime copy and keeps counters
+ok 29 - translation is idempotent for runtime copy and keeps counters
+  ---
+  duration_ms: 0.270792
+  type: 'test'
+  ...
+# Subtest: TS pure functions preserve the frozen JS values, normalization and errors
+ok 30 - TS pure functions preserve the frozen JS values, normalization and errors
+  ---
+  duration_ms: 7.035583
+  type: 'test'
+  ...
+# Subtest: TS budgets, uniforms and portable JSON remain exact across fixed boundary combinations
+ok 31 - TS budgets, uniforms and portable JSON remain exact across fixed boundary combinations
+  ---
+  duration_ms: 18.168417
+  type: 'test'
+  ...
+# Subtest: shared optical ABI retains integer bits, aligned tint and coordinates
+ok 32 - shared optical ABI retains integer bits, aligned tint and coordinates
+  ---
+  duration_ms: 0.61475
+  type: 'test'
+  ...
+# Subtest: image ABI packs fractional steps and mode without stale padding
+ok 33 - image ABI packs fractional steps and mode without stale padding
+  ---
+  duration_ms: 0.877125
+  type: 'test'
+  ...
+1..33
+# tests 33
+# suites 0
+# pass 33
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 522.675209

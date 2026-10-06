@@ -1,13 +1,33 @@
+import type {SceneTexture,RenderSurface,ControllerSettings,EffectiveSettings,FailureCallback,OpticalUniforms} from '../contracts.js';
+import type {UniformData} from '../shaders/generated/packers.js';
 import { GLImagePass } from "./blur-webgl.js";
 import { glVertex, glFragment, opticalBindings } from "../shaders.js";
 import { uniformData, bindUniformBlock } from "./uniforms.js";
 import { packOpticsU } from "../shaders/generated/packers.js";
 import { surfaceUniforms, material, controlsFor } from "../policy.js";
 export class WebGLRenderer {
-  static async create(canvas, onFailure) {
+ declare gl:WebGL2RenderingContext;
+ declare maxTextureDimension:number;
+ declare canvas:HTMLCanvasElement;
+ declare textures:Map<string,{texture:WebGLTexture|null;signature?:string}>;
+ declare buffers:Map<string,WebGLBuffer>;
+ declare uniformData:Map<string,UniformData>;
+ declare disposed:boolean;
+ declare lost:(event:Event)=>void;
+ declare program:WebGLProgram;
+ declare samplers:Record<string,WebGLUniformLocation|null>;
+ declare imagePass:GLImagePass;
+ declare buffer:WebGLBuffer|null;
+ declare positionLocation:number;
+ declare source:SceneTexture|undefined;
+ declare sourceId:number|undefined;
+ declare layers:[WebGLTexture|null,WebGLTexture|null]|null|undefined;
+ declare layerWidth:number|undefined;
+ declare layerHeight:number|undefined;
+  static async create(canvas:HTMLCanvasElement, onFailure:FailureCallback) {
     return new WebGLRenderer(canvas, onFailure);
   }
-  constructor(canvas, onFailure) {
+  constructor(canvas:HTMLCanvasElement, onFailure:FailureCallback) {
     const gl = canvas.getContext("webgl2", {
       alpha: true,
       premultipliedAlpha: true,
@@ -27,24 +47,26 @@ export class WebGLRenderer {
       if (!this.disposed) onFailure("WebGL context lost");
     };
     canvas.addEventListener("webglcontextlost", this.lost);
-    const shaders = [];
+    const shaders:WebGLShader[] = [];
     try {
-      for (const [type, source] of [
+      for (const [type, source] of ([
         [gl.VERTEX_SHADER, glVertex],
         [gl.FRAGMENT_SHADER, glFragment],
-      ]) {
+      ] as [number,string][])) {
         const s = gl.createShader(type);
+        if(!s)throw new Error("WebGL shader allocation failed");
         shaders.push(s);
         gl.shaderSource(s, source);
         gl.compileShader(s);
         if (!gl.getShaderParameter(s, gl.COMPILE_STATUS))
-          throw new Error(gl.getShaderInfoLog(s));
+          throw new Error(gl.getShaderInfoLog(s) as string);
       }
-      this.program = gl.createProgram();
+      this.program = gl.createProgram() as WebGLProgram;
+      if(!this.program)throw new Error("WebGL program allocation failed");
       for (const s of shaders) gl.attachShader(this.program, s);
       gl.linkProgram(this.program);
       if (!gl.getProgramParameter(this.program, gl.LINK_STATUS))
-        throw new Error(gl.getProgramInfoLog(this.program));
+        throw new Error(gl.getProgramInfoLog(this.program) as string);
       bindUniformBlock(gl, this.program, opticalBindings.uniforms.u, 0);
       this.samplers = Object.fromEntries(Object.entries(opticalBindings.textures)
         .map(([name, binding]) => [name, gl.getUniformLocation(this.program, binding.name)]));
@@ -74,7 +96,7 @@ export class WebGLRenderer {
       for (const s of shaders) gl.deleteShader(s);
     }
   }
-  upload(key, source, signature) {
+  upload(key:string, source:HTMLCanvasElement, signature:string) {
     const g = this.gl;
     let item = this.textures.get(key);
     if (!item) {
@@ -93,7 +115,7 @@ export class WebGLRenderer {
     }
     return item.texture;
   }
-  render(scene, surfaces, settings, dpr) {
+  render(scene:SceneTexture, surfaces:RenderSurface[], settings:ControllerSettings&EffectiveSettings, dpr:number) {
     const g = this.gl,
       w = scene.canvas.width,
       h = scene.canvas.height;
@@ -150,9 +172,9 @@ export class WebGLRenderer {
     g.clearColor(0, 0, 0, 0);
     g.clear(g.COLOR_BUFFER_BIT);
     let input = bg,
-      output;
+      output:WebGLTexture|null|undefined;
     if (layered) {
-      [input, output] = this.layers;
+      [input, output] = this.layers as [WebGLTexture|null,WebGLTexture|null];
       this.imagePass.draw(bg, input, 0, 0, w, h);
     }
     for (const s of visible) {
@@ -201,16 +223,17 @@ export class WebGLRenderer {
       };
       let buffer = this.buffers.get(s.id), data = this.uniformData.get(s.id);
       if (!buffer) {
-        buffer = g.createBuffer();
+        buffer = g.createBuffer() as WebGLBuffer;
+        if(!buffer)throw new Error("WebGL uniform allocation failed");
         data = uniformData(opticalBindings.uniforms.u);
         this.buffers.set(s.id, buffer);
         this.uniformData.set(s.id, data);
       }
       g.bindBuffer(g.UNIFORM_BUFFER, buffer);
-      packOpticsU(data, uniforms);
+      packOpticsU(data as UniformData, uniforms);
       // Replace storage so queued draws can retain the previous contents.
       // Reuse the buffer object; the driver owns backing-storage retirement.
-      g.bufferData(g.UNIFORM_BUFFER, data.bytes, g.STREAM_DRAW);
+      g.bufferData(g.UNIFORM_BUFFER, (data as UniformData).bytes, g.STREAM_DRAW);
       g.bindBufferBase(g.UNIFORM_BUFFER, 0, buffer);
       g.uniform1i(this.samplers.u_bg, 0);
       g.uniform1i(this.samplers.u_blurredBg, 1);
@@ -222,7 +245,7 @@ export class WebGLRenderer {
         g.scissor(x, y, sw, sh);
         g.drawArrays(g.TRIANGLE_STRIP, 0, 4);
       }
-      if (layered) [input, output] = [output, input];
+      if (layered) [input, output] = [output as WebGLTexture|null, input];
     }
     if (layered) this.imagePass.draw(input, null, 0, 0, w, h);
     g.disable(g.SCISSOR_TEST);

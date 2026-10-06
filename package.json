@@ -29,23 +29,27 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 4174 --strictPort",
     "predev": "node scripts/shaders.mjs --check && node scripts/fingerprint.mjs && node scripts/prepare-lab.mjs",
-    "prebuild": "node scripts/shaders.mjs --check && node scripts/fingerprint.mjs && node scripts/prepare-lab.mjs",
-    "shaders:generate": "node scripts/shaders.mjs",
+    "prebuild": "node scripts/shaders.mjs --check && npm run types:check && node scripts/fingerprint.mjs && node scripts/prepare-lab.mjs",
+    "shaders:generate": "node scripts/shaders.mjs && node scripts/shader-types.mjs",
     "shaders:check": "node scripts/shaders.mjs --check",
     "build": "vite build && vite build --config vite.lib.config.js",
     "test": "node scripts/prepare-ts-baseline.mjs && node --import ./scripts/register-source.mjs --test tests/*.test.js",
-    "typecheck": "tsc --noEmit && tsc -p tsconfig.runtime.json --noEmit",
+    "typecheck": "npm run types:check && tsc --noEmit && tsc -p tsconfig.runtime.json --noEmit",
     "test:package": "node scripts/package-smoke.mjs",
     "bench:report": "node scripts/benchmark-report.mjs",
-    "preview": "vite preview --host 127.0.0.1 --port 4175 --strictPort"
+    "preview": "vite preview --host 127.0.0.1 --port 4175 --strictPort",
+    "types:generate": "node scripts/shader-types.mjs && node scripts/declarations.mjs",
+    "types:check": "node scripts/shader-types.mjs --check && node scripts/declarations.mjs --check"
   },
   "devDependencies": {
     "@types/react": "19.2.0",
     "@types/react-dom": "19.2.0",
+    "@webgpu/types": "0.1.74",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "rollup-plugin-dts": "6.5.1",
     "typescript": "5.9.3",
-    "vite": "6.4.2"
+    "vite": "6.4.4"
   },
   "peerDependencies": {
     "react": "^19.0.0"

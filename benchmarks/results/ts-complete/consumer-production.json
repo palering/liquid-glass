@@ -1,0 +1,221 @@
+{
+  "url": "http://127.0.0.1:4180/",
+  "rows": [
+    {
+      "case": "connect",
+      "summary": "8 nodes · 9 connections",
+      "passed": true
+    },
+    {
+      "case": "edit-and-drag-final",
+      "before": {
+        "bottom": 565.5791015625,
+        "height": 149.25009155273438,
+        "left": 474.7793273925781,
+        "right": 579.2604370117188,
+        "top": 416.3290100097656,
+        "width": 104.48110961914062,
+        "x": 474.7793273925781,
+        "y": 416.3290100097656
+      },
+      "after": {
+        "bottom": 582.5790405273438,
+        "height": 149.25003051757812,
+        "left": 509.7793273925781,
+        "right": 614.2604370117188,
+        "top": 433.3290100097656,
+        "width": 104.48110961914062,
+        "x": 509.7793273925781,
+        "y": 433.3290100097656
+      },
+      "passed": true
+    },
+    {
+      "case": "add-final",
+      "summary": "9 nodes · 9 connections",
+      "passed": true
+    },
+    {
+      "case": "insert-final",
+      "summary": "10 nodes · 10 connections",
+      "passed": true
+    },
+    {
+      "case": "insert-splits-edge-final",
+      "nodes": 10,
+      "edges": 10,
+      "passed": true
+    },
+    {
+      "case": "delete-final",
+      "summary": "9 nodes · 10 connections",
+      "passed": true
+    },
+    {
+      "case": "webgl-light-final",
+      "images": true,
+      "overflow": false,
+      "qa": false,
+      "stage": {
+        "backend": "webgl",
+        "geometryMode": "provided",
+        "surfaceCount": "3",
+        "theme": "light"
+      },
+      "passed": true
+    },
+    {
+      "case": "mobile-light-final",
+      "images": true,
+      "overflow": false,
+      "theme": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "passed": true
+    },
+    {
+      "case": "mobile-dark-final",
+      "images": true,
+      "overflow": false,
+      "theme": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "passed": true
+    },
+    {
+      "case": "reset-final",
+      "summary": "8 nodes · 8 connections",
+      "passed": true
+    }
+  ],
+  "initialAttempts": [
+    {
+      "case": "edit-and-drag",
+      "before": {
+        "bottom": 565.5791015625,
+        "height": 149.25009155273438,
+        "left": 474.7793273925781,
+        "right": 579.2604370117188,
+        "top": 416.3290100097656,
+        "width": 104.48110961914062,
+        "x": 474.7793273925781,
+        "y": 416.3290100097656
+      },
+      "after": {
+        "bottom": 565.5791015625,
+        "height": 149.25009155273438,
+        "left": 474.7793273925781,
+        "right": 579.2604370117188,
+        "top": 416.3290100097656,
+        "width": 104.48110961914062,
+        "x": 474.7793273925781,
+        "y": 416.3290100097656
+      },
+      "passed": false
+    }
+  ],
+  "productionBundle": [
+    "/assets/index-BIexmT7E.js"
+  ],
+  "finalStage": {
+    "backend": "webgl",
+    "geometryMode": "provided",
+    "surfaceCount": "3",
+    "theme": "dark"
+  },
+  "logs": [],
+  "source": "02eadf4c977c5de7cd33553c335b3653b744b156bed1d12cdd7323e376f0aed3",
+  "passed": true,
+  "previousBundleChecks": [
+    {
+      "case": "port-connection",
+      "before": "8 nodes · 8 connections",
+      "after": "8 nodes · 9 connections",
+      "passed": true
+    },
+    {
+      "case": "drag-after-dialog-and-fit-settled",
+      "before": {
+        "bottom": 573.5599365234375,
+        "height": 125.90670776367188,
+        "left": 500.15130615234375,
+        "right": 588.2911376953125,
+        "top": 447.6532287597656,
+        "width": 88.13983154296875,
+        "x": 500.15130615234375,
+        "y": 447.6532287597656
+      },
+      "after": {
+        "bottom": 591.5599365234375,
+        "height": 125.90670776367188,
+        "left": 535.1513061523438,
+        "right": 623.2911376953125,
+        "top": 465.6532287597656,
+        "width": 88.13983154296875,
+        "x": 535.1513061523438,
+        "y": 465.6532287597656
+      },
+      "passed": true
+    },
+    {
+      "case": "add-review",
+      "after": "9 nodes · 9 connections",
+      "passed": true
+    },
+    {
+      "case": "insert-review",
+      "nodes": 10,
+      "edges": 10,
+      "passed": true
+    },
+    {
+      "case": "delete-review",
+      "after": "9 nodes · 10 connections",
+      "passed": true
+    },
+    {
+      "case": "production-webgl-light",
+      "images": true,
+      "overflow": false,
+      "qa": false,
+      "stage": {
+        "backend": "webgl",
+        "geometryMode": "provided",
+        "surfaceCount": "3",
+        "theme": "light"
+      },
+      "passed": true
+    },
+    {
+      "case": "mobile-light",
+      "images": true,
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ],
+      "passed": true
+    },
+    {
+      "case": "mobile-dark",
+      "images": true,
+      "overflow": false,
+      "theme": "dark",
+      "passed": true
+    },
+    {
+      "case": "reset-demo",
+      "after": "8 nodes · 8 connections",
+      "passed": true
+    },
+    {
+      "case": "initial-edit",
+      "title": "TS consumer review",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-07",
+  "scope": "Complete authored core TypeScript migration; Chrome/Chromium only",
+  "sourceSha256": "02eadf4c977c5de7cd33553c335b3653b744b156bed1d12cdd7323e376f0aed3",
+  "baselineCommit": "f6f329e",
+  "stageOneCommit": "d10f003",
+  "nodeVersions": [
+    "22.23.3",
+    "26.7.0"
+  ],
+  "nodeTestsPerVersion": 33,
+  "strictTypes": true,
+  "implementationGeneratedDeclarations": true,
+  "packerTypesFromReflection": true,
+  "authoredTsModules": 20,
+  "remainingAuthoredCoreJs": [],
+  "generatedPackerRuntimeJsPreserved": true,
+  "shaderPairs": 4,
+  "authorAndGeneratedGpuBytesUnchanged": true,
+  "pureParityBudgets": 2400,
+  "pureParityUniforms": 240,
+  "gpuCases": 140,
+  "exactFrozenJsPixelHashes": 140,
+  "pixelHashMismatches": [],
+  "profileContracts": 30,
+  "profileStabilityFrames": 1350,
+  "asyncLifecycleCases": 8,
+  "createdAndDestroyedGpuDevices": [
+    2,
+    2
+  ],
+  "chromeSmokeCases": 10,
+  "consumerMatrixCases": 20,
+  "consumerMatrixMaxGeometryErrorPx": 0.015625,
+  "consumerProductionBundle": "index-BIexmT7E.js",
+  "consumerProductionCases": 10,
+  "consumerProductionJsBytesApprox": 716790,
+  "consumerProductionGzipBytesApprox": 220120,
+  "consumerSitesTests": 4,
+  "reactControllersCreatedAndDisposed": [
+    11,
+    11
+  ],
+  "package": {
+    "filename": "workspace-liquid-glass-0.4.0.tgz",
+    "bytes": 40957,
+    "files": 13,
+    "integrity": "sha512-x3pkBRYny+IN2Kjvv4pCgHKoCte3s2PSMxFvDamUSlKglkaw+tQipA+UgwRFAGi0q49Quk5P62ZhJhPh0m+h5Q=="
+  },
+  "packageSha256": "327ac7ca6d9bfbf5db21ad54fe996479cd003317d7cc7bb9981f60aac9ef7858",
+  "npmAuditKnownAdvisories": 0,
+  "localMarkdownLinksChecked": 326,
+  "brokenLocalMarkdownLinks": 0,
+  "agentDocsErrors": 0,
+  "agentDocsIgnoredAndCopiedContentWarnings": 25,
+  "remoteCiRerun": false,
+  "pushed": false,
+  "deployed": false,
+  "npmPublished": false,
+  "limits": [
+    "Other browser engines/WebView not tested",
+    "Native DOM capture unavailable; only fallback verified",
+    "Hydration not tested",
+    "Counters are owned resources, not driver VRAM",
+    "No production long-term soak or multi-hardware performance claims"
+  ]
+}

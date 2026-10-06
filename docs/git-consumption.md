@@ -41,7 +41,9 @@ npm run test:git -- 'git+https://github.com/palering/liquid-glass.git#COMMIT_SHA
 
 The Git smoke test starts a new consumer, lets npm prepare an unbuilt Git revision, compiles positive/negative public type examples, imports core without a DOM, renders React on the server, checks installed file boundaries and repeats installation through `npm ci`. Results stay in ignored `.local/git-consumers/`. GPU/browser results are separate; this check is not a production stability claim.
 
-2026-10-07 本地安装验证通过：提交 `2df5583de297524ebc5684a1cedc000725abb066` 经 npm 的 `git+file` 路径从无构建产物的提交自动准备；Node26.7/npm12.1 下声明正反例、无DOM核心导入、预设性能策略、React SSR 和 lockfile `npm ci` 重装通过。安装后仅13个文件，包含双语README/ESM/CSS/声明/完整许可，不含Lab、归档、源码编译器或Rust。33个Node测试、typecheck、完整Lab/库构建与tarball消费检查也通过。新增 `prepare` 会污染部分 npm 版本的 `pack --json` stdout，因此 tarball检查改为显式构建后使用 `--ignore-scripts` 打包；真实Git准备另行端到端检查。
+2026-10-07 本地安装验证通过：提交 `2df5583de297524ebc5684a1cedc000725abb066` 经 npm 的 `git+file` 路径从无构建产物的提交自动准备；Node26.7/npm12.1 下声明正反例、无DOM核心导入、预设性能策略、React SSR 和 lockfile `npm ci` 重装通过。安装后仅13个文件，包含双语README/ESM/CSS/声明/完整许可，不含Lab、归档、源码编译器或Rust。33个Node测试、typecheck、完整Lab/库构建与tarball消费检查也通过。
+
+首次远端Pages检查 `37541931808` 在 Node22 的 tarball JSON 解析失败；本地隔离官方Node22.23.3/npm10.9.9复现：该版本 `npm pack --ignore-scripts` 仍运行 `prepare`，子构建 stdout 污染 JSON。最终准备入口使用 `scripts/prepare-package.mjs` 将构建日志定向 stderr，保持真实 `npm pack --json` 的stdout只含JSON；tarball检查恢复正常生命周期，Git准备与CI需按最终提交复核。
 
 发布前重新扫描389个候选文件、509个可达历史blob，未发现所检查的凭据、私钥、密码URL、私人路径；禁入文件忽略和未上传提交的noreply身份通过。扫描是模式检查，不是安全审计或绝无敏感信息保证。远端安装、Pages与画布消费结果在实际验证后补充。
 

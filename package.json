@@ -37,7 +37,7 @@
     "shaders:check": "node scripts/shaders.mjs --check",
     "build": "vite build && vite build --config vite.lib.config.js",
     "build:lib": "npm run shaders:check && npm run types:check && vite build --config vite.lib.config.js",
-    "prepare": "npm run build:lib",
+    "prepare": "node scripts/prepare-package.mjs",
     "test": "node scripts/prepare-ts-baseline.mjs && node --import ./scripts/register-source.mjs --test tests/*.test.js",
     "typecheck": "npm run types:check && tsc --noEmit && tsc -p tsconfig.runtime.json --noEmit",
     "test:package": "node scripts/package-smoke.mjs",

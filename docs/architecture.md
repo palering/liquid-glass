@@ -2,13 +2,13 @@
 
 Audience: public
 
-2026-10-06 v0.4：实际目录职责及导出见 [package-contract.md](package-contract.md)，实现与证据见 [status.md](status.md)。下文保留早期目标接口和演进方案，`system` theme、snapshot、任意 DOM SVG backdrop、采集要求驱动后端选择仍未实现；现有 API 是根 README 中的 flat settings。
+2026-10-06 v0.4：实际目录职责及导出见 [package-contract.md](package-contract.md)，实现与证据见 [status.md](status.md)。下文保留早期目标接口和演进方案，`system` theme、snapshot、任意 DOM SVG backdrop、采集要求驱动后端选择仍未实现；现有 API 是 [api.md](api.md) 中的 flat settings。
 
 当前数据流：消费方 DOM / React → 共享 GlassController → 独立 capture source + renderer policy → scene texture / surface bounds → WebGPU、WebGL2 或 DOMRenderer → 装饰层；前景保持 DOM。config / preset 位于核心；localStorage、下载、benchmark UI 属于 lab。React 用 effect 创建/释放、注册/注销和订阅；Svelte 没有实现。性能 runner 独立创建固定 stage，不复用用户效果页状态。
 
 当前 capture 请求失败时回到 scene，并公开原因；它不会因业务 DOM 采集缺失自动跳到 CSS。下文的需求约束式策略是后续提案。SVG 当前取 scene 图裁切位移，不是浏览器任意背景的 SVG backdrop 路径。
 
-历史 0.1 实现差异：WebGPU/WebGL 光学着色器已运行；模糊使用缓存 Canvas 2D 纹理。SVG 使用 scene 图裁切位移，不是任意 DOM 的 SVG backdrop。原生桥先做 2D 采集→GPU 纹理，当前浏览器未开放，直接 GPU DOM 上传尚未实现。v0.2 新增独立光学 controls、enabled、testchart 及光学样片/业务视图对照，基础库默认保持克制。实际 flat settings/API 见根 README；下文 system theme、通用 source 等仍是目标方案。
+历史 0.1 实现差异：WebGPU/WebGL 光学着色器已运行；模糊使用缓存 Canvas 2D 纹理。SVG 使用 scene 图裁切位移，不是任意 DOM 的 SVG backdrop。原生桥先做 2D 采集→GPU 纹理，当前浏览器未开放，直接 GPU DOM 上传尚未实现。v0.2 新增独立光学 controls、enabled、testchart 及光学样片/业务视图对照，基础库默认保持克制。实际 flat settings/API 见 [api.md](api.md)；下文 system theme、通用 source 等仍是目标方案。
 
 v0.3 当前差异：GPU 已使用降采样低通 + 横纵高斯 pass；半径缓存按可见 surface 回收。可选 layered 使用双纹理 ping-pong，按 zIndex 顺序让上层读取下层材质；前景 DOM、CSS 投影与 rim 不进入采集。GPU 支持相互材质折射，SVG/CSS 不等价。增加核心 config / preset schema、20 参数与实验室命名持久化。原生桥仍未验证，其他目标方案保持提案状态。
 

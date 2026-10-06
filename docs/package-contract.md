@@ -15,10 +15,10 @@ Audience: public
 | src/react.js | 共享 controller 的 React 19 薄适配 | 独立 React 入口 |
 | types/ | 实际 API 的声明，消费者类型检查 | 是 |
 | src/glass.css | DOM / 装饰层与阴影样式 | 是，显式导入 |
-| lab/、public/ | 效果实验室、性能 UI、React fixture、生成素材 | 否 |
+| lab/、public/ | 双语效果实验室、性能 UI、React fixture、生成素材 | 否 |
 | benchmarks/ | 协议、统计、原始样本、报告 | 否，Git 管理 |
 | vendor/studio/ | 固定上游源码与 notices | 只包含 LICENSE / UPSTREAM |
-| tests/、scripts/、docs/ | 契约、打包/数据工具、交接说明 | 否，根 README 除外 |
+| tests/、scripts/、docs/ | 契约、打包/数据工具、交接说明 | 否，根 README 文件除外 |
 
 `dist/lib/` 与 `dist/lab/` 都可重新构建，不进入 Git。node_modules、.local、output、生成公开数据副本、压缩包与环境文件不进入 Git；npm `files` 再单独限定发布边界。shader 是 bundle 中的字符串，不依赖消费项目访问 vendor 或 Vite raw loader。库 tarball 含完整 vendor MIT notices。
 
@@ -37,5 +37,7 @@ React 目前同包子入口足够；稳定后才考虑 `core` / `react` 分包�
 验收后将此库作为后续液态玻璃效果的默认复用实现。首个消费应用先接少量表面，再验证 React Flow 端口、边、平移缩放和面板遮挡背景；当前没有修改原应用。
 
 ## 展示站发布边界
+
+README 截图位于 docs/images，属于源码文档资产，不进入库 tarball 或 Pages。
 
 GitHub Pages 工作流只上传 `dist/lab`。它包含实验室自有生成图片、性能归档 JSON/CSV/报告和三个 HTML 入口；不包含 `dist/lib`、node_modules、缓存、环境文件、打包 tarball 或临时截图。`VITE_BASE_PATH` 控制站点 URL 前缀，不改变核心库 API。公开仓库与展示站授权不等于选择整体开源许可，private / UNLICENSED 与 vendor MIT/NOTICE 保持原状。详见 [deployment.md](deployment.md)。

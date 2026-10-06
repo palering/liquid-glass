@@ -25,6 +25,10 @@ VITE_BASE_PATH=/liquid-glass/ npm run preview
 
 后续发布：运行上述检查，提交 main 并推送 origin；等待 build/deploy success，再检查线上页面和 benchmark-source.json 的 revision。不要将 pending workflow 或 HTTP 200 当作真实交互/渲染验收。
 
+## 双语展示入口
+
+三个页面均支持 `?lang=en` 和 `?lang=zh-CN`。页头 EN / 中文切换保留当前交互状态，导航继承语言；查询参数优先于浏览器偏好，缺省英文。语言逻辑只属于 lab，数据下载、资源 URL、原生 DOM 交互和核心 fallback 顺序没有改变。源 README 为英文，中文入口为 README.zh-CN.md；截图位于 docs/images，仅进入源码仓库，不进入 Pages 或库 tarball。
+
 ## 本次验证
 
 - 本地 /liquid-glass/ 构建、10 个契约测试、TypeScript 与打包/离线安装/核心导入/React SSR 全部通过。

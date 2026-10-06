@@ -4,6 +4,8 @@ Audience: public
 
 2026-10-06：v0.4 独立 Git / GitHub 工程基线，核心库、React 薄适配、实验室与性能 harness 分开管理。未接入无限画布；尚未完成生产稳定性验收。公开仓库和 Pages 展示站已发布并通过本次线上交互检查；发布记录见 [deployment.md](deployment.md)。
 
+公开入口为英文 [README](../README.md) 和 [中文版本](../README.zh-CN.md)，共用两张实际 Clear / WebGPU 效果图。详细接口与运行步骤见 [api.md](api.md) / [development.md](development.md)；实验室、性能页与 React 示例支持 EN / 中文原地切换和携带语言的导航。后续提交使用 Conventional Commits。
+
 ## 已实现
 
 Studio 固定 MIT GLSL/WGSL 光学 shader；WebGPU → WebGL2 → SVG → CSS → solid。共享 renderer/context；GPU 降采样低通 + 25 tap 横/纵高斯模糊；纹理按半径缓存并回收，GPU 路径不调用 Canvas 2D 模糊。shader 保持透明输出与逐 surface bounds，未执行上游 demo/utils。
@@ -13,6 +15,8 @@ Studio 固定 MIT GLSL/WGSL 光学 shader；WebGPU → WebGL2 → SVG → CSS �
 预设定义与 schema v1 是核心导出；实验室命名保存/更新/恢复，JSON 校验、生成、复制和可选下载。有限数值/选项/版本/颜色校验与未知字段剔除；图片不进入 JSON。深浅主题、测试图/网格/棋盘/渐变/图片背景、故障恢复和减少动态效果仍保留。
 
 ## 已验证
+
+双语迭代本地构建、14 个契约测试（含语言解析/动态状态/20 参数标签）、类型与打包消费检查通过。实际浏览器确认切换语言保留 21 px 厚度、image 背景、中文自定义预设名和 JSON；坏 JSON 被拒绝。性能归档 147 / 147 与 WebGPU 11 行筛选保留，React 输入与计数/solid 后端在两次语言切换后保留，十次挂载/卸载后 11 个 controller 释放。中英 390 px 页面均无水平溢出，未新增 GPU/跨浏览器性能结论。
 
 源码与实际浏览器证据见 [validation.md](validation.md)。本次 GitHub Pages 已实际验证 GPU 渲染、实时参数、预设 JSON、图片、导航、完整故障降级与 React 生产构建交互，见 [deployment.md](deployment.md)。已确认 GPU 透明/毛玻璃与叠层呈现、WebGL 的叠层像素差异和模糊低通效果、预设保存/刷新恢复/JSON 生成与导入、坏 JSON 拒绝、真实设备/上下文故障降级。v0.4 构建、10 个契约测试、TypeScript 消费、实际打包/本地安装/无 DOM 导入/React SSR 通过。React 19 开发模式 StrictMode 输入、点击、后端更新与十次挂载/卸载已测；11 个可观察 controller 最终释放，fixture 无遗留子节点，控制台无 error/warn。
 

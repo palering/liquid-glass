@@ -2,18 +2,18 @@
 
 Audience: public
 
-- [Status](status.md): implemented versus proposed, verification and continuation.
-- [Architecture](architecture.md): renderer/capture separation, material and theme contracts, fallback and integration gates.
-- [Upstream review](upstream-review.md): inspected revisions, findings and selection rationale.
+Start with the [English README](../README.md) or [简体中文 README](../README.zh-CN.md) for the project, live demo and quick start.
 
-- [Browser validation](validation.md): actual GPU/fallback, UI and synthetic movement evidence with limits.
-
-The root README is the project entry and contains setup, actual API and implementation boundaries. The library and lab now run; the target architecture still includes unimplemented future work.
-
-- [Native capture](native-capture.md): measured API availability, browser flags and unverified compatibility.
-- [Independent library roadmap](library-roadmap.md): Git/publication gates, materials and framework bindings.
-- [Package contract](package-contract.md): actual core/framework/lab boundaries, exports, types, licensing and installation.
-- [Performance](performance.md): reproducible protocol, tracked raw samples, CSV and measured limitations.
-- [Acceptance](acceptance.md): completed evidence and user review checklist before consumer integration.
-
-- [GitHub Pages 部署、复跑与线上验证](deployment.md)
+- [API reference](api.md): current controller, settings, presets, lifecycle and React contracts.
+- [Development](development.md): local setup, build/check commands, local package consumption and commits.
+- [Package contract](package-contract.md): exports, framework/lab boundaries, types and licensing.
+- [Deployment](deployment.md): GitHub Pages workflow, project paths and actual online verification.
+- [Status](status.md): implemented capabilities, verified results, limits and continuation.
+- [Browser validation](validation.md): observed rendering, fallback and DOM interaction evidence.
+- [Performance](performance.md): reproducible protocol, raw samples, CSV and measured limits.
+- [Acceptance](acceptance.md): evidence and remaining review before consumer integration.
+- [Architecture](architecture.md): current data flow and clearly labeled target designs.
+- [Native capture](native-capture.md): measured API availability and experimental compatibility.
+- [Library roadmap](library-roadmap.md): future materials, framework bindings and release decisions.
+- [Upstream review](upstream-review.md): inspected revisions, selection rationale and attribution.
+- [Screenshot provenance](images/README.md): actual Clear preset captures used in both READMEs.

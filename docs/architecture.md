@@ -2,6 +2,8 @@
 
 Audience: public
 
+2026-10-07 TS第一阶段：config/settings/preset/policy/performance/geometry已迁移为strict TypeScript；来源、renderer、controller与React适配仍为JS。构建后ESM入口与WGSL/生成ABI不变；内部契约与公开手写声明暂时分开，后续实现声明生成按[迁移入口](ts-migration-plan.md)执行。
+
 2026-10-06 v0.4：实际目录职责及导出见 [package-contract.md](package-contract.md)，实现与证据见 [status.md](status.md)。下文保留早期目标接口和演进方案，`system` theme、snapshot、任意 DOM SVG backdrop、采集要求驱动后端选择仍未实现；现有 API 是 [api.md](api.md) 中的 flat settings。
 
 当前数据流：消费方 DOM / React → 共享 GlassController → 独立 capture source + renderer policy → scene texture / surface bounds → WebGPU、WebGL2 或 DOMRenderer → 装饰层；前景保持 DOM。config / preset 位于核心；localStorage、下载、benchmark UI 属于 lab。React 用 effect 创建/释放、注册/注销和订阅；Svelte 没有实现。性能 runner 独立创建固定 stage，不复用用户效果页状态。

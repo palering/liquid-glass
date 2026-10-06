@@ -1,6 +1,7 @@
+import type {Controls,LookName,OpticalControls,OpticalField,OpticalKey} from './contracts.js';
 // Units mirror the Studio shader inputs; range/hardness stay shader controls,
 // not claimed physical millimetres or measured optical quantities.
-export const opticalFields = [
+export const opticalFields: OpticalField[] = [
   ["distance", "折射距离", 0, 0.15, 0.001, 0.05, "", "gpu-svg"],
   ["thickness", "边缘厚度", 1, 65, 1, 20, "px", "gpu-svg"],
   ["ior", "折射率", 1.01, 2.5, 0.01, 1.4, "", "gpu"],
@@ -28,7 +29,7 @@ export const looks = {
     blurEdge: true,
     tintColor: "auto",
   },
-};
+} as Record<LookName, OpticalControls>;
 looks.clear = {
   ...looks.studio,
   distance: 0.075,
@@ -62,7 +63,7 @@ looks.subtle = {
   fresnelRange: 12,
   radius: 22,
 };
-export const formatValue = (field, value) =>
+export const formatValue = (field: OpticalField, value: unknown) =>
   Number(value).toFixed(field[4] < 1 ? (field[4] < 0.01 ? 3 : 2) : 0) +
   field[6];
 // Inspired by Apple's clear/regular guidance, not measured Apple shader values.
@@ -96,9 +97,9 @@ looks.reading = {
   fresnelFactor: 0.06,
   shadowOpacity: 0.08,
 };
-export function clarityControls(amount) {
+export function clarityControls(amount: number): Controls {
   const t = Math.max(0, Math.min(1, amount));
-  const keys = [
+  const keys: OpticalKey[] = [
     "distance",
     "thickness",
     "dispersion",

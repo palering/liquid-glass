@@ -215,3 +215,4 @@ async function profileGallery(){
  e.passed=e.rows.length===8&&e.rows.every(r=>!r.errors.length);output.value=JSON.stringify(e,null,2);status.textContent=`Profile gallery complete: ${e.passed}`;
 }
 document.querySelector('#profiles').onclick=async()=>{document.querySelectorAll('button,select').forEach(b=>b.disabled=true);try{await profileGallery();}catch(error){status.textContent='Failed: '+error.message;output.value=JSON.stringify({failed:true,error:error.stack});}finally{document.querySelectorAll('button,select').forEach(b=>b.disabled=false);}};
+status.textContent='Ready';

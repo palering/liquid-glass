@@ -2,7 +2,7 @@
 
 Audience: public
 
-提交与迁移检查：[本地提交前检查](commit-safety-check.md) · [TS迁移入口](ts-migration-plan.md)。
+提交与迁移检查：[本地提交前检查](commit-safety-check.md) · [TS迁移入口](ts-migration-plan.md) · [第一阶段迁移](ts-migration-stage1.md)。
 
 Start with the [English README](../README.md) or [简体中文 README](../README.zh-CN.md) for the project, live demo and quick start.
 

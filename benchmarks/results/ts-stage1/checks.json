@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-07",
+  "baselineCommit": "f6f329e9e31473eac26b28ba803157316af93328",
+  "baselineSource": "0243e339c688c8bcc7f2b762bc330efe370b34eaa3cb088052684c85e55299cd",
+  "sourceSha256": "914562889b0999ef52547a7eb53d7df9926dec78e45ee636f6b0d35be95d5185",
+  "stage": 1,
+  "migratedModules": [
+    "config",
+    "settings",
+    "preset",
+    "policy",
+    "geometry",
+    "performance"
+  ],
+  "strict": true,
+  "publicDeclarationsGenerated": false,
+  "remainingRuntime": "capture/renderers/controller/react are still JS",
+  "nodeTests": 31,
+  "budgetParityCombinations": 2400,
+  "uniformParityCombinations": 240,
+  "typesPassed": true,
+  "shaderPairs": 4,
+  "shaderAndABIFilesUnchanged": true,
+  "buildsPassed": true,
+  "package": {
+    "files": 13,
+    "bytes": 40237,
+    "sha256": "78929b78d3a5ca687888bcbc9d1ee467400bc1e6dcc46d7f1c49bd65f0ebd106",
+    "importAndReactSSR": true
+  },
+  "gpu": {
+    "cases": 140,
+    "exactFrozenPixelHashes": 140,
+    "mismatches": 0
+  },
+  "performancePolicies": {
+    "cases": 30,
+    "passed": true
+  },
+  "nodeVersion": "v26.7.0",
+  "remoteNode22CIRerun": false,
+  "pushed": false,
+  "deployed": false,
+  "npmPublished": false
+}

@@ -23,7 +23,7 @@ npm run test:package
 
 契约测试、TypeScript 消费与实际打包/离线安装/无 DOM 导入/React SSR 分别覆盖不同边界；这些检查不证明跨浏览器视觉或生产稳定性。浏览器证据见 [validation.md](validation.md)，性能复跑见 [performance.md](performance.md)，Pages 子路径与发布见 [deployment.md](deployment.md)。
 
-当前性能阶段：29 个 Node 契约；五档 API、v2 输出/v1 读取和实际包导出。浏览器 `tests/browser/performance-profiles.html` 提供默认像素、策略契约和稳定性三个按钮，需要先按 [实施验收](performance-profile-implementation.md) 恢复冻结 BC2 fixture。TS 起点是新的性能阶段 JS 快照，旧光学快照保持独立。
+当前TS第一阶段：31个Node契约，六个纯函数模块以strict检查；公开声明仍单独消费检查。`npm test`先从固定Shader阶段快照恢复忽略目录中的JS参考，再通过仅测试使用的TypeScript加载器保留源码`.js`导入标识；npm消费仍只加载构建后的JS，不需要编译器。文件重命名后应重新加载开发页，必要时重启开发服务。浏览器 `tests/browser/performance-profiles.html` 提供策略契约和稳定性按钮；双GPU像素及精确JS对照见[第一阶段验收](ts-migration-stage1.md)。旧快照保持独立。
 
 ## Shader 开发
 

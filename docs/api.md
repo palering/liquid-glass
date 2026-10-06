@@ -44,7 +44,7 @@ glass.invalidate();
 
 constructor / setSettings 现在在改变 DOM、状态或图片请求前校验设置：非法选项、非布尔开关、非有限数字和非法颜色抛出 TypeError（setSettings 返回 rejected promise）。有效光学参数按 opticalFields 范围夹取，thickness 保留 0.5 px 下限；相对 blur/refraction/highlight 为 0–4，tint 增量为 -1–1。未知字段不进入设置，部分更新只合并提供的字段，不注入 Studio 绝对参数，因此 card/control/panel 的默认差异保留。直接修改公开 settings 对象不是受支持更新方式；通过 setSettings 应用。
 
-预设及参数定义在 `src/config.js`，核心导出 `looks` / `opticalFields` / `clarityControls`。它覆盖所有可调项，不代表三个参考项目已达到像素一致，也没有实现它们的全部能力：形状融合、显微扰动、多灯光和完整 DOM 采集仍未接入；相互折射当前只包含自有材质纹理。
+预设及参数定义在 `src/config.ts`，核心导出 `looks` / `opticalFields` / `clarityControls`。它覆盖所有可调项，不代表三个参考项目已达到像素一致，也没有实现它们的全部能力：形状融合、显微扰动、多灯光和完整 DOM 采集仍未接入；相互折射当前只包含自有材质纹理。
 
 `setImage(url)` 加载图片并切换 image 背景，失败切到 grid；`retry()` 重新从所选优先级初始化。`simulateLoss()` 是实验室故障入口。实验室显式命名预设存入 localStorage；不会自动保存所有临时操作。
 

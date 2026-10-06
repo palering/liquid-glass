@@ -42,7 +42,9 @@ Shader 研究阶段（档位接入前）已完成三方逐函数对照、数学�
 
 **性能档位阶段（2026-10-06）：五个手动档位已在JS实现，双语Lab、实际预算诊断、v2预设/v1读取及类型/包同步完成。** 29/29 Node、四对shader、类型/构建/实际包通过；默认双GPU84/84 RGBA完全一致、30项策略契约、五后端10项smoke、1350帧切档与最终零资源清理、真实消费20/20及图交互通过。取舍、成本和边界见 [实施验收](performance-profile-implementation.md)。新 [JS检查点](../benchmarks/results/performance-profiles/current-source.json) 是 TS 起点，旧光学快照保留。当前达到用户范围内开始TS的门槛，停止在入口，运行时仍JS；没有推送、部署或npm发布。自动硬件分档/其他核与照明模型仍未实现。
 
-**最新Shader优化阶段（2026-10-07）：** 5个优先优化候选各140案例通过，常量准备、CPU/展开权重和GPU递推未获稳定收益，保持实验；生产采用精确零Fresnel/glare跳过。交错三重复的全零光照GPU mean .871902→.592555 ms（约32%），p95 1.441792→1.032192；正常开启p95持平，不宣称全局加速。最终生产140/140通过（134精确，其余RGB最大1/255，alpha精确），29 Node、类型/四对shader/构建/实际包通过；性能30项、1350生命周期帧、Chrome10项及真实消费检查见[验收](shader-preparation.md)。新半圆/凸/Hermite轮廓各140项掩膜/资源检查与样片保持隔离，不是旧look保真或产品视觉验收。新[完整JS快照](../benchmarks/results/shader-preparation/current-source.json)取代旧性能快照作为TS起点；运行时仍JS，未推送/部署。当前优先实验已完成取舍、接口和ABI稳定、回归及恢复点明确，可开始TS；这不代表Shader已最优。
+**迁移前Shader优化阶段（2026-10-07）：** 5个优先优化候选各140案例通过，常量准备、CPU/展开权重和GPU递推未获稳定收益，保持实验；生产采用精确零Fresnel/glare跳过。交错三重复的全零光照GPU mean .871902→.592555 ms（约32%），p95 1.441792→1.032192；正常开启p95持平，不宣称全局加速。最终生产140/140通过（134精确，其余RGB最大1/255，alpha精确），29 Node、类型/四对shader/构建/实际包通过；性能30项、1350生命周期帧、Chrome10项及真实消费检查见[验收](shader-preparation.md)。新半圆/凸/Hermite轮廓各140项掩膜/资源检查与样片保持隔离，不是旧look保真或产品视觉验收。新[完整JS快照](../benchmarks/results/shader-preparation/current-source.json)取代旧性能快照作为TS起点；运行时仍JS，未推送/部署。当前优先实验已完成取舍、接口和ABI稳定、回归及恢复点明确，可开始TS；这不代表Shader已最优。
+
+**最新TS第一阶段（2026-10-07）：** 敏感信息及暂存区检查通过，本地JS基线提交`f6f329e`。六个配置/纯函数模块已迁移为strict TS；31个Node、类型、四对shader、构建与实际包通过，140个双GPU像素哈希与冻结JS精确一致，30项策略通过。renderer/controller/React与公开声明生成尚未迁移，完整状态和下一步见[第一阶段报告](ts-migration-stage1.md)。这是已开始迁移后的检查点，旧快照保留；未推送、部署或npm发布。
 
 ## 未验证 / 未实现
 

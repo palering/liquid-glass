@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-07。用户授权先完成光学试验与稳定性检查，直到可以开始 TS 重构；本文件是下一阶段的实施入口，当前门槛已通过，尚未开始把运行时代码改写为 TS。当前先验收 Chrome/Chromium，Safari/Firefox 与平台差异延后到 WebView 支持阶段。此处的迁移就绪不等于生产稳定或跨平台完成。
+2026-10-07。用户已授权检查敏感信息、建立本地Git基线并开始TS迁移。JS基线提交为`f6f329e`；第一组纯函数已迁移，验收与后续入口见[迁移状态](ts-migration-stage1.md)。当前先验收 Chrome/Chromium，Safari/Firefox 与平台差异延后到 WebView 支持阶段。迁移进展不等于生产稳定或跨平台完成。
 
 ## 本阶段边界
 

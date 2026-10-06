@@ -1,0 +1,20 @@
+{
+  "sourceSha256": "914562889b0999ef52547a7eb53d7df9926dec78e45ee636f6b0d35be95d5185",
+  "files": {
+    "README.md": {
+      "sha256": "c6be7851f5b81efe68345ddc5f5e09954b9456cb156db3b8a683f11d0d4df43f"
+    },
+    "checks.json": {
+      "sha256": "3dcb5bdab7b9babc80040259cf3cfdc21f64811db2f149ac4d62d3f697394782"
+    },
+    "contracts.json": {
+      "sha256": "3c594111a8eed38e38516e757299b8a597d5f246922588c0787dcd2dffe10f46"
+    },
+    "quality.json": {
+      "sha256": "7cd4461a1855376ea52d614170ebb5b26f93fafe1fb5220dafe127ca92339e34"
+    },
+    "quality.png": {
+      "sha256": "ccfe8bc7780b5458f5b2354ae99bd71b3258f88f331bf46cba03441398709e62"
+    }
+  }
+}

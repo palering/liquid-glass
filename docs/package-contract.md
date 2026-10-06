@@ -11,7 +11,8 @@ Audience: public
 | src/controller.js | 共享生命周期、surface 注册、后端/采集状态、dirty 重绘 | 构建为 ESM |
 | src/capture/ | scene；实验性原生 DOM 2D 桥 | 构建为 ESM |
 | src/renderers/、src/shaders.js、src/shaders/ | GPU / GL / SVG / CSS / solid；WGSL 单源码及生成 GLSL，GPU 模糊与合成 | 构建为 ESM |
-| src/config.js、preset.js、policy.js、settings.js、performance.js | 参数、预设校验、后端顺序和性能预算 | 构建为 ESM |
+| src/config.ts、preset.ts、policy.ts、settings.ts、performance.ts、geometry.ts | 严格类型的参数、预设校验、后端顺序、性能预算和几何验证 | 构建为 ESM JS |
+| src/contracts.ts | 第一阶段内部类型；公开声明保持原接口 | 类型擦除，不单独分发 |
 | src/react.js | 共享 controller 的 React 19 薄适配 | 独立 React 入口 |
 | types/ | 实际 API 的声明，消费者类型检查 | 是 |
 | src/glass.css | DOM / 装饰层与阴影样式 | 是，显式导入 |

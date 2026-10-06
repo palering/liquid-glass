@@ -1,11 +1,12 @@
-export const BACKENDS = ["webgpu", "webgl", "svg", "css", "solid"];
-export function controlsFor(settings,kind){return settings.controlsByKind?.[kind]??settings.controls;}
-export function candidates(requested, blocked = new Set()) {
+import type {ActiveBackend,Backend,CaptureRequest,Controls,EffectiveSettings,Material,Settings,SurfaceBounds,SurfaceKind} from './contracts.js';
+export const BACKENDS: ActiveBackend[] = ["webgpu", "webgl", "svg", "css", "solid"];
+export function controlsFor(settings: EffectiveSettings,kind: string){return settings.controlsByKind?.[kind]??settings.controls;}
+export function candidates(requested: Backend, blocked = new Set<string>()) {
   const start = requested === "auto" ? 0 : BACKENDS.indexOf(requested);
   if (start < 0) throw new Error(`Unknown backend: ${requested}`);
   return BACKENDS.slice(start).filter((x) => !blocked.has(x));
 }
-export function resolveCapture(requested, nativeSupported) {
+export function resolveCapture(requested: CaptureRequest, nativeSupported: boolean): {active: "scene" | "native-dom";reason: string | null} {
   if (requested === "native-dom" && !nativeSupported)
     return {
       active: "scene",
@@ -22,7 +23,7 @@ export function resolveCapture(requested, nativeSupported) {
     reason: null,
   };
 }
-export const presets = {
+export const presets: Record<SurfaceKind,Material> = {
   card: {
     blur: 9,
     thickness: 18,
@@ -48,7 +49,7 @@ export const presets = {
     tint: 0.54,
   },
 };
-export function material(kind, controls = {}) {
+export function material(kind: SurfaceKind, controls: Controls = {}): Material {
   const p = presets[kind] ?? presets.card;
   return {
     ...p,
@@ -66,12 +67,12 @@ export function material(kind, controls = {}) {
     ),
   };
 }
-export function tintRGB(color, light = false) {
+export function tintRGB(color: Controls["tintColor"], light = false) {
   if (/^#[0-9a-f]{6}$/i.test(color ?? ""))
-    return [1, 3, 5].map((i) => parseInt(color.slice(i, i + 2), 16) / 255);
+    return [1, 3, 5].map((i) => parseInt((color as string).slice(i, i + 2), 16) / 255);
   return light ? [0.96, 0.96, 0.98] : [0.11, 0.12, 0.13];
 }
-export function surfaceUniforms(r, width, height, dpr, kind, controls, theme) {
+export function surfaceUniforms(r: SurfaceBounds, width: number, height: number, dpr: number, kind: SurfaceKind, controls: Controls | undefined, theme: Settings["theme"]) {
   const p = material(kind, controls);
   const light = theme === "light";
   return {

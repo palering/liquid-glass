@@ -1,3 +1,4 @@
+import { t, pageUrl, localizeHtml, installLanguageSwitcher } from "./i18n.js";
 import { labUrl } from "./url.js";
 import {
   GlassController,
@@ -13,9 +14,9 @@ import { opticalFields, looks, formatValue } from "./optics.js";
 const icon = (s) =>
   `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${s}</svg>`;
 const plus = icon('<path d="M12 5v14M5 12h14"/>');
-document.querySelector("#app").innerHTML = `
-<header class="topbar"><a class="brand" href="${labUrl("")}" aria-label="Liquid lab home"><span class="brand-symbol">◒</span>liquid<span class="brand-slash">/</span><span class="brand-sub">material lab</span></a><div class="edition">EXPERIMENT 001 <span class="edition-dot"></span> STUDIO</div><a class="app-link" href="${labUrl("benchmark.html")}">Performance ↗</a></header>
-<main><section class="intro"><div><p class="eyebrow">OPTICAL SURFACES / INTERACTIVE STUDY</p><h1>Light, with a little<br><em>less solidity.</em></h1></div><p class="intro-copy">同一种材质，三种表面。<br>探索折射、散射与边缘光，<br>让内容保持清晰，让背景流动。</p></section>
+document.querySelector("#app").innerHTML = localizeHtml(`
+<header class="topbar"><a class="brand" href="${pageUrl("")}" aria-label="Liquid lab home"><span class="brand-symbol">◒</span>liquid<span class="brand-slash">/</span><span class="brand-sub">material lab</span></a><div class="edition">EXPERIMENT 001 <span class="edition-dot"></span> STUDIO</div><a class="app-link" href="${pageUrl("benchmark.html")}">Performance ↗</a></header>
+<main><section class="intro"><div><p class="eyebrow">OPTICAL SURFACES / INTERACTIVE STUDY</p><h1>Light, with a little<br><em>less solidity.</em></h1></div><p class="intro-copy">同一种材质，三种表面。<br> 探索折射、散射与边缘光，<br> 让内容保持清晰，让背景流动。</p></section>
 <div class="workbench"><section class="preview-wrap"><div class="preview-label"><span><i></i> LIVE MATERIAL PREVIEW</span><span id="render-label">INITIALIZING</span></div>
 <div class="experiment-toolbar"><div class="view-buttons" role="group" aria-label="预览场景"><button class="selected" data-view="optics">光学样片</button><button data-view="workflow">业务卡片</button><button data-view="layers">玻璃叠层</button></div><label><input id="effect-enabled" type="checkbox" checked> 玻璃效果 <span>关闭看原背景</span></label></div>
 <div id="stage" class="lg-stage optics-view" data-theme="light">
@@ -32,7 +33,7 @@ document.querySelector("#app").innerHTML = `
 <div class="control-section preset-section"><p class="section-label">03 / PRESETS</p><label class="field">我的预设<select id="saved-preset" aria-label="我的预设"><option value="">选择已保存预设</option></select></label><label class="field">名称<input id="preset-name" aria-label="预设名称" maxlength="80" placeholder="例如：柔光侧栏"></label><div class="preset-actions"><button id="save-preset">保存为预设</button><button id="export-preset">生成 JSON</button></div><details class="preset-json"><summary>JSON 导入 / 查看</summary><textarea id="preset-json" aria-label="预设 JSON" spellcheck="false" placeholder="粘贴预设 JSON"></textarea><div class="preset-actions"><button id="import-preset">校验并导入</button><button id="copy-preset">复制 JSON</button></div><a id="download-preset" class="download-preset" hidden download="liquid-glass-preset.json">下载 JSON 文件 ↓</a><label class="upload-label">导入 JSON 文件<input type="file" id="preset-file" accept=".json,application/json"></label></details><p id="preset-status" class="control-hint" aria-live="polite">预设保存在本浏览器；JSON 不包含本地图片。</p></div>
 <div class="control-section"><p class="section-label">04 / RENDERING</p><label class="field">后端<select id="backend" aria-label="后端"><option value="auto">Auto · GPU 优先</option><option value="webgpu">WebGPU</option><option value="webgl">WebGL 2</option><option value="svg">SVG · 位移近似</option><option value="css">CSS · 毛玻璃</option><option value="solid">Solid · 实色</option></select></label><label class="field">背景采集<select id="capture" aria-label="背景采集"><option value="scene">Scene · 场景纹理</option><option value="native-dom">HTML-in-Canvas · 实验</option></select></label><label class="field">质量<select id="quality" aria-label="质量"><option value="high">High · DPR ≤ 2</option><option value="medium">Medium · DPR ≤ 1.5</option><option value="low">Low · DPR 1</option></select></label><label class="toggle-row"><span>玻璃材质相互折射</span><input id="layered" type="checkbox"></label><p class="control-hint" id="layer-note">GPU 逐层合成；SVG/CSS 保留各自的降级效果。</p><label class="toggle-row"><span>背景流动</span><input id="animation" type="checkbox" role="switch"></label>
 <div class="runtime-status" aria-live="polite"><div><i></i><span id="active-backend">Initializing…</span></div><p id="status-detail">检测渲染能力与首帧。</p></div><details class="native-info"><summary>HTML-in-Canvas 能力诊断</summary><pre id="native-report"></pre><p class="control-hint">页面参数无法启用原生 API。普通 Chrome 可在 chrome://flags/#canvas-draw-element 实验；内置浏览器暂无已确认的启动参数入口。</p><a href="https://developer.chrome.com/blog/html-in-canvas-ot-changes" target="_blank" rel="noopener">Chrome 实验 API 变更 ↗</a></details><button class="fault-button" id="simulate-loss">模拟当前后端故障 ↘</button></div>
-</aside></div><div class="reference-links">参考演示 <a href="https://liquid-glass-studio.vercel.app/" target="_blank" rel="noopener">Studio ↗</a><a href="https://liquid-glass.ybouane.com/" target="_blank" rel="noopener">ybouane ↗</a><a href="https://liquid-dom-showcase.vercel.app/" target="_blank" rel="noopener">Liquid DOM ↗</a><span>不同背景 / 采集方式，不作为性能排名。</span></div><footer class="page-footer"><span>SEVEN LOOKS. ONE MATERIAL LANGUAGE.</span><span>GPU OPTICS / DOM CONTENT</span></footer></main>`;
+</aside></div><div class="reference-links">参考演示 <a href="https://liquid-glass-studio.vercel.app/" target="_blank" rel="noopener">Studio ↗</a><a href="https://liquid-glass.ybouane.com/" target="_blank" rel="noopener">ybouane ↗</a><a href="https://liquid-dom-showcase.vercel.app/" target="_blank" rel="noopener">Liquid DOM ↗</a><span>不同背景 / 采集方式，不作为性能排名。</span></div><footer class="page-footer"><span>SEVEN LOOKS. ONE MATERIAL LANGUAGE.</span><span>GPU OPTICS / DOM CONTENT</span></footer></main>`);
 const $ = (s) => document.querySelector(s),
   stage = $("#stage");
 document.documentElement.dataset.theme = "light";
@@ -90,24 +91,24 @@ controller.subscribe((state) => {
   $("#animation").checked = state.animating;
   $("#animation").disabled = state.reducedMotion;
   const backend = state.activeBackend?.toUpperCase() ?? "INITIALIZING";
-  $("#active-backend").textContent = backend + " / " + state.phase;
-  $("#render-label").textContent = backend;
+  $("#active-backend").textContent = t(backend + " / " + state.phase);
+  $("#render-label").textContent = t(backend);
   $("#capture-label").textContent =
-    "BACKDROP / " + state.activeCapture.toUpperCase();
+    t("BACKDROP / " + state.activeCapture.toUpperCase());
   $("#status-detail").textContent =
-    [state.fallbackReason, state.captureReason, state.imageReason]
+    t([state.fallbackReason, state.captureReason, state.imageReason]
       .filter(Boolean)
-      .join(" · ") || "场景纹理取样 · 共享渲染器 · 清晰 DOM 内容";
+      .join(" · ") || "场景纹理取样 · 共享渲染器 · 清晰 DOM 内容");
   $("#draw-label").textContent =
-    `${state.draws} draws · CPU ${state.cpuMs.toFixed(1)} ms`;
-  $("#draw-label").title = "CPU 提交与场景生成时间，不是 GPU 耗时或帧率";
+    t(`${state.draws} draws · CPU ${state.cpuMs.toFixed(1)} ms`);
+  $("#draw-label").title = t("CPU 提交与场景生成时间，不是 GPU 耗时或帧率");
   const gpu = ["webgpu", "webgl"].includes(state.activeBackend),
     svg = state.activeBackend === "svg";
   for (const f of opticalFields) {
     const input = $("#" + f[0]),
       value = state.settings.controls[f[0]] ?? f[5];
     input.value = value;
-    $("#" + f[0] + "-value").textContent = formatValue(f, value);
+    $("#" + f[0] + "-value").textContent = t(formatValue(f, value));
     input.disabled = !{
       gpu,
       "gpu-svg": gpu || svg,
@@ -120,9 +121,9 @@ controller.subscribe((state) => {
   }
   $("#layered").checked = state.settings.layered;
   $("#layered").disabled = !gpu;
-  $("#layer-note").textContent = gpu
+  $("#layer-note").textContent = t(gpu
     ? "GPU 逐层合成；不采集前景 DOM。"
-    : "当前后端不支持材质相互折射；所选偏好仍会保留。";
+    : "当前后端不支持材质相互折射；所选偏好仍会保留。");
   $("#auto-tint").checked =
     !state.settings.controls.tintColor ||
     state.settings.controls.tintColor === "auto";
@@ -139,9 +140,9 @@ controller.subscribe((state) => {
     option.disabled = state.capabilities[option.value] === false;
   const nativeOption = $('#capture option[value="native-dom"]');
   nativeOption.disabled = !state.nativeSupported;
-  nativeOption.textContent = state.nativeSupported
+  nativeOption.textContent = t(state.nativeSupported
     ? "HTML-in-Canvas · 实验"
-    : "HTML-in-Canvas · 当前未开放";
+    : "HTML-in-Canvas · 当前未开放");
 });
 for (const button of document.querySelectorAll("[data-theme]"))
   if (button.tagName === "BUTTON")
@@ -155,14 +156,14 @@ for (const f of opticalFields)
   $("#" + f[0]).oninput = (e) => {
     activeLook = "custom";
     $("#look").value = activeLook;
-    $("#clarity-value").textContent = "自定义光学";
+    $("#clarity-value").textContent = t("自定义光学");
     void controller.setSettings({
       controls: { [f[0]]: Number(e.target.value) },
     });
   };
 $("#look").onchange = (e) => {
   activeLook = e.target.value;
-  $("#clarity-value").textContent = "预设光学";
+  $("#clarity-value").textContent = t("预设光学");
   void controller.setSettings({
     controls: { ...looks[activeLook], blurEdge: true },
   });
@@ -191,7 +192,7 @@ $("#layered").onchange = (e) =>
   void controller.setSettings({ layered: e.target.checked });
 $("#clarity").oninput = (e) => {
   const value = Number(e.target.value);
-  $("#clarity-value").textContent = `${value}%`;
+  $("#clarity-value").textContent = t(`${value}%`);
   activeLook = "custom";
   $("#look").value = activeLook;
   void controller.setSettings({ controls: clarityControls(value / 100) });
@@ -230,7 +231,7 @@ $("#reset").onclick = async () => {
   activeLook = "studio";
   $("#look").value = activeLook;
   $("#clarity").value = 0;
-  $("#clarity-value").textContent = "预设光学";
+  $("#clarity-value").textContent = t("预设光学");
   controller.setAnimation(false);
   await controller.setSettings({
     backend: "auto",
@@ -245,7 +246,7 @@ $("#reset").onclick = async () => {
 };
 let clicks = 0;
 $("#liquid-button").onclick = () => {
-  $("#interaction-note").textContent = `已添加示例审核步骤 · ${++clicks}`;
+  $("#interaction-note").textContent = t(`已添加示例审核步骤 · ${++clicks}`);
 };
 const card = $("#review-card");
 function bindDrag(card, grip) {
@@ -318,10 +319,10 @@ bindDrag($("#layer-a"), $("#layer-a"));
 bindDrag($("#layer-b"), $("#layer-b"));
 const storageKey = "workspace-liquid-glass.presets.v1";
 let savedPresets = [];
-const presetStatus = (message) => ($("#preset-status").textContent = message);
+const presetStatus = (message) => ($("#preset-status").textContent = t(message));
 function refreshPresets() {
   $("#saved-preset").replaceChildren(
-    new Option("选择已保存预设", ""),
+    new Option(t("选择已保存预设"), ""),
     ...savedPresets.map((p, i) => new Option(p.name, String(i))),
   );
 }
@@ -355,7 +356,7 @@ async function applyPreset(p) {
   activeLook = "custom";
   $("#look").value = activeLook;
   $("#preset-name").value = validated.name;
-  $("#clarity-value").textContent = "自定义光学";
+  $("#clarity-value").textContent = t("自定义光学");
 }
 $("#saved-preset").onchange = async (e) => {
   if (e.target.value === "") return;
@@ -378,7 +379,7 @@ let downloadUrl = null;
 $("#export-preset").onclick = () => {
   try {
     const p = createPreset(
-        $("#preset-name").value || "自定义材质",
+        $("#preset-name").value || t("自定义材质"),
         controller.settings,
       ),
       json = serializePreset(p);
@@ -460,3 +461,5 @@ window.addEventListener("pagehide", () => {
   if (downloadUrl) URL.revokeObjectURL(downloadUrl);
   if (imageUrl) URL.revokeObjectURL(imageUrl);
 });
+
+installLanguageSwitcher();

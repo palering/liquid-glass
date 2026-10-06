@@ -1,11 +1,12 @@
+import { t, pageUrl, localizeHtml, installLanguageSwitcher } from "./i18n.js";
 import { labUrl } from "./url.js";
 import "../src/glass.css";
 import "./performance.css";
 import { runSuite } from "../benchmarks/runner.js";
 import { summarizeRuns } from "../benchmarks/statistics.js";
 
-document.querySelector("#app").innerHTML = `
-<header><a href="${labUrl("")}">← Material studio</a><span>LIQUID GLASS / ENGINEERING</span><a href="${labUrl("react-smoke.html")}">React fixture ↗</a></header>
+document.querySelector("#app").innerHTML = localizeHtml(`
+<header><a href="${pageUrl("")}">← Material studio</a><span>LIQUID GLASS / ENGINEERING</span><a href="${pageUrl("react-smoke.html")}">React fixture ↗</a></header>
 <main><p class="eyebrow">BENCHMARK PROTOCOL 01</p><h1>性能，需要有据可查。</h1>
 <p class="intro">同一场景，五种后端。保留原始样本、三次重复和资源清理结果，让下一次调整有可比较的起点。</p>
 <div class="specs"><span>960 × 540</span><span>DPR ≤ 1</span><span>10 / 50 / 100 surfaces</span><span>12 warmup + 60 frames</span><span>3 repeats</span></div>
@@ -15,7 +16,7 @@ document.querySelector("#app").innerHTML = `
 <p class="boundary">CPU 包含节点更新与绘制提交；rAF 是回调间隔，不是实际呈现 FPS。没有采集 GPU 时间或驱动显存。CSS / solid 光学能力较少，速度不能作为相同视觉效果的排名。</p>
 <p class="boundary">归档下载：<a href="${labUrl("benchmarks/results/latest.json")}">原始 JSON</a> · <a href="${labUrl("benchmarks/results/runs.csv")}">逐次 CSV</a> · <a href="${labUrl("benchmarks/results/summary.csv")}">汇总 CSV</a> · <a href="${labUrl("benchmarks/results/report.md")}">报告</a></p><div id="table"></div><details><summary>原始 JSON / 复制保存</summary><textarea id="raw" readonly aria-label="原始 JSON"></textarea></details>
 <section class="fixture"><div class="fixture-label"><span>LIVE FIXTURE</span><span id="case-label">固定场景 / 每个测试独立创建与销毁</span></div><div class="fixture-scroll"><div id="host"></div></div></section>
-</main>`;
+</main>`);
 let result = null,
   abort = null,
   progress = null;
@@ -27,12 +28,12 @@ function show(data) {
   $("#export").disabled = false;
   const ok = data.runs.filter((r) => r.status === "ok");
   $("#metrics").innerHTML =
-    `<article><strong>${ok.length} / ${data.totalCases}</strong><span>有效测试</span></article><article><strong>${data.environment.nativeCapture ? "实验 API" : "未开放"}</strong><span>原生 DOM 采集</span></article><article><strong>${fmt(data.calibration.raf.p50)} ms</strong><span>空载 rAF 中位数</span></article><article><strong>${ok.every((r) => r.cleanup.remainingChildren === 0) ? "PASS" : "FAIL"}</strong><span>DOM 清理</span></article>`;
+    localizeHtml(`<article><strong>${ok.length} / ${data.totalCases}</strong><span>有效测试</span></article><article><strong>${data.environment.nativeCapture ? "实验 API" : "未开放"}</strong><span>原生 DOM 采集</span></article><article><strong>${fmt(data.calibration.raf.p50)} ms</strong><span>空载 rAF 中位数</span></article><article><strong>${ok.every((r) => r.cleanup.remainingChildren === 0) ? "PASS" : "FAIL"}</strong><span>DOM 清理</span></article>`);
   const rows = summarizeRuns(data.runs).filter(
     (r) => $("#backend").value === "all" || r.backend === $("#backend").value,
   );
   $("#table").innerHTML =
-    `<div class="table-scroll"><table><thead><tr><th>后端 / 预设</th><th>场景</th><th>表面</th><th>CPU p50 / p95 ms</th><th>rAF p50 / p95 ms</th><th>纹理 源/模糊/合成</th><th>重复</th></tr></thead><tbody>${rows.map((r) => `<tr><td><b>${r.backend}</b><small>${r.look}${r.layered ? " · layered" : ""}</small></td><td>${r.workload}</td><td>${r.count}</td><td>${fmt(r.cpu?.p50)} / <b>${fmt(r.cpu?.p95)}</b></td><td>${fmt(r.raf?.p50)} / ${fmt(r.raf?.p95)}</td><td>${r.resources.sourceTextures ?? "—"} / ${r.resources.blurTextures ?? "—"} / ${r.resources.compositeTextures}</td><td>${r.repeats}</td></tr>`).join("")}</tbody></table></div>`;
+    localizeHtml(`<div class="table-scroll"><table><thead><tr><th>后端 / 预设</th><th>场景</th><th>表面</th><th>CPU p50 / p95 ms</th><th>rAF p50 / p95 ms</th><th>纹理 源/模糊/合成</th><th>重复</th></tr></thead><tbody>${rows.map((r) => `<tr><td><b>${r.backend}</b><small>${r.look}${r.layered ? " · layered" : ""}</small></td><td>${r.workload}</td><td>${r.count}</td><td>${fmt(r.cpu?.p50)} / <b>${fmt(r.cpu?.p95)}</b></td><td>${fmt(r.raf?.p50)} / ${fmt(r.raf?.p95)}</td><td>${r.resources.sourceTextures ?? "—"} / ${r.resources.blurTextures ?? "—"} / ${r.resources.compositeTextures}</td><td>${r.repeats}</td></tr>`).join("")}</tbody></table></div>`);
 }
 $("#run").onclick = async () => {
   if (abort) return;
@@ -50,17 +51,17 @@ $("#run").onclick = async () => {
       onProgress(p) {
         progress = p;
         $("#progress").textContent =
-          `${p.completed} / ${p.total}${p.done ? " · 采样结束" : " · 测试中，请保留当前标签页"}`;
+          t(`${p.completed} / ${p.total}${p.done ? " · 采样结束" : " · 测试中，请保留当前标签页"}`);
         if (p.spec)
           $("#case-label").textContent =
-            `${p.spec.backend} / ${p.spec.look} / ${p.spec.workload} / ${p.spec.count} / repeat ${p.spec.repeat}`;
+            t(`${p.spec.backend} / ${p.spec.look} / ${p.spec.workload} / ${p.spec.count} / repeat ${p.spec.repeat}`);
       },
     });
     show(data);
     $("#progress").textContent +=
-      ` · ${data.runs.filter((r) => r.status === "failed").length} 失败 / ${data.runs.filter((r) => r.status === "skipped").length} 跳过`;
+      t(` · ${data.runs.filter((r) => r.status === "failed").length} 失败 / ${data.runs.filter((r) => r.status === "skipped").length} 跳过`);
   } catch (e) {
-    $("#progress").textContent = e.message;
+    $("#progress").textContent = t(e.message);
   } finally {
     abort = null;
     $("#run").disabled = false;
@@ -88,9 +89,9 @@ $("#saved").onclick = async () => {
     if (!r.ok) throw new Error("尚未生成归档数据；先运行完整测试。");
     show(await r.json());
     $("#progress").textContent =
-      `归档采样 ${result.startedAt} · ${result.environment.userAgent}`;
+      t(`归档采样 ${result.startedAt} · ${result.environment.userAgent}`);
   } catch (e) {
-    $("#progress").textContent = e.message;
+    $("#progress").textContent = t(e.message);
   }
 };
 // App-owned automation seam. Never stores browser or user data outside this page.
@@ -105,3 +106,5 @@ window.performanceLab = {
     return !!abort;
   },
 };
+
+installLanguageSwitcher();

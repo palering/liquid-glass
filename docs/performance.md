@@ -2,9 +2,11 @@
 
 Audience: public
 
-2026-10-06 首个可复跑基线。原始 [JSON](../benchmarks/results/latest.json)、[逐次 CSV](../benchmarks/results/runs.csv)、[汇总 CSV](../benchmarks/results/summary.csv)、[完整报告](../benchmarks/results/report.md) 均进入 Git；不以旧版本实验室零散帧数作为本轮矩阵。
+2026-10-06 首个可复跑历史基线。原始 [JSON](../benchmarks/results/latest.json)、[逐次 CSV](../benchmarks/results/runs.csv)、[汇总 CSV](../benchmarks/results/summary.csv)、[完整报告](../benchmarks/results/report.md) 均进入 Git；不以旧版本实验室零散帧数作为本轮矩阵。
 
 固定构建、Chromium 154、Apple M4 Pro / ANGLE Metal（[采样后设备探针](../benchmarks/results/adapter.json)）、1440 × 1024 浏览器视口、960 × 540 scene、DPR 1、浅色 testchart、统一圆角 12 / 无外投影。每组预热 12 帧、采样 60 帧、重复 3 次，轮换后端顺序；总计 147 组，全部有效，无失败或跳过。代码输入列表与 SHA-256 在原始 JSON 中，覆盖 core、固定 vendor、benchmark runner/statistics，UI 与报告工具不在该 hash 内。
+
+后续 SVG 缓存已试验，新的成对协议、原始样本和质量证据见 [optimization-experiment.md](optimization-experiment.md)。本页 147 组归档保持原样；其源码 hash 与优化后的实现不同，不能作为当前版本完整矩阵或与新协议直接混合。
 
 ## 看到了什么
 
@@ -20,7 +22,7 @@ Audience: public
 
 50 个小表面的 GPU 场景在本次短窗口中大多维持约 16.7 ms 的回调节奏；100 个移动表面出现长尾，不能承诺 60 fps。WebGPU 不一定比 WebGL2 的 CPU 提交更快，GPU 时间也未采集；不能用这个表直接决定所有设备上的优先级。
 
-SVG 在 50 / 100 表面时成本明显偏高。当前 DOM renderer 在重绘中重建 filter / displacement 图，需要后续缓存优化；这是源码判断与实测高成本相符，并未通过 profiler 证明唯一瓶颈。100 表面下 solid 同样有长尾，说明公共几何/样式更新与浏览器布局成本也值得单独分析，不能把所有耗时归因于 shader。
+SVG 在 50 / 100 表面时成本明显偏高。此归档对应的 DOM renderer 在重绘中重建 filter / displacement 图；这是源码判断与实测高成本相符，并未通过 profiler 证明唯一瓶颈。100 表面下 solid 同样有长尾，说明公共几何/样式更新与浏览器布局成本也值得单独分析，不能把所有耗时归因于 shader。
 
 50 表面动态背景的 Studio CPU p95：WebGPU 1.90、WebGL2 3.60、SVG 65.90 ms。该场景节点几何保持不动；与 move 场景测的是不同工作负载，不应当作背景更新“免费”的证明。10 个 Frosted 重叠表面，WebGL2 分层后 CPU p95 从 1.80 增至 5.40 ms；WebGPU 分层提交时间没有明显升高，但异步 GPU 成本未测，所以不宣称叠层没有额外成本。分层额外占用两个合成纹理。
 

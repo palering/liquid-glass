@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-06",
+  "baselineRevision": "8f6b9ffece2c6a0d7227f8de6ca3b115b64e51c7",
+  "baselineSourceSha256": "90062fd9129b4a37efeb2f29034935cff5727dad5b3b9ad7ce57d7ef515c4b82",
+  "currentSourceSha256": "073993999bdc90e5e18ddc77c7fca42ad74c8eee4027e7d8e4cc83c1f736feca",
+  "fixtureSha256": {
+    "tests/browser/optimization.html": "c73711ae9fc7bbab1051313609ee38fbc6c5ebcdbed0f08a7b390dd8f945e470",
+    "tests/browser/optimization.js": "57fd86413c314fdcbf68e2c03139b1c1bd6ff6df4ac1fa45327a36e9177d88d6",
+    "scripts/prepare-optimization-baseline.mjs": "38aefc322407a89cce4980c9ad02e6289ecad102fba224e7484c1d8ed068a8bd"
+  },
+  "environment": {
+    "devicePixelRatio": 1,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "viewport": [
+      1440,
+      1024
+    ]
+  },
+  "qualityScope": "SVG subtrees rasterized on identical backdrop pixels; GPU checks are smoke tests, not pixel-equivalence tests.",
+  "runtimeErrorsSinceFinalPerformanceStart": 0
+}

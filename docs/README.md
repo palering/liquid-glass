@@ -16,4 +16,6 @@ Start with the [English README](../README.md) or [简体中文 README](../README
 - [Native capture](native-capture.md): measured API availability and experimental compatibility.
 - [Library roadmap](library-roadmap.md): future materials, framework bindings and release decisions.
 - [Upstream review](upstream-review.md): inspected revisions, selection rationale and attribution.
+- [Shader quality review](shader-quality-review.md): scoped source comparison, algorithm assumptions, existing optimization evidence and proposed acceptance work.
+- [Optimization experiment](optimization-experiment.md): paired baseline/current measurements, SVG pixel regression and cache lifecycle evidence.
 - [Screenshot provenance](images/README.md): actual Clear preset captures used in both READMEs.

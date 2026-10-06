@@ -12,6 +12,8 @@ Audience: public
 
 v0.3 当前差异：GPU 已使用降采样低通 + 横纵高斯 pass；半径缓存按可见 surface 回收。可选 layered 使用双纹理 ping-pong，按 zIndex 顺序让上层读取下层材质；前景 DOM、CSS 投影与 rim 不进入采集。GPU 支持相互材质折射，SVG/CSS 不等价。增加核心 config / preset schema、20 参数与实验室命名持久化。原生桥仍未验证，其他目标方案保持提案状态。
 
+当前 SVG renderer 按 surface 保留 filter/image/tint 节点，按宽、高、有效圆角和厚度复用 80×80 位移图；位置与背景更新独立处理。缓存只保留本帧活跃形状，注销及 dispose 释放。该优化不改变 SVG 光学公式，也不新增 DOM 背景采集能力。证据见 [optimization-experiment.md](optimization-experiment.md)。
+
 ## 两条独立能力轴
 
 `Renderer` 决定如何绘制玻璃；`BackdropSource` 决定哪里来的背景像素。HTML-in-Canvas 属于后者，也涉及 DOM 命中几何，并不等于一种高于 WebGPU 的渲染器。

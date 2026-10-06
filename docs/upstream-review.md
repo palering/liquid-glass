@@ -6,6 +6,8 @@ Audience: public
 
 2026-10-06 已固定并改造 Studio 光学着色器，在自己的 renderer/lab 中实际运行；未运行它的 demo，也未安装其他两个项目。当前实现及有限浏览器证据见 [status.md](status.md) 和 [validation.md](validation.md)，不要将历史静态检查与当前验证混为一谈。
 
+2026-10-06 补充固定源码复核见 [shader-quality-review.md](shader-quality-review.md)：具体光学近似、另外两库的资源/采集优化、本库已有改动与待验证优先级。此前选型没有三方统一条件的视觉或性能排名；本次源码分析也不补造这些运行证据。
+
 ## 固定评估版本
 
 | 项目 | 分支 / commit | 最近 push（UTC，检查时元数据） | 许可信息 |

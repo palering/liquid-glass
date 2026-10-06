@@ -1,0 +1,1312 @@
+[
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "testchart",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "clear"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "3f91f5c2b557c20a3f188183cb7a8f8f0fe40195ae214ba55a994cb02a5c2917",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "3f91f5c2b557c20a3f188183cb7a8f8f0fe40195ae214ba55a994cb02a5c2917",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "d3caf9adc4308b0fe6ef91ef43a9e42f68bd454929150192f59f4e5803542600",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "d3caf9adc4308b0fe6ef91ef43a9e42f68bd454929150192f59f4e5803542600",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "908823b8655ee7ef2e5154d7ecf822c6fc23e139e83697eb23135e8948e68bce",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "908823b8655ee7ef2e5154d7ecf822c6fc23e139e83697eb23135e8948e68bce",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "testchart",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "clear"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "986fac5f9f552ae34c06a9908c021f996d69eee625e19bcdb8892e3513854d73",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "986fac5f9f552ae34c06a9908c021f996d69eee625e19bcdb8892e3513854d73",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "aa656b70a665b919d8bee3fc3adcc0032089c02651abcaeec198e88495f4751a",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "aa656b70a665b919d8bee3fc3adcc0032089c02651abcaeec198e88495f4751a",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "469efb70e68284a5ab7c2878f8497a0e6080c0b17e6dd583677b1c46bef2409a",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "469efb70e68284a5ab7c2878f8497a0e6080c0b17e6dd583677b1c46bef2409a",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "gradient",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "clear"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "a37cf80b4f6bfcf56b55fca485efa7ecb58f34e15d24bac50e22fbd86363928d",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "a37cf80b4f6bfcf56b55fca485efa7ecb58f34e15d24bac50e22fbd86363928d",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "8295fd7baf1a95215e75a09571c66e83c9eb632a177e9d093c6860da1fee7581",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "8295fd7baf1a95215e75a09571c66e83c9eb632a177e9d093c6860da1fee7581",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "b45ef859652319c72d90e026d353d47352895687ced22cd87996143b2e682bfb",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "b45ef859652319c72d90e026d353d47352895687ced22cd87996143b2e682bfb",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "gradient",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "clear"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "4146692628d5a0daffec0cb137078fcb43e59f9b3c3fed366a004e27c0286c12",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "4146692628d5a0daffec0cb137078fcb43e59f9b3c3fed366a004e27c0286c12",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "6870c39710e1b3c5b47b87c3bfbe1297fa27bf076b24da3e309ce05df863c344",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "6870c39710e1b3c5b47b87c3bfbe1297fa27bf076b24da3e309ce05df863c344",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "f88dd6a4f532b9d048a3acaaaa7f4ecab891d184eb38625dc262d29c2d8df0d0",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "f88dd6a4f532b9d048a3acaaaa7f4ecab891d184eb38625dc262d29c2d8df0d0",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "image",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "clear"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 3,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "7558dbdc28e43614dad1ebd2d7f3e56c5b535c7df691c3c14a9762698dd2c0bb",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "7558dbdc28e43614dad1ebd2d7f3e56c5b535c7df691c3c14a9762698dd2c0bb",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "8e83265a0e2ebd1b43382f8274634a370d2da4d255ea588c79417b5259dd601c",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "8e83265a0e2ebd1b43382f8274634a370d2da4d255ea588c79417b5259dd601c",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "3e1d75b5e3a09299558d239768338249a8db7dda6f33fdae94679f6cf388a2a9",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "3e1d75b5e3a09299558d239768338249a8db7dda6f33fdae94679f6cf388a2a9",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "image",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "clear"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 3,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "0afda2cd942c5ae912827e43229de969304dd0095a593657db3b1bc7ce7d734f",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "0afda2cd942c5ae912827e43229de969304dd0095a593657db3b1bc7ce7d734f",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "5903c509919760e29d961faef2764e6ab7178507b0d5f167e31d1e09191baca0",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "5903c509919760e29d961faef2764e6ab7178507b0d5f167e31d1e09191baca0",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "6fdcae7d6dab9537ab0a1e8374cbee4d313e4da824b97c76ca4a5980f8b95779",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "6fdcae7d6dab9537ab0a1e8374cbee4d313e4da824b97c76ca4a5980f8b95779",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "testchart",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "fb294a851fc10d7b1999f0df6515ba926ffd74dc1cefabb1b80f13a2601a3ee3",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "fb294a851fc10d7b1999f0df6515ba926ffd74dc1cefabb1b80f13a2601a3ee3",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "c50fce95edce35efc9d6c3526388e28ae6fdd226b83473f7a7f65dd8291afe21",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "c50fce95edce35efc9d6c3526388e28ae6fdd226b83473f7a7f65dd8291afe21",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "0a8a91d403ec5a772ef1ec83e23242f8d515a613d31a51d987d15941b622e788",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "0a8a91d403ec5a772ef1ec83e23242f8d515a613d31a51d987d15941b622e788",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "testchart",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "7620990b8881827c7d0b63f737dd12ecf7e42f716abd7d52bd78fa08122be271",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "7620990b8881827c7d0b63f737dd12ecf7e42f716abd7d52bd78fa08122be271",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "d962765b700fd8bf42418580653de1c95c299f9d4d062f954184202efea31f61",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "d962765b700fd8bf42418580653de1c95c299f9d4d062f954184202efea31f61",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "51afa35da3fdc97173c7c0595316ca8e36231cb7ecf7304e6040231ab4e9278b",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "51afa35da3fdc97173c7c0595316ca8e36231cb7ecf7304e6040231ab4e9278b",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "gradient",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "bb483e005be246c2082b8a0f8075d1e281473a797ee14f9e79219c12671c6c38",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "bb483e005be246c2082b8a0f8075d1e281473a797ee14f9e79219c12671c6c38",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "1828c7176fc2b0e487faec410767eb8d55a9d9718ad0c75fc236fdde895b4117",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "1828c7176fc2b0e487faec410767eb8d55a9d9718ad0c75fc236fdde895b4117",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "7d5063f62eff2c82df2ae2078fd20670bc6e90192236ef5a916e069b9ae80c00",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "7d5063f62eff2c82df2ae2078fd20670bc6e90192236ef5a916e069b9ae80c00",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "gradient",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "247d3fb382d5e4954426eacaf36bec01e92ae7ea91f5858f30f39e9b77b92d6a",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "247d3fb382d5e4954426eacaf36bec01e92ae7ea91f5858f30f39e9b77b92d6a",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "5c701b1def6ed8a52f5326330f1ae06974a4666215d9155e534eb6a448dc3f82",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "5c701b1def6ed8a52f5326330f1ae06974a4666215d9155e534eb6a448dc3f82",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "d5ca1a860a6d98269258ce738d57740d53340c7262b03b734370eabd2505b781",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "d5ca1a860a6d98269258ce738d57740d53340c7262b03b734370eabd2505b781",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "image",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 3,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "13af1605eb2b757081d55c2746ec4d18516be14b1551a1868fbbfd98f6715078",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "13af1605eb2b757081d55c2746ec4d18516be14b1551a1868fbbfd98f6715078",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "1a7d232b831e555db285b1557af6033c9b0f6bda807ede270937bf2739c931a1",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "1a7d232b831e555db285b1557af6033c9b0f6bda807ede270937bf2739c931a1",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "9623eec69111471e044703af5573f3e287e15d15a03536b996ff3b1463f7f009",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "9623eec69111471e044703af5573f3e287e15d15a03536b996ff3b1463f7f009",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "image",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 3,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "b8f58f77793ba2c100766cb8ec22ae99d988983a6d160b84cde8755f0772e36b",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "b8f58f77793ba2c100766cb8ec22ae99d988983a6d160b84cde8755f0772e36b",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "352fe719c9043faf3a250b1f9d90607e9b79612ba3e84329587ef8e999a95dc0",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "352fe719c9043faf3a250b1f9d90607e9b79612ba3e84329587ef8e999a95dc0",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "8a6002b1692ca6d1cf661c4560fc972d57ffeaf596dfa4e18aeedcfb52dad465",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "8a6002b1692ca6d1cf661c4560fc972d57ffeaf596dfa4e18aeedcfb52dad465",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "testchart",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "reading"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "629cd110ae205bf06433fd7bcb19b09986e572ca60ba935bad2583470adfde8d",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "629cd110ae205bf06433fd7bcb19b09986e572ca60ba935bad2583470adfde8d",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "92441936bce9024e0a6960d7d8fcf122e0b1457977da1355010a9a526f9608b9",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "92441936bce9024e0a6960d7d8fcf122e0b1457977da1355010a9a526f9608b9",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "056038cc020d92e2051e948a610a40b6c1b3ba1599f2734e67dbced4cc804444",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "056038cc020d92e2051e948a610a40b6c1b3ba1599f2734e67dbced4cc804444",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "testchart",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "reading"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "1d7681dd4b144ff9dc03b39e5dc26fe1b9267c128b9492a93464fd654f0816b4",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "1d7681dd4b144ff9dc03b39e5dc26fe1b9267c128b9492a93464fd654f0816b4",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "e878ed4e9780d4cc618df0c11f5683f21f85d578624f3fa5fbc104e8bf52af28",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "e878ed4e9780d4cc618df0c11f5683f21f85d578624f3fa5fbc104e8bf52af28",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "47e9fdd644cb82f78ccb1bc0c887e402966aa646e836a84a0ad2ac674a610a01",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "47e9fdd644cb82f78ccb1bc0c887e402966aa646e836a84a0ad2ac674a610a01",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "gradient",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "reading"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "0d09ce4e0ab529288f5e123e04734ea404834d3f78ae0d7ed06437b2534ffdc1",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "0d09ce4e0ab529288f5e123e04734ea404834d3f78ae0d7ed06437b2534ffdc1",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "ef56db7b7f79a79dec1670ea7712033b245c3d255a113cbdd82f8ab55b413e51",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "ef56db7b7f79a79dec1670ea7712033b245c3d255a113cbdd82f8ab55b413e51",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "a3e48be385bafe6e1836df302b309b790c49e7eae08e6a097b14076b124cc998",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "a3e48be385bafe6e1836df302b309b790c49e7eae08e6a097b14076b124cc998",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "gradient",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "reading"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "d042f63fba99c2612f47a87a5ad587fb31dce9e92fbb213766fcec39e805851f",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "d042f63fba99c2612f47a87a5ad587fb31dce9e92fbb213766fcec39e805851f",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "7d11b243b34be039b9b9e4368704d1a1630fb9383fec89cacbc7121dd713d3c0",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "7d11b243b34be039b9b9e4368704d1a1630fb9383fec89cacbc7121dd713d3c0",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "1b4cefa237b920374baf6fbb22265ac0864893319a9f274b018b01f23cb2c917",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "1b4cefa237b920374baf6fbb22265ac0864893319a9f274b018b01f23cb2c917",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "image",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "reading"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 3,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "71b1c8d8536dcfbd09aead2310043cbb7d1dac5acf7c442fe860a5699b25a5c5",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "71b1c8d8536dcfbd09aead2310043cbb7d1dac5acf7c442fe860a5699b25a5c5",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "16aa9a23fde554d77c5ea220eeb421ad8802116c7e072a772c8c7784c55c3c47",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "16aa9a23fde554d77c5ea220eeb421ad8802116c7e072a772c8c7784c55c3c47",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "899e3566955f4c075b3345c7ba88f9c567560521e2b7ec252320d0a6abddebb9",
+        "bytes": 98800,
+        "changedChannels": 0,
+        "currentHash": "899e3566955f4c075b3345c7ba88f9c567560521e2b7ec252320d0a6abddebb9",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "image",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "reading"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 3,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "9ef00a7f5408e3905175a785d720a448b35248077f086128db3580247d7789bc",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "9ef00a7f5408e3905175a785d720a448b35248077f086128db3580247d7789bc",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "684ba6bc938db6c94fceac3ae589bc0db8a114972d97a5a6f95cb248b02cf20b",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "684ba6bc938db6c94fceac3ae589bc0db8a114972d97a5a6f95cb248b02cf20b",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "b02f2130fce5481fbe3f612cd7e650e84973b9fa878c055561ee033e30df1427",
+        "bytes": 395200,
+        "changedChannels": 0,
+        "currentHash": "b02f2130fce5481fbe3f612cd7e650e84973b9fa878c055561ee033e30df1427",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "testchart",
+      "dpr": "2",
+      "geometry": "thin",
+      "look": "clear"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "b33a0c1ab256e47cb632bc45426788960f8d61bbe3d9a3267b819ad8532a3d5a",
+        "bytes": 36480,
+        "changedChannels": 0,
+        "currentHash": "b33a0c1ab256e47cb632bc45426788960f8d61bbe3d9a3267b819ad8532a3d5a",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "2bc91e9391ac4eff369e22c3acf6c7eda859eb9f44da3e78a06aa0f64a85b75a",
+        "bytes": 36480,
+        "changedChannels": 0,
+        "currentHash": "2bc91e9391ac4eff369e22c3acf6c7eda859eb9f44da3e78a06aa0f64a85b75a",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "7341dfaacd8f9dd1d4073d92444f89e6570fc8bab9ca35aea90311b78267e6b3",
+        "bytes": 36480,
+        "changedChannels": 0,
+        "currentHash": "7341dfaacd8f9dd1d4073d92444f89e6570fc8bab9ca35aea90311b78267e6b3",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "svg",
+      "background": "gradient",
+      "dpr": "2",
+      "geometry": "resize",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "svg",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": [
+      {
+        "baselineHash": "76f3d111867832ac7a2ffd6edf1c462363a1b2f16f26c84e82b7f7fdd9a8a062",
+        "bytes": 166400,
+        "changedChannels": 0,
+        "currentHash": "76f3d111867832ac7a2ffd6edf1c462363a1b2f16f26c84e82b7f7fdd9a8a062",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 0
+      },
+      {
+        "baselineHash": "3ac0cd02df3dd955f77a4c766ea6a533ff7c2eb1ddd52fcd0ce36d7671d019ce",
+        "bytes": 239200,
+        "changedChannels": 0,
+        "currentHash": "3ac0cd02df3dd955f77a4c766ea6a533ff7c2eb1ddd52fcd0ce36d7671d019ce",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 1
+      },
+      {
+        "baselineHash": "710d8ec2c90a190e828f6dda3eb5a4d0e118889c2fbd94ddc3ebeb8d6d0add4b",
+        "bytes": 312000,
+        "changedChannels": 0,
+        "currentHash": "710d8ec2c90a190e828f6dda3eb5a4d0e118889c2fbd94ddc3ebeb8d6d0add4b",
+        "maxDelta": 0,
+        "nonblank": true,
+        "surface": 2
+      }
+    ]
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "webgpu",
+      "background": "testchart",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "clear"
+    },
+    "states": [
+      {
+        "backend": "webgpu",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "webgpu",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": null
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "webgpu",
+      "background": "testchart",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "clear"
+    },
+    "states": [
+      {
+        "backend": "webgpu",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "webgpu",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": null
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "webgpu",
+      "background": "testchart",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "webgpu",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "webgpu",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": null
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "webgpu",
+      "background": "testchart",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "webgpu",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "webgpu",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": null
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "webgl",
+      "background": "testchart",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "clear"
+    },
+    "states": [
+      {
+        "backend": "webgl",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "webgl",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": null
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "webgl",
+      "background": "testchart",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "clear"
+    },
+    "states": [
+      {
+        "backend": "webgl",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "webgl",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": null
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "webgl",
+      "background": "testchart",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "webgl",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "webgl",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": null
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "webgl",
+      "background": "testchart",
+      "dpr": "2",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "webgl",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "webgl",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": null
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "css",
+      "background": "gradient",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "css",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "css",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": null
+  },
+  {
+    "equalMarkup": true,
+    "spec": {
+      "backend": "solid",
+      "background": "gradient",
+      "dpr": "1",
+      "geometry": "normal",
+      "look": "frosted"
+    },
+    "states": [
+      {
+        "backend": "solid",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      },
+      {
+        "backend": "solid",
+        "phase": "ready",
+        "sourceVersion": 2,
+        "surfaces": 3
+      }
+    ],
+    "svgPixels": null
+  }
+]

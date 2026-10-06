@@ -1,0 +1,30 @@
+[
+  {
+    "backgroundChanged": true,
+    "cacheAfterUnregister": null,
+    "focusRetained": true,
+    "initialMapCount": null,
+    "inputRetained": true,
+    "materialLayers": 0,
+    "remainingChildren": 0,
+    "resizeChanged": true,
+    "reusedNodes": false,
+    "shapeChanged": true,
+    "stableCanvases": 36,
+    "variant": "baseline"
+  },
+  {
+    "backgroundChanged": true,
+    "cacheAfterUnregister": 0,
+    "focusRetained": true,
+    "initialMapCount": 1,
+    "inputRetained": true,
+    "materialLayers": 0,
+    "remainingChildren": 0,
+    "resizeChanged": true,
+    "reusedNodes": true,
+    "shapeChanged": true,
+    "stableCanvases": 0,
+    "variant": "current"
+  }
+]

@@ -29,6 +29,8 @@ VITE_BASE_PATH=/liquid-glass/ npm run preview
 
 三个页面均支持 `?lang=en` 和 `?lang=zh-CN`。页头 EN / 中文切换保留当前交互状态，导航继承语言；查询参数优先于浏览器偏好，缺省英文。语言逻辑只属于 lab，数据下载、资源 URL、原生 DOM 交互和核心 fallback 顺序没有改变。源 README 为英文，中文入口为 README.zh-CN.md；截图位于 docs/images，仅进入源码仓库，不进入 Pages 或库 tarball。
 
+2026-10-06 双语版本 `e3f9198` 已由 [Actions run 37400378939](https://github.com/palering/liquid-glass/actions/runs/37400378939) 成功构建和部署，14 个测试、类型、构建及打包消费检查通过；线上 fingerprint revision 匹配，核心 sourceSha256 保持原值。实际浏览器确认英文首页 → 中文切换保留 21 px 厚度和 WebGPU ready，性能导航继承语言并加载 147 / 147 归档、DOM 清理 PASS，切到英文保留数据。React 生产页切中文后保留输入和点击计数，表面状态同步翻译，控制台无 error/warn。GitHub 两张 README 图片完整加载，中文 README 链接与内容显示正常。上述检查不构成新的性能基准。
+
 ## 本次验证
 
 - 本地 /liquid-glass/ 构建、10 个契约测试、TypeScript 与打包/离线安装/核心导入/React SSR 全部通过。

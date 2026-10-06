@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-06：v0.4 独立 Git / GitHub 工程基线，核心库、React 薄适配、实验室与性能 harness 分开管理。未接入无限画布；尚未完成生产稳定性验收。公开仓库已创建，Pages 部署进行中；发布记录见 [deployment.md](deployment.md)。
+2026-10-06：v0.4 独立 Git / GitHub 工程基线，核心库、React 薄适配、实验室与性能 harness 分开管理。未接入无限画布；尚未完成生产稳定性验收。公开仓库和 Pages 展示站已发布并通过本次线上交互检查；发布记录见 [deployment.md](deployment.md)。
 
 ## 已实现
 
@@ -14,7 +14,7 @@ Studio 固定 MIT GLSL/WGSL 光学 shader；WebGPU → WebGL2 → SVG → CSS �
 
 ## 已验证
 
-源码与实际浏览器证据见 [validation.md](validation.md)。已确认 GPU 透明/毛玻璃与叠层呈现、WebGL 的叠层像素差异和模糊低通效果、预设保存/刷新恢复/JSON 生成与导入、坏 JSON 拒绝、真实设备/上下文故障降级。v0.4 构建、10 个契约测试、TypeScript 消费、实际打包/本地安装/无 DOM 导入/React SSR 通过。React 19 开发模式 StrictMode 输入、点击、后端更新与十次挂载/卸载已测；11 个可观察 controller 最终释放，fixture 无遗留子节点，控制台无 error/warn。
+源码与实际浏览器证据见 [validation.md](validation.md)。本次 GitHub Pages 已实际验证 GPU 渲染、实时参数、预设 JSON、图片、导航、完整故障降级与 React 生产构建交互，见 [deployment.md](deployment.md)。已确认 GPU 透明/毛玻璃与叠层呈现、WebGL 的叠层像素差异和模糊低通效果、预设保存/刷新恢复/JSON 生成与导入、坏 JSON 拒绝、真实设备/上下文故障降级。v0.4 构建、10 个契约测试、TypeScript 消费、实际打包/本地安装/无 DOM 导入/React SSR 通过。React 19 开发模式 StrictMode 输入、点击、后端更新与十次挂载/卸载已测；11 个可观察 controller 最终释放，fixture 无遗留子节点，控制台无 error/warn。
 
 五后端 147 组固定构建性能测试通过，包含两种 look、10/50/100、动态背景、idle 和 GPU 重叠分层，每组 3 次重复。原始 JSON、逐次/汇总 CSV 与报告进入 Git；所有 idle 无额外 draw，最终 DOM/注册/订阅清理通过。100 个移动表面存在长尾；SVG 50/100 表面成本高，待优化。资源计数不是驱动显存，CPU 提交不是 GPU 时间。详见 [performance.md](performance.md)。
 

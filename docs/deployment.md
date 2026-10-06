@@ -2,7 +2,7 @@
 
 Audience: public
 
-2026-10-06：用户明确授权创建公开 GitHub 仓库与 GitHub Pages 展示站。仓库为 [palering/liquid-glass](https://github.com/palering/liquid-glass)，预期站点为 [在线实验室](https://palering.github.io/liquid-glass/)。当前首次部署进行中，线上验证待完成。
+2026-10-06：用户明确授权创建公开 GitHub 仓库与 GitHub Pages 展示站。仓库为 [palering/liquid-glass](https://github.com/palering/liquid-glass)，站点为 [在线实验室](https://palering.github.io/liquid-glass/)。首次部署与线上验证已完成；生产展示站与工程/视觉验收边界分开记录。
 
 ## 实现与操作
 
@@ -29,8 +29,15 @@ VITE_BASE_PATH=/liquid-glass/ npm run preview
 
 - 本地 /liquid-glass/ 构建、10 个契约测试、TypeScript 与打包/离线安装/核心导入/React SSR 全部通过。
 - Codex 内置浏览器：实际 WebGPU ready，边缘厚度 20 → 21 px 触发重绘；业务视图与两张生成图片加载；预设生成 JSON 后校验、导入并保存成功。
-- GitHub Actions 与线上交互：待首次部署完成后补实际记录。
-- 发布前检查：Git 白名单排除 node_modules、.local、dist、环境文件、tarball 与临时截图；源码/归档未发现本地绝对路径或凭证。完整 Studio MIT/NOTICE 保留。
+- 首次 [GitHub Actions run 37397508009](https://github.com/palering/liquid-glass/actions/runs/37397508009) build / deploy success，部署源码 `46e348a`。发布身份修正后初始源码提交为 `ed358a5`，内容树与原初始提交相同。后续文档/fixture 标签修正会自动触发同一工作流；线上 benchmark-source.json 提供实际 revision。
+- 线上三个 HTML 入口、fingerprint、两张图片、JSON、逐次/汇总 CSV 与报告均 HTTP 200；四份归档内容 SHA-256 与 Git 源文件相同。
+- 内置 Chromium 154 线上实际 WebGPU、WebGL2、SVG 视觉呈现已观察；边缘厚度 20 → 21 px 与 draw 增加，Frosted look、深浅主题、示例图片、真实按钮计数和键盘移动成功。模拟故障实际沿 WebGPU → WebGL2 → SVG → CSS → solid，DOM 点击继续工作，未出现 error/warn。
+- 预设 JSON 生成、校验导入并保存成功，坏 JSON 被拒绝；JSON 不含图片。文件下载仍不在本轮验收范围。
+- 性能页真实加载 147 / 147 历史归档、DOM 清理 PASS；WebGPU 筛选显示 11 个汇总行。没有在线重跑完整性能矩阵。
+- React 生产构建：输入文本保持，点击 0 → 1，auto → solid 更新成功；十次挂载/卸载后 11 个可观察 controller 全部报告已释放，控制台无 error/warn。StrictMode 开发 effect 重放来自既有本地证据，生产版本标签已明确区分。
+- 390 × 844 视口检查：无水平溢出，光学样片可见；它不代表移动浏览器或 DPR 2 验收。
+- 发布前内容扫描覆盖全部可达提交中的 111 个唯一 blob、99 个当前跟踪文件及 21 个站点产物：常见 GitHub/OpenAI/AWS/Slack/Google 凭证形态、私钥、敏感键赋值和本地绝对路径均无命中。Git 文件清单无禁入项，git check-ignore 验证 node_modules、.local、dist、环境文件、tarball、临时截图和生成归档副本都被忽略。完整 Studio MIT/NOTICE 保留。这是模式与范围检查，不保证覆盖任意编码或未知格式的敏感信息。
+- 首次 push 被 GitHub GH007 拦截，原因是提交身份含私有邮箱，文件扫描未覆盖元数据。保留本地忽略目录中的历史 bundle 后，仅改写两个未发布提交的作者/提交者为账号公开 noreply 身份，逐个验证 tree 相同；私有邮箱保护保持开启。项目本地 Git 身份已设置 noreply，未修改全局配置，成功推送的可达历史不包含原私有邮箱。
 
 ## 许可与能力边界
 
